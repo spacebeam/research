@@ -1,10 +1,5 @@
-# chaos
-=======
-The first who ruled over confusion, the void of emptiness, within the universe.
-
 # control systems
 -----------------
-
 Control is one type of system.
 
 We can find control has many of the same properties as systems in general; numerous systems interlocked in many ways.

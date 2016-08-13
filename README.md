@@ -1,6 +1,5 @@
 # chaos linux
--------------
-Chaos Linux is a nonsense.ws sponsored project. Our primary user base is within the high performance computing community. However, our users come from a wide variety of industries.
+Chaos Linux is a [nonsense.ws](https://nonsense.ws) sponsored project. Our primary user base is within the high performance computing community. However, our users come from a wide variety of industries.
 
 Our Mission: Driven by nonsense.ws and focusing on the changing needs of experimental research facilities, Chaos Linux should provide a world class environment for high performance computing.
 

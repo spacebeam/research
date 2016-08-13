@@ -1,0 +1,4 @@
+d-i passwd/root-login boolean false
+
+d-i apt-setup/non-free boolean true
+d-i apt-setup/contrib boolean true

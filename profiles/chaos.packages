@@ -14,9 +14,10 @@ terminator
 transmission
 filezilla
 build-essential
+xfburn
 gnome-calculator
 gnome-menus
-xarchiver
+file-roller
 zip
 unzip
 exim4

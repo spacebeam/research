@@ -5,4 +5,4 @@ Our Mission: Driven by [nonsense.ws](https://nonsense.ws)  and focusing on the c
 
 Our Goal: Provide a stable, scalable, and extensible environment for scientific computing.
 
-Chaos Linux distribution, is based on [Debian](https://www.debian.org/) stable and built around the lightweight i3 window manager.
+Chaos Linux distribution, is based on [Debian](https://www.debian.org/) stable and built around the lightweight [i3](https://i3wm.org/docs/) window manager.

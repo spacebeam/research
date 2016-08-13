@@ -6,11 +6,12 @@ lxc
 lxappearance
 lxrandr
 lxtask
-dmenu
+suckless-tools
 lightdm
 terminator
 build-essential
-chromium-browser
+exim4
+zsh
 pavucontrol
 geany
 compton

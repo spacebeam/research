@@ -22,6 +22,8 @@ scrot
 feh
 vlc
 python-wxgtk3.0
+pgamin3
+audacity
 pcmanfm
 htop
 tmux
@@ -30,3 +32,4 @@ curl
 vim
 jq
 git
+erlang-solutions

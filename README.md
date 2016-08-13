@@ -1,11 +1,9 @@
-# control systems
------------------
-Control is one type of system.
+# chaos linux
+-------------
+Chaos Linux is a nonsense.ws sponsored project. Our primary user base is within the high performance computing community. However, our users come from a wide variety of industries.
 
-We can find control has many of the same properties as systems in general; numerous systems interlocked in many ways.
+Our Mission: Driven by nonsense.ws and focusing on the changing needs of experimental research facilities, Chaos Linux should provide a world class environment for high performance computing.
 
-One such way may be seen when there are hierarchies of systems paralleling progressions of goals.
+Our Goal: Provide a stable, scalable, and extensible environment for scientific computing.
 
-There are also control systems within control systems or as we have more frequently referred to this, control loops within control loops.
-
-Since control is also a system, it can influence other systems and in turn be influenced by them.
+Chaos Linux distribution, is based on Debian and built around the lightweight i3 window manager.

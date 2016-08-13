@@ -11,7 +11,7 @@ jfsutils
 ntfs-3g
 fuse
 gvfs
-gvfs-fise
+gvfs-fuse
 fusesmb
 bash-completion
 lintian
@@ -78,4 +78,3 @@ python-virtualenv
 python-apt
 python-dev
 python-pip
-julia

@@ -3,6 +3,7 @@ network-manager-gnome
 network-manager-openvpn-gnome
 network-manager-pptp-gnome
 network-manager-vpnc-gnome
+erlang-solutions
 e2fsprogs
 xfsprogs
 reiserfsprogs
@@ -71,4 +72,10 @@ curl
 vim
 jq
 git
-erlang-solutions
+luajit
+erlang
+monit
+python-virtualenv
+python-apt
+python-dev
+python-pip

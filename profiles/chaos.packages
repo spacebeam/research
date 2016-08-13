@@ -4,6 +4,7 @@ i3status
 i3lock
 lxc
 lxappearance
+aptitude
 lxrandr
 lxtask
 suckless-tools
@@ -13,6 +14,10 @@ terminator
 transmission
 filezilla
 build-essential
+gnome-calculator
+xarchiver
+zip
+unzip
 exim4
 zsh
 pavucontrol

@@ -10,6 +10,8 @@ suckless-tools
 chromium
 lightdm
 terminator
+transmission
+filezilla
 build-essential
 exim4
 zsh

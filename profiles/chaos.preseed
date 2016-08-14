@@ -1,4 +1,41 @@
+
+### Localization
+# Preseeding only locale sets language, country and locale.
+d-i debian-installer/locale string en_US
+
+# Keyboard selection.
+# Disable automatic (interactive) keymap detection.
+#d-i console-setup/ask_detect boolean false
+
+# Keyboard selection.
+# keymap is an alias for keyboard-configuration/xkb-keymap
+d-i keymap select us
+
+d-i netcfg/get_hostname string chaos
+
 d-i passwd/root-login boolean false
+
+# You may set this to any valid setting for $TZ; see the contents of
+# /usr/share/zoneinfo/ for valid values.
+d-i time/zone string Etc/UTC
+
+# Controls whether to use NTP to set the clock during the install
+d-i clock-setup/ntp boolean true
 
 d-i apt-setup/non-free boolean true
 d-i apt-setup/contrib boolean true
+
+# If one of the disks that are going to be automatically partitioned
+# contains an old LVM configuration, the user will normally receive a
+# warning. This can be preseeded away...
+d-i partman-lvm/device_remove_lvm boolean true
+# The same applies to pre-existing software RAID array:
+d-i partman-md/device_remove_md boolean true
+# And the same goes for the confirmation to write the lvm partitions.
+d-i partman-lvm/confirm boolean false
+
+# Put GRUB on that disk as well. Install anyway even if there's already
+d-i grub-installer/with_other_os boolean true
+
+# I like to opt out of this
+d-i popularity-contest/participate boolean false

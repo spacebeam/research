@@ -1,4 +1,6 @@
+menu
 xorg
+gnome-menus
 network-manager-gnome
 network-manager-openvpn-gnome
 network-manager-pptp-gnome
@@ -23,8 +25,6 @@ rsync
 anacron
 usbutils
 wmctrl
-menu
-gnome-menus
 menulibre
 bc
 qtcurve
@@ -67,7 +67,6 @@ vlc
 python-wxgtk3.0
 pgadmin3
 audacity
-pcmanfm
 nitrogen
 htop
 tmux
@@ -83,3 +82,4 @@ python-virtualenv
 python-apt
 python-dev
 python-pip
+pcmanfm

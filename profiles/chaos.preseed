@@ -5,10 +5,6 @@ d-i debian-installer/locale string en_US
 # Disable automatic (interactive) keymap detection.
 d-i console-setup/ask_detect boolean false
 
-# Keyboard selection.
-# keymap is an alias for keyboard-configuration/xkb-keymap
-d-i keymap select us
-
 d-i netcfg/get_hostname string chaos
 d-i passwd/root-login boolean false
 

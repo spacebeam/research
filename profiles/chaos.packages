@@ -32,7 +32,6 @@ cpufrequtils
 avahi-daemon
 openssh-client
 sshfs
-virt-manager
 libvirt-daemon
 libvirt-dev
 i3
@@ -83,3 +82,4 @@ python-apt
 python-dev
 python-pip
 pcmanfm
+virt-manager

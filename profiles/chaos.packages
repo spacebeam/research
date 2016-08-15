@@ -81,5 +81,6 @@ python-virtualenv
 python-apt
 python-dev
 python-pip
-pcmanfm
 virt-manager
+gtk2-engines-murrine
+gnome-themes-standard

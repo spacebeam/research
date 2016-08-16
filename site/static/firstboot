@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# This script will run the first time the system boots. Even
+# though we've told it to run after networking is enabled,
+# I've observed inconsistent behavior if we start hitting the
+# net immediately.
+#
+# Introducing a brief sleep makes things work right all the
+# time.
+sleep 30
+
+# update apt
+/usr/bin/apt-get update
+
+# install our preseed so libc doesn't whine
+cat > /tmp/chaos.preseed <<EOF
+libc6 glibc/upgrade boolean true
+libc6 glibc/restart-services string
+libc6 libraries/restart-without-asking boolean true
+EOF
+
+/usr/bin/debconf-set-selections /tmp/chaos.preseed
+
+# do the dist-upgrade
+/usr/bin/apt-get -y dist-upgrade
+
+/usr/bin/apt-get -y install pcmanfm
+
+# Remove our firstboot service so that it won't run again
+update-rc.d firstboot remove
+
+# Reboot into the new kernel
+/sbin/reboot

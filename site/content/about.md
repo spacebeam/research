@@ -12,4 +12,4 @@ Chaos HPC Linux distribution, is based on [Debian](https://www.debian.org/) stab
 
 For information about how to get help or get involved see the [Community](https://github.com/iofun/chaos) github page.
 
-We make a stable platform for high performance computing that anyone can use.  We have direct access to cutting edge software.  Today, we focus in on putting these two things together into unified environment.
+We make a stable platform for high performance computing that anyone can use.  We have direct access to cutting edge software. Today, we focus on putting these two things together into one unified environment.

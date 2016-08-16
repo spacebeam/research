@@ -19,6 +19,7 @@ bash-completion
 lintian
 libnss-mdns
 gvfs-bin
+gdebi
 gvfs-backends
 xdg-utils
 rsync

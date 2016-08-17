@@ -24,6 +24,7 @@ EOF
 # do the dist-upgrade
 /usr/bin/apt-get -y dist-upgrade
 
+# install pacmanfm and test the fucking application menu
 /usr/bin/apt-get -y install pcmanfm
 
 # Remove our firstboot service so that it won't run again

@@ -6,6 +6,8 @@ chmod +x /srv/firstboot
 
 # create a service that will run our firstboot script
 cat > /etc/init.d/firstboot <<EOF
+#!/bin/sh
+
 ### BEGIN INIT INFO
 # Provides:        firstboot
 # Required-Start:  $networking
@@ -17,7 +19,6 @@ cat > /etc/init.d/firstboot <<EOF
 ### END INIT INFO
 
 cd /srv ; /usr/bin/nohup sh -x /srv/firstboot &
-
 
 EOF
 

@@ -10,6 +10,6 @@ ShaOS HPC Linux is a [nonsense.ws](https://nonsense.ws) sponsored project. Our p
 
 ShaOS HPC Linux distribution, is based on [Debian](https://www.debian.org/) stable and built around the lightweight [i3](https://i3wm.org/docs/) window manager.
 
-For information about how to get help or get involved see the [Community](https://github.com/iofun/chaos) github page.
+For information about how to get help or get involved see the [Community](https://github.com/nonsensews/shaos) github page.
 
 We make a stable platform for high performance computing that anyone can use.  We have direct access to cutting edge software. Today, we focus on putting these two things together into one unified environment.

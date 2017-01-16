@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Chaos Team'
-SITENAME = u'Chaos HPC Linux'
+AUTHOR = u'Shaos Team'
+SITENAME = u'Shaos HPC Linux'
 SITEURL = ''
 
 PATH = 'content'

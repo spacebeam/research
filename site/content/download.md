@@ -1,7 +1,7 @@
-Title: Download Chaos HPC
+Title: Download ShaOS HPC
 Date: 2016-08-15 17:20
 Category: Download
-Summary: Chaos HPC is a Debian desktop with custom configurations and additional software focus on high performance and distributed computing.
+Summary: ShaOS HPC is a Debian desktop with custom configurations and additional software focus on high performance and distributed computing.
 
 
 ##Internet Connection Required
@@ -10,7 +10,7 @@ Keep in mind, as the distro is currently based off of the Debian netinstall, an 
 
 ##System requirements
 
-Chaos HPC is a Debian desktop with custom configurations and additional software. The [hardware recommendations](https://www.debian.org/releases/jessie/amd64/ch03s04.html.en) from the Debian project apply.
+ShaOS HPC is a Debian desktop with custom configurations and additional software. The [hardware recommendations](https://www.debian.org/releases/jessie/amd64/ch03s04.html.en) from the Debian project apply.
 
 ###Download
 

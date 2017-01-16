@@ -13,13 +13,13 @@ sleep 30
 /usr/bin/apt-get update
 
 # install our preseed so libc doesn't whine
-cat > /tmp/chaos.preseed <<EOF
+cat > /tmp/shaos.preseed <<EOF
 libc6 glibc/upgrade boolean true
 libc6 glibc/restart-services string
 libc6 libraries/restart-without-asking boolean true
 EOF
 
-/usr/bin/debconf-set-selections /tmp/chaos.preseed
+/usr/bin/debconf-set-selections /tmp/shaos.preseed
 
 # do the dist-upgrade
 /usr/bin/apt-get -y dist-upgrade

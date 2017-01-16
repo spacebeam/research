@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # grab our firstboot script
-/usr/bin/curl -o /srv/firstboot https://chaos.nonsense.ws/firstboot
+/usr/bin/curl -o /srv/firstboot https://shaos.ws/firstboot
 chmod +x /srv/firstboot
 
 # create a service that will run our firstboot script

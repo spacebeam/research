@@ -8,8 +8,8 @@ The laboratory conducts multidisciplinary research in the fields of inconsistenc
 
 ## Code and wiki
 
-The GitHub organization is https://github.com/nonsensews.
+The GitHub [organization](https://github.com/nonsensews) is [https://github.com/nonsensews](https://github.com/nonsensews)https://github.com/nonsensews.
 
 We are a loose, sparse distributed organization without a clear power structure.
 
-The organization wiki page explains our working process and how anyone can join the team. https://github.com/nonsensews/guide/wiki
+The [wiki](https://github.com/nonsensews/guide/wiki) explains our working process and how anyone can join the team. 

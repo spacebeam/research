@@ -12,4 +12,4 @@ Shaos HPC Linux distribution, is based on [Debian](https://www.debian.org/) stab
 
 For information about how to get help or get involved see the [Community Wiki](https://github.com/nonsensews/guide).
 
-We make a stable workspace for high-performance distributed computing that anyone can use today, at [nonsense.ws](https://nonsense.ws) we put these things together into one unified environment.
+We make a stable workspace for high-performance computing that anyone can use today, at [nonsense.ws](https://nonsense.ws) we put these things together into one unified environment.

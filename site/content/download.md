@@ -1,7 +1,7 @@
 Title: Download
 Date: 2016-08-15 17:20
 Category: Download
-Summary: Shaos HPC is a Debian workstation with custom configurations and additional software focus on high performance and distributed computing.
+Summary: Shaos HPC is a Debian workstation with custom configurations and additional software focus on high-performance and distributed computation.
 
 
 ##Internet Connection Required

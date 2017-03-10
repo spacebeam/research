@@ -1,4 +1,4 @@
-Title: About Shaos HPC Linux
+Title: Shaos HPC Linux
 Date: 2016-08-15 19:20
 Category: About
 

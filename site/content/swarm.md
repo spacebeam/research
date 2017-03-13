@@ -4,9 +4,7 @@ Category: About
 
 Swarm computing works by combining multiple computer systems to create a powerful, flexible computing engine.
 
-A swarm is similar in purpose to a “cluster”. However a swarm has very different structure and properties.
-
-A computer swarm has the following features:
+A swarm is similar in purpose to a “cluster”. However a swarm has very different structure and properties:
 
 + One computer is no computer swarm it needs at least 3 individual nodes.
 

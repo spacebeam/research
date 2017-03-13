@@ -8,8 +8,8 @@ A swarm is similar in purpose to a “cluster”. However a swarm has very diffe
 
 + One computer is no computer swarm it needs at least 3 individual nodes.
 
-+ Additional computers that are running the “client” can request work from the swarm.
++ Additional computers that are running the “client” can request work from the computer swarm.
 
-+ If more computing power is required more computers can join or leave as necessary.
++ If more computing power is required more computers can join or leave the swarm as necessary.
 
 + Client computers can be of a variety of specifications.

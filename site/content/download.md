@@ -14,4 +14,4 @@ Shaos HPC is a Debian workstation with custom configurations and additional soft
 
 ###Download
 
-If you can use BitTorrent, please do so and leave the client open for a while so you can seed the files for other users. Otherwise, use the [direct download](https://shaos.ws/images/shaos-3.17-amd64.iso) links.
+If you can use BitTorrent, please do so and leave the client open for a while so you can seed the files for other users. Otherwise, use the [direct download](https://shaos.ws/images/shaos-3.17-amd64.iso).

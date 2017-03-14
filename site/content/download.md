@@ -6,7 +6,7 @@ Summary: Shaos HPC is a Debian workstation with custom configurations and additi
 
 ##Internet Connection Required
 
-Keep in mind, as the distro is currently based off of the Debian netinstall, an internet connection will be required.
+Keep in mind, as the distro is currently based off on the Debian netinstall, an internet connection will be required.
 
 ##System requirements
 

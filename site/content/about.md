@@ -4,7 +4,7 @@ Category: About
 
 Shaos HPC Linux is a [nonsense.ws](https://nonsense.ws) sponsored project. Our primary user base is within the high-performance computing community. However, our users come from a wide variety of industries.
 
-**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on experimental research facilities, [shaos.ws](https://shaos.ws) provides a world class workspace environment for creative research and distributed high-performance computing.
+**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on experimental research facilities, [shaos.ws](https://shaos.ws) provides a professional workspace environment for creative research and distributed high-performance computing.
 
 **Our Goal**: Provide a stable, scalable, and extensible distributed workspace environment for kids of all ages.
 

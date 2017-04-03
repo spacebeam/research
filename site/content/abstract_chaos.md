@@ -1,4 +1,4 @@
-Title: Abstract Chaos and Inconsistency
+Title: Chaos and Inconsistency
 Date: 2017-04-03 16:20
 Category: Chaos
 

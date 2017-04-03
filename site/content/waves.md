@@ -1,4 +1,4 @@
-Title: Waves of the past an indication of the future
+Title: Waves of the Past an indication of the Future
 Date: 2017-04-03 16:22
 Category: Chaos
 

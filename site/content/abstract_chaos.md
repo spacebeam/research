@@ -12,6 +12,6 @@ To cope with these "blind spots" we have to make use of another vocabulary or sy
 
 By going to another means of communication, such as finding a picture.
 
-The strategy in these solutions is the same.
+The strategy in 	these solutions is the same.
 
 The incompleteness of the system or language is compensated for by resorting to something outside of the system, by using another language or another system.

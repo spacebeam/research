@@ -9,3 +9,7 @@ Then comes a comparing or examination phase when the desired output is compared 
 After this comparison is made, for example a propety is noted to be too low corrective action is required: the process is turned on by a unit we will call a decision maker that it's yet another neural network.
 
 Once the process is running, the first phases are repeated unit the discriminator determines that the property has reached or exceeded the upper limit, then another action is required and the process is shut off and killed.
+
+The basic steps in the control process identified thus far are:
+
+Gathering on performance, comparison of data with a standard, and taking corrective action if performance does not match the standard properly.

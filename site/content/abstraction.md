@@ -12,7 +12,7 @@ This selection of some items and ignoring of others is a process of abstraction.
 
 It is the abstracting fomr a real or if you will empirical situation the tings seemingly most important to deal with.
 
-## Models
+## Model your challenge
 Taking the abstracted elements, the character with the flat tire begins to connect them into a pattern.
 
 Better yet, he weaves them into a model of the confronting situation, which we can use both to understand his plight and figure out what to do about it.

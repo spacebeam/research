@@ -1,6 +1,8 @@
-Title: Waves of the Past an indication of the Future
+Title: Waves of the Past
 Date: 2017-04-03 16:22
 Category: Chaos
+
+## An indication of the future
 
 Not too long ago the literature of organizations consisted largely of principles of organizations; these were didactic statements of absolute and final truths which hold in all situations like a silver bullet.
 

@@ -6,7 +6,9 @@ The control process of an organization can be implemented in a number of ways.
 
 One variation is in the manner in which the elements in the control process are allocated to different organizational members.
 
-A common situation exists when a supervisor gives a worker instructions that tell him what is to be accomplished: ["Make twenty-five Javascript widgets of good quality"]
+A common situation exists when a supervisor gives a worker instructions that tell him what is to be accomplished: 
+
+["Make twenty-five Javascript widgets of good quality"]
 
 Here the foreman is giving a standard to the worker.
 
@@ -24,7 +26,7 @@ In effect, what this does is to say that if a forest ranger has made a decision 
 
 The forest ranger is engages in certain activities, the public functions as the sensor, higher executives are the decision makers who bring about corrective actions.
 
-Through revoking or amending the rangers decision, the decision maker of course, uses standards, established by still higher authorities, in some cases Nature itself.
+Through revoking or amending the rangers decision, the decision maker of course, uses standards, established by still higher authorities, in some cases nature itself.
 
 As noted when discussing division of work the further work is subdivided, the greater becomes the problem of coordinating the parts.
 

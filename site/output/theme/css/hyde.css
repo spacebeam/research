@@ -102,7 +102,7 @@ html {
 .sidebar-nav-item {
   display: block;
   padding: .25rem 0.5rem;
-  background: #2a9ec5;
+  background: #7dafc4;
   margin: 0 .2rem;
   border-radius: .25rem;
   text-transform: uppercase;
@@ -113,7 +113,7 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  background: #2a9ec5;
+  background: #6096ac;
   text-decoration: none;
 }
 .sidebar-nav-item.active {
@@ -205,7 +205,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Red */
 .theme-base-08 .sidebar {
-  background-color: #ac4142;
+  background-color: #2a9ec5;
 }
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
@@ -214,7 +214,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Orange */
 .theme-base-09 .sidebar {
-  background-color: #d28445;
+  background-color: #2a9ec5;
 }
 .theme-base-09 .content a,
 .theme-base-09 .related-posts li a:hover {
@@ -223,7 +223,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Yellow */
 .theme-base-0a .sidebar {
-  background-color: #f4bf75;
+  background-color: #2a9ec5;
 }
 .theme-base-0a .content a,
 .theme-base-0a .related-posts li a:hover {
@@ -232,7 +232,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Green */
 .theme-base-0b .sidebar {
-  background-color: #90a959;
+  background-color: #2a9ec5;
 }
 .theme-base-0b .content a,
 .theme-base-0b .related-posts li a:hover {
@@ -241,7 +241,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Cyan */
 .theme-base-0c .sidebar {
-  background-color: #75b5aa;
+  background-color: #2a9ec5;
 }
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
@@ -250,7 +250,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Blue */
 .theme-base-0d .sidebar {
-  background-color: #6a9fb5;
+  background-color: #2a9ec5;
 }
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {
@@ -259,7 +259,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Magenta */
 .theme-base-0e .sidebar {
-  background-color: #aa759f;
+  background-color: #2a9ec5;
 }
 .theme-base-0e .content a,
 .theme-base-0e .related-posts li a:hover {
@@ -268,9 +268,9 @@ a.sidebar-nav-item.active:focus {
 
 /* Brown */
 .theme-base-0f .sidebar {
-  background-color: #8f5536;
+  background-color: #2a9ec5;
 }
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
+  color: #2a9ec5;
 }

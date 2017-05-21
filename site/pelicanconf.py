@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Nonsense Worlds'
 SITENAME = u'shaos.ws'
-SITEURL = 'https://shaos.ws'
+SITEURL = 'https://shaos.whs'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'
 DEFAULT_LANG = u'en'
@@ -19,7 +19,7 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 # Social widget
-SOCIAL = (('cube', 'https://shaos.ws/images/shaos-5.21-amd64.iso'),
+SOCIAL = (('cube', 'https://nonsense.ws'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
 	('twitter', 'https://twitter.com/shaosws'),
 	('github', 'https://github.com/nonsensews'),

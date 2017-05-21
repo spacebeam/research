@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>shaos.ws</title><link href="https://shaos.ws/" rel="alternate"></link><link href="https://shaos.ws/feeds/packages.atom.xml" rel="self"></link><id>https://shaos.ws/</id><updated>2016-08-15T10:20:00+00:00</updated><entry><title>Package index 08.16</title><link href="https://shaos.ws/package-index-0816.html" rel="alternate"></link><published>2016-08-15T10:20:00+00:00</published><author><name>Nonsense Worlds</name></author><id>tag:shaos.ws,2016-08-15:package-index-0816.html</id><summary type="html">&lt;h2&gt;Included Packages&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>shaos.ws</title><link href="https://shaos.whs/" rel="alternate"></link><link href="https://shaos.whs/feeds/packages.atom.xml" rel="self"></link><id>https://shaos.whs/</id><updated>2016-08-15T10:20:00+00:00</updated><entry><title>Package index 08.16</title><link href="https://shaos.whs/package-index-0816.html" rel="alternate"></link><published>2016-08-15T10:20:00+00:00</published><author><name>Nonsense Worlds</name></author><id>tag:shaos.whs,2016-08-15:package-index-0816.html</id><summary type="html">&lt;h2&gt;Included Packages&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;menu&lt;/li&gt;
 &lt;li&gt;xorg&lt;/li&gt;

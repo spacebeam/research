@@ -37,4 +37,4 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 THEME = "pelican-hyde"
 
 BIO = "Grow by Nonsense Worlds Supercomputer and open-source Community of HPC monkeys."
-PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/509423372975882240/VZ0d9nTW.jpeg"
+PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/804425570633351168/zg5aEOaF.jpg"

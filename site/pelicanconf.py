@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Nonsense Worlds'
 SITENAME = u'shaos.ws'
-SITEURL = 'https://shaos.whs'
+SITEURL = 'https://shaos.ws'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'
 DEFAULT_LANG = u'en'

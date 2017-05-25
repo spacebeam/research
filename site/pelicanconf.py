@@ -22,8 +22,7 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 SOCIAL = (('cube', 'https://nonsense.ws'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
 	('twitter', 'https://twitter.com/shaosws'),
-	('github', 'https://github.com/nonsensews'),
-	('email', 'info@nonsense.ws'))
+	('github', 'https://github.com/nonsensews'))
 
 DEFAULT_PAGINATION = 2
 

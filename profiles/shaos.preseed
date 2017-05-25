@@ -50,4 +50,4 @@ d-i grub-installer/with_other_os boolean true
 d-i popularity-contest/participate boolean false
 
 # Once the installation is done we'll set the system up for some firstboot magic.
-d-i preseed/late_command string chroot /target sh -c "/usr/bin/curl -o /tmp/postinstall https://chaos.nonsense.ws/static/postinstall && /bin/sh -x /tmp/postinstall"
+d-i preseed/late_command string chroot /target sh -c "/usr/bin/curl -o /tmp/postinstall https://shaos.ws/static/postinstall && /bin/sh -x /tmp/postinstall"

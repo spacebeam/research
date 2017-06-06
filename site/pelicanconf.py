@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Nonsense Worlds'
-SITENAME = u'shaos.ws'
+SITENAME = u'SHA/OS'
 SITEURL = 'https://shaos.ws'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'
@@ -35,5 +35,5 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 # Theme stuff
 THEME = "pelican-hyde"
 
-BIO = "Grow by Nonsense Worlds Supercomputer and open-source Community of HPC monkeys."
+BIO = "Grow by https://nonsense.ws open-source community of monkeys."
 PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/804425570633351168/zg5aEOaF.jpg"

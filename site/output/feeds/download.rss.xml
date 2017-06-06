@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>shaos.ws</title><link>https://shaos.ws/</link><description></description><lastBuildDate>Fri, 10 Mar 2017 16:20:00 +0000</lastBuildDate><item><title>Download</title><link>https://shaos.ws/download.html</link><description>&lt;h2&gt;Internet Connection Required&lt;/h2&gt;
+<rss version="2.0"><channel><title>SHA/OS</title><link>https://shaos.ws/</link><description></description><lastBuildDate>Fri, 10 Mar 2017 16:20:00 +0000</lastBuildDate><item><title>Download</title><link>https://shaos.ws/download.html</link><description>&lt;h2&gt;Internet Connection Required&lt;/h2&gt;
 &lt;p&gt;Keep in mind, as the distro is currently based off on the Debian netinstall, an internet connection will be required.&lt;/p&gt;
 &lt;h2&gt;System requirements&lt;/h2&gt;
 &lt;p&gt;Shaos HPC is a Debian workstation with custom configurations and additional software. The &lt;a href="https://www.debian.org/releases/jessie/amd64/ch03s04.html.en"&gt;hardware recommendations&lt;/a&gt; from the Debian project apply.&lt;/p&gt;

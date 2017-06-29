@@ -6,7 +6,7 @@ SHA/OS is a [nonsense.ws](https://nonsense.ws) sponsored project.
 
 Our primary user base is within the distributed high-performance computing community. However, our users come from a wide variety of industries.
 
-**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional Computer Science research, [shaos.ws](https://shaos.ws) provide a linux workspace environment full of distributed asynchronous tools.
+**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional Computer Science research, [shaos.ws](https://shaos.ws) provide a workspace environment full of distributed asynchronous tools.
 
 **Our Goal**: Provide a stable, flexible, distributed environment for kids of all ages.
 

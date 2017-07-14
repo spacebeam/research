@@ -6,25 +6,19 @@ Systems are so extraordinarily complex that it is difficult to deal with them in
 
 We are likely to find analyses which discuss the performance of organizational elements in handling the control process but relatively little discussion of how this is accomplished.
 
-Doibles at time goes out knoledge of these details will grow. We mention the inadequancy of out knowledge at this time fot two reasons:
+Computer systems are to a considerable degree influenced by basic human organizational phenomena, principal among them are perception, motivation and communication.
 
-1 so the reader will have an appreciation of the complexity of the problem and
+The basic elements of the control process are few in number:
 
-2 to point out that even if we do not know many details, we are still able to use cybernetics systems to cope with manu important problems.
+1. gathering of data about performance by a sensor;
 
-Computer systems are to a considerable degree influenced by basic organizational phenomena, principal among them are perception, motivation and communication.
+2. comparison of performance with standard by a discriminator
 
-The basic elements of the control process were few in number:
+3. when a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker:
 
-1 gathering of data about performance by a sensor;
+A. to undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
 
-2 comparison of performance with standard by a discriminator
-
-3 when a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker:
-
-A) to undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
-
-B) to direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
+B. to direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
 
 When these elements exists, there is control through self-regulation of whatever entity contains them.
 

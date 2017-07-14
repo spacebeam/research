@@ -22,6 +22,8 @@ Undertake corrective action which will bring performance back into line with sta
 ### B
 Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
 
+
+### self-regulation
 When these elements exists, there is control through self-regulation of whatever entity contains them.
 
 The elements, however, may be allocated in a number of ways within the entity.

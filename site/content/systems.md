@@ -16,9 +16,11 @@ The basic elements of the control process are few in number:
 
 3. When a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker.
 
-1. Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
+### A 
+Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
 
-2. Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
+### B
+Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
 
 When these elements exists, there is control through self-regulation of whatever entity contains them.
 

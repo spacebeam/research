@@ -10,15 +10,15 @@ Computer systems are to a considerable degree influenced by basic human organiza
 
 The basic elements of the control process are few in number:
 
-1. gathering of data about performance by a sensor;
+1. Gathering of data about performance by a sensor;
 
-2. comparison of performance with standard by a discriminator
+2. Comparison of performance with standard by a discriminator
 
-3. when a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker:
+3. When a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker.
 
-A. to undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
+1. Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
 
-B. to direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
+2. Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
 
 When these elements exists, there is control through self-regulation of whatever entity contains them.
 

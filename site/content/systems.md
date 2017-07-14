@@ -17,13 +17,13 @@ The basic elements of the control process are few in number:
 3. When a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker.
 
 ### A 
-Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new program
+Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new process
 
 ### B
 Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
 
 
-### self-regulation
+### self-regulation of semi-autonomous machines
 When these elements exists, there is control through self-regulation of whatever entity contains them.
 
 The elements, however, may be allocated in a number of ways within the entity.
@@ -32,7 +32,7 @@ They may all be performed by one person or each element may be performed by a di
 
 As the work of carrying the control cycle is divided further, coordination of this effort becomes more difficult.
 
-Control as we have been seen it is one type of system, hence we find control has many of the same properties as systems in general; numerous systems interblocked in many ways.
+Control as we have been seen it is one type of system, we observe how control has many of the same properties as systems in general; numerous systems interblocked in many ways.
 
 One such way may be seen when there are hierarchies of systems paralleling progression of goals.
 

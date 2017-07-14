@@ -10,7 +10,7 @@ In communications such as the written or spoken words, syntax is concerned with 
 
 A third part of communication is concerned with pragmatics and focuses on the relationship between communication and purposeful action.
 
-Each of the approaches to computer communication represents an enormous fiel of study with many subdivisions.
+Each of the approaches to computer communication represents an enormous field of study with many subdivisions.
 
 The central question here is cern in with a communication system. Much of the communications that occur in organizations primarly involve people, and many times the specifics illustrations of the general system pertain to communications among individuals.
 

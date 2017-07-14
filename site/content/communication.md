@@ -1,6 +1,8 @@
-Title: Communication is extraordinarily broad and complex
+Title: Communication Key
 Date: 2017-07-14 04:19
 Category: About
+
+### Communication is extraordinarily broad and complex
 
 One sector, semantics, concerns it-self with the meaning of symbols and words.
 

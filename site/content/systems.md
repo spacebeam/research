@@ -34,7 +34,7 @@ As the work of carrying the control cycle is divided further, coordination of th
 
 Control as we have been seen it is one type of system, hence we find control has many of the same properties as systems in general; numerous systems interblocked in many ways.
 
-One such way may be seen when there are hierarchies of systems paralleling progression of goals and events.
+One such way may be seen when there are hierarchies of systems paralleling progression of goals.
 
 There are also systems within systems and loops within the loops. Since control is also a system, it can influence other systems and in turn be influenced by them.
 

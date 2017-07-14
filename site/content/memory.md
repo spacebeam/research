@@ -13,5 +13,6 @@ Many separate memory areas/types.
 - User data
 - Timers
 - Cache
+- File system
 - SQL
 - NoSQL

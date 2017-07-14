@@ -1,5 +1,5 @@
 Title: Memory
-Date: 2015-07-04 16:20
+Date: 2017-07-04 16:20
 Category: About
 
 Many separate memory areas/types.

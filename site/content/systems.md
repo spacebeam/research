@@ -2,7 +2,7 @@ Title: Systems within Systems
 Date: 2017-07-14 04:20
 Category: About
 
-Systems are so extraordinarily complex that it is difficult to deal with them in any detailed fashion.
+Operating Systems are so extraordinarily complex that it is difficult to deal with them in any detailed fashion.
 
 We are likely to find analyses which discuss the performance of organizational elements in handling the control process but relatively little discussion of how this is accomplished.
 

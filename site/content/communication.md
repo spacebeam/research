@@ -1,8 +1,6 @@
-Title: Communication Key
+Title: Communication Complex
 Date: 2017-07-14 04:19
 Category: About
-
-#### Communication is extraordinarily broad and complex
 
 One sector, semantics, concerns it-self with the meaning of symbols and words.
 
@@ -16,7 +14,7 @@ Each of the approaches to computer communication represents an enormous fiel of 
 
 The central question here is cern in with a communication system. Much of the communications that occur in organizations primarly involve people, and many times the specifics illustrations of the general system pertain to communications among individuals.
 
-#### Channeling Claude E. Shannon
+### Channeling Claude E. Shannon
 
 Shannon originally developed his model of communications while working on problems of telephone communications.
 

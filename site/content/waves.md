@@ -1,12 +1,11 @@
 Title: Waves of the Past
-Date: 2017-04-03 16:22
+Date: 2017-06-16 16:20
 Category: Chaos
 
-## An indication of the future
+### An indication of the future
 
-Not too long ago the literature of organizations consisted largely of principles of organizations; these were didactic statements of absolute and final truths which hold in all situations like a silver bullet.
+Not too long ago the literature of organizations consisted largely of mirrors for princes and principles of organizations; these were didactic statements which hold on certain situations and aspects of rule and behaviour, but in a broader sense, the term is also used to cover histories or work aimed at creating patterns for imitation or avoidance.
 
-They were' in effect, the one final answer to what an organization should be or do.
 
 Today this is no longer the case; knowledge of organizations is incomplete, and perhaps the best we can do at preset is to use it to guide our inquiries about answers rather than as a precise tool to develop them.
 

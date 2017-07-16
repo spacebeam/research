@@ -2,7 +2,7 @@ Title: Stochastic community
 Date: 2017-07-16 14:21
 Category: Community
 
-Growed by groups of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and free public services where humans and machines can easily find new information models and knowledge.
+Growed by groups of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and free public services where humans and machines can easily find new information models.
 
 The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, real-time communications and high-performance computing.
 

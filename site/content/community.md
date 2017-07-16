@@ -1,12 +1,12 @@
 Title: Stochastic community
-Date: 2016-08-15 14:20
+Date: 2017-07-16 14:21
 Category: Community
 
-Grow by groups of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and free public services where humans and machines can easily find new knowledge and information models.
+Growed by groups of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and free public services where humans and machines can easily find new information models and knowledge.
 
-The laboratory conducts multidisciplinary research in the fields of inconsistency robustness, real-time communications and high-performance computing.
+The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, real-time communications and high-performance computing.
 
-## Code and wiki
+### Code and wiki
 
 The GitHub [organization](https://github.com/nonsensews) is [https://github.com/nonsensews.](https://github.com/nonsensews)
 

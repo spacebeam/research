@@ -4,10 +4,9 @@
 	<div class="posts">
 		{% for article in articles_page.object_list %}
 			<div class="post">
-				<h1 class="post-title" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">
-					<a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a>
+				<h1 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
+					<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
 				</h1>
-				<span class="post-date">{{ article.locale_date }}</span>
 				<p>
 					{{ article.summary }}
 				</p>
@@ -19,15 +18,15 @@
 
 		{% if articles_page.has_previous() %}
 		{% set num = articles_page.previous_page_number() %}
-		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">Newer</a></span>
+		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">Previous</a></span>
 		{% else %}
-		<span class="pagination-item older">Newer</span>
+		<span class="pagination-item older">Previous</span>
 		{% endif %}
 
 		{% if articles_page.has_next() %}
-		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Older</a></span>
+		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next</a></span>
 		{% else %}
-		<span class="pagination-item newer">Older</span>
+		<span class="pagination-item newer">Next</span>
 		{% endif %}
 	</div>
 {% endblock %}

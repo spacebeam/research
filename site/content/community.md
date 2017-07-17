@@ -4,7 +4,7 @@ Category: Community
 
 Growed by nodes of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and services where humans and machines can easily find new information models.
 
-The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, real-time communications, game theory and high-performance computing.
+The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, soft real-time communications, game theory and high-performance computing.
 
 ### Code and wiki
 

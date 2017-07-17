@@ -1,4 +1,4 @@
-Title: Stochastic community
+Title: Community
 Date: 2017-07-16 14:21
 Category: Community
 
@@ -12,4 +12,4 @@ The GitHub [organization](https://github.com/nonsensews) is [https://github.com/
 
 We are a loose, sparse distributed organization without a clear power structure.
 
-The [wiki](https://github.com/nonsensews/guide/wiki) explains our working process and how anyone can join the team. 
+The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment and our [community home](https://nonsense.ws) you can link to our working process and how anyone can join the team.

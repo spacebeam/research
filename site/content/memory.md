@@ -9,11 +9,11 @@ Many separate memory areas/types.
 - Lua tables
 - Atom tables
 - Large binary space
+- File system
 - Code space
 - User data
-- LSTM
 - Timers
 - Cache
-- File system
+- LSTM
 - SQL
 - NoSQL

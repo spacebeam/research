@@ -53,12 +53,12 @@
 &lt;li&gt;Lua tables&lt;/li&gt;
 &lt;li&gt;Atom tables&lt;/li&gt;
 &lt;li&gt;Large binary space&lt;/li&gt;
+&lt;li&gt;File system&lt;/li&gt;
 &lt;li&gt;Code space&lt;/li&gt;
 &lt;li&gt;User data&lt;/li&gt;
-&lt;li&gt;LSTM&lt;/li&gt;
 &lt;li&gt;Timers&lt;/li&gt;
 &lt;li&gt;Cache&lt;/li&gt;
-&lt;li&gt;File system&lt;/li&gt;
+&lt;li&gt;LSTM&lt;/li&gt;
 &lt;li&gt;SQL&lt;/li&gt;
 &lt;li&gt;NoSQL&lt;/li&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nonsense Worlds</dc:creator><pubDate>Tue, 04 Jul 2017 16:20:00 +0000</pubDate><guid isPermaLink="false">tag:shaos.ws,2017-07-04:memory.html</guid></item><item><title>SHA/OS</title><link>https://shaos.ws/shaos.html</link><description>&lt;p&gt;SHA/OS is a &lt;a href="https://nonsense.ws"&gt;nonsense.ws&lt;/a&gt; sponsored project. &lt;/p&gt;

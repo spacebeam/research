@@ -35,5 +35,5 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 # Theme stuff
 THEME = "pelican-hyde"
 
-BIO = "Anti-fragile distributed environment for kids of all ages"
+BIO = "Anti-fragile distributed environment for kids of all ages."
 PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/886033699824779264/o8FuhIuP_400x400.jpg"

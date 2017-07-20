@@ -10,6 +10,6 @@ The laboratory conducts multidisciplinary research in the fields of artificial i
 
 The GitHub [organization](https://github.com/nonsensews) is [https://github.com/nonsensews.](https://github.com/nonsensews)
 
-We are a loose, sparse, distributed organization ruled by tropical cloud forest monkeys without a clear power structure.
+We are a loose, sparse, distributed organization ruled by tropical cloud forest monkeys living in the jungle without a clear power structure.
 
 The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment and our [community website](https://nonsense.ws) links to the work process and explain how anyone can join the team.

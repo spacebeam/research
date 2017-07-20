@@ -1,15 +1,21 @@
-Title: Swarm computing
-Date: 2015-05-24 16:20
+Title: Head of the Swarm
+Date: 2017-07-20 16:20
 Category: About
 
-Swarm computing works by combining multiple computer systems to create a powerful, flexible computing engine.
+Swarm intelligence (SI) is the collective behavior of decentralized, self-organized systems, natural or artificial.
 
-A swarm is similar in purpose to a “cluster”. However a swarm has very different structure and properties:
+The concept is employed in work on artificial intelligence that aims to simulate the behavior of swarms or social animals and insects. Swarm refers to any loosely structured collection of interacting agents. Technically swarms are regarded as decentralized self-organized systems.
 
-+ One computer is no computer swarm it needs at least 3 individual nodes.
+Swarm intelligence has a multidisciplinary character its study provides insights that can help humans manage complex systems.
 
-+ Additional computers that are running the “client” can request work from the computer swarm.
+There is no clear definition for swarm intelligence. Emergent behaviour, self-organized behaviour and collective intelligence are the related terms. Surprisingly swarm intelligence system has the ability to act in a coordinated way without any coordinator or external controller.
 
-+ If more computing power is required more computers can join or leave the swarm as necessary.
+The application of ‘swarm intelligence’ refers to the more general set of algorithms. Generally this type of systems consist typically of a population of simple bot agents or boids interacting locally with one another and with their environment.
 
-+ Client computers can be of a variety of specifications.
+The inspiration often comes from nature, especially biological systems.
+
+The agents follow very simple rules, and although there is no centralized control structure dictating how individual agents should behave, local, and to a certain degree random, interactions between such agents lead to the emergence of “intelligent” global behavior, unknown to the individual agents.
+
+Examples in natural systems of SI include ant colonies, bird flocking, animal herding, bacterial growth, fish schooling and microbial intelligence.
+
+The expression was introduced by Gerardo Beni and Jing Wang in 1989, in the context of cellular robotic systems.

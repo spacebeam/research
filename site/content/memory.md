@@ -11,6 +11,7 @@ Many separate memory areas/types.
 - Large binary space
 - Code space
 - User data
+- LSTM
 - Timers
 - Cache
 - File system

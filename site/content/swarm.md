@@ -4,7 +4,7 @@ Category: About
 
 Swarm intelligence (SI) is the collective behavior of decentralized, self-organized systems, natural or artificial.
 
-The concept is employed in work on artificial intelligence that aims to simulate the behavior of social animals and swarms of insects. Swarm in this context refers to any loosely structured collection of interacting actors. Technically swarms are regarded as decentralized self-organized systems.
+The concept is employed in work on artificial intelligence that aims to simulate the behavior of social animals and insects. Swarm in this context refers to any loosely structured collection of interacting actors. Technically swarms are regarded as decentralized self-organized systems.
 
 The application of ‘swarm intelligence’ refers to a more general set of algorithms. This type of systems consist typically of a population of simple bots or units interacting locally with one another and with their environment.
 

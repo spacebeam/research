@@ -12,4 +12,4 @@ The GitHub [organization](https://github.com/nonsensews) is [https://github.com/
 
 We are a loose, sparse, distributed organization ruled by tropical cloud forest monkeys living in the jungle without a clear power structure.
 
-The [wiki](https://github.com/nonsensews/guide/wiki) overview the tools and explains our environment, the [community website](https://nonsense.ws) links to our work process, read the rules and join the team.
+The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment, the [community website](https://nonsense.ws) links to our work process, read the rules and join the team!

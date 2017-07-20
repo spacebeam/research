@@ -2,7 +2,7 @@ Title: Community
 Date: 2017-07-16 14:21
 Category: Community
 
-Growed by nodes of cloud forest monkeys, artists, scientists, and researchers that create open-source resources and services where humans and machines can easily find new information models.
+Growed by nodes of cloud forest monkeys, artists, scientists, and researchers that spawn, train and manage open-source resources and services where humans and machines can easily find new information models.
 
 The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, soft real-time communications, game theory and high-performance computing.
 

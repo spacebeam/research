@@ -1,21 +1,14 @@
-We emphasis on people and computer systems in organizations where managers and supervisors have to make decisions even through their knowledge and concepts may be wrong, inadequate, inconsistent or incomplete.
+## Head of the Swarm
+The collective behavior of decentralized, self-organized systems, natural or artificial.
 
-As generalizations are made about what takes place in organizations, we focus on the decision processes that organizational members engage in or the sequence of factors which lead to a particular behavior.
+Swarm in this context refers to any loosely structured collection of interacting units. Technically swarms are regarded as decentralized self-organized systems.
 
-We mean the possible actions a person may take on receipt of an order from his superior, which he thinks is improper and unwarranted.
+The concept is employed in work on artificial intelligence that aims to simulate the behavior of social animals.
 
-People and computers choose amount the courses of accepting the order competently, protesting, protesting and raising an alternative, or crash and leaving the organization.
+The application of '*swarm intelligence*' refers to a more general set of algorithms. 
 
-It sometimes appears as if there were a basic assumption that people consciously bring our all these possibilities and rationally weigh the pros and cons of each.
+This type of systems consist typically of a population of simple bots or units interacting locally with one another and with their environment.
 
-Does the individual at times carry on the same process unconsciously that on other occasions he perhaps conducts consciously? We hardly know...
+The inspiration comes from nature, biological systems and especially physics, including general relativity and quantum mechanics.
 
-We are faced with the fact that people sometimes do things and later say, I never thought that I would act like that under those circumstances.
-
-In saying this the individual indicates that he saw other opportunities and that, through some process unobservable to him he decided among them and chose on that came from elsewhere that his own conscious thought.
-
-The distinction between conscious and unconscious thought are by no means easy to determine, and for our purposes, it is not usually necessary to make them.
-
-Considering the development of the field of Artificial Intelligence at the moment, it seems reasonable to conduct our analysis at the level at which both machines and humans do make decisions, without taking into account whether the choices and decisions processes are conscious or not.
-
-Several references have been made with the intent of this guide to provide conceptual tools for analysis. As with any other tool models, abstractions and generalizations are useful only when within their limitations.
+The system follow very simple rules, and although there is no centralized control structure dictating how individual units should behave, local, and to a certain degree random, interactions between them lead to the emergence of “intelligent” global behavior, unknown to the individual units.

@@ -1,4 +1,6 @@
 ## Head of the Swarm
+
+### Jungle intelligence
 The collective behavior of decentralized, self-organized systems, natural or artificial.
 
 Swarm in this context refers to any loosely structured collection of interacting units. Technically swarms are regarded as decentralized self-organized systems.

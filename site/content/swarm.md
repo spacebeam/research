@@ -4,11 +4,11 @@ Category: About
 
 The collective behavior of decentralized, self-organized systems, natural or artificial.
 
-Swarm in this context refers to any loosely structured collection of interacting units. Technically swarms are regarded as decentralized self-organized systems.
+Swarm in this context refers to any loosely structured collection of interacting units.
 
 The concept is employed in work on artificial intelligence that aims to simulate the behavior of social animals.
 
-The application of '*swarm intelligence*' refers to a more general set of algorithms. 
+The application of '*swarm intelligence*' refers to a more general set of algorithms.
 
 This type of systems consist typically of a population of simple bots or units interacting locally with one another and with their environment.
 

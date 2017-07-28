@@ -6,7 +6,7 @@ Many separate memory areas/types.
 
 - Process heaps
 - ETS tables
-- CRDT's
+- CRDT
 - Lua tables
 - Atom tables
 - Large binary space

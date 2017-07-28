@@ -39,7 +39,7 @@
 &lt;ul&gt;
 &lt;li&gt;Process heaps&lt;/li&gt;
 &lt;li&gt;ETS tables&lt;/li&gt;
-&lt;li&gt;CRDT's&lt;/li&gt;
+&lt;li&gt;CRDT&lt;/li&gt;
 &lt;li&gt;Lua tables&lt;/li&gt;
 &lt;li&gt;Atom tables&lt;/li&gt;
 &lt;li&gt;Large binary space&lt;/li&gt;

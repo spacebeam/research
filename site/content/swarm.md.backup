@@ -27,7 +27,7 @@ It has been used both as a framework for a theoretical understanding of computat
 
 Its development was "motivated by the prospect of highly parallel computing machines consisting of dozens, hundreds, or even thousands of independent microprocessors, each with its own local memory and communications processor, communicating via a high-performance communications network.
 
-### Fundamental concepts
+Fundamental concepts[edit]
 The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-oriented programming languages.
 
 An actor is a computational entity that, in response to a message it receives, can concurrently:
@@ -38,7 +38,7 @@ An actor is a computational entity that, in response to a message it receives, c
 
 There is no assumed sequence to the above actions and they could be carried out in parallel.
 
-Decoupling the sender from communications sent was a fundamental advance of the Actor model enabling asynchronous communication and control structures as patterns of passing messages.
+Decoupling the sender from communications sent was a fundamental advance of the Actor model enabling asynchronous communication and control structures as patterns of passing messages.[8]
 
 Recipients of messages are identified by address. Thus an actor can only communicate with actors whose addresses it has. It can obtain those from a message it receives, or if the address is for an actor it has itself created.
 

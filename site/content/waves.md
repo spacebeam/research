@@ -11,4 +11,4 @@ Today this is no longer the case; knowledge of organizations is incomplete, and 
 
 On the surface, this shift from positive statements to qualified less precise ones might seem to be a regression, a loss of position.
 
-Actually, it amounts to an enormous step forward. The simple faith in the existence of a final and ultimate answer has been replaced by a more mature and sophisticate understanding of the multitude and complexity of the factors involved in organizations.
+Actually, it amounts to an enormous step forward. The simple faith in the existence of a final and ultimate answer has been replaced by a more mature and sophisticate understanding of the concurrent factors involved in organizations.

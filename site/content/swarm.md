@@ -2,8 +2,6 @@ Title: Head of the Swarm
 Date: 2017-07-20 16:20
 Category: About
 
-## Head of the Swarm
-
 The collective behavior of decentralized, self-organized systems, natural or artificial.
 
 Swarm in this context refers to any loosely structured collection of interacting units.
@@ -16,30 +14,4 @@ This type of systems consist typically of a population of simple bots or units i
 
 The inspiration comes from nature, biological systems and especially physics, including general relativity and quantum mechanics.
 
-The system follow very simple rules, and although there is no centralized control structure dictating how individual units should behave, local, and to a certain degree random, interactions between them lead to the emergence of “intelligent” global behavior, unknown to the individual processes.
-
-### The actor model 
-In computer science is a mathematical model of concurrent computation that treats "actors" as the universal primitives of concurrent computation.
-
-Originated in 1973 by Carl Hewitt unlike previous models of computation, the actor model was inspired by physics, including general relativity and quantum mechanics. 
-
-It has been used both as a framework for a theoretical understanding of computation and as the theoretical basis for several practical implementations of concurrent systems.
-
-Its development was "motivated by the prospect of highly parallel computing machines consisting of dozens, hundreds, or even thousands of independent microprocessors, each with its own local memory and communications processor, communicating via a high-performance communications network.
-
-### Fundamental concepts
-The actor model adopts the philosophy that everything is an actor. This is similar to the everything is an object philosophy used by some object-oriented programming languages.
-
-An actor is a computational entity that, in response to a message it receives, can concurrently:
-
-- send a finite number of messages to other actors;
-- create a finite number of new actors;
-- designate the behavior to be used for the next message it receives.
-
-There is no assumed sequence to the above actions and they could be carried out in parallel.
-
-Decoupling the sender from communications sent was a fundamental advance of the Actor model enabling asynchronous communication and control structures as patterns of passing messages.
-
-Recipients of messages are identified by address. Thus an actor can only communicate with actors whose addresses it has. It can obtain those from a message it receives, or if the address is for an actor it has itself created.
-
-The actor model is characterized by inherent concurrency of computation within and among actors, dynamic creation of actors, inclusion of actor addresses in messages, and interaction only through direct asynchronous message passing with no restriction on message arrival order.
+The system follow very simple rules, and although there is no centralized control structure dictating how working units should behave, local, and to a certain degree random, interactions between them lead to the emergence of “*intelligent*” global behavior, unknown to the individual units.

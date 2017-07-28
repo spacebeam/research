@@ -43,7 +43,7 @@
 &lt;li&gt;Lua tables&lt;/li&gt;
 &lt;li&gt;Atom tables&lt;/li&gt;
 &lt;li&gt;Large binary space&lt;/li&gt;
-&lt;li&gt;Python dicts, tuples and lists.&lt;/li&gt;
+&lt;li&gt;Python dicts, tuples and lists&lt;/li&gt;
 &lt;li&gt;File system&lt;/li&gt;
 &lt;li&gt;Code space&lt;/li&gt;
 &lt;li&gt;User data&lt;/li&gt;

@@ -10,7 +10,7 @@ Many separate memory areas/types.
 - Lua tables
 - Atom tables
 - Large binary space
-- Python dicts, tuples and lists.
+- Python dicts, tuples and lists
 - File system
 - Code space
 - User data

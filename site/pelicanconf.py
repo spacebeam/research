@@ -21,7 +21,7 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 # Social widget
 SOCIAL = (('cube', 'https://nonsense.ws'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
-	('cloud-download', 'https://shaos.ws/download.html'),
+	('download', 'https://shaos.ws/download.html'),
 	('github', 'https://github.com/nonsensews'))
 
 DEFAULT_PAGINATION = 2

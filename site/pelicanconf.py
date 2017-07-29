@@ -21,7 +21,7 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 # Social widget
 SOCIAL = (('cube', 'https://nonsense.ws'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
-	('twitter', 'https://twitter.com/shaosws'),
+	('cloud-download', 'https://shaos.ws/download.html'),
 	('github', 'https://github.com/nonsensews'))
 
 DEFAULT_PAGINATION = 2
@@ -32,8 +32,8 @@ DEFAULT_PAGINATION = 2
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
-# Theme stuff
-THEME = "pelican-hyde"
+# Configure pelican theme
+THEME = "pelican-shaos"
 
-BIO = "Anti-fragile distributed linux environment for kids of all ages."
+BIO = "Distributed workspace environment for kids of all ages."
 PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/886033699824779264/o8FuhIuP_400x400.jpg"

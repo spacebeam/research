@@ -90,9 +90,12 @@ html {
 
 .sidebar-about .profile-picture {
   margin: 0 auto;
-  border-radius: 50%;
-  border: 2px solid #2a9ec5;
   max-width: 5rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;    
 }
 
 /* Sidebar nav */

@@ -36,4 +36,4 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 THEME = "pelican-shaos"
 
 BIO = "Antifragile distributed linux environment for kids of all ages."
-PROFILE_IMAGE = "https://pbs.twimg.com/profile_images/886033699824779264/o8FuhIuP_400x400.jpg"
+PROFILE_IMAGE = "https://shaos.ws/theme/img/shaos.png"

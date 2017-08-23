@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Nonsense Worlds'
+AUTHOR = u'Nonsense Web Services'
 SITENAME = u'SHA/OS'
 SITEURL = 'https://shaos.ws'
 PATH = 'content'
@@ -14,7 +14,7 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 # Community
-LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
+LINKS = (('Nonsense Web Services', 'https://nonsense.ws/'),)
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -35,5 +35,5 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 # Configure pelican theme
 THEME = "pelican-shaos"
 
-BIO = "Antifragile distributed linux environment for kids of all ages"
+BIO = "Antifragile distributed OS environment for kids of all ages"
 PROFILE_IMAGE = "https://shaos.ws/theme/img/shaos.png"

@@ -2,14 +2,14 @@ Title: Community
 Date: 2017-07-16 14:21
 Category: Community
 
-Growed by nodes of cloud forest monkeys, artists, scientists, and researchers that spawn, train and manage open-source resources and services where humans and machines can easily find new information models.
+SHA/OS is a distributed operating system designed for building machine learning models and distributed networke systems on a wide variety of devices and platforms.
 
-The laboratory conducts multidisciplinary research in the fields of artificial intelligence, inconsistency robustness, soft real-time communications, game theory and high-performance computing.
+SHA/OS run as a user application on top of an existing linux system or as a stand alone Debian custom release.
+
+Each system node presents an identical environment to the applications, irrespective of the underlying host OS or architecture, this integration allow us to spawn an homogeneous grid environment across multiple different base platforms and clusters tested to manage millions of request per node in a peer-to-peer 21 century fashion.
 
 ### Code and wiki
 
 The GitHub [organization](https://github.com/nonsensews) is [https://github.com/nonsensews.](https://github.com/nonsensews)
 
-We are a loose, sparse, distributed organization ruled by tropical cloud forest monkeys living in the jungle without a clear power structure.
-
-The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment, the [community website](https://nonsense.ws) links to the work process, read the rules and join the team!
+The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment, the [community website](https://nonsense.ws) links to the community work process, read the rules and join the team!

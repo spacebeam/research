@@ -35,5 +35,5 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 # Configure pelican theme
 THEME = "pelican-shaos"
 
-BIO = "Scientific High-Availability OS is a distributed operating system"
+BIO = "Scientific High-Availability OS"
 PROFILE_IMAGE = "https://shaos.ws/theme/img/shaos.png"

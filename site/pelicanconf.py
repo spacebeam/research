@@ -19,7 +19,7 @@ LINKS = (('Nonsense Web Services', 'https://nonsense.ws/'),)
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 # Social widget
-SOCIAL = (('cube', 'https://nonsense.ws'),
+SOCIAL = (('cube', 'https://shaos.ws/community.html'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
 	('download', 'https://shaos.ws/download.html'),
 	('github', 'https://github.com/nonsensews'))

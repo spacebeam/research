@@ -25,6 +25,7 @@ dconf-cli
 dconf-editor
 gksu
 gdebi
+emacs
 xdg-utils
 rsync
 anacron
@@ -35,6 +36,7 @@ cpufrequtils
 avahi-daemon
 openssh-client
 sshfs
+gdb
 bc
 jq
 i3
@@ -67,6 +69,7 @@ compton
 scrot
 feh
 vlc
+mpv
 python-wxgtk3.0
 pgadmin3
 audacity
@@ -75,6 +78,9 @@ tmux
 less
 wget
 mutt
+urlview
+mopidy
+ncmpcpp
 curl
 vim
 git
@@ -85,3 +91,4 @@ python-dev
 python-pip
 gtk2-engines-murrine
 gnome-themes-standard
+fontconfig

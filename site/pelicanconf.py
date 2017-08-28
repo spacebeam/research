@@ -22,7 +22,7 @@ LINKS = (('Nonsense Web Services', 'https://nonsense.ws/'),)
 SOCIAL = (('cube', 'https://shaos.ws/community.html'),
 	('book', 'https://github.com/nonsensews/guide/wiki'),
 	('download', 'https://shaos.ws/download.html'),
-	('github', 'https://github.com/nonsensews'))
+	('twitter', 'https://twitter.com/shaosws'))
 
 DEFAULT_PAGINATION = 2
 

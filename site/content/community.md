@@ -2,11 +2,11 @@ Title: Community
 Date: 2017-08-27 14:21
 Category: Community
 
-SHA/OS is an operating system full of distributed high-availability tools that runs on a wide variety of devices and platforms.
+SHA/OS is a distributed operating system full of high-availability tools that runs on a wide variety of platforms.
 
-SHA/OS run hosted as a user application on top of an existing linux system or as a native stand alone Debian stable custom release.
+SHA/OS run hosted as a user application on any existing linux system or as a custom rolling release build on top of Debian.
 
-Each node presents an identical environment to the applications, irrespective of the underlying host OS or architecture, this integration allow us to spawn an homogeneous grid across multiple different clusters of peer-to-peer nodes.
+Each node presents an identical environment to the applications, irrespective of the underlying host OS or architecture, this integration allows to spawn an egalitarian homogeneous grid across multiple different clusters of peer-to-peer nodes.
 
 ### Code and wiki
 

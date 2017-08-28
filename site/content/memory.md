@@ -2,21 +2,23 @@ Title: Memory
 Date: 2017-07-04 16:20
 Category: About
 
-Many separate memory areas/types.
+Many separate data memory areas/types.
 
 - Process heaps
 - ETS tables
-- CRDT
-- Lua tables
-- Atom tables
+- Atom table
 - Large binary space
+- Lua tables
 - Python dicts, tuples and lists
 - File system
 - Code space
 - User data
-- Timers
+- CRDTs
 - Maps
+- Counters
+- Registers
 - Cache
-- LSTM
 - SQL
 - NoSQL
+
+and don't forguet LSTM networks!

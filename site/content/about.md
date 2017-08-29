@@ -2,9 +2,7 @@ Title: SHA/OS
 Date: 2017-08-28 04:20
 Category: About
 
-SHA/OS is a [nonsense.ws](https://nonsense.ws) sponsored project. 
-
-Our primary user base is within the distributed high-performance computing community. However, our power users come from a wide variety of studios and industries.
+Our primary user base is within the distributed high-performance computing community. However, our power users come from a wide variety of industries.
 
 **Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional research, [shaos.ws](https://shaos.ws) provide a workspace environment full of distributed high-availability tools.
 

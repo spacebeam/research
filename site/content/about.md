@@ -8,9 +8,9 @@ Our primary user base is within the distributed high-performance computing commu
 
 **Our Goal**: Provide a stable, flexible, distributed environment for kids of all ages.
 
-The Linux distribution is based on [Debian](https://www.debian.org/) plus all computer [nonsense.ws](https://nonsense.ws) we provide additional semi-autonomous assistance in a [tiling window](https://i3wm.org/docs/) user interface with heavy focus on [Erlang/OTP](http://www.erlang.org/) and the official [native](https://github.com/zeromq/chumak) implementation of [ZeroMQ](http://zeromq.org). You can talk to any other ZeroMQ stack on your network.
+The Linux distribution is based on [Debian](https://www.debian.org/) plus all computer [nonsense.ws](https://nonsense.ws) we provide additional semi-autonomous assistance in a [tiling window](https://i3wm.org/docs/) user interface with heavy focus on [Erlang/OTP](http://www.erlang.org/) and the official [native](https://github.com/zeromq/chumak) implementation of [ZeroMQ](http://zeromq.org).
 
-Other native [ZMTP](http://zmtp.org/) implementations are libzmq (C++), NetMQ (C#), JeroMQ (Java), libzmtp (C).
+You can talk to any other ZeroMQ stack on your network. Other native [ZMTP](http://zmtp.org/) implementations are libzmq (C++), NetMQ (C#), JeroMQ (Java), libzmtp (C).
 
 We make a stable workspace for distributed computing that anyone can use today, at [nonsense.ws](https://nonsense.ws) these things work together into one unified environment with native support for [Luerl](https://luerl.org) an implementation of Lua written in Erlang that integrate both [#LuaLang](https://twitter.com/hashtag/lualang?src=hash) and the BEAM ecosystems.
 

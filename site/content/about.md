@@ -8,7 +8,7 @@ Our primary user base is within the distributed high-performance computing commu
 
 **Our Goal**: Provide a stable, flexible, distributed environment for kids of all ages.
 
-The Linux distribution is based on [Debian](https://www.debian.org/) plus all computer [nonsense.ws](https://nonsense.ws) environment we provide additional semi-autonomous assistance in a [tiling window](https://i3wm.org/docs/) user interface, there is heavy focus on [Erlang/OTP](http://www.erlang.org/) and the official [native](https://github.com/zeromq/chumak) implementation of [ZeroMQ](http://zeromq.org). You can talk to any other ZeroMQ stack on your network.
+The Linux distribution is based on [Debian](https://www.debian.org/) plus all computer [nonsense.ws](https://nonsense.ws) we provide additional semi-autonomous assistance in a [tiling window](https://i3wm.org/docs/) user interface with heavy focus on [Erlang/OTP](http://www.erlang.org/) and the official [native](https://github.com/zeromq/chumak) implementation of [ZeroMQ](http://zeromq.org). You can talk to any other ZeroMQ stack on your network.
 
 Other native [ZMTP](http://zmtp.org/) implementations are libzmq (C++), NetMQ (C#), JeroMQ (Java), libzmtp (C).
 

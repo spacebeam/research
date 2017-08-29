@@ -1,5 +1,5 @@
 Title: SHA/OS
-Date: 2017-06-29 04:20
+Date: 2017-08-28 04:20
 Category: About
 
 SHA/OS is a [nonsense.ws](https://nonsense.ws) sponsored project. 

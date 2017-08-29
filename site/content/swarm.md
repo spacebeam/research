@@ -1,4 +1,4 @@
-Title: Head of the Swarm
+Title: Head of the swarm
 Date: 2017-07-20 16:20
 Category: About
 

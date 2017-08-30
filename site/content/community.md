@@ -12,4 +12,4 @@ Each node presents an identical environment to your working space, irrespective 
 
 The Code lives at the expected GitHub [organization](https://github.com/nonsensews) at [https://github.com/nonsensews.](https://github.com/nonsensews)
 
-The Computer Nonsense [Guide](https://github.com/nonsensews/guide/wiki) explains our environment and the [community website](https://nonsense.ws) links to the our work process, read the rules and join the team!
+The Computer Nonsense [Guide](https://github.com/nonsensews/guide/wiki) explains our environment and the [community website](https://nonsense.ws) links to our work process, read the rules and join the team!

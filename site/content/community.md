@@ -8,7 +8,7 @@ The system run hosted as a user application on any existing linux distribution o
 
 Each node presents an identical environment to your working space, irrespective of the underlying host OS or architecture, this integration allow to spawn an egalitarian homogeneous grid across multiple different clusters of peers.
 
-### Code and wiki
+### Code and documentation
 
 The Code lives at the expected GitHub [organization](https://github.com/nonsensews) at [https://github.com/nonsensews.](https://github.com/nonsensews)
 

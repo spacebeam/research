@@ -4,12 +4,12 @@ Category: Community
 
 SHA/OS is a distributed operating system full of high-availability tools that runs on a wide variety of platforms.
 
-SHA/OS run hosted as a user application on any existing linux system or as a custom rolling release build on top of Debian.
+The system run hosted as a user application on any existing linux distribution or as a custom rolling release build on top of [Debian](https://debian.org).
 
-Each node presents an identical environment to the applications, irrespective of the underlying host OS or architecture, this integration allows to spawn an egalitarian homogeneous grid across multiple different clusters of peer-to-peer nodes.
+Each node presents an identical environment to the userspace applications, irrespective of the underlying host OS or architecture, this integration allows to spawn an egalitarian homogeneous grid across multiple different clusters of peer-to-peer nodes.
 
 ### Code and wiki
 
-The GitHub [organization](https://github.com/nonsensews) is [https://github.com/nonsensews.](https://github.com/nonsensews)
+The Code lives at the expected GitHub [organization](https://github.com/nonsensews) at [https://github.com/nonsensews.](https://github.com/nonsensews)
 
-The [wiki](https://github.com/nonsensews/guide/wiki) explains our environment, the [community website](https://nonsense.ws) links to the community work process, read the rules and join the team!
+The Computer Nonsense [Guide](https://github.com/nonsensews/guide/wiki) explains our environment and the [community website](https://nonsense.ws) links to the our work process, read the rules and join the team!

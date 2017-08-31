@@ -6,7 +6,7 @@ Our primary user base is within the distributed high-performance computing commu
 
 **Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional research, [shaos.ws](https://shaos.ws) provide a workspace environment full of distributed high-availability tools.
 
-**Our Goal**: Provide a stable, flexible, distributed environment for kids of all ages.
+**Our Goal**: Provide a stable, flexible, distributed environment for kid scientists of all ages.
 
 The Linux distribution is based on [Debian](https://www.debian.org/) plus all computer [nonsense.ws](https://nonsense.ws) we provide additional semi-autonomous assistance in a [tiling window](https://i3wm.org/docs/) user interface with heavy focus on [Erlang/OTP](http://www.erlang.org/) and the official [native](https://github.com/zeromq/chumak) implementation of [ZeroMQ](http://zeromq.org).
 

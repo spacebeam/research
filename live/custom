@@ -1,0 +1,87 @@
+
+# Install applications we need to build the environment
+
+sudo apt-get install \
+	debootstrap \
+	syslinux \
+	isolinux \
+	squashfs-tools \
+	genisoimage \
+	memtest86+ \
+	rsync
+
+# Set up the base Debian environment. We are using testing as rolling release and amd64 for the architecture. Please change your mirror if you are not in the U.S or know of a mirror close to you.
+
+mkdir $HOME/live_boot
+
+sudo debootstrap \
+	--arch=amd64
+	--variant=minbase
+	testing $HOME/live_boot/chroot \
+	http://ftp.us.debian.org/debian/
+
+# chroot to our Debian environment
+
+sudo chroot $HOME/live_boot/chroot
+
+# Set a custom hostname for your Debian environment.
+
+echo "shaos-live" > /etc/hostname
+
+
+apt-get update && \
+apt-get install \
+	-y
+	linux-image-amd64 \
+	live-boot \
+	systemd-sysv
+
+# here we make the custom environment of our choosing, and then run apt-get clean to clean some cache.
+
+apt-get install -y tcpdump wget openssh-client xserver-xorg-core xserver-xorg xinit xterm pciutils usbutils gparted ntfs-3g hfsprogs rsync  dosfstools syslinux partclone nano  pv chntpw network-manager-gnome network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-vpnc-gnome e2fsprogs xfsprogs reiserfsprogs reiser4progs jfsutils ntfs-3g fuse gvfs gvfs-fuse fusesmb libnss-mdns gvfs-bin gvfs-backends dconf-service dconf-cli dconf-editor gksu gdebi emacs xdg-utils rsync anacron usbutils wmctrl menulibre cpufrequtils avahi-daemon openssh-client sshfs gdb bc jq i3 i3status i3lock ranger lxappearance chromium aptitude lxrandr lxtask suckless-tools lightdm terminator transmission filezilla build-essential gnome-calculator gpicview virt-viewer xarchiver zip rar unrar unzip zsh pavucontrol geany compton scrot feh vlc mpv python-wxgtk3.0 pgadmin3 audacity htop tmux less wget mutt urlview mopidy ncmpcpp curl vim git monit python-virtualenv python-apt python-dev python-pip gtk2-engines-murrine gnome-themes-standard fontconfig
+
+apt-get clean
+
+# set the root password
+passwd root
+
+exit
+
+# make directories that will be copied to our bootable medium.
+
+
+
+
+
+
+(cd $HOME/live_boot && \
+    cp chroot/boot/vmlinuz-4.9.0-3-amd64 image/live/vmlinuz1
+    cp chroot/boot/initrd.img-4.9.0-3-amd64 image/live/initrd1
+)
+
+
+UI menu.c32
+
+prompt 0
+menu title Debian Live
+
+timeout 300
+
+label Debian Live 4.9.0-3-amd64
+menu label ^Debian Live 4.9.0-3-amd64
+menu default
+kernel /live/vmlinuz1
+append initrd=/live/initrd1 boot=live
+
+label hdt
+menu label ^Hardware Detection Tool (HDT)
+kernel hdt.c32
+text help
+HDT displays low-level information about the systems hardware.
+endtext
+
+label memtest86+
+menu label ^Memory Failure Detection (memtest86+)
+kernel /live/memtest
+
+

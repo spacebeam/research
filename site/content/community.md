@@ -4,11 +4,11 @@ Category: Community
 
 SHA/OS is a distributed operating system full of high-availability tools that runs on a wide variety of platforms.
 
-The system run hosted as a user space application on any existing linux distribution and it's also available pre-installed on top of a custom [Debian](https://debian.org) live cd / usb.
+The system run hosted as a user space application on any existing linux distribution and it's also available pre-installed on top of a custom [Debian](https://debian.org) live image.
 
-Each node presents an identical environment to your working space, irrespective of the underlying host OS our focus allow us to span clean egalitarian homogeneous grids across multiple clusters of peers.
+Each node presents an identical environment to your working space, irrespective of the underlying host OS our focus allow us to spawn clean egalitarian homogeneous grids across multiple clusters of peers.
 
-A communications protocol called ZMTP version 3.1 is applied uniformly to access both local and remote resources, which programs use by message passing.
+A communications protocol called [ZMTP](http://zmtp.org) version 3.1 is applied uniformly to access both local and remote resources, which processes in multiple languages use to communicate like you and me by message passing.
 
 ### Code and documentation
 

@@ -8,6 +8,8 @@ The system run hosted as a user space application on any existing linux distribu
 
 Each node presents an identical environment to your working space, irrespective of the underlying host OS our focus allow us to span clean egalitarian homogeneous grids across multiple clusters of peers.
 
+A communications protocol called ZMTP version 3.1 is applied uniformly to access both local and remote resources, which programs use by message passing.
+
 ### Code and documentation
 
 The Code lives at the expected GitHub [organization](https://github.com/nonsensews) at [https://github.com/nonsensews.](https://github.com/nonsensews)

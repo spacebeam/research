@@ -4,7 +4,7 @@ Category: About
 
 Our primary user base is within the distributed high-performance computing community. However, our power users come from a wide variety of industries.
 
-**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional research, [shaos.ws](https://shaos.ws) provide a workspace environment full of distributed high-availability tools.
+**Our Mission**: Driven by [nonsense.ws](https://nonsense.ws) we focus on multi-dimensional research, [SHA/OS](https://shaos.ws) provide a workspace environment full of distributed high-availability tools.
 
 **Our Goal**: Provide a distributed environment for scientists of all ages.
 

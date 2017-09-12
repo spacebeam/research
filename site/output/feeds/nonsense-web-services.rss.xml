@@ -143,7 +143,7 @@
 &lt;p&gt;By going to another means of communication, such as finding a picture.&lt;/p&gt;
 &lt;p&gt;The strategy in     these solutions is the same.&lt;/p&gt;
 &lt;p&gt;The incompleteness of the system or language is compensated for by resorting to something outside of the system, by using another language or another system.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nonsense Web Services</dc:creator><pubDate>Mon, 03 Apr 2017 16:20:00 +0000</pubDate><guid isPermaLink="false">tag:shaos.ws,2017-04-03:chaos-and-inconsistency.html</guid></item><item><title>Download</title><link>https://shaos.ws/download.html</link><description>&lt;h2&gt;Hosted&lt;/h2&gt;
-&lt;p&gt;Hosted systems have been reported to run on Debian, Ubuntu and CentOS Linux.&lt;/p&gt;
+&lt;p&gt;Hosted systems have been reported to run on Debian, Ubuntu and CentOS.&lt;/p&gt;
 &lt;p&gt;You can use LuaRocks to install the SHA/OS cube on Linux.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;luarocks install cube-cli&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If the installation fails make sure that you have &lt;a href="http://singularity.lbl.gov"&gt;singularity&lt;/a&gt; installed.&lt;/p&gt;

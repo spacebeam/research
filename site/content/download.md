@@ -4,7 +4,7 @@ Category: Download
 Summary: SHA/OS is a distributed workstation with custom configurations and additional software focus on high-performance and scientific computation.
 
 ## Hosted
-Hosted systems have been reported to run on Debian, Ubuntu and CentOS Linux.
+Hosted systems have been reported to run on Debian, Ubuntu and CentOS.
 
 You can use LuaRocks to install the SHA/OS cube on Linux.
 

@@ -6,7 +6,7 @@ Summary: SHA/OS is a distributed workstation with custom configurations and addi
 ## Hosted
 Hosted systems have been reported to run on Debian, Ubuntu and CentOS Linux.
 
-You can use LuaRocks to install the SHA/OS cube-cli on Linux.
+You can use LuaRocks to install the SHA/OS cube on Linux.
 
 ``luarocks install cube-cli``
 

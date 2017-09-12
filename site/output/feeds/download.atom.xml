@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SHA/OS</title><link href="https://shaos.ws/" rel="alternate"></link><link href="https://shaos.ws/feeds/download.atom.xml" rel="self"></link><id>https://shaos.ws/</id><updated>2017-03-10T16:20:00+00:00</updated><entry><title>Download</title><link href="https://shaos.ws/download.html" rel="alternate"></link><published>2017-03-10T16:20:00+00:00</published><author><name>Nonsense Web Services</name></author><id>tag:shaos.ws,2017-03-10:download.html</id><summary type="html">&lt;h2&gt;Hosted&lt;/h2&gt;
 &lt;p&gt;Hosted systems have been reported to run on Debian, Ubuntu and CentOS Linux.&lt;/p&gt;
+&lt;p&gt;You can use LuaRocks to install the SHA/OS cube-cli on Linux.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;luarocks install cube-cli&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If the installation fails make sure that you have &lt;a href="http://singularity.lbl.gov"&gt;singularity&lt;/a&gt; installed.&lt;/p&gt;
+&lt;p&gt;For help using cube-cli, including a list of commands, run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ cube-cli --help&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Native&lt;/h2&gt;
 &lt;p&gt;If you can use BitTorrent, please do so and leave the client open for a while so you can seed the files for other users. Otherwise, use the &lt;a href="https://shaos.ws/images/shaos-8.17-amd64.iso"&gt;direct download&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>

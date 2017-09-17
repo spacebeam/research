@@ -1,9 +1,0 @@
-[unit]
-name=starcraft
-description=starcraft build pipeline
-;type=default
-;uri=
-
-[consume]
-
-[execute]

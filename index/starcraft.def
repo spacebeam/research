@@ -1,0 +1,33 @@
+BootStrap: debootstrap
+OSVersion: xenial
+MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+
+
+%runscript
+    echo "Well, it seem there is something to chaos theory after all."
+    winetricks -q vcrun2013
+    winetricks -q vcrun2015
+    winetricks -q nocrashdialog
+    unzip -o /data/StarCraft.zip -d ~/.wine/drive_c/
+    wine ~/.wine/drive_c/StarCraft/BWAPI/Chaoslauncher/Chaoslauncher.exe
+
+
+%post
+    echo "Setting up the container, please wait!"
+    sed -i 's/$/ universe/' /etc/apt/sources.list
+    apt-get -y install aptitude wget zip unzip
+    dpkg --add-architecture i386
+    apt-get update
+    aptitude install -y software-properties-common
+    aptitude install -y apt-transport-https
+    wget https://dl.winehq.org/wine-builds/Release.key
+    apt-key add Release.key
+    apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+    apt-get update
+    aptitude install -y winehq-staging
+    wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+    mv winetricks /usr/local/bin/
+    wget https://underworld.ws/StarCraft.zip
+    mkdir /data
+    mv StarCraft.zip /data/
+    apt-get clean

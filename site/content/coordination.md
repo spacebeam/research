@@ -1,4 +1,7 @@
-### Achieving Coordination
+Title: Achieving Coordination
+Date: 2016-09-28 16:20
+Category: Community
+
 Having covered the essential core of distribution let us now consider how several loops are connected to provide that synchronization of effort we think of as coordination.
 
 #### Programmed links
@@ -20,4 +23,4 @@ The feedback loop containing information about organizational performance and co
 
 This even result in reformulating the basic goals of organizations. Feedback is essential to adequate goal formation.
 
-This leads us to an important point which, when stated without the type of development presented, appears to be a somewhat mystical statement; namely, organizations automatically take actions to bring about their continuity or to perpetuate themselves. Of course there are times when organizations do not change goals and do go out of existence. Many, however, shift to those goals feedback defines as possible; feedback leading to goal redefinition is one of the basic ways by wh
+This leads us to an important point which, when stated without the type of development presented, appears to be a somewhat mystical statement; namely, organizations automatically take actions to bring about their continuity or to perpetuate themselves. Of course there are times when organizations do not change goals and do go out of existence. Many, however, shift to those goals feedback defines as possible; feedback leading to goal redefinition is one of the basic ways by which organizational survival is achieved.

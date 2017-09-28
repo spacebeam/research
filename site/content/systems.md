@@ -1,23 +1,41 @@
-### Achieving Coordination
-Having covered the essential core of distribution let us now consider how several loops are connected to provide that synchronization of effort we think of as coordination.
+Title: Systems within Systems
+Date: 2017-07-14 04:20
+Category: About
 
-#### Programmed links
-If the process had given instruction to report immediately on completion of the task, this instruction facilitates linking the completed act with the next one. Through an information transfer, we call this a programmed link.
+Operating Systems are so extraordinarily complex that it is difficult to deal with them in any detailed fashion.
 
-The supervisor node, of course may detect that something is wrong through another control cycle. It can then take corrective action by including or adding into this programmed link or perhaps by attacking on the more difficult problem of human apathetic attitudes and motivation his units could display.
+We are likely to find analyses which discuss the performance of organizational elements in handling the control process but relatively little discussion of how this is accomplished.
 
-#### Progression of goals
-Organizations have progression of goals which result from a division of work.
+Computer systems are to a considerable degree influenced by basic human organizational phenomena, principal among them are perception, motivation and communication.
 
-A subdivide goal becomes the task of a process contained within a specialized organizational unit.
+The basic elements of the control process are few in number:
 
-This nesting of goals is contained as part of the core organizational  means-ends chain.
+1. Gathering of data about performance by a sensor;
 
-Needless to say, the hierarchy of control loops which are connected with the progression of goals may be handle in number of ways, regardless of how the elements are allocated, the important factor is that all elements must be provided for in some way. Hence, our model supplies an extremely useful tool in analyzing complex control situations by telling us what basic functions bust occur and in what sequence, even though initially we have no idea as to where or how they are executed in the organization.
+2. Comparison of performance with standard by a discriminator
 
-#### Feedback and Goal formation
-The feedback loop containing information about organizational performance and conditions leads to definition of subunit goals or standards. It's important to show how a situation in one area could lead to modifications in a number of organizational units at higher levels.
+3. When a difference between performance and standard is noted, two courses of action are likely to be taking by a decision maker.
 
-This even result in reformulating the basic goals of organizations. Feedback is essential to adequate goal formation.
+### A 
+Undertake corrective action which will bring performance back into line with standards perhaps by selecting or developing a new process
 
-This leads us to an important point which, when stated without the type of development presented, appears to be a somewhat mystical statement; namely, organizations automatically take actions to bring about their continuity or to perpetuate themselves. Of course there are times when organizations do not change goals and do go out of existence. Many, however, shift to those goals feedback defines as possible; feedback leading to goal redefinition is one of the basic ways by which organizational survival is achieved.
+### B
+Direct information about this difference to a goal setter for the establishment of new goals or the redefinition of old ones.
+
+
+### self-regulation of semi-autonomous machines
+When these elements exists, there is control through self-regulation of whatever entity contains them.
+
+The elements, however, may be allocated in a number of ways within the entity.
+
+They may all be performed by one person or each element may be performed by a different person or for that matter, by different departments.
+
+As the work of carrying the control cycle is divided further, coordination of this effort becomes more difficult.
+
+Control as we have been seen it is one type of system, we observe how control has many of the same properties as systems in general; numerous systems interblocked in many ways.
+
+One such way may be seen when there are hierarchies of systems paralleling progression of goals.
+
+There are also systems within systems and loops within the loops. Since control is also a system, it can influence other systems and in turn be influenced by them.
+
+Looking at control as a particular type of system make us appreciate how extraordinarily complex a topic it is, and at the same time gives us an extremely valuable approach to this difficult subject.

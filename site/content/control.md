@@ -1,4 +1,4 @@
-Title: Control Processes and Systems
+Title: Control Systems
 Date: 2016-08-02 16:20
 Category: Community
 
@@ -10,7 +10,7 @@ The essence here is on reactivity and integration of effort, required accomplish
 
 There are a number of different processes which produce control.
 
-Control is concerned not only with events directly related to the accomplishment of major purposes but also with maintaining the organization n a condition in which it can function adequately to achieve these major purposes.
+Control is concerned not only with events directly related to the accomplishment of major purposes but also with maintaining the organization in a condition in which it can function adequately to achieve these major purposes.
 
 ##The control process
 The study of control has received a great deal of attention by people in number of different fields. This has come about with the realization that control is basic to an extraordinarily wide array of things.

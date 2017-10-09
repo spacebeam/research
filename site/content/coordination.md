@@ -24,3 +24,10 @@ The feedback loop containing information about organizational performance and co
 This even result in reformulating the basic goals of organizations. Feedback is essential to adequate goal formation.
 
 This leads us to an important point which, when stated without the type of development presented, appears to be a somewhat mystical statement; namely, organizations automatically take actions to bring about their continuity or to perpetuate themselves. Of course there are times when organizations do not change goals and do go out of existence. Many, however, shift to those goals feedback defines as possible; feedback leading to goal redefinition is one of the basic ways by which organizational survival is achieved.
+
+#### Time Discrepancies
+Another problem that can exist with control is that the feedback of information on performance takes so long it became impossible to correct performance.
+
+There is another aspect of time which should be mentioned, the time horizon of people in an organization gets progressively shorter as we come down in a hierarchy.
+
+Hence, by taking into account the perceptions of organizations members along with the time during which wortk is being performed on a prohect we can begin to define a time period within wich feedback must occur if adequate corrective action is to be taken.

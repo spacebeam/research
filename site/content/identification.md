@@ -1,76 +1,34 @@
+Title: System identification
+Date: 2017-10-09 04:20
+Category: About
 
-
-The term identification was introduced by L.A. Zadeh [Zadeh, 1956] as a
-generic expression for the problem of “determining the input-output
-relationships of a black box by experimental means.”
-
-http://users.isy.liu.se/en/rt/ljung/seoul2dvinew/plenary2.pdf
-System identification is the art and science of building mathematical models of dynamic systems
-from observed input-output data. It can be seen as the interface between the real world of
+The art and science of building mathematical models of dynamic systems from observed input-output data. It can be seen as the interface between the real world of
 applications and the mathematical world of control theory and model abstractions.
 
-System identification is a very large topic,
-with different techniques that depend on the character of the models to be estimated: linear,
-nonlinear, hybrid, nonparametric etc. At the same time, the area can be characterized by a
-small number of leading principles, e.g. to look for sustainable descriptions by proper decisions
-in the triangle of model complexity, information contents in the data, and effective validation.
+The field of system identification uses statistical methods to build mathematical models of dynamical systems from measured data this also includes optimal design of experiments for efficiency generating information data for training such models as well as model reduction
 
-System Identification is the term that has been coined
-by Zadeh (1956) for the model estimation problem for
-dynamic systems in the control community. 
+A dynamical mathematical model in this context is a mathematical description of the dynamic behavior of a system of process in either the time or frequency domain
 
-here we focus on the prediction-error
-approach, more in line with statistical time-series analysis
-and econometrics. This approach and all its basic themes
-were outlined in the pioneering paper Åström and Bohlin
-(1965). It is also the main perspective in Ljung (1999).
+Sometimes pure feed-forward control without feedback is called "ballistic" because once a control signal has been send it cannot further adjusted any corrective adjustment must be by way of a new control signal.
 
-ain feature of dynamical systems is that the future
-depends on the past. Thus a prediction of the output y(t)
-at time t, either being constructed by ad hoc reasoning or
-carefully calculated in a stochastic framework, depends on
-all or some previous measured inputs and outputs, Z
-t−1 =
-{y(t − 1), u(t − 1), y(t − 2), u(t −2), . . .}. Let us denote the
-prediction by yˆ(t|t − 1) = g(Z
-t−1
-). In case the system is
-not fully known, this prediction will be parameterized by
-a parameter θ (which typically is finite-dimensional, but
-could also conceptually capture nonparametric structures)
-so the prediction is
-yˆ(t|θ) = g(Z
-t−1
-, θ) (15)
-The distinguishing features as well as the bulk of efforts
-in System Identification can, somewhat simplistically, be
-described as
-(1) Invent parameterizations yˆ(t|θ), suitable to describe
-linear and nonlinear dynamic systems. For underlying
-state-space realizations, realization theory has been
-an important source of inspiration. Questions of how
-prior physical knowledge can best be incorporated
-form another central issue.
-(2) Translate the core material of Section 2 to properties
-of estimated systems, as well as estimation procedures.
-(3) Find effective ways to estimate θ numerically for the
-chosen parameterizations. The curve-fitting criterion
-(5) forms a beacon for these efforts in the prediction
-error approach, typically leading to nonlinear optimization
-by iterative search. The realization avenue
-has developed techniques based on SVD and QR
-factorizations.
-(4) The typical intended use of the model in this context
-is for prediction or control. This means that models
-of the noise affecting the system often are essential.
-(5) Experiment design now becomes the selection of input
-signal. The effects of the experiment design can be
-evaluated from the core material, but can be given
-concrete interpretations in terms of model quality for
-control design, e.g. Gevers (1993). Specific features for
-control applications are the problems and opportunities
-of using inputs, partly formed from output feedback,
-e.g. Hjalmarsson (2005). An important problem
-is to quantify the model error, and its contribution
-from the variance error and the bias error, cf. (11),
-“model error models”, e.g. Goodwin et al. (1992).
+In contrast "cruise control" adjust the output in response to the load that it encounters, by a feedback mechanism.
+
+#### Grey box model
+
+In mathematics, statistics, and computational modeling a gray box model combines a partial theoretical structure with data to complete the model,
+
+The theoretical structure may vary from information on the smoothness of results, to models that need only parameters values from data or existing literature.
+
+#### Feed-forward
+a term describing an element of control that passes a signal from a source in its external environment, often a command from a external operator, to a load elsewhere n its external environment.
+
+A system which has only feed-forward behavior responds to its signal in a pee-defined way without responding to how the load reacts; its is in contract with a system that also has feedback.
+
+#### Feedback
+Which adjusts the output to take account of how it affects the load, and how the load itself may vary unpredictably; the load is considered to belong to the external environment of the system.
+
+#### Cybernetics
+
+The study of communication and control of regulatory feedback both in living and lifeless systems, organisms, organizations, machines and in combination of those.
+
+Its focus is how anything digital, mechanical or biological controls its behavior, process information, reacts to information and changes or can be changes to better accomplish those three primary tasks.

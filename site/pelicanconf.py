@@ -20,8 +20,8 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 #RELATIVE_URLS = True
 # Social widget
 SOCIAL = (('cube', 'https://nonsense.ws'),
-	('github', 'https://github.com/nonsensews'),
-	('download', 'https://github.com/nonsensews/guide/raw/master/guide.pdf'),
+	('book', 'https://github.com/nonsensews/docs/wiki'),
+	('github', 'https://github.com/nonsensews/guide/'),
 	('twitter', 'https://twitter.com/nonsensews'))
 
 DEFAULT_PAGINATION = 2

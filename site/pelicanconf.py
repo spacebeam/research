@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Nonsense Worlds'
-SITENAME = u'Developer Blog'
+AUTHOR = u'Team Machine'
+SITENAME = u'Blog'
 SITEURL = 'https://blog.nonsense.ws'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'
@@ -20,8 +20,8 @@ LINKS = (('Nonsense Worlds', 'https://nonsense.ws/'),)
 #RELATIVE_URLS = True
 # Social widget
 SOCIAL = (('cube', 'https://nonsense.ws'),
-	('book', 'https://github.com/nonsensews/guide'),
-	('download', 'https://blog.nonsense.ws/download.html'),
+	('github', 'https://github.com/nonsensews'),
+	('download', 'https://github.com/nonsensews/guide/raw/master/guide.pdf'),
 	('twitter', 'https://twitter.com/nonsensews'))
 
 DEFAULT_PAGINATION = 2

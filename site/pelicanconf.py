@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Team Machine'
-SITENAME = u'Developer Blog'
+SITENAME = u'Nonsense Worlds - Developer Blog'
 SITEURL = 'https://blog.nonsense.ws'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'

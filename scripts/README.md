@@ -1,2 +1,2 @@
-# Sector S Building Scripts
+# Sector S Init Scripts
 todo: d=

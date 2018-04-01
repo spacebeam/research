@@ -1,2 +1,2 @@
-# Automated building scripts
+# Building scripts
 todo: d=

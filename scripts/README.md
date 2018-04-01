@@ -1,2 +1,2 @@
-# Building scripts
+# Scripts
 todo: d=

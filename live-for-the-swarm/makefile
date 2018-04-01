@@ -1,4 +1,4 @@
-FILES = paper.md \
+FILES = README.md \
 		metadata.yaml
 
 OUTPUT = build

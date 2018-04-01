@@ -5,7 +5,7 @@
 - [Pandoc](http://pandoc.org/)
 - [Texlive](https://www.tug.org/texlive/)
 
-### Debian/Ubuntu
+### Ubuntu
 
 ```sh
 sudo apt update

@@ -1,0 +1,18 @@
+BootStrap: debootstrap
+OSVersion: xenial
+MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+
+%environment
+    LANG=C.UTF-8
+    LC_ALL=C.UTF-8
+
+%post
+    sed -i 's/$/ universe/' /etc/apt/sources.list
+    apt update
+    apt -y install vim less build-essential sudo wget default-jre default-jdk\
+     libglu1-mesa libwxbase3.0-0v5 libwxgtk3.0-0v5 logrotate
+    wget https://packages.erlang-solutions.com/erlang/riak/FLAVOUR_1_main/riak_2.2.5-1\~ubuntu\~xenial_amd64.deb
+    dpkg -i riak_2.2.5-1\~ubuntu\~xenial_amd64.deb
+
+%startscript
+    service riak start

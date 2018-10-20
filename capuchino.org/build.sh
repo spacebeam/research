@@ -10,6 +10,7 @@ apt update
 
 apt install --install-recommends \
     tcpdump\
+    sngrep\
     wget\
     openssh-client\
     openssh-server\
@@ -86,6 +87,7 @@ apt install --install-recommends \
     chromium\
     rxvt-unicode-256color\
     jq\
+    screenkey\
     uuid-dev\
     uuid\
     odbcinst\

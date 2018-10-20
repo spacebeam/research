@@ -16,7 +16,7 @@ debootstrap \
     http://ftp.us.debian.org/debian/
 
 while true; do
-    read -p "Do you wish to chroot into this environment? " yn
+    read -p "Do you wish to chroot into this environment? [Y/n]" yn
     case $yn in
         [Yy]* ) break;;
         [Nn]* ) exit;;

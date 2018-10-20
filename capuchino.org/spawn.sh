@@ -20,7 +20,7 @@ search --set=root --file /DEBIAN_CUSTOM
 insmod all_video
 
 set default="0"
-set timeout=30
+set timeout=3
 
 menuentry "Live Capuchino" {
     linux /vmlinuz boot=live quiet nomodeset

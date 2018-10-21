@@ -78,4 +78,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. /opt/torch/install/bin/torch-activate
+#. /opt/torch/install/bin/torch-activate

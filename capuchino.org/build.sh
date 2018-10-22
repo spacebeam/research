@@ -51,7 +51,6 @@ apt install --install-recommends \
     dconf-service\
     dconf-cli\
     dconf-editor\
-    gksu\
     xdg-utils\
     lxrandr\
     build-essential\

@@ -115,3 +115,5 @@ apt clean
 apt remove yelp -y
 
 apt autoremove -y
+
+pip3 install riak queries py3status jupyter

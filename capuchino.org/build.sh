@@ -117,3 +117,9 @@ apt remove yelp -y
 apt autoremove -y
 
 pip3 install riak queries py3status jupyter
+
+wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.1-1~debian~stretch_amd64.deb
+
+dpkg -i esl-erlang_21.1-1~debian~stretch_amd64.deb
+
+rm esl-erlang_21.1-1~debian~stretch_amd64.deb

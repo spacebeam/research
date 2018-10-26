@@ -9,6 +9,7 @@ echo "capuchino" > /etc/hostname
 apt update
 
 apt install --install-recommends \
+    libsctp1\
     tcpdump\
     sngrep\
     wget\

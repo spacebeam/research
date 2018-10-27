@@ -108,7 +108,6 @@ apt install --install-recommends \
     evince\
     pandoc\
     gfortran\
-    luajit\
  -y
 
 apt clean
@@ -124,3 +123,9 @@ wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/e
 dpkg -i esl-erlang_21.1-1~debian~stretch_amd64.deb
 
 rm esl-erlang_21.1-1~debian~stretch_amd64.deb
+
+git clone https://github.com/torch/distro.git /opt/torch --recursive
+
+bash /opt/torch/install-deps
+
+bash /opt/torch/install.sh

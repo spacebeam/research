@@ -2,9 +2,9 @@
 
 echo "capuchino" > /etc/hostname
 
-#sed -i 's/$/ universe/' /etc/apt/sources.list
+sed -i 's/$/ universe/' /etc/apt/sources.list
 
-#sed -i 's/$/ contrib/' /etc/apt/sources.list
+sed -i 's/$/ contrib/' /etc/apt/sources.list
 
 apt update
 
@@ -128,4 +128,6 @@ git clone https://github.com/torch/distro.git /opt/torch --recursive
 
 bash /opt/torch/install-deps
 
-bash /opt/torch/install.sh
+cd /opt/torch/
+
+./install.sh

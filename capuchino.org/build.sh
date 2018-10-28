@@ -131,3 +131,9 @@ bash /opt/torch/install-deps
 cd /opt/torch/
 
 ./install.sh
+
+cd /usr/src/
+
+wget https://github.com/themix-project/oomox/releases/download/1.7.0.5/oomox_1.7.0.5.deb
+
+dpkg -i oomox_1.7.0.5.deb

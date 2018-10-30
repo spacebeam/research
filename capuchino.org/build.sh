@@ -108,6 +108,40 @@ apt install --install-recommends \
     evince\
     pandoc\
     gfortran\
+    albatross-gtk-theme\
+    bc\
+    blackbird-gtk-theme\
+    bluebird-gtk-theme\
+    cron\
+    exim4\
+    exim4-base\
+    exim4-config\
+    exim4-daemon-light\
+    gir1.2-atk-1.0\
+    gir1.2-freedesktop\
+    gir1.2-gdkpixbuf-2.0\
+    gir1.2-gtk-3.0\
+    gir1.2-pango-1.0\
+    greybird-gtk-theme\
+    gtk2-engines-murrine\
+    guile-2.0-libs\
+    libgdk-pixbuf2.0-dev\
+    libgsasl7\
+    libkyotocabinet16v5\
+    libmailutils5\
+    libntlm0\
+    libpangoxft-1.0-0\
+    librsvg2-bin\
+    libsass0\
+    libxml2-utils\
+    mailutils\
+    mailutils-common\
+    murrine-themes\
+    optipng\
+    parallel\
+    python3-pil\
+    sassc\
+    sysstat\
  -y
 
 apt clean

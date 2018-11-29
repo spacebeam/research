@@ -2,9 +2,9 @@
 
 echo "capuchino" > /etc/hostname
 
-sed -i 's/$/ universe/' /etc/apt/sources.list
+#sed -i 's/$/ universe/' /etc/apt/sources.list
 
-sed -i 's/$/ contrib/' /etc/apt/sources.list
+#sed -i 's/$/ contrib/' /etc/apt/sources.list
 
 apt update
 

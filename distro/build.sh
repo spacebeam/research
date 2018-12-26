@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "capuchino" > /etc/hostname
+echo "nonsense" > /etc/hostname
 
 #sed -i 's/$/ universe/' /etc/apt/sources.list
 
@@ -152,11 +152,11 @@ apt autoremove -y
 
 pip3 install riak queries py3status jupyter pywal
 
-wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.1-1~debian~stretch_amd64.deb
+wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-dpkg -i esl-erlang_21.1-1~debian~stretch_amd64.deb
+dpkg -i esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-rm esl-erlang_21.1-1~debian~stretch_amd64.deb
+rm esl-erlang_21.2-1~debian~stretch_amd64.deb
 
 git clone https://github.com/torch/distro.git /opt/torch --recursive
 

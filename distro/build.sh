@@ -85,7 +85,7 @@ apt install --install-recommends \
     pcmanfm\
     transmission\
     chromium\
-    rxvt-unicode-256color\
+    rxvt-unicode\
     jq\
     screenkey\
     uuid-dev\

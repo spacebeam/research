@@ -12,6 +12,7 @@ apt install --install-recommends \
     libsctp1\
     tcpdump\
     sngrep\
+    libnotify-bin\
     wget\
     openssh-client\
     openssh-server\
@@ -54,6 +55,7 @@ apt install --install-recommends \
     dconf-editor\
     xdg-utils\
     lxrandr\
+    sxiv\
     build-essential\
     gnome-calculator\
     gpicview\

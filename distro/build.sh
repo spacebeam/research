@@ -2,9 +2,9 @@
 
 echo "nonsense" > /etc/hostname
 
-#sed -i 's/$/ universe/' /etc/apt/sources.list
+sed -i 's/$/ universe/' /etc/apt/sources.list
 
-#sed -i 's/$/ contrib/' /etc/apt/sources.list
+sed -i 's/$/ contrib/' /etc/apt/sources.list
 
 apt update
 
@@ -69,7 +69,6 @@ apt install --install-recommends \
     python3-apt\
     python3-dev\
     python3-pip\
-    zsh\
     lxappearance\
     mpv\
     python-wxgtk3.0\
@@ -83,7 +82,6 @@ apt install --install-recommends \
     tmux\
     i3\
     lightdm\
-    ranger\
     pcmanfm\
     transmission\
     chromium\

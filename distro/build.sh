@@ -14,6 +14,7 @@ apt install --install-recommends \
     sngrep\
     libnotify-bin\
     wget\
+    mksh\
     openssh-client\
     openssh-server\
     xserver-xorg-core\

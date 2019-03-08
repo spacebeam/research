@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "nonsense" > /etc/hostname
+#echo "nonsense" > /etc/hostname
 
-sed -i 's/$/ universe/' /etc/apt/sources.list
+#sed -i 's/$/ universe/' /etc/apt/sources.list
 
-sed -i 's/$/ contrib/' /etc/apt/sources.list
+#sed -i 's/$/ contrib/' /etc/apt/sources.list
 
 apt update
 

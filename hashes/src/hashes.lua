@@ -6,8 +6,8 @@ local argparse = require("argparse")
 local pgmoon = require("pgmoon")
 local ini = require("inifile")
 -- define service arguments
-local parser = argparse("server.lua", "handles the creation of system hashes")
-    parser:option("-c --config", "configuration file.", "hash.conf")
+local parser = argparse("hashes.lua", "handles the creation of system hashes")
+    parser:option("-c --config", "configuration file.", "hashes.conf")
 -- parse resource arguments
 local args = parser:parse()
 -- get options from config file

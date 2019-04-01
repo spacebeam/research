@@ -1,10 +1,16 @@
+#!/usr/bin/env luajit
+--
 -- Handles the creation of system hashes
+--
+local socket = require("socket")
 local uuid = require("uuid")
 local sha2 = require("sha2")
 local turbo = require("turbo")
 local argparse = require("argparse")
 local pgmoon = require("pgmoon")
 local ini = require("inifile")
+-- init random seed
+uuid.randomseed(socket.gettime()*10000)
 -- define service arguments
 local parser = argparse("hashes.lua", "handles the creation of system hashes")
     parser:option("-c --config", "configuration file.", "hashes.conf")
@@ -21,12 +27,10 @@ local options = get_options(args['config'])
 local pg = pgmoon.new({
     host = options['server']['dbhost'],
     port = options['server']['dbport'],
-    database = "animal",
+    database = "units",
     user = options['server']['dbuser']
 })
--- System UUID
 local system_uuid = uuid()
--- start things up, get the system uuid and shit.
 turbo.log.warning("Starting hashes resource uuid: " .. system_uuid)
 -- postgres connect
 assert(pg:connect())
@@ -54,7 +58,7 @@ function new_hash(value)
     local hash_uuid = uuid()
     local md5_hash = md5sum(value)
     local sha_hash = sha2.sha256hex(value)
-    local query = "INSERT INTO hashes(uuid, value, md5, sha) VALUES" ..
+    local query = "INSERT INTO hashes(uuid, name, md5, sha) VALUES" ..
                   "('" .. hash_uuid .. "', '" .. value .. "', '" ..
                   md5_hash .. "', '" .. sha_hash .."')"
     local result = pg:query(query)

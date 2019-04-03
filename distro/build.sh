@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#echo "nonsense" > /etc/hostname
+#echo "spacebeam" > /etc/hostname
 
 #sed -i 's/$/ universe/' /etc/apt/sources.list
 

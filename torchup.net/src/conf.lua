@@ -1,10 +1,10 @@
 function love.conf(t)
-    t.identity = "ivy.nonsense.ws"
+    t.identity = "torchup.net"
     t.version = "0.10.0"
     t.console = false
     t.accelerometerjoystick = true
     t.gammacorrect = false
-    t.window.title = "ivy.nonsense.ws"
+    t.window.title = "torchup.net"
     t.window.icon = nil
     t.window.width = 256*3
     t.window.height = 200*3

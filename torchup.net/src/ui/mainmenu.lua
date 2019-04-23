@@ -1,7 +1,7 @@
 mainmenu = {}
 
 local MENU_STRINGS = {
-	"IVY.NONSENSE", "HOW TO PLAY", "OPTIONS"
+	"TORCHUP.NET", "HOW TO PLAY", "OPTIONS"
 }
 
 lg = love.graphics

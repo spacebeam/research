@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#echo "spacebeam" > /etc/hostname
+echo "spacebeam" > /etc/hostname
 
-#sed -i 's/$/ universe/' /etc/apt/sources.list
+sed -i 's/$/ universe/' /etc/apt/sources.list
 
-#sed -i 's/$/ contrib/' /etc/apt/sources.list
+sed -i 's/$/ contrib/' /etc/apt/sources.list
 
 apt update
 
@@ -25,6 +25,10 @@ apt install --install-recommends \
     ntfs-3g\
     hfsprogs\
     dosfstools\
+    xterm\
+    neomutt\
+    vimfm\
+    calcurse\
     pv\
     network-manager-gnome\
     network-manager-openvpn-gnome\
@@ -64,8 +68,6 @@ apt install --install-recommends \
     audacity\
     git\
     gnome-themes-standard\
-    thunderbird\
-    calendar-google-provider\
     fonts-lyx\
     python3-apt\
     python3-dev\
@@ -86,7 +88,6 @@ apt install --install-recommends \
     pcmanfm\
     transmission\
     chromium\
-    rxvt-unicode\
     jq\
     screenkey\
     uuid-dev\

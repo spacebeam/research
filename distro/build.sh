@@ -38,7 +38,6 @@ apt install --install-recommends \
     ntfs-3g\
     hfsprogs\
     dosfstools\
-    xterm\
     neomutt\
     vimfm\
     calcurse\
@@ -89,7 +88,7 @@ apt install --install-recommends \
     mpv\
     python-wxgtk3.0\
     python3-venv\
-    linux-image-amd64\
+    #linux-image-amd64\
     live-boot\
     systemd-sysv\
     curl\
@@ -120,8 +119,9 @@ apt install --install-recommends \
     automake\
     libtool\
     inkscape\
-    evince\
     pandoc\
+    pandoc-citeproc\
+    texlive-full\
     gfortran\
     albatross-gtk-theme\
     bc\

@@ -13,6 +13,19 @@ apt install --install-recommends \
     tcpdump\
     sngrep\
     libnotify-bin\
+    git\
+    g++\
+    libgtk-3-dev\
+    gtk-doc-tools\
+    gnutls-bin\
+    valac\
+    intltool\
+    libpcre2-dev\
+    libglib3.0-cil-dev\
+    libgnutls28-dev\
+    libgirepository1.0-dev\
+    libxml2-utils\
+    gpref\
     wget\
     mksh\
     openssh-client\

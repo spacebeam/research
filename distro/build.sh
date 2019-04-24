@@ -39,7 +39,7 @@ apt install --install-recommends \
     hfsprogs\
     dosfstools\
     neomutt\
-    vimfm\
+    vifm\
     calcurse\
     pv\
     network-manager-gnome\

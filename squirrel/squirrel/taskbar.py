@@ -50,6 +50,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         self.Bind(wx.EVT_MENU, self.OnWebBrowser, id=self.TBMENU_WEB)
         self.Bind(wx.EVT_MENU, self.OnMediaPlayer, id=self.TBMENU_MEDIA)
         self.Bind(wx.EVT_MENU, self.OnDisplaySettings, id=self.TBMENU_DISPLAY)
+        self.Bind(wx.EVT_MENU, self.OnSpacebeamIO, id=self.TBMENU_SBIO)
         self.Bind(wx.EVT_TASKBAR_LEFT_DOWN, self.OnLeftClickMenu)
         self.Bind(wx.EVT_TASKBAR_RIGHT_DOWN, self.OnRightClickMenu)
 
@@ -77,10 +78,13 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
 
     def CreateWorkMenu(self, event=None):
         '''
-            
+            This method is called by the class when it need to popup
+            the menu for the default EVT_LEFT_DOWN event.
+
+            Just create the menu how you want it and return ir from this function.
         '''
         menu = wx.Menu()
-        menu.Append(self.TBMENU_WEB, "Play vs AI")
+        menu.Append(self.TBMENU_SBIO, "Spacebeam I/O")
         return menu
 
     def OnAppearance(self, event):
@@ -113,6 +117,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         menu = self.CreatePopupMenu()
         self.PopupMenu(menu)
         menu.Destroy()
+
     def OnAudioControl(self, event):
         subprocess.Popen(['pavucontrol'])
 

@@ -39,6 +39,7 @@ apt install --install-recommends \
     hfsprogs\
     dosfstools\
     neomutt\
+    newsboat\
     vifm\
     calcurse\
     pv\
@@ -48,7 +49,6 @@ apt install --install-recommends \
     network-manager-vpnc-gnome\
     i3lock\
     compton\
-    geany\
     htop\
     urlview\
     mupdf\

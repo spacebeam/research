@@ -81,8 +81,6 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         '''
         menu = wx.Menu()
         menu.Append(self.TBMENU_WEB, "Play vs AI")
-        menu.AppendSeparator()
-        menu.Append(self.TBMENU_WEB, "Spacebeam I/O")
         return menu
 
     def OnAppearance(self, event):

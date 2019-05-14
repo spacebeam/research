@@ -61,10 +61,10 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Just create the menu how you want it and return it from this function.
         '''
         menu = wx.Menu()
-        menu.Append(self.TBMENU_WEB, "Web Browser")
+        menu.Append(self.TBMENU_APPLICATIONS, "Applications")
         menu.AppendSeparator()
         menu.Append(self.TBMENU_FILE, "File Manager")
-        menu.Append(self.TBMENU_APPLICATIONS, "Applications")
+        menu.Append(self.TBMENU_WEB, "Web Browser")
         menu.Append(self.TBMENU_MEDIA, "Media Player")
         menu.AppendSeparator()
         menu.Append(self.TBMENU_APPEARANCE, "Look and Feel")

@@ -74,6 +74,16 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         menu.Append(self.TBMENU_CLOSE, "Exit")
         return menu
 
+
+    def CreateWorkMenu(self, event=None):
+        '''
+            
+        '''
+        menu = wx.Menu()
+        menu.Append(self.TBMENU_WEB, "Web Browser")
+        menu.AppendSeparator()
+        return menu
+
     def OnAppearance(self, event):
         '''
             On LXEAppearance
@@ -92,7 +102,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Create the left-click menu
         '''
         self.frame.Hide()
-        menu = self.CreatePopupMenu()
+        menu = self.CreateWorkMenu()
         self.PopupMenu(menu)
         menu.Destroy()
     

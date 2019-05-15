@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-    Squirell main app.
+    Squirell main function.
 '''
 
 # This file is part of squirrel.

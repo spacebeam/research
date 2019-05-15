@@ -29,6 +29,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
     TBMENU_WEB = wx.NewId()
     TBMENU_MEDIA = wx.NewId()
     TBMENU_CLOSE = wx.NewId()
+    TBMENU_SBIO = wx.NewId()
 
     def __init__(self, frame):
         '''
@@ -75,7 +76,6 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         menu.Append(self.TBMENU_CLOSE, "Exit")
         return menu
 
-
     def CreateWorkMenu(self, event=None):
         '''
             This method is called by the class when it need to popup
@@ -86,6 +86,12 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         menu = wx.Menu()
         menu.Append(self.TBMENU_SBIO, "Spacebeam I/O")
         return menu
+
+    def OnSpacebeamIO(self, event):
+        '''
+            On Spacebeam I/O
+        '''
+        webbrowser.open_new('https://github.com/spacebeam') 
 
     def OnAppearance(self, event):
         '''
@@ -105,7 +111,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Create the left-click menu
         '''
         self.frame.Hide()
-        menu = self.CreateWorkMenu()
+        menu = self.CreatePopupMenu()
         self.PopupMenu(menu)
         menu.Destroy()
     
@@ -114,7 +120,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Create the right-click menu
         '''
         self.frame.Hide()
-        menu = self.CreatePopupMenu()
+        menu = self.CreateWorkMenu()
         self.PopupMenu(menu)
         menu.Destroy()
 

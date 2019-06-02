@@ -88,7 +88,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         menu.AppendSeparator()
         menu.Append(self.TBMENU_SBIO, "Fire it up!")
         menu.AppendSeparator()
-        menu.Append(self.TBMENU_SBIO, "About Spacebeam")
+        menu.Append(self.TBMENU_SBIO, "Spacebeam")
         return menu
 
     def OnSpacebeamIO(self, event):

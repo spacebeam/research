@@ -8,3 +8,6 @@ A custom Debian GNU/Linux 10 (buster) x86_64 and a set of tools that manage Sing
 - Message passing and function calling are analogous.
 - Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
+
+## Images
+![1](images/1.png)

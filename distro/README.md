@@ -9,6 +9,9 @@ A custom Debian GNU/Linux 10 (buster) x86_64 and a set of tools that manage Sing
 - Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
 
+## Download
+TBD
+
 ## Screenshots
 
 ![1](images/1.png)

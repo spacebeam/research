@@ -1,4 +1,4 @@
-require("util")
+require("tools")
 require("./game/map")
 require("./game/config")
 require("./game/resources")

@@ -1,15 +1,12 @@
 # Spacebeam
 
-Spacebeam is an open-source Debian stable (x86_64) dcustomization that enables end users easily build computational clusters, grid endpoints and visualization tiled-displays; installation, consulting and support is also available from community members.
+Spacebeam is an open-source Debian stable (x86_64) custom distribution that enables end users easily build computational clusters, grid endpoints and visualization on tiled-displays; installation, consulting and support is also available from community members.
 
 ## Core ideas
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
 - Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
-
-## Download
-TBD
 
 ## Screenshots
 

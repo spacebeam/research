@@ -2,10 +2,6 @@
 
 echo "spacebeam" > /etc/hostname
 
-sed -i 's/$/ universe/' /etc/apt/sources.list
-
-sed -i 's/$/ contrib/' /etc/apt/sources.list
-
 apt update
 
 apt install --install-recommends \
@@ -25,7 +21,6 @@ apt install --install-recommends \
     libgnutls28-dev\
     libgirepository1.0-dev\
     libxml2-utils\
-    gpref\
     wget\
     mksh\
     openssh-client\
@@ -38,8 +33,6 @@ apt install --install-recommends \
     ntfs-3g\
     hfsprogs\
     dosfstools\
-    neomutt\
-    newsboat\
     vifm\
     calcurse\
     pv\
@@ -88,7 +81,7 @@ apt install --install-recommends \
     mpv\
     python-wxgtk3.0\
     python3-venv\
-    #linux-image-amd64\
+    linux-image-amd64\
     live-boot\
     systemd-sysv\
     curl\
@@ -99,7 +92,6 @@ apt install --install-recommends \
     lightdm\
     pcmanfm\
     transmission\
-    chromium\
     jq\
     screenkey\
     uuid-dev\
@@ -167,22 +159,22 @@ apt autoremove -y
 
 pip3 install riak queries py3status jupyter pywal
 
-wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
+#wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-dpkg -i esl-erlang_21.2-1~debian~stretch_amd64.deb
+#dpkg -i esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-rm esl-erlang_21.2-1~debian~stretch_amd64.deb
+#rm esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-git clone https://github.com/torch/distro.git /opt/torch --recursive
+#git clone https://github.com/torch/distro.git /opt/torch --recursive
 
-bash /opt/torch/install-deps
+#bash /opt/torch/install-deps
 
-cd /opt/torch/
+#cd /opt/torch/
 
-./install.sh
+#./install.sh
 
 cd /usr/src/
 
-wget https://github.com/themix-project/oomox/releases/download/1.7.0.5/oomox_1.7.0.5.deb
+wget https://github.com/themix-project/oomox/releases/download/1.11/oomox_1.11-3-gde075379_18.10+.deb
 
-dpkg -i oomox_1.7.0.5.deb
+dpkg -i oomox_1.11-3-gde075379_18.10+.deb

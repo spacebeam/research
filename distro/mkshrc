@@ -1,11 +1,11 @@
-# .mkshrc
+# ~/.mkshrc
 export LANG=en_US.utf8
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
-
 export TERM=xterm-color
-
+# switch console to utf8 mode
+echo -ne '\033%G'
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
@@ -24,24 +24,16 @@ PS1=$'\001\r''${|
 	(( e )) && REPLY+=" $e "
 	\return $e
 }'"$PS1 "
-
 case "$-" in *i*)
 	# interative mode settings
-
-	# switch console to utf8 mode
-	echo -ne '\033%G'
-
 	HISTFILE=$HOME/.mksh_history
-    HISTSIZE=10000
-    LESSSECURE=1
-    export HISTFILE HISTSIZE LESSSECURE
+    	HISTSIZE=10000
+    	LESSSECURE=1
+    	export HISTFILE HISTSIZE LESSSECURE
 	export EDITOR=vim
-
 	alias ls='ls --color'
 	;;
 esac
-
 # activate torch
 . /opt/torch/install/bin/torch-activate
-
 # vim:ft=sh

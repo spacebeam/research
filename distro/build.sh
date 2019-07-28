@@ -5,6 +5,13 @@ echo "spacebeam" > /etc/hostname
 apt update
 
 apt install --install-recommends \
+    libssl-dev\
+    uuid-dev\
+    libgpgme11-dev\
+    libseccomp-dev\
+    pkg-config\
+    squashfs-tools\
+    cryptsetup\
     libsctp1\
     tcpdump\
     sngrep\
@@ -158,6 +165,12 @@ apt remove yelp -y
 apt autoremove -y
 
 pip3 install riak queries py3status jupyter pywal
+
+chsh -s /bin/mksh
+
+rm /root/.mkshrc
+
+cp mkshrc /root/.mkshrc
 
 #wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
 

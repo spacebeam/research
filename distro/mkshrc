@@ -1,0 +1,47 @@
+# .mkshrc
+export LANG=en_US.utf8
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
+export MANPATH=$MANPATH:/usr/local/share/man
+
+export TERM=xterm-color
+
+PS1='#'                   # Root
+(( USER_ID )) && PS1='$'  # Regular user
+PS1=$'\001\r''${|
+	# Store exit code for later
+	\typeset e=$?
+	\typeset d=${PWD:-?}/
+	\typeset p=~
+	# Replace $HOME with ~
+	[[ $p = ?(*/) ]] || d=${d/#$p\//\~/}
+	d=${d%/}
+	\typeset m=${%d} n p=…
+	(( m > 0 )) || m=${#d}
+	(( m > (n = (COLUMNS/3 < 7 ? 7 : COLUMNS/3)) )) && d=${d:(-n)} || p=
+	REPLY+="[$p$d]"
+	# Add exit code
+	(( e )) && REPLY+=" $e "
+	\return $e
+}'"$PS1 "
+
+case "$-" in *i*)
+	# interative mode settings
+
+	# switch console to utf8 mode
+	echo -ne '\033%G'
+
+	HISTFILE=$HOME/.mksh_history
+    HISTSIZE=10000
+    LESSSECURE=1
+    export HISTFILE HISTSIZE LESSSECURE
+	export EDITOR=vim
+
+	alias ls='ls --color'
+	;;
+esac
+
+# activate torch
+. /opt/torch/install/bin/torch-activate
+
+# vim:ft=sh

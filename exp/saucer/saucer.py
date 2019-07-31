@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 '''
-    Squirell main function.
+    Flying Saucer main function.
 '''
 
-# This file is part of squirrel.
+# This file is part of a flying saucer experience.
 
 # Distributed under the terms of the last Apache License.
 # The full license is in the file LICENCE, distributed as part of this software.
@@ -24,11 +24,15 @@ class Toolbook(wx.Toolbook) :
         wx.Toolbook.__init__(self, parent, wx.ID_ANY, style=wx.BK_DEFAULT)
 
 
-class Colors(wx.Dialog):
+class Colours(wx.Dialog):
     
     def __init__(self, parent, id, title):
         '''
-            Constructor
+            Wake yourself up, sirens on
+            Cause we are fighting so exciting, now it's on
+            Are you ready for the war?
+            Show your colours
+            Bring your colours to the floor 
         '''
         wx.Dialog.__init__(self, parent, id, title, size=(640,480))
         self.tbIcon = taskbar.CustomTaskBarIcon(self)
@@ -58,10 +62,10 @@ class Colors(wx.Dialog):
 
 def main():
     '''
-        Squirrel Monkey
+        Flying Saucer Experience (EXP)
     '''
     app = wx.App(False)
-    Colors(None, -1, 'Space-based Adjutant')
+    Colours(None, -1, 'Space-based Adjutant')
     app.MainLoop()
 
 if __name__ == "__main__":

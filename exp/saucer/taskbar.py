@@ -37,7 +37,7 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
         '''
         wx.TaskBarIcon.__init__(self)
         self.frame = frame
-        img = wx.Image("/opt/squirrel/squirrel/24x24.png", wx.BITMAP_TYPE_ANY)
+        img = wx.Image("/opt/saucer/saucer/24x24.png", wx.BITMAP_TYPE_ANY)
         bmp = wx.BitmapFromImage(img)
         self.icon = wx.EmptyIcon()
         self.icon.CopyFromBitmap(bmp)

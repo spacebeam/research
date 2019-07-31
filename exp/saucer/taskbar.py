@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 '''
-    Squirell wxWidgets TaskBar.
+    Flying Saucer wxWidgets TaskBar.
 '''
 
-# This file is part of squirrel.
+# This file is part of a flying saucer experience.
 
 # Distributed under the terms of the last Apache License.
 # The full license is in the file LICENCE, distributed as part of this software.
@@ -84,14 +84,14 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Just create the menu how you want it and return ir from this function.
         '''
         menu = wx.Menu()
-        menu.Append(self.TBMENU_SBIO, "Need a light?")
+        menu.Append(self.TBMENU_SBIO, "Inventary")
         menu.AppendSeparator()
-        menu.Append(self.TBMENU_SBIO, "Fire it up!")
+        menu.Append(self.TBMENU_SBIO, "Flying Saucer")
         return menu
 
     def OnSpacebeamIO(self, event):
         '''
-            On Spacebeam
+            On Spacebeam I/O
         '''
         webbrowser.open_new('https://github.com/spacebeam') 
 

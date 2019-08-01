@@ -1,5 +1,5 @@
 # Flying Saucer 
-The flying saucer space-based adjutant experience.
+Flying Saucer Experience (EXP).
 
 ## Screenshots
 ![1](images/1.png)

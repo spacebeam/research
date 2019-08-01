@@ -32,9 +32,6 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
     TBMENU_SBIO = wx.NewId()
 
     def __init__(self, frame):
-        '''
-            init custom ws.TaskBar
-        '''
         wx.TaskBarIcon.__init__(self)
         self.frame = frame
         img = wx.Image("/opt/saucer/24x24.png", wx.BITMAP_TYPE_ANY)

@@ -81,9 +81,9 @@ class CustomTaskBarIcon(wx.TaskBarIcon):
             Just create the menu how you want it and return ir from this function.
         '''
         menu = wx.Menu()
-        menu.Append(self.TBMENU_SBIO, "Inventary")
+        menu.Append(self.TBMENU_SBIO, "Start")
         menu.AppendSeparator()
-        menu.Append(self.TBMENU_SBIO, "Flying Saucer")
+        menu.Append(self.TBMENU_SBIO, "Options")
         return menu
 
     def OnSpacebeamIO(self, event):

@@ -5,6 +5,7 @@ echo "spacebeam" > /etc/hostname
 apt update
 
 apt install --install-recommends \
+    libsdl2-ttf-dev\
     libssl-dev\
     uuid-dev\
     libgpgme11-dev\
@@ -18,16 +19,6 @@ apt install --install-recommends \
     libnotify-bin\
     git\
     g++\
-    libgtk-3-dev\
-    gtk-doc-tools\
-    gnutls-bin\
-    valac\
-    intltool\
-    libpcre2-dev\
-    libglib3.0-cil-dev\
-    libgnutls28-dev\
-    libgirepository1.0-dev\
-    libxml2-utils\
     wget\
     mksh\
     openssh-client\
@@ -72,7 +63,6 @@ apt install --install-recommends \
     dconf-editor\
     xdg-utils\
     lxrandr\
-    sxiv\
     build-essential\
     gnome-calculator\
     gpicview\
@@ -116,16 +106,9 @@ apt install --install-recommends \
     libasound2-dev\
     libpulse-dev\
     automake\
-    libtool\
     inkscape\
-    pandoc\
-    pandoc-citeproc\
-    texlive-full\
     gfortran\
-    albatross-gtk-theme\
     bc\
-    blackbird-gtk-theme\
-    bluebird-gtk-theme\
     cron\
     exim4\
     exim4-base\
@@ -136,7 +119,6 @@ apt install --install-recommends \
     gir1.2-gdkpixbuf-2.0\
     gir1.2-gtk-3.0\
     gir1.2-pango-1.0\
-    greybird-gtk-theme\
     gtk2-engines-murrine\
     guile-2.0-libs\
     libgdk-pixbuf2.0-dev\
@@ -160,17 +142,19 @@ apt install --install-recommends \
 
 apt clean
 
-apt remove yelp -y
+#apt remove yelp -y
 
 apt autoremove -y
 
-pip3 install riak queries py3status jupyter pywal
+#pip3 install riak queries py3status jupyter pywal
 
-chsh -s /bin/mksh
+#chsh -s /bin/mksh
 
-rm /root/.mkshrc
+#rm /root/.mkshrc
 
-cp mkshrc /root/.mkshrc
+#cp mkshrc /root/.mkshrc
+
+# alternative mksh
 
 #wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
 
@@ -178,16 +162,16 @@ cp mkshrc /root/.mkshrc
 
 #rm esl-erlang_21.2-1~debian~stretch_amd64.deb
 
-#git clone https://github.com/torch/distro.git /opt/torch --recursive
+git clone https://github.com/torch/distro.git /opt/torch --recursive
 
-#bash /opt/torch/install-deps
+bash /opt/torch/install-deps
 
-#cd /opt/torch/
+cd /opt/torch/
 
-#./install.sh
+./install.sh
 
-cd /usr/src/
+#cd /usr/src/
 
-wget https://github.com/themix-project/oomox/releases/download/1.11/oomox_1.11-3-gde075379_18.10+.deb
+#wget https://github.com/themix-project/oomox/releases/download/1.11/oomox_1.11-3-gde075379_18.10+.deb
 
-dpkg -i oomox_1.11-3-gde075379_18.10+.deb
+#dpkg -i oomox_1.11-3-gde075379_18.10+.deb

@@ -11,7 +11,7 @@ mkdir $HOME/LIVE_BOOT
 debootstrap \
     --arch=amd64 \
     --variant=minbase \
-    stable \
+    stretch \
     $HOME/LIVE_BOOT/chroot \
     http://ftp.us.debian.org/debian/
 
@@ -24,4 +24,4 @@ while true; do
     esac
 done
 
-chroot $HOME/LIVE_BOOT/chroot
+chroot $HOME/LIVE_BOOT/chroot /bin/bash

@@ -1,4 +1,4 @@
-# Char
+# Char system
 
 Spacebeam present a custom Debian stable (x86_64) distribution that enables easily build computational clusters, grid endpoints and visualization on tiled-displays; installation and support is also available from community members.
 

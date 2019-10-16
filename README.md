@@ -51,7 +51,7 @@ Feel free to explore the organization, [click here](https://github.com/spacebeam
     »░h½█▀░╜██▀K»Ü»░░░»╨h░»▀▀█▀█▀▀▀▀▀▀▀▀╩╩▀▀H»▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀»░╨hh░»»/╠░╚ñ║▀▀▀M░░░
     »»»╨╚╙╨░╙╙░╨"!╙░╙╚░╩^^╨^░"h░░""░Ü"░░░^╚"╚╨░»»░░░»░»»░░»»░░»░»»░»»»»»»»»»»░░░░░»»
 
-For more about how to get help or get involved check the BW competition [website](https://torchup.org) or explore the [community guide](https://github.com/spacebeam/guide/wiki), and our [community](https://spacebeam.org).
+For more about how to get help or get involved check the [competition](https://torchup.org) or explore the [guide](https://github.com/spacebeam/guide/wiki), and [community](https://spacebeam.org) website.
 
 ## Community
 Spacebeam is an open-source community that enables end users easily build computational clusters, grid endpoints and visualization in tiled-displays. [Explore](https://github.com/spacebeam) and remember; as the system grow in number, spawn more nodes to control it.

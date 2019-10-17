@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Luerl'
 SITENAME = u'Lua in Erlang'
-SITEURL = 'https://luerl.org'
+#SITEURL = 'https://luerl.org'
 PATH = 'content'
 TIMEZONE = 'Etc/UTC'
 DEFAULT_LANG = u'en'

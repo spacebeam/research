@@ -28,7 +28,7 @@ We also offer unofficial support for anything with a working BWAPI wrapper avail
 ## Tournament Structure
 The tournament will be round-robin, with as many rounds as possible.
 
-The round format is 1v1, all best of 5, maps are random from the pool without duplicate locations per round, a round ends when participants complete all best of 5 games between bots on all maps.
+The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.
 
 ### Tournament winner
 
@@ -57,7 +57,7 @@ The official maps for the event are:
 The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.
 
 ### Time Limit
-Games will have a `frame limit` of `85714 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.
+Games will have a `frame limit` of `86400 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.
 
 ### Conflict of Interest
 Organizing AND participating in events like this can be tricky, we address these problems as follows:

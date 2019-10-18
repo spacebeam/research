@@ -62,7 +62,7 @@ Games will have a `frame limit` of `86400 frames`, to simulate one hour of gamep
 ### Conflict of Interest
 Organizing AND participating in events like this can be tricky, we address these problems as follows:
 
-Before accepting submissions, we will distribute the `SHA-1` check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.
+Before accepting submissions, we will distribute the `SHA-2` check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.
 
 ## Software Requirements
 ### All bot types are welcome!

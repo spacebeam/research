@@ -2,7 +2,7 @@ title: Torch Up
 Date: 2019-10-06 16:20
 ## FOSDEM 2020 Brood War AI Tournament
 
-###2020 Tournament Registration / Submission Open!
+### 2020 Tournament Registration / Submission Open!
 
 Torch Up: FOSDEM 2020 Brood War AI Tournament registration and submission are now open. You have until January 15th to submit your registration for the competition. Submission deadline for bots will be January 25th, 2020. Good luck, have fun!
 

@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Spacebeam Community'
 SITENAME = 'Torch Up: Brood War AI Tournament'
-SITEURL = 'https://torchup.org'
+#SITEURL = 'https://torchup.org'
+SITEURL = ''
 
 # Categories
 USE_FOLDER_AS_CATEGORY = True

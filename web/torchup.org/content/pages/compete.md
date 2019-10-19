@@ -1,22 +1,21 @@
 Title: Compete
 Date: 2019-10-09 16:20
 
-## 2020 Registration Open!
+## Torch Up: Brood War AI Registration Open!
 
-You must register by January 15th, 2020 in order to compete. | [rules](https://torchup.org/pages/rules/).
+You must register by January 15th, 2020 in order to compete.
 
 To register, send an email to [Jean Chassoul](mailto:jchassoul@gmail.com) with the following information:
 
 ```
-    Subject: BWAI2020 ENTRY
+    Subject: FOSDEM'20 ENTRY
     Entry Name:
-    Contact Person Name (First, Last): 
-    Contact Person Email Address: 
+    Contact Name (First, Last): 
+    Contact Email Address: 
     Affiliation: 
     Race (in full game): 
     Type (DLL, EXE, Linux or Java):
     BWAPI Version:
-    Brief Description of AI Techniques:
 ```
 ### Bot Submission Guidelines
 

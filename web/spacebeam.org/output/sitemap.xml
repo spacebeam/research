@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-10-19T08:41:10-00:00</lastmod>
+<lastmod>2019-10-19T12:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-10-19T08:41:10-00:00</lastmod>
+<lastmod>2019-10-19T12:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-10-19T08:41:10-00:00</lastmod>
+<lastmod>2019-10-19T12:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-10-19T08:41:10-00:00</lastmod>
+<lastmod>2019-10-19T12:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,6 +53,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/2019/10/19/process-of-abstraction/</loc>
+<lastmod>2019-10-19T00:00:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
+</url>
+
+<url>
 <loc>/2019/10/13/cognitive-framework/</loc>
 <lastmod>2019-10-13T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
@@ -68,7 +75,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2019-10-13T00:00:00+00:18</lastmod>
+<lastmod>2019-10-19T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

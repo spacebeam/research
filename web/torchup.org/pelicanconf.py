@@ -61,7 +61,7 @@ FIRST_NAME = 'Spacebeam'
 ## google analytics (fake code commented out)
 # GOOGLE_ANALYTICS = 'UA-0011001-1'
 ## Twitter username for Twitter Card data
-TWITTER_USERNAME = '@spacebeamio'
+TWITTER_USERNAME = '@spacebeamo'
 ## Toggle display of theme attribution in the footer (scroll down and see)
 ## Attribution is appreciated but totally fine to turn off!
 ATTRIBUTION = True
@@ -70,7 +70,7 @@ ATTRIBUTION = True
 #MENUITEMS = [('tags', '/tags')]
 ## Social icons for footer
 
-TWITTER = 'https://twitter.com/spacebeamio'
+TWITTER = 'https://twitter.com/spacebeamo'
 GITHUB = 'https://github.com/spacebeam'
 
 ## Disqus Sitename for comments on posts

@@ -1,6 +1,6 @@
 title: Process of abstraction
 date: 2019-10-19
-description: If a system is to be stable the number of states of its control mechanism must be greater than or equal to the number of states in the system being controlled. &mdash; William Ross Ashby
+description: If a system is to be stable the number of states of its control mechanism must be greater than or equal to the number of states in the system being controlled.
 
 In trying to understand what is happening around us we are faced with a fundamental problem. In approaching any situation, the system trying to understand it, does not attempt to gather all information. Instead it selects certain facts and searchers for others.
 

@@ -2,7 +2,9 @@ title: The Undermind podcast 34
 date: 2019-10-06
 description: How to play underwater baseball
 
-.. youtube:: pQM6MbaFV5E?start=17925
+.. youtube:: pQM6MbaFV5E
+
+.. youtube:: 4_X6EyqXa2s
 
 In the last episode of the Undermind we hear about the ten aniversary of AIIDE
 

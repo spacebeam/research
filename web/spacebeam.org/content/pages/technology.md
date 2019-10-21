@@ -3,7 +3,7 @@ Date: 2019-07-12 16:20
 Category: Technology 
 Spacebeam present `Char` a custom Debian (x86_64) distribution for simple computational clusters, grid endpoints and visualization on tiled-displays; installation and support is also available from community members.
 
-Char is a cluster system that run hosted as an user-space application on any existing Linux distribution and it's also available pre-installed on top of a custom [Debian](https://debian.org) live image, made for professionals, students or hobbyists starting out.
+Char is a cluster system that run hosted as an user-space application on any existing Linux distribution and it's also available pre-installed on top of a custom [Debian](https://debian.org) live image, made for professionals, students, and hobbyists.
 
 Each node presents an identical environment to your working space, irrespective of the underlying host our focus it allow you to spawn clean computational grids across multiple clusters of peers.
 

@@ -25,6 +25,6 @@ Come with clear problems and pausible solutions.
 
 ## Code and documentation
 
-The source code lives at the expected GitHub organization at [spacebeam](https://github.com/spacebeam)
+The source code lives at the [spacebeam](https://github.com/spacebeam) GitHub organization.
 
-The [guide](https://github.com/spacebeam/guide/wiki) explains our environment and the community [website](https://spacebeam.org) links to our work process, read the rules and join us!
+The [guide](https://github.com/spacebeam/guide/wiki) explains our environment and the community [website](https://spacebeam.org) links to our work process, read the rules and join the adventure!

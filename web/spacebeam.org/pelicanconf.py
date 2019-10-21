@@ -78,7 +78,7 @@ DISQUS_SITENAME = 'spacebeam'
 
 # PLUGINS
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'pelican_youtube',  'w3c_validate', 'optimize_images', 'gzip_cache', 'liquid_tags.youtube']
+PLUGINS = ['sitemap', 'pelican_youtube', 'w3c_validate', 'optimize_images', 'gzip_cache', 'liquid_tags.youtube']
 
 ## SITEMAP PLUGIN
 SITEMAP = {

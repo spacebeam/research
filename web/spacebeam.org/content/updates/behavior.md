@@ -7,7 +7,7 @@ Exactly what is an organization? It is a building? A collection of machinery? A 
 The purposes of the organization, whether it is formal or informal, are accomplished by a collection of members whose efforts or behavior are so directed that they become coordinated and integrated in order to attain sub-goals and objectives.
 
 ## Perception and behavior
-All of us at some point or another have had the experience of watching another person do something or behave in a certain way, saying to ourselves, "She/he acts as if she/he thought, ... " and then filling in some supposition about the way the other person looked at things.
+All of us at some point or another have had the experience of watching another person do something or behave in a certain way, saying to ourselves, "She acts as if she thought, ... " and then filling in some supposition about the way the other person looked at things.
 
 Simple as the statement "She acts as if she thought ... " may be, it illustrates two important points.
 

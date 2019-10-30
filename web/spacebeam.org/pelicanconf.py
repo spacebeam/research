@@ -1,31 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-
+#
 AUTHOR = 'Spacebeam Community'
 SITENAME = 'Spacebeam: Distributed Artificial Intelligence'
 #SITEURL = 'https://spacebeam.org'
-
 # Categories
 USE_FOLDER_AS_CATEGORY = True
 DISPLAY_CATEGORIES_ON_MENU = True
-
 # Pages
 DISPLAY_PAGES_ON_MENU = True
-
 PATH = 'content'
 STATIC_PATHS = ['images']
 TIMEZONE = 'Europe/Brussels'
 DEFAULT_LANG = 'en'
-
 # Will change this to 10 when publishing; 3 is easier to do theme dev with
 DEFAULT_PAGINATION = 3 
-
 # Period Archive formats
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/index.html'
-
 # URL settings -- leads to clean slug urls instead of having .html after everything
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
@@ -44,23 +38,20 @@ PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 )
-
 # Theme Settings
 THEME = 'themes/brutalist'
 ## used for OG tags and Twitter Card data on index page
-SITEIMAGE = 'site-cover.jpg'
+SITEIMAGE = 'logo.png'
 ## used for OG tags and Twitter Card data of index page
-SITEDESCRIPTION = ''
+SITEDESCRIPTION = 'Live for the Swarm!'
 ## path to favicon
 FAVICON = 'logo.png'
 ## path to logo for nav menu (optional)
 LOGO = 'logo.png'
 ## first name for nav menu if logo isn't provided
 FIRST_NAME = 'Spacebeam'
-## google analytics (fake code commented out)
-# GOOGLE_ANALYTICS = 'UA-0011001-1'
 ## Twitter username for Twitter Card data
-TWITTER_USERNAME = '@spacebeamio'
+TWITTER_USERNAME = '@SpacebeamOrg'
 ## Toggle display of theme attribution in the footer (scroll down and see)
 ## Attribution is appreciated but totally fine to turn off!
 ATTRIBUTION = True
@@ -68,18 +59,17 @@ ATTRIBUTION = True
 ## Other links can be added following the same tuple pattern 
 #MENUITEMS = [('tags', '/tags')]
 ## Social icons for footer
-
-TWITTER = 'https://twitter.com/spacebeamo'
+TWITTER = 'https://twitter.com/SpacebeamOrg'
 GITHUB = 'https://github.com/spacebeam'
-
 ## Disqus Sitename for comments on posts
 ## Commenting mine out for this theme site
 DISQUS_SITENAME = 'spacebeam'
-
 # PLUGINS
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'w3c_validate', 'optimize_images', 'gzip_cache', 'liquid_tags.youtube']
-
+PLUGINS = ['sitemap', 'w3c_validate', 
+           'optimize_images', 'gzip_cache', 
+           'liquid_tags.youtube', 'liquid_tags.speakerdeck',
+           'liquid_tags.audio', 'liquid_tags.include_code']
 ## SITEMAP PLUGIN
 SITEMAP = {
     'format': 'xml',
@@ -94,8 +84,3 @@ SITEMAP = {
         'indexes': 'daily'
     },
 }
-
-## Github URL for fork ribbon
-## Only used on theme site, not personal blog
-#GITHUB_URL = 'https://github.com/spacebeam'
-#GITHUB_POSITION = 'left'

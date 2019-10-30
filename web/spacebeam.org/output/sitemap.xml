@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-10-21T13:52:11-00:00</lastmod>
+<lastmod>2019-10-30T16:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-10-21T13:52:11-00:00</lastmod>
+<lastmod>2019-10-30T16:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-10-21T13:52:11-00:00</lastmod>
+<lastmod>2019-10-30T16:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-10-21T13:52:11-00:00</lastmod>
+<lastmod>2019-10-30T16:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -50,6 +50,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2019-07-12T16:20:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.75</priority>
+</url>
+
+<url>
+<loc>/2019/10/23/the-education-of-the-architect/</loc>
+<lastmod>2019-10-23T00:00:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
 </url>
 
 <url>
@@ -81,15 +88,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2019/10/06/the-undermind-podcast-34/</loc>
-<lastmod>2019-10-06T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
 <loc>/category/updates</loc>
-<lastmod>2019-10-19T00:00:00+00:18</lastmod>
+<lastmod>2019-10-23T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -31,7 +31,7 @@ The parts of this model would probably include, among other things, the flat tir
 
 A second model would contain the telephone, the service station, and the repairman there.
 
-Finally, it concludes that it will call a cab and leave his wife to deal with the flat tire as best as she can.
+Finally, he concludes that he will call a cab and leave his wife to deal with the flat tire as best as she can.
 
 These are extraordinarily elementary models, but they serve a very practical purpose.
 
@@ -39,7 +39,7 @@ With them the main character in our illustration can see the likely consequences
 
 We can find out these things by doing them directly by actually handling the tire and observing that we get dirty, or by calling the repairmen and waiting for him and learning that it takes too long.
 
-In the age of big data; big models are good.
+In the age of big data; information models are good.
 
 - For any given size of data, the bigger the model, the better it generalizes, provided you regularize well.
 - This is obviously true if your model is an ensemble of smaller models.

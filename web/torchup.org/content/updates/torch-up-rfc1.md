@@ -1,6 +1,6 @@
 title: Brood War AI Tournament RFC 1
 date: 2019-10-06
-description: We are excited to announce the first draft for the Brood War AI competition We've been working on. This post contains all the details about our community's FOSDEM side event. For those interested, it also listed some of our design rationale, which may be helpful if you are looking to create or extend an existing bot and make it your own using the Linux environment.
+description: We are excited to announce the first draft for the Brood War AI competition We've been working on. For those interested, it also listed some of our design rationale, which may be helpful if you are looking to create or extend an existing bot and make it your own using the Linux environment.
 
 Current StarCraft: Brood War AI tournaments claim to be using Windows because that is the OS that the game was written for 20 years ago, they want to keep things as close to the original game environment as possible.
 

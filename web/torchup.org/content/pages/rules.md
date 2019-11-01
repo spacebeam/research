@@ -46,12 +46,15 @@ The official maps for the event are:
 ```
 (4) Circuit Breakers,
 (3) Neo Aztec,
-(2) Tres Pass,
+(2) Heartbreak Ridge,
+(4) Gladiator,
+(3) Gold Rush,
+(2) Blue Storm,
 (4) Fighting Spirit,
 (3) Power Bond,
 (2) Overwatch.
 ```
-[click here](), to download them on zip file.
+[click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
 ### Game Type
 The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.

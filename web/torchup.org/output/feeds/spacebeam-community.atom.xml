@@ -6,6 +6,7 @@
 &lt;p&gt;All bots play several round-robins, with a second stage or knock-out matches between the top 4. The competition encoutages but don't require the use of Linux and BWAPI wrappers for languages outside C++ or Java.&lt;/p&gt;
 &lt;p&gt;The tournament offer access to multicore and GPU, Linux containers and native support for TorchCraft bots using Python and Lua, read the &lt;a href="/pages/rules/"&gt;rules&lt;/a&gt;, join the &lt;a href="https://discordapp.com/invite/w9wRRrF"&gt;conversation&lt;/a&gt;, send your comments and &lt;a href="mailto:jchassoul@gmail.com"&gt;feedback&lt;/a&gt; or check the &lt;a href="https://liquipedia.net/starcraft/Torch_Up"&gt;liquipedia&lt;/a&gt; page of the event.&lt;/p&gt;
 &lt;h2&gt;Maps&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -78,8 +79,7 @@
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;</content></entry><entry><title>Brood War AI Tournament RFC 1</title><link href="/2019/10/06/brood-war-ai-tournament-rfc-1/" rel="alternate"></link><published>2019-10-06T00:00:00+02:00</published><updated>2019-10-06T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2019-10-06:/2019/10/06/brood-war-ai-tournament-rfc-1/</id><summary type="html">&lt;p&gt;Current StarCraft: Brood War AI tournaments claim to be using Windows because that is the OS that the game was written for 20 years ago, they want to keep things as close to the original game environment as possible.&lt;/p&gt;
+&lt;/table&gt;</content></entry><entry><title>Brood War AI Tournament RFC 1</title><link href="/2019/10/06/brood-war-ai-tournament-rfc-1/" rel="alternate"></link><published>2019-10-06T00:00:00+02:00</published><updated>2019-10-06T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2019-10-06:/2019/10/06/brood-war-ai-tournament-rfc-1/</id><summary type="html">&lt;p&gt;Current StarCraft: Brood War AI tournaments claim to be using Windows because that is the OS that the game was written for 20 years ago, they want to keep things as close to the original game environment as possible.&lt;/p&gt;
 &lt;p&gt;Organizers argue that anything you write from Linux should also compile …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Current StarCraft: Brood War AI tournaments claim to be using Windows because that is the OS that the game was written for 20 years ago, they want to keep things as close to the original game environment as possible.&lt;/p&gt;
 &lt;p&gt;Organizers argue that anything you write from Linux should also compile and run inside an old version of the Windows 32-bit environment.&lt;/p&gt;
 &lt;p&gt;The purpose of this AI competition is offer a stable Linux environment with access to modern multicore machines and GPU, supporting anything that you could package inside a Linux container and all existing BWAPI wrappers outside the current Java and C++ options.&lt;/p&gt;

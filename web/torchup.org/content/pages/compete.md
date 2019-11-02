@@ -23,7 +23,7 @@ When submitting your bot, *please* follow these guidelines for submitting your b
 
 A folder containing the dll or executable of your bot we will use in the tournament and for immediate testing. (EXE/Linux/Java) bot files must contain a file named run_proxy.bat or run_proxy.sh which runs your bot.
 
-The official versions of the BWAPI libraries that we will use are [here](), your bot *MUST WORK* with one of these downloads, depending on which you chose when you registered:
+The official versions of the BWAPI libraries that we will use are [here](https://torchup.org/files/bwapi.zip), your bot *MUST WORK* with one of these dlls, depending on which you chose when you registered:
 ```
 BWAPI 4.4.0
 BWAPI 4.2.0

@@ -52,7 +52,8 @@ The official maps for the event are:
 (2) Blue Storm,
 (4) Fighting Spirit,
 (3) Power Bond,
-(2) Overwatch.
+(2) Overwatch,
+(4) Sparkle.
 ```
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 

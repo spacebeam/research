@@ -44,7 +44,7 @@ You are not allowed to use of other BWAPI version.
 ### Maps
 The official maps for the event are:
 ```
-(4) Circuit Breakers,
+(4) Circuit Breaker,
 (3) Neo Aztec,
 (2) Heartbreak Ridge,
 (4) Gladiator,

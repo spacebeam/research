@@ -13,18 +13,18 @@ The tournament offer access to multicore and GPU, Linux containers and native su
 ## Maps
 | (4) Circuit Breaker | &nbsp; | (3) Neo Aztec | &nbsp; | (2) Blue Storm | 
 |:---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Circuit_Breaker.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Neo_Aztec.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Bluestorm.jpg 150 %} |
+| {% img [class name(s)] /images/Circuit_Breaker.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Neo_Aztec.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Bluestorm.jpg 200 %} |
 
 | (4) Gladiator | &nbsp; | (3) Gold Rush | &nbsp; | (2) Heartbreak Ridge |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Gladiator.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Gold_Rush.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Heartbreak_Ridge.jpg 150 %} |
+| {% img [class name(s)] /images/Gladiator.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Gold_Rush.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Heartbreak_Ridge.jpg 200 %} |
 
 | (4) Fighting Spirit | &nbsp; | (3) Power Bond | &nbsp; | (2) Overwatch |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Fighting_Spirit.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Power_Bond.jpg 150 %} | &nbsp; | {% img [class name(s)] /images/Overwatch.jpg 150 %} |
+| {% img [class name(s)] /images/Fighting_Spirit.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Power_Bond.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Overwatch.jpg 200 %} |
 
 ### Bonus: Island Challenge
 | (4) Sparkle | 
 :---:|
-| {% img [class name(s)] /images/Sparkle.jpg 150 %} |
+| {% img [class name(s)] /images/Sparkle.jpg 250 %} |
 

@@ -70,7 +70,7 @@ ATTRIBUTION = True
 #MENUITEMS = [('tags', '/tags')]
 ## Social icons for footer
 
-TWITTER = 'https://twitter.com/spacebeamo'
+TWITTER = 'https://twitter.com/SpacebeamOrg'
 GITHUB = 'https://github.com/spacebeam'
 
 ## Disqus Sitename for comments on posts

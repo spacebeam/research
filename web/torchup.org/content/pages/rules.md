@@ -38,6 +38,7 @@ The top bots will play a single elimination bracket seeded 1-4 and 2-3.
 The following BWAPI release versions will be supported this year:
 
 Version `4.1.2, 4.2.0, 4.4.0`.
+[click here](https://torchup.org/files/bwapi.zip), to download them on zip file.
 
 You are not allowed to use of other BWAPI version.
 

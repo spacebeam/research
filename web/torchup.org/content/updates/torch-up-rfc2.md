@@ -26,5 +26,5 @@ The tournament offer access to multicore and GPU, Linux containers and native su
 ### Bonus: Island Challenge
 | (4) Sparkle | 
 :---:|
-| {% img [class name(s)] /images/Sparkle.jpg 250 %} |
+| {% img [class name(s)] /images/Sparkle.jpg 200 %} |
 

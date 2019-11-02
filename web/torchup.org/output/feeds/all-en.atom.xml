@@ -75,7 +75,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/Sparkle.jpg" width="250"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content></entry><entry><title>Brood War AI Tournament RFC 1</title><link href="/2019/10/06/brood-war-ai-tournament-rfc-1/" rel="alternate"></link><published>2019-10-06T00:00:00+02:00</published><updated>2019-10-06T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2019-10-06:/2019/10/06/brood-war-ai-tournament-rfc-1/</id><summary type="html">&lt;p&gt;Current StarCraft: Brood War AI tournaments claim to be using Windows because that is the OS that the game was written for 20 years ago, they want to keep things as close to the original game environment as possible.&lt;/p&gt;

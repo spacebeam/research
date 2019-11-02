@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-11-02T11:55:24-00:00</lastmod>
+<lastmod>2019-11-02T11:57:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-11-02T11:55:24-00:00</lastmod>
+<lastmod>2019-11-02T11:57:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-11-02T11:55:24-00:00</lastmod>
+<lastmod>2019-11-02T11:57:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-11-02T11:55:24-00:00</lastmod>
+<lastmod>2019-11-02T11:57:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,8 +60,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2019/10/31/brood-war-ai-tournament-rfc-2/</loc>
-<lastmod>2019-10-31T00:00:00+01:00</lastmod>
+<loc>/2019/11/01/brood-war-ai-tournament-rfc-2/</loc>
+<lastmod>2019-11-01T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>
 </url>
@@ -82,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2019-10-31T00:00:00+00:18</lastmod>
+<lastmod>2019-11-01T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

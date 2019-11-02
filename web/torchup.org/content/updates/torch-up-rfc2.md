@@ -28,3 +28,4 @@ The tournament offer access to multicore and GPU, Linux containers and native su
 :---:|
 | {% img [class name(s)] /images/Sparkle.jpg 200 %} |
 
+[click here](https://torchup.org/files/maps.zip), to download them on zip file.

@@ -79,7 +79,7 @@ DISQUS_SITENAME = 'torch-up'
 
 # PLUGINS
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'w3c_validate', 'optimize_images', 'gzip_cache', 'liquid_tags.youtube']
+PLUGINS = ['sitemap', 'w3c_validate', 'optimize_images', 'gzip_cache', 'liquid_tags.youtube', 'liquid_tags.img']
 
 ## SITEMAP PLUGIN
 SITEMAP = {

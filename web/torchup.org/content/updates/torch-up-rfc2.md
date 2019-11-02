@@ -6,7 +6,7 @@ Torch Up: Brood War AI Tournament is currently organized by the [Spacebeam](http
 
 The results are presented at [FOSDEM](https://fosdem.org/2020/) in Brussels, Belgium.
 
-All bots play several round-robins, with a second stage or knock-out matches between the top 4. The competition encourages but don't require the use of Linux® and [BWAPI](https://github.com/bwapi/bwapi) wrappers for languages outside C++ or Java.
+All bots play several round-robins, with a second stage or knock-out matches between the top 4. The competition encourages but don't require the use of Linux® and [BWAPI](https://github.com/bwapi/bwapi) wrappers for programming languages outside C++ or Java.
 
 The tournament offer access to multicore and GPU, Linux containers and native support for [TorchCraft](https://github.com/TorchCraft/TorchCraft) bots using Python and Lua, read the [rules](/pages/rules/), join the [conversation](https://discordapp.com/invite/w9wRRrF), send your comments and [feedback](mailto:jchassoul@gmail.com) or check the [liquipedia](https://liquipedia.net/starcraft/Torch_Up) page of the event.
 

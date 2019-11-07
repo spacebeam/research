@@ -1,96 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link href="http://gmpg.org/xfn/11" rel="profile">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-		<!-- Enable responsiveness on mobile devices-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-		<title>Luerl: Lua in Erlang</title>
-
-		<!-- CSS -->
-		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
-		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
-
-		<link rel="stylesheet" href="/theme/css/poole.css" />
-		<link rel="stylesheet" href="/theme/css/hyde.css" />
-		<link rel="stylesheet" href="/theme/css/syntax.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-	</head>
-
-	<body class="theme-base-0d">
-<div class="sidebar">
-    <div class="container sidebar-sticky">
-        <div class="sidebar-about">
-            <h1>
-                <a href="/">
-                    <img class="profile-picture" src="https://luerl.org/theme/lua.png">
-                </a>
-            </h1>
-            <p class="lead">Luerl is an implementation of Lua 5.2 written in pure Erlang </p>
-            <p></p>
-        </div>
-        <nav class="sidebar-nav">
-                    <a class="sidebar-nav-item" href="https://luerl.org/community.html">
-                        <i class="fa fa-cube"></i>
-                    </a>
-                    <a class="sidebar-nav-item" href="https://github.com/rvirding/luerl/wiki">
-                        <i class="fa fa-book"></i>
-                    </a>
-                    <a class="sidebar-nav-item" href="https://github.com/rvirding/luerl/issues">
-                        <i class="fa fa-bug"></i>
-                    </a>
-                    <a class="sidebar-nav-item" href="https://github.com/rvirding/luerl">
-                        <i class="fa fa-github"></i>
-                    </a>
-            <a class="sidebar-nav-item" href="feeds/all.rss.xml">
-                <i class="fa fa-feed"></i>
-            </a>
-        </nav>
+<head>
+        <title>Luerl: Lua in Erlang</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Luerl: Lua in Erlang Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/images/site-cover.jpg">
+<meta name="twitter:creator" content="@rvirding">
+<meta name="twitter:site" content="@rvirding">
+<meta name="twitter:title" content="Luerl: Lua in Erlang">
+<meta name="twitter:description" content="">
+        <!-- OG Tags -->
+<meta property="og:url" content=""/>
+<meta property="og:title" content="Luerl: Lua in Erlang" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="/images/site-cover.jpg" />
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="/images/luerl.png">
+        <!-- moment.js for date formatting -->
+        <script src="/theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <a href="/"><img src="/images/luerl.png" alt="McManus Logo"></a>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                        <li><a href="/pages/about/">about</a></li>
+                        <li><a href="/pages/community/">community</a></li>
+                        <li><a href="/pages/examples/">examples</a></li>
+                        <li><a href="/pages/questions/">questions</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
-</div>		<div class="content container">
-	<div class="posts">
-			<div class="post">
-				<h1 class="post-title" href="/lua-in-erlang.html">
-					<a href="/lua-in-erlang.html">Lua in Erlang</a>
-				</h1>
-				<p>
-					<p>Luerl is an implementation of standard Lua 5.2 written in Erlang/OTP.</p>
-<p>Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, AI bots, machine learning and scientific computing research.</p>
-<p>It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description.</p>
-<p><strong>Fast Language …</strong></p>
-				</p>
-				<a class="read-more" href="lua-in-erlang.html">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="/community.html">
-					<a href="/community.html">Community</a>
-				</h1>
-				<p>
-					<p>Luerl embrace both <a href="https://twitter.com/hashtag/lualang?src=hash">#LuaLang</a> and <a href="https://twitter.com/hashtag/erlang?src=hash">#Erlang</a> the two of them are simple, diverse and complementary communities and ecosystems.</p>
-<h3>Join the Community</h3>
-<p><a href="https://luerl.slack.com">Luerl on Slack</a>, join by requesting an invite <a href="http://luerl-slack.herokuapp.com/">here</a></p>
-<p><a href="https://github.com/rvirding/luerl/issues">Issues on GitHub</a></p>
-<h3>Learning</h3>
-<p>The official definition of the Lua language is given in the <a href="https://www.lua.org/manual/5.2/">reference manual</a>.</p>
-<h3>Videos</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=A6_bt6tK2Is">Luerl - an …</a></li></ul>
-				</p>
-				<a class="read-more" href="community.html">Continue reading »</a>
-			</div>
-	</div>
-	<div class="pagination">
-
-		<span class="pagination-item older">Previous</span>
-
-		<span class="pagination-item newer"><a href="/index2.html">Next</a></span>
-	</div>
-		</div>
-	</body>
+        <div class="page" role="main">
+<div class="articles">
+    <ol>
+    </ol>
+    
+</div>                <footer>
+                    <div class="icons">
+                        <a href="https://twitter.com/rvirding" target="_blank"><div class="icon-twitter icon"></div></a>
+                        <a href="https://github.com/rvirding/luerl" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> BEAM Community</p>
+                </footer>
+        </div>
+</body>
 </html>

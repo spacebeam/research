@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Luerl: Lua in Erlang</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Luerl: Lua in Erlang Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/luerl.png">
+<meta name="twitter:site" content="@rvirding">
+<meta name="twitter:title" content="F.A.Q">
+<meta name="twitter:description" content="">
+        <!-- OG Tags -->
+<meta property="og:url" content="/pages/faq/"/>
+<meta property="og:title" content="Luerl: Lua in Erlang | F.A.Q" />
+<meta property="og:description" content="" />
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="/images/luerl.png">
+        <!-- moment.js for date formatting -->
+        <script src="/theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <a href="/"><img src="/images/luerl.png" alt="McManus Logo"></a>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                        <li><a href="/pages/torch-up/">torch-up</a></li>
+                        <li><a href="/pages/community/">community</a></li>
+                        <li><a href="/pages/examples/">examples</a></li>
+                        <li class="active"><a href="/pages/faq/">faq</a></li>
+                            <li><a href="/category/updates">updates</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2019-10-08 16:20:00+02:00">
+                <script>document.write(moment('2019-10-08 16:20:00+02:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            F.A.Q
+          </h2>
+        </header>
+      <div class="content">
+         <p>The following rules should be read in the context of fair play.</p>
+<p>Administration tries to provide authors participating in the tournament with a working environment, but can not guarantee activity. It's bot authors duty to do all necessary to not stall the procedure.</p>
+<p>The spirit of the rules should be followed, rather than the wording.</p>
+<p>We are more interested in seeing all bots playing, rather than in authors trying their best to bend the rules in their favor, while trying to force their will, OS or programming language over opponents.</p>
+<h2>Available hardware</h2>
+<p>Every AI run inside its own Linux container and have the following hardware reserved with no shared resources between competitors.</p>
+<ul>
+<li>Operating System: Debian 10 "buster" 64-bit</li>
+<li>Processor: 4 Xeon E5-2686 v4 (Broadwell) at 2.7 GHz</li>
+<li>Graphics Card: 1 NVIDIA Tesla M60</li>
+<li>System Memory: 8 GB RAM</li>
+<li>HDD free space: 4.7 GB</li>
+</ul>
+<p>If your system require the allocation of additional CPU's or GPU's please <a href="https://torchup.org/pages/contact/">contact us</a>, we are happy to help with your submission process.</p>
+<h2>Programming languages</h2>
+<p>This competition officially supports Lua, Python, C++ and Java.</p>
+<p>We also offer unofficial support for anything with a working BWAPI wrapper available in supported BWAPI versions, please <a href="https://torchup.org/pages/contact/">contact us</a> if your bot is under this category and you want to compete.</p>
+<h2>Tournament Structure</h2>
+<p>The tournament will be round-robin, with as many rounds as possible.</p>
+<p>The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.</p>
+<h3>Tournament winner</h3>
+<p>The top bots will play a single elimination bracket seeded 1-4 and 2-3.</p>
+<h3>BWAPI Versions</h3>
+<p>The following BWAPI <a href="https://torchup.org/files/bwapi.zip">release versions</a> will be supported this year:</p>
+<p>Version <code>4.1.2, 4.2.0, 4.4.0</code>.</p>
+<p>You are not allowed to use of other BWAPI version.</p>
+<h3>Maps</h3>
+<p>The official maps for the event are:</p>
+<div class="highlight"><pre><span></span>(4) Circuit Breaker,
+(3) Neo Aztec,
+(2) Heartbreak Ridge,
+(4) Gladiator,
+(3) Gold Rush,
+(2) Blue Storm,
+(4) Fighting Spirit,
+(3) Power Bond,
+(2) Overwatch,
+(4) Sparkle.
+</pre></div>
+
+
+<p><a href="https://torchup.org/files/maps.zip">click here</a>, to download them on zip file.</p>
+<h3>Game Type</h3>
+<p>The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.</p>
+<h3>Time Limit</h3>
+<p>Games will have a <code>frame limit</code> of <code>86400 frames</code>, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.</p>
+<h3>Conflict of Interest</h3>
+<p>Organizing AND participating in events like this can be tricky, we address these problems as follows:</p>
+<p>Before accepting submissions, we will distribute the <code>SHA-2</code> check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.</p>
+<h2>Software Requirements</h2>
+<h3>All bot types are welcome!</h3>
+<p>All open-source or closed source entries, submission folders will be published on this website once the competition has finished.</p>
+<h3>Game Speed</h3>
+<p>All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0) with no delay between each frame, so simulation will be as fast as possible and the Game Speed slider in the game lobby set to "Normal" (i.e. latency frames = 3, also known as LF3).</p>
+<h3>Software Time-Out</h3>
+<p>Make sure that each onframe call does not run longer than 42ms. Entries that slow down games by repeatedly exceeding this time limit will lose games on time. In particular:</p>
+<p>In a match a bot LOSES (immediately) on time</p>
+<div class="highlight"><pre><span></span>&gt;= 1 frames exceed 10 seconds, or
+&gt;= 10 frames exceed 1 second, or
+&gt;= 320 frames exceed 55ms
+</pre></div>
+
+
+<p>No observer players will join any games.</p>
+<h2>Persistent File I/O</h2>
+<p>File I/O will work the same way as AIIDE StarCraft AI Competition Rules. You will have read access to folder <code>bwapi-data/read/</code> and write access to folder <code>bwapi-data/write/</code>, both of which will be in the standard location under the StarCraft root directory.
+<em>IMPORTANT</em>: File I/O works as follows:</p>
+<ol>
+<li>Before each game, the contents of the server-side read directory for your bot are copied to the client machine under <code>bwapi-data/read/</code>. For the first round of the tournament this directory will be blank since a full round has not yet been played.</li>
+<li>During a game, you have write access to the <code>bwapi-data/write/</code> folder and read access to the <code>bwapi-data/read/</code> folder on the client you are currently playing on</li>
+<li>After the game ends, the contents of the <code>bwapi-data/read/</code> folder are deleted, and the contents of the <code>bwapi-data/write/</code> folder are sent to the server and stored in your bot's server-side write folder.</li>
+<li><em>WARNING</em>: Step 3 may overwrite previous results if you are not careful in specifying unique filenames for each opponent that you play against.</li>
+<li>After each bot has played each other bot on the current map (one round robin on that map) the contents of each bot's server-side write folder are copied into the respective server-side read folder and the write folder is cleared.</li>
+<li><em>WARNING</em>: Step 5 will over-write previous round data inside the server-side read folder. Your file output must either be cumulative, or have a filename scheme such that no overwrites will happen in order for your data to be preserved.</li>
+<li>The bot's server-side read folder is NEVER deleted throughout the tournament</li>
+<li>The next round starts, and from step 1 you will have access to your server-side read data from the previous rounds inside the client's <code>bwapi-data/read/</code> folder</li>
+</ol>
+<p>Due to the nature of overwriting the read folder, your file names should be unique at least to the current opponent.</p>
+<h2>Detailed Rules</h2>
+<p>No entry fee.</p>
+<p>All replay files and bot binaries will be made publicly available after the contest.</p>
+<p>StarCraft Brood War version 1.16.1 will be used for all games.</p>
+<p>All the games are 1 vs. 1 Game type is set to Melee.</p>
+<p>Bots that perform malicious behavior will be disqualified and banned from all future contests. This includes but is not limited to:</p>
+<ul>
+<li>
+<p>Install worms/viruses/malware on the host machine.</p>
+</li>
+<li>
+<p>Intentionally crash StarCraft.</p>
+</li>
+<li>
+<p>Spam the in-game console.</p>
+</li>
+</ul>
+<p>Read and write files outside of <code>bwapi-data/read/</code> (read-only), <code>bwapi-data/write/</code> and <code>bwapi-data/AI</code> (read-only).</p>
+<p>Up to 4.7 GB of disk space total for your <code>bwapi-data/read/</code> + <code>bwapi-data/write/</code> + <code>bwapi-data/AI/</code> directories.</p>
+<p>Bots that behave suspiciously, don't run, crash/hang/timeout too much, or lag too much (e.g. lagging client based bots that the tournament module can't detect) may be disqualified after some investigation.</p>
+<p>Use the system for other purposes, e.g. cryptomining, etc.</p>
+<p>Programs that attempt to cheat will be disqualified. See the other points about StarCraft bugs/tricks and bugs/exploits. Also, this includes but is not limited to:</p>
+<ul>
+<li>
+<p>Bots must <em>NOT</em> enable the complete map information flag (BWAPI::Flag::CompleteMapInformation).</p>
+</li>
+<li>
+<p>Use the getRandomSeed() method for decision making, e.g. inferring enemy start location or race.</p>
+</li>
+</ul>
+<p>Games in which an agent crashes StarCraft will be counted as a loss.</p>
+<p>Games will be run on <a href="https://debian.org">Debian</a> stable 64-bit environment.</p>
+<p>Entries must be tested on before submission.</p>
+<p>We will not be held responsible for entries that crash StarCraft due to our configuration of the system.</p>
+<p>Games will be run in a semi-automated fashion.</p>
+<p>Bots must not slow down the game speed.  </p>
+<p>All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.</p>
+<p>To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.</p>
+<p>Your bot <em>MUST NOT</em> call setLocalSpeed() or setFrameSkip() during the competition.</p>
+<p>Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).</p>
+<p>Games in which a bot crash or slows down the game speed on purpose will be counted as a loss.</p>
+<p>If your bot always crash or is slow too often on purpose, your bot <em>WILL BE</em> disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.</p>
+<p>Participants are not required to disclose bot source code but must provide a short description of implementation details.</p>
+<p>Entries are allowed to make use of free open-source software components and close source software as well.</p>
+<p>Bots are not allowed to pause the game, games in which a bot pauses the game will be counted as a loss.</p>
+<p>The following StarCraft bugs/tricks are permitted:</p>
+<ul>
+<li>
+<p>Stacked Recall</p>
+</li>
+<li>
+<p>Plague on interceptor</p>
+</li>
+<li>
+<p>Units pressed through</p>
+</li>
+<li>
+<p>Drops to defuse mines</p>
+</li>
+<li>
+<p>Mineral walk</p>
+</li>
+<li>
+<p>Manner Pylon</p>
+</li>
+<li>
+<p>Lurker hold position</p>
+</li>
+<li>
+<p>Observer over turret</p>
+</li>
+<li>
+<p>Stacking air units</p>
+</li>
+</ul>
+<p>All other bugs/exploits are forbidden. Bots caught attempted these exploits will be disqualified. </p>
+<p>This includes but is not limit to:</p>
+<ul>
+<li>
+<p>Flying drones and templars</p>
+</li>
+<li>
+<p>Terran sliding buildings</p>
+</li>
+<li>
+<p>Stacking non-burrowed ground units is forbidden except when you are using "Mineral walk" or "Units pressed through"</p>
+</li>
+<li>
+<p>Allied mines</p>
+</li>
+<li>
+<p>Gas walk (in all cases)</p>
+</li>
+</ul>
+<p>Bot names can only contain alphanumeric characters with no spaces, e.g. "ExampleBot", not "Example bot".</p>
+<p>Bots must stay one race for the entire tournament.</p>
+<p>The <code>bwapi-data/read/</code> and <code>bwapi-data/write/</code> folders for participating bots will be cleared after testing. </p>
+<p>Every bot's <code>bwapi-data/read/</code> and <code>bwapi-data/write/</code> folders will be empty at the start of the competition. </p>
+<p>Entries are not allowed to submit files for their bot to read from <code>bwapi-data/read/</code>. If your bot needs static files such as configuration files or pre-trained data, please ensure you bot reads such files from the <code>bwapi-data/AI/</code> folder, not from the <code>bwapi-data/read/</code> folder. <em>Note</em>: the purpose of the <code>bwapi-data/read/</code> folder is for reading data that your bot previously wrote during earlier games in this competition.</p>
+<p>If you copy a bot, please uphold the spirit of competition and ensure you make significant modification or addition before you submit it.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+      <div id="disqus_thread"></div>
+        <script>
+        (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://luerl.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://twitter.com/rvirding" target="_blank"><div class="icon-twitter icon"></div></a>
+                        <a href="https://github.com/rvirding/luerl" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> BEAM Community</p>
+                </footer>
+        </div>
+</body>
+</html>

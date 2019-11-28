@@ -22,8 +22,8 @@ Simplicity means that the basic principles of your system, the underlying basic 
 
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
-- Asynchronous communication is the necessary base for non-blocking systems.
-- Selective receive allow to ignore messages that can't be process now.
+- Async communication is the base of non-blocking systems.
+- Selective receive allow to ignore messages uninteresting now.
 
 ## Community
 Team up with scientists, artists and hackers that spawn network resources where you'll find new tools and information models.

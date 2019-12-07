@@ -146,7 +146,7 @@ apt clean
 
 apt autoremove -y
 
-#pip3 install riak queries py3status jupyter pywal
+#pip3 install riak queries py3status jupyter pywal ueberzug
 
 #chsh -s /bin/mksh
 

@@ -78,8 +78,6 @@ apt install --install-recommends \
     gpicview\
     xarchiver\
     audacity\
-    git\
-    gnome-themes-standard\
     fonts-lyx\
     python3-apt\
     python3-dev\

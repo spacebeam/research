@@ -4,6 +4,7 @@ apt update
 
 apt install --install-recommends \
     apt-transport-https\
+    debootstrap\
     gnupg2\
     software-properties-common\
     curl\
@@ -55,7 +56,6 @@ apt install --install-recommends \
     hfsprogs\
     dosfstools\
     vifm\
-    calcurse\
     pv\
     network-manager-gnome\
     network-manager-openvpn-gnome\

@@ -190,7 +190,6 @@ apt install --install-recommends\
     mesa-vulkan-drivers\
     xvfb\
     winehq-staging\
-    winetricks\
  -y
 
 pip3 install riak queries py3status jupyter pywal ueberzug

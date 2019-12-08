@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "spacebeam" > /etc/hostname
-
 apt update
 
 apt install --install-recommends \
@@ -102,11 +100,9 @@ apt install --install-recommends \
     protobuf-compiler\
     libsdl2-dev\
     libsdl2-image-dev\
-    pelican\
     libasound2-dev\
     libpulse-dev\
     automake\
-    inkscape\
     gfortran\
     bc\
     cron\

@@ -206,6 +206,7 @@ apt install --install-recommends\
     libgl1-mesa-dri:i386\
     mesa-vulkan-drivers\
     xvfb\
+    sudo\
     winehq-staging\
  -y
 

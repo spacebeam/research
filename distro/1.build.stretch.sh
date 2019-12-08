@@ -173,9 +173,9 @@ apt-key add winehq.key
 
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ stretch main'
 
-apt update & rm winehq.key
+apt update && rm winehq.key
 
-apt -y install --install-recommends\
+apt install --install-recommends\
     libgnutls30:i386\
     libldap-2.4-2:i386\
     libgpg-error0:i386\
@@ -191,7 +191,7 @@ apt -y install --install-recommends\
     xvfb\
     winehq-staging\
     winetricks\
-- y
+-y
 
 pip3 install riak queries py3status jupyter pywal ueberzug
 

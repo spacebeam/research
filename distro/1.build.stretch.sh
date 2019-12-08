@@ -191,7 +191,7 @@ apt install --install-recommends\
     xvfb\
     winehq-staging\
     winetricks\
--y
+ -y
 
 pip3 install riak queries py3status jupyter pywal ueberzug
 
@@ -201,13 +201,9 @@ rm /root/.mkshrc
 
 cp extra/mkshrc /root/.mkshrc
 
-# alternative mksh
+wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_22.1.8-1~debian~stretch_amd64.deb
 
-#wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2-1~debian~stretch_amd64.deb
-
-#dpkg -i esl-erlang_21.2-1~debian~stretch_amd64.deb
-
-#rm esl-erlang_21.2-1~debian~stretch_amd64.deb
+dpkg -i esl-erlang_22.1.8-1~debian~stretch_amd64.deb && rm esl-erlang_22.1.8-1~debian~stretch_amd64.deb
 
 git clone https://github.com/torch/distro.git /opt/torch --recursive
 

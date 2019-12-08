@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo export LC_ALL=en_US.UTF-8
-echo export LANG=en_US.UTF-8
-echo export LANGUAGE=en_US.UTF-8
+echo export LC_ALL="en_US.UTF-8"
+echo export LANG="en_US.UTF-8"
+echo export LANGUAGE="en_US.UTF-8"
 
 apt update
 

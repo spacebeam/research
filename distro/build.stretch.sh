@@ -3,8 +3,21 @@
 apt update
 
 apt install --install-recommends \
+    apt-transport-https\
+    gnupg2\
+    software-properties-common\
+    curl\
+    libyaml-0-2\
+    libyaml-dev\
     libsdl2-ttf-dev\
     libssl-dev\
+    zlib1g-dev\
+    libncurses5-dev\
+    libgdbm-dev\
+    libnss3-dev\
+    libssl-dev\
+    libreadline-dev\
+    libffi-dev\
     uuid-dev\
     libgpgme11-dev\
     libseccomp-dev\
@@ -148,17 +161,45 @@ apt install --install-recommends \
 
 apt clean
 
-#apt remove yelp -y
+apt remove yelp -y
 
 apt autoremove -y
 
-#pip3 install riak queries py3status jupyter pywal ueberzug
+dpkg --add-architecture i386
 
-#chsh -s /bin/mksh
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
 
-#rm /root/.mkshrc
+apt-key add winehq.key
 
-#cp mkshrc /root/.mkshrc
+apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ stretch main'
+
+apt update & rm winehq.key
+
+apt -y install --install-recommends\
+    libgnutls30:i386\
+    libldap-2.4-2:i386\
+    libgpg-error0:i386\
+    libxml2:i386\
+    libasound2-plugins:i386\
+    libsdl2-2.0-0:i386\
+    libfreetype6:i386\
+    libdbus-1-3:i386\
+    libsqlite3-0:i386\
+    libgl1-mesa-glx:i386\
+    libgl1-mesa-dri:i386\
+    mesa-vulkan-drivers\
+    xvfb\
+    winehq-staging\
+    winetricks\
+- y
+
+pip3 install riak queries py3status jupyter pywal ueberzug
+
+chsh -s /bin/mksh
+
+rm /root/.mkshrc
+
+cp extra/mkshrc /root/.mkshrc
 
 # alternative mksh
 
@@ -175,9 +216,3 @@ bash /opt/torch/install-deps
 cd /opt/torch/
 
 ./install.sh
-
-#cd /usr/src/
-
-#wget https://github.com/themix-project/oomox/releases/download/1.11/oomox_1.11-3-gde075379_18.10+.deb
-
-#dpkg -i oomox_1.11-3-gde075379_18.10+.deb

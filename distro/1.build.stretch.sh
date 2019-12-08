@@ -116,6 +116,7 @@ apt install --install-recommends \
     odbcinst\
     unixodbc\
     unixodbc-dev\
+    sudo\
     make\
     cmake\
     libncurses5-dev\
@@ -167,6 +168,7 @@ apt autoremove -y
 apt install --install-recommends\
     libglib3.0-cil\ 
     libglib3.0-cil-dev\
+    libtool\
  -y
 
 git clone --recursive https://github.com/thestinger/termite.git
@@ -206,7 +208,6 @@ apt install --install-recommends\
     libgl1-mesa-dri:i386\
     mesa-vulkan-drivers\
     xvfb\
-    sudo\
     winehq-staging\
  -y
 

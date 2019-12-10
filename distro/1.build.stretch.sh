@@ -171,7 +171,6 @@ apt autoremove -y
 
 apt install --install-recommends\
     libglib3.0-cil-dev\
-    libtool\
  -y
 
 git clone --recursive https://github.com/thestinger/termite.git

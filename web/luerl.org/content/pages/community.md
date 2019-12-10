@@ -2,20 +2,24 @@ Title: Community
 Date: 2017-01-07 16:20
 Category: Community
 
-Luerl embrace both [#LuaLang](https://twitter.com/hashtag/lualang?src=hash) and [#Erlang](https://twitter.com/hashtag/erlang?src=hash) the two of them are simple, diverse and complementary communities and ecosystems.
+Luerl embrace both [Lua](https://www.lua.org/) and [Erlang](https://www.erlang.org/) the two of them are simple, diverse and complementary communities and ecosystems.
 
 ### Join the Community
 
 [Luerl on Slack](https://luerl.slack.com), join by requesting an invite [here](http://luerl-slack.herokuapp.com/)
 
-[Issues on GitHub](https://github.com/rvirding/luerl/issues)
+[Issues](https://github.com/rvirding/luerl/issues)
+
+[Wiki](https://github.com/rvirding/luerl/wiki)
+
+[Code](https://github.com/rvirding/luerl)
 
 ### Learning
 
 The official definition of the Lua language is given in the [reference manual](https://www.lua.org/manual/5.2/).
 
 ### Videos
-
+- [Sandbox Wars: Elixir and Luerl](https://www.youtube.com/watch?v=fZG-K_zgDyI)
 - [Luerl - an implementation of Lua on the Erlang VM](https://www.youtube.com/watch?v=A6_bt6tK2Is)
 - [Synchronizing Game Components](https://www.youtube.com/watch?v=eHTePEtLV-c)
 - [On Language Design](https://www.youtube.com/watch?v=f3rP3JRq7Mw)

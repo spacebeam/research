@@ -187,6 +187,10 @@ sudo mkdir -p /lib/terminfo/x; sudo ln -s \
 
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/termite 60
 
+
+# MISSING SINGULARITY AND FUCKING GO!
+
+
 dpkg --add-architecture i386
 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key

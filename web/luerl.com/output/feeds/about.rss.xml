@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Lua in Erlang - About</title><link>/</link><description></description><lastBuildDate>Sun, 16 Jul 2017 16:20:00 +0000</lastBuildDate><item><title>Lua in Erlang</title><link>/lua-in-erlang.html</link><description>&lt;p&gt;Luerl is an implementation of standard Lua 5.2 written in Erlang/OTP.&lt;/p&gt;
-&lt;p&gt;Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, AI bots, machine learning and scientific computing research.&lt;/p&gt;
-&lt;p&gt;It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fast Language …&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Luerl</dc:creator><pubDate>Sun, 16 Jul 2017 16:20:00 +0000</pubDate><guid isPermaLink="false">tag:None,2017-07-16:/lua-in-erlang.html</guid></item></channel></rss>

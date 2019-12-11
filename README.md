@@ -1,4 +1,6 @@
 # Sector F Lambda Complex
+Spacebeam follows this interpretation of the UNIX philosophy: lots of small components that do one thing and talk between them by passing messages, usually text, binaries and signals.
+
 Feel free to explore the organization, [click here](https://github.com/spacebeam/guide/raw/master/guide.pdf) to download the guide on PDF or select the Wiki to [continue](https://github.com/spacebeam/research/wiki).
 
 For more about how to get help or get involved check the AI [competition](https://torchup.org) or explore the [guide](https://github.com/spacebeam/guide/wiki), and [community](https://spacebeam.org) website.

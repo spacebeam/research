@@ -5,7 +5,7 @@ Spacebeam present `Char` a custom Debian (x86_64) distribution that enables easi
 ## Core ideas
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
-- Async message passing is necessary for non-blocking systems.
+- Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
 
 ## Screenshots

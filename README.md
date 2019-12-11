@@ -1,5 +1,5 @@
 # Sector F Lambda Complex
-Spacebeam follows this interpretation of the UNIX philosophy: lots of small components that do one thing and talk between them by passing messages, usually text, binaries and signals.
+Spacebeam follows this interpretation of the UNIX philosophy: lots of small components that do one thing and talk between them by passing messages, usually text, binaries or signals.
 
 Feel free to explore the organization, [click here](https://github.com/spacebeam/guide/raw/master/guide.pdf) to download the guide on PDF or select the Wiki to [continue](https://github.com/spacebeam/research/wiki).
 

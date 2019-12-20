@@ -1,4 +1,5 @@
 # Luna
+```
                                   |
 ,--.                              |  **Spacebeam**
 |  |   ,--.,--.,--,--,  ,--,--.   |  Distributed Artificial Intelligence
@@ -6,3 +7,4 @@
 |  '--.'  ''  '|  ||  |\ '-'  |   |  https://github.com/spacebeam
 `-----' `----' `--''--' `--`--'   |  https://spacebeam.org
                                   |
+```

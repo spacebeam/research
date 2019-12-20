@@ -73,6 +73,7 @@ PLUGINS = ['sitemap', 'w3c_validate',
            'optimize_images', 'gzip_cache', 
            'liquid_tags.youtube', 'liquid_tags.speakerdeck',
            'liquid_tags.audio', 'liquid_tags.include_code']
+IPYNB_GENERATE_SUMMARY = True
 IGNORE_FILES = [".ipynb_checkpoints"]
 ## SITEMAP PLUGIN
 SITEMAP = {

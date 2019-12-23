@@ -22,7 +22,7 @@ Simplicity means that the basic principles of your system, the underlying basic 
 
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
-- Async communication is the base of non-blocking systems.
+- Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
 
 ## Community

@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - updates</title><link href="/" rel="alternate"></link><link href="/feeds/updates.atom.xml" rel="self"></link><id>/</id><updated>2019-12-28T00:00:00+01:00</updated><entry><title>Distributed memory</title><link href="/2019/12/28/distributed-memory/" rel="alternate"></link><published>2019-12-28T00:00:00+01:00</published><updated>2019-12-28T00:00:00+01:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2019-12-28:/2019/12/28/distributed-memory/</id><summary type="html">&lt;p&gt;l; and the competitive learning paradigm, in which the goal is to discover salient features of the ensemble of patterns
-.&lt;/p&gt;
-&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
-&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, maki
-ng their behavior contingent on instructions originating elsewhere in the network. This …&lt;/p&gt;</summary><content type="html">&lt;p&gt;l; and the competitive learning paradigm, in which the goal is to discover salient features of the ensemble of patterns
-.&lt;/p&gt;
-&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
-&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, maki
-ng their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the wa
-y a network responds to a particular input can be made contingent on the state of some other network in the system, the
-reby greatly increasing the flexibility of parallel processing mechanisms.&lt;/p&gt;
-&lt;p&gt;Perhaps the most general way of stating the benefit of connection information distribution is to note that it is analog
-ous, in a way, to the invention of the stored program. The use of centrally stored connection information to program lo
-cal processing structures is analogous. This allows the very same processing structures to be programmed to perform a v
-ery wide range of different tasks.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - updates</title><link href="/" rel="alternate"></link><link href="/feeds/updates.atom.xml" rel="self"></link><id>/</id><updated>2019-12-28T00:00:00+01:00</updated><entry><title>Distributed memory</title><link href="/2019/12/28/distributed-memory/" rel="alternate"></link><published>2019-12-28T00:00:00+01:00</published><updated>2019-12-28T00:00:00+01:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2019-12-28:/2019/12/28/distributed-memory/</id><summary type="html">&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of some other network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.&lt;/p&gt;
+&lt;p&gt;Perhaps the most general way of stating the benefit of connection information distribution is to note that it is analogous, in a way, to the invention of the stored program. The use of centrally stored connection information to program local processing structures is analogous. This allows the very same processing structures to be programmed to perform a very wide range of different tasks.&lt;/p&gt;
 &lt;h2&gt;A Distributed Model Of Memory&lt;/h2&gt;
-&lt;p&gt;The auto-associator models are a class of related models that share the auto-associative architecture. That is, they al
-l consist of a single set of units that are completely interconnected, auto-associators are limited by the fact that th
-ey can only train connections between units whose target activations can be specified from outside the network.&lt;/p&gt;
-&lt;p&gt;In spite of this limitation, auto-associators have several interesting properties. They can learn to do pattern complet
-ion and to restore distorted versions of learned patterns to their original form. They can learn to extract the prototy
-pe of a set of patterns from distorted exemplars presented during training.&lt;/p&gt;
+&lt;p&gt;The auto-associator models are a class of related models that share the auto-associative architecture. That is, they all consist of a single set of units that are completely interconnected, auto-associators are limited by the fact thatthey can only train connections between units whose target activations can be specified from outside the network.&lt;/p&gt;
+&lt;p&gt;In spite of this limitation, auto-associators have several interesting properties. They can learn to do pattern completion and to restore distorted versions of learned patterns to their original form. They can learn to extract the prototype of a set of patterns from distorted exemplars presented during training.&lt;/p&gt;
 &lt;p&gt;In all versions of the auto-associator input patterns consist of vectors specifying positive and negative inputs to the
  units from outside the network, based on these external inputs and on the connections they receive from other units inside the network.&lt;/p&gt;
 &lt;p&gt;Patterns that are scaled by a network are called eigenvectors, eigenvector simply means "same vector." The magnitude of the eigenvector, as it is processed by the network, is called its eigenvalue.&lt;/p&gt;

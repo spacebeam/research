@@ -1,28 +1,16 @@
 title: Distributed memory 
 date: 2019-12-28
-description: The auto-associator learning paradigm, in which the goal is to store specific patterns for future retrieva
-l; and the competitive learning paradigm, in which the goal is to discover salient features of the ensemble of patterns
-.
+description: The auto-associator learning paradigm, in which the goal is to store specific patterns for future retrieval; and the competitive learning paradigm, in which the goal is to discover salient features of the ensemble of patterns.
 
 ## Benefits of Distribution
-Connection information distribution allows us to instruct parallel processing structures from outside the network, maki
-ng their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the wa
-y a network responds to a particular input can be made contingent on the state of some other network in the system, the
-reby greatly increasing the flexibility of parallel processing mechanisms.
+Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of some other network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.
 
-Perhaps the most general way of stating the benefit of connection information distribution is to note that it is analog
-ous, in a way, to the invention of the stored program. The use of centrally stored connection information to program lo
-cal processing structures is analogous. This allows the very same processing structures to be programmed to perform a v
-ery wide range of different tasks.
+Perhaps the most general way of stating the benefit of connection information distribution is to note that it is analogous, in a way, to the invention of the stored program. The use of centrally stored connection information to program local processing structures is analogous. This allows the very same processing structures to be programmed to perform a very wide range of different tasks.
 
 ## A Distributed Model Of Memory
-The auto-associator models are a class of related models that share the auto-associative architecture. That is, they al
-l consist of a single set of units that are completely interconnected, auto-associators are limited by the fact that th
-ey can only train connections between units whose target activations can be specified from outside the network.
+The auto-associator models are a class of related models that share the auto-associative architecture. That is, they all consist of a single set of units that are completely interconnected, auto-associators are limited by the fact thatthey can only train connections between units whose target activations can be specified from outside the network.
 
-In spite of this limitation, auto-associators have several interesting properties. They can learn to do pattern complet
-ion and to restore distorted versions of learned patterns to their original form. They can learn to extract the prototy
-pe of a set of patterns from distorted exemplars presented during training.
+In spite of this limitation, auto-associators have several interesting properties. They can learn to do pattern completion and to restore distorted versions of learned patterns to their original form. They can learn to extract the prototype of a set of patterns from distorted exemplars presented during training.
 
 In all versions of the auto-associator input patterns consist of vectors specifying positive and negative inputs to the
  units from outside the network, based on these external inputs and on the connections they receive from other units inside the network.

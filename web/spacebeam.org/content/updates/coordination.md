@@ -21,7 +21,7 @@ The process has two fundamental elements:
 
 Faced with a need for action, an individual might have a range of conditions to contend with in selecting a program; from those where programs are available, complete, and detailed to those where a program will have to be developed either through searching somewhere else for it, adapting an existing one, or creating a new one.
 
-Communications are seen to have a wide range range of forms from the specific, precise instruction or order, to the general information about the state of the organization and its environment.
+Communications are seen to have a wide range of forms from the specific, precise instruction or order, to the general information about the state of the organization and its environment.
 
 The existence of these wide variations and the basic elements of coordination suggest the need for multiple means of achieving coordination from which the most acceptable element or a combination of them can be chosen.
 

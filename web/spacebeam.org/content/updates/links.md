@@ -1,6 +1,6 @@
 title: Elements of Coordination 
 date: 2020-01-12
-description: In a crude way division of work is concerned with breaking a big task into smaller ones.
+description: In a crude way division of work is concerned with breaking a task into smaller ones.
 
 Division of work is concerned with breaking a big task into smaller ones. The resulting activities are therefore interconnected or linked.
 

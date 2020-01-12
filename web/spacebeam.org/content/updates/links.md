@@ -1,4 +1,4 @@
-title: The Elements Of Coordination 
+title: Elements of Coordination 
 date: 2020-01-12
 description: In a crude way division of work is concerned with breaking a big task into smaller ones.
 

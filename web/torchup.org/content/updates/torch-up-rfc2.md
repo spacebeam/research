@@ -25,7 +25,7 @@ The tournament offer access to multicore and GPU, Linux containers and native su
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Fighting_Spirit.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Power_Bond.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Overwatch.jpg 200 %} |
 
-### Bonus: Island Challenge
+### Optional: Island Challenge
 | (4) Sparkle | 
 :---:|
 | {% img [class name(s)] /images/Sparkle.jpg 200 %} |

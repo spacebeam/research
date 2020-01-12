@@ -53,7 +53,7 @@ The official maps for the event are:
 (4) Fighting Spirit,
 (3) Power Bond,
 (2) Overwatch,
-(4) Sparkle.
+(4) Sparkle. (optional) Island Challenge
 ```
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 

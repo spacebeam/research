@@ -1,5 +1,5 @@
 Title: Rules
-Date: 2019-10-08 16:20
+Date: 2020-01-14 16:20
 
 The following rules should be read in the context of fair play.
 
@@ -136,9 +136,9 @@ Programs that attempt to cheat will be disqualified. See the other points about 
 
 Games in which an agent crashes StarCraft will be counted as a loss.
 
-Games will be run on [Debian](https://debian.org) stable 64-bit environment.
+Games will be run on [Debian](https://debian.org) stable 64-bit environment inside Singularity Linux containers..
 
-Entries must be tested on before submission.
+Entries must be tested to work on the [maps](https://torchup.com/files/maps.zip) before submission.
 
 We will not be held responsible for entries that crash StarCraft due to our configuration of the system.
 

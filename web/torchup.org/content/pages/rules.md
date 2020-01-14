@@ -138,7 +138,7 @@ Games in which an agent crashes StarCraft will be counted as a loss.
 
 Games will be run on [Debian](https://debian.org) stable 64-bit environment inside Singularity Linux containers..
 
-Entries must be tested to work on the [maps](https://torchup.com/files/maps.zip) before submission.
+Entries must be tested to work on the [maps](https://torchup.org/files/maps.zip) before submission.
 
 We will not be held responsible for entries that crash StarCraft due to our configuration of the system.
 

@@ -118,7 +118,7 @@
 (4) Fighting Spirit,
 (3) Power Bond,
 (2) Overwatch,
-(4) Sparkle. (optional challenge)
+(4) Sparkle (optional) Island challenge.
 </pre></div>
 
 
@@ -205,14 +205,28 @@
 <p>Entries must be tested on before submission.</p>
 <p>We will not be held responsible for entries that crash StarCraft due to our configuration of the system.</p>
 <p>Games will be run in a semi-automated fashion.</p>
-<p>Bots must not slow down the game speed.  </p>
+<p>Bots must not slow down the game speed:</p>
+<ul>
+<li>
 <p>All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.</p>
+</li>
+<li>
 <p>To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.</p>
+</li>
+<li>
 <p>Your bot <em>MUST NOT</em> call setLocalSpeed() or setFrameSkip() during the competition.</p>
+</li>
+<li>
 <p>Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).</p>
+</li>
+<li>
 <p>Games in which a bot crash or slows down the game speed on purpose will be counted as a loss.</p>
+</li>
+<li>
 <p>If your bot always crash or is slow too often on purpose, your bot <em>WILL BE</em> disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.</p>
-<p>Participants are not required to disclose bot source code but must provide a short description of implementation details.</p>
+</li>
+</ul>
+<p>Participants are not required to disclose bot source code but may provide a short description of implementation details.</p>
 <p>Entries are allowed to make use of free open-source software components and close source software as well.</p>
 <p>Bots are not allowed to pause the game, games in which a bot pauses the game will be counted as a loss.</p>
 <p>The following StarCraft bugs/tricks are permitted:</p>

@@ -53,7 +53,7 @@ The official maps for the event are:
 (4) Fighting Spirit,
 (3) Power Bond,
 (2) Overwatch,
-(4) Sparkle. (optional challenge)
+(4) Sparkle (optional) Island challenge.
 ```
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
@@ -118,13 +118,15 @@ Bots that perform malicious behavior will be disqualified and banned from all fu
 
 - Spam the in-game console.
 
-Read and write files outside of `bwapi-data/read/` (read-only), `bwapi-data/write/` and `bwapi-data/AI` (read-only).
+- Change the already pre-set current working directory (CWD) of the process.
 
-Up to 4.7 GB of disk space total for your `bwapi-data/read/` + `bwapi-data/write/` + `bwapi-data/AI/` directories.
+- Read and write files outside of the CWD (read-only), ‘bwapi-data/read/’ (read-only), ‘bwapi-data/write/ and ‘bwapi-data/AI’ (read-only).
 
-Bots that behave suspiciously, don't run, crash/hang/timeout too much, or lag too much (e.g. lagging client based bots that the tournament module can't detect) may be disqualified after some investigation.
+- Up to 4.7 GB of disk space total for your `bwapi-data/read/` + `bwapi-data/write/` + `bwapi-data/AI/` directories.
 
-Use the system for other purposes, e.g. cryptomining, etc.
+- Bots that behave suspiciously, don't run, crash/hang/timeout too much, or lag too much (e.g. lagging client based bots that the tournament module can't detect) may be disqualified after some investigation.
+
+- Use the system for other purposes, e.g. cryptomining, etc.
 
 Programs that attempt to cheat will be disqualified. See the other points about StarCraft bugs/tricks and bugs/exploits. Also, this includes but is not limited to:
 
@@ -142,21 +144,21 @@ We will not be held responsible for entries that crash StarCraft due to our conf
 
 Games will be run in a semi-automated fashion.
 
-Bots must not slow down the game speed.  
+Bots must not slow down the game speed:
 
-All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.
+- All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.
 
-To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.
+- To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.
 
-Your bot *MUST NOT* call setLocalSpeed() or setFrameSkip() during the competition.
+- Your bot *MUST NOT* call setLocalSpeed() or setFrameSkip() during the competition.
 
-Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).
+- Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).
 
-Games in which a bot crash or slows down the game speed on purpose will be counted as a loss.
+- Games in which a bot crash or slows down the game speed on purpose will be counted as a loss.
 
-If your bot always crash or is slow too often on purpose, your bot *WILL BE* disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.
+- If your bot always crash or is slow too often on purpose, your bot *WILL BE* disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.
 
-Participants are not required to disclose bot source code but must provide a short description of implementation details.
+Participants are not required to disclose bot source code but may provide a short description of implementation details.
 
 Entries are allowed to make use of free open-source software components and close source software as well.
 

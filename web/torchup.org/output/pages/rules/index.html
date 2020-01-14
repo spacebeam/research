@@ -205,7 +205,7 @@
 <p>Entries must be tested to work on the <a href="https://torchup.org/files/maps.zip">maps</a> before submission.</p>
 <p>We will not be held responsible for entries that crash StarCraft due to our configuration of the system.</p>
 <p>Games will be run in a semi-automated fashion.</p>
-<p>Bots must not slow down the game speed:</p>
+<p>Bots must not slow down the game speed on purpose:</p>
 <ul>
 <li>
 <p>All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.</p>
@@ -214,7 +214,7 @@
 <p>To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.</p>
 </li>
 <li>
-<p>Your bot <em>MUST NOT</em> call setLocalSpeed() or setFrameSkip() during the competition.</p>
+<p>Your bot <em>MUST NOT</em> call setLocalSpeed() or setFrameSkip() during the competition. Not even setLocalSpeed(0) or setFrameSkip(0).  We suggest you comment out all calls to them.</p>
 </li>
 <li>
 <p>Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).</p>

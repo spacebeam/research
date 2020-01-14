@@ -144,13 +144,13 @@ We will not be held responsible for entries that crash StarCraft due to our conf
 
 Games will be run in a semi-automated fashion.
 
-Bots must not slow down the game speed:
+Bots must not slow down the game speed on purpose:
 
 - All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0), please make sure that your bot functions correctly on this setting.
 
 - To avoid problems, base your 'timings' on unit counts or getFrameCount() and not machine time.
 
-- Your bot *MUST NOT* call setLocalSpeed() or setFrameSkip() during the competition.
+- Your bot *MUST NOT* call setLocalSpeed() or setFrameSkip() during the competition. Not even setLocalSpeed(0) or setFrameSkip(0).  We suggest you comment out all calls to them.
 
 - Games will be run using the Game Speed slider in the game lobby set to the default which is "Normal" (i.e. latency frames = 3, also known as LF3).
 

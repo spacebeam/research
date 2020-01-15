@@ -124,6 +124,10 @@ Bots that perform malicious behavior will be disqualified and banned from all fu
 
 - Up to 4.7 GB of disk space total for your `bwapi-data/read/` + `bwapi-data/write/` + `bwapi-data/AI/` directories.
 
+- Malicious utilization of resources such as sockets, files, zombie processes (Using 100% RAM and 100% CPU is permitted).
+
+- Retrieve / store system or user information, e.g. username, hostname, IP address, network information, operating system type/version, CPU type/model/details, system time zone/offsets and other location/locale information (note: dates/times are ok so long as you don’t identify the time zone/offset).
+
 - Bots that behave suspiciously, don't run, crash/hang/timeout too much, or lag too much (e.g. lagging client based bots that the tournament module can't detect) may be disqualified after some investigation.
 
 - Use the system for other purposes, e.g. cryptomining, etc.

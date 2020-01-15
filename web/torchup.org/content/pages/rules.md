@@ -202,11 +202,11 @@ Bot names can only contain alphanumeric characters with no spaces, e.g. "Example
 
 Bots must stay one race for the entire tournament.
 
-The `bwapi-data/read/` and `bwapi-data/write/` folders for participating bots will be cleared after testing. 
+The `bwapi-data/read/` and `bwapi-data/write/` folders for participating bots will be cleared after testing. Every bot’s `bwapi-data/read/` and `bwapi-data/write/` folders will be empty at the start of the competition. Entries are not allowed to submit files for their bot to read from `bwapi-data/read/`. If your bot needs static files such as configuration files or pre-trained data, please ensure you bot reads such files from the `bwapi-data/AI/` folder, not from the `bwapi-data/read/` folder. Note: the purpose of the `bwapi-data/read/` folder is for reading data that your bot previously wrote during earlier games in this competition.
 
-Every bot's `bwapi-data/read/` and `bwapi-data/write/` folders will be empty at the start of the competition. 
+If you copy other bots or use IP/files/source code/logic/techniques etc from other bots, you must familiarize yourself with their licenses and ensure that you are not infringing their licenses. Copying other bot(s) is allowed, so long as it does not infringe their licenses and so long as you modify their logic or if you use/wrap it without modifying it and add some of your own logic on top of it.
 
-Entries are not allowed to submit files for their bot to read from `bwapi-data/read/`. If your bot needs static files such as configuration files or pre-trained data, please ensure you bot reads such files from the `bwapi-data/AI/` folder, not from the `bwapi-data/read/` folder. *Note*: the purpose of the `bwapi-data/read/` folder is for reading data that your bot previously wrote during earlier games in this competition.
+If you copy a bot, please uphold the spirit of competition and ensure you make significant modification or addition before you submit it. We don’t want multiple apparently near-identical copies of the same bot competing!
 
-If you copy a bot, please uphold the spirit of competition and ensure you make significant modification or addition before you submit it.
+Rules are not necessarily retrospective when applied to re-used entries from past years – the rules that applied during the corresponding old year apply to each re-used entry, but newer/updated rules may or may not be applied, at the discretion of the competition organizers.
 

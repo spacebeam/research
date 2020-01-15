@@ -156,7 +156,7 @@ Bots must not slow down the game speed on purpose:
 
 - Games in which a bot crash or slows down the game speed on purpose will be counted as a loss.
 
-- If your bot always crash or is slow too often on purpose, your bot *WILL BE* disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.
+- If your bot always crash or is slow too often without any apparent reason, your bot *WILL BE* disqualified.  It may be disabled part-way through the competition. The results for all games involving the bot will be ignored and excluded, by this particular case  administration reserve the right to decide whether to restart the competition or run from scratch.
 
 Participants are not required to disclose bot source code but may provide a short description of implementation details.
 
@@ -207,6 +207,8 @@ The `bwapi-data/read/` and `bwapi-data/write/` folders for participating bots wi
 If you copy other bots or use IP/files/source code/logic/techniques etc from other bots, you must familiarize yourself with their licenses and ensure that you are not infringing their licenses. Copying other bot(s) is allowed, so long as it does not infringe their licenses and so long as you modify their logic or if you use/wrap it without modifying it and add some of your own logic on top of it.
 
 If you copy a bot, please uphold the spirit of competition and ensure you make significant modification or addition before you submit it. We don’t want multiple apparently near-identical copies of the same bot competing!
+
+Please *DO NOT* have any logic that only works on a specific version of windows or specific types of environment or only works on a hard-coded list of bot names that register. Entries must run/play properly when run in other similar environments and against other players. This is so that they can easily be used in next year’s competition – the players will be different, and the environment might be different – and so that they can easily be used in future by other researchers / developers / competitions. Bots should run/play properly regardless of what context it is run in. 
 
 Rules are not necessarily retrospective when applied to re-used entries from past years – the rules that applied during the corresponding old year apply to each re-used entry, but newer/updated rules may or may not be applied, at the discretion of the competition organizers.
 

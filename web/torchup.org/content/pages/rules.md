@@ -196,7 +196,7 @@ This includes but is not limit to:
 
 - Allied mines
 
-- Gas walk (in all cases)
+- Gas walk (in all cases including: to get through blocked entrances or ramps; to attack any units)
 
 Bot names can only contain alphanumeric characters with no spaces, e.g. "ExampleBot", not "Example bot".
 

@@ -13,12 +13,12 @@ We are more interested in seeing all bots playing, rather than in authors trying
 Every AI run inside its own Linux container and have the following hardware reserved with no shared resources between competitors.
 
 - Operating System: Debian 10 "buster" 64-bit
-- Processor: 4 Xeon E5-2686 v4 (Broadwell) at 2.7 GHz
+- Processor: 4 vCPU Xeon E5-2686 v4 (Broadwell) at 2.7 GHz
 - Graphics Card: 1 NVIDIA Tesla M60
 - System Memory: 8 GB RAM
 - HDD free space: 4.7 GB
 
-If your system require the allocation of additional CPU's or GPU's please [contact us](https://torchup.org/pages/contact/), we are happy to help with your submission process.
+If your system require the allocation of additional vCPU's or GPU's please [contact us](https://torchup.org/pages/contact/), we are happy to help with your submission process.
 
 ## Programming languages
 This competition officially supports Lua, Python, C++ and Java.
@@ -55,6 +55,8 @@ The official maps for the event are:
 (2) Overwatch,
 (4) Sparkle (optional) challenge.
 ```
+*NOTE* Sparkle is used after the main event for a completely optional `Island challenge`, bot authors could opt out of this round at any time without this affecting or reflecting into the tournament results.
+
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
 ### Game Type

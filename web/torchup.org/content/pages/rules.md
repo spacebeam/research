@@ -192,7 +192,7 @@ This includes but is not limit to:
 
 - Terran sliding buildings
 
-- Stacking non-burrowed ground units is forbidden except when you are using "Mineral walk" or "Units pressed through"
+- Stacking non-burrowed ground units is forbidden except when you are using "Mineral walk" or "Units pressed through" or "Stacked Recall". E.g. stacking your workers using "gas walk" is forbidden.
 
 - Allied mines
 

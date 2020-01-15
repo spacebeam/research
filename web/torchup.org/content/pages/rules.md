@@ -136,7 +136,7 @@ Programs that attempt to cheat will be disqualified. See the other points about 
 
 Games in which an agent crashes StarCraft will be counted as a loss.
 
-Games will be run on [Debian](https://debian.org) stable 64-bit environment inside [Singularity](https://github.com/sylabs/singularity) Linux containers.
+Games will be run on [Debian](https://debian.org) stable 64-bit inside [Singularity](https://github.com/sylabs/singularity) containers.
 
 Entries must be tested to work on the [maps](https://torchup.org/files/maps.zip) before submission.
 

@@ -17,6 +17,15 @@ To register, send an email to [Jean Chassoul](mailto:jchassoul@gmail.com) with t
     Type (DLL, EXE, Linux or Java):
     BWAPI Version:
 ```
+
+### Registration
+Registration Deadline is 15 January 2020.
+
+
+### Submission
+Submission Deadline is 25 January 2020.
+
+
 ### Bot Submission Guidelines
 
 When submitting your bot, *please* follow these guidelines for submitting your bot's final version. To submit the final version of your bot, email [jchassoul@gmail.com](mailto:jchassoul@gmail.com) a link or attach a single zip file containing:

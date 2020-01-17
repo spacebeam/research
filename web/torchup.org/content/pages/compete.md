@@ -19,11 +19,11 @@ To register, send an email to [Jean Chassoul](mailto:jchassoul@gmail.com) with t
 ```
 
 ### Registration
-Registration Deadline is 15 January 2020.
+Registration deadline is *15 January 2020*.
 
 
 ### Submission
-Submission Deadline is 25 January 2020.
+Submission deadline is *25 January 2020*.
 
 
 ### Bot Submission Guidelines

@@ -41,7 +41,7 @@ BWAPI 4.1.2
 
 ### Additional Submission Notes:
 
-Before submitting, and without taking Sparkle in consideration, please test that your bot is able to successfully play a game on all the other nine maps in the map pool.
+Before submitting, excluding Sparkle, please test that your bot is able to successfully play a game for every map in the map pool.
 
 *DO NOT* include BWAPI or external libraries with your submission, if your bot .zip file is to big for email, contact us about it, we are happy to help.
 

@@ -1,5 +1,5 @@
 title: Torch Up
-Date: 2020-01-16 16:20
+Date: 2020-01-14 16:20
 ## Torch Up: FOSDEM'20 Brood War AI Tournament
 
 ### 2020 Tournament Registration / Submission Open!

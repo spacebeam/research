@@ -1,7 +1,7 @@
 Title: Compete
 Date: 2020-01-17 16:20
 
-## Torch Up: Brood War AI Tournament Registration Open!
+## Torch Up: Brood War AI Registration Open!
 
 You must register by January 15th, 2020 in order to compete.
 

@@ -1,6 +1,6 @@
 title: Torch Up
-Date: 2019-10-06 16:20
-## FOSDEM 2020 Brood War AI Tournament
+Date: 2020-01-16 16:20
+## Torch Up: FOSDEM'20 Brood War AI Tournament
 
 ### 2020 Tournament Registration / Submission Open!
 
@@ -10,9 +10,8 @@ Are you new to a StarCraft: Brood War AI Competition? Want a fully functional bo
 
 ###Overview
 
-Welcome to the home of the 1th FOSDEM Brood War AI tournament which is organized by the Spacebeam community as an annual FOSDEM side event (end of January/begining of February) at Brussels, Belgium.
-
+Welcome to the home of the 1th Torch Up Brood War AI tournament which is organized by the [Spacebeam](https://spacebeam.org) community as an annual FOSDEM side event (end of January/begining of February) at Brussels, Belgium.
 
 During this event, programs will play StarCraft: Brood War games against each other using BWAPI, a software library that makes it possible to connect programs to the StarCraft: Brood War game engine.
 
-The purpose of this competition is enable Brood War AI bots native support for the Linux® environment, access to multi-core and GPU's, as well of the use of popular machine learning frameworks and data analysis tools, anything that authors could package inside a [Singularity](https://en.wikipedia.org/wiki/Singularity_(software)) Linux® [Container](https://sylabs.io/guides/3.4/user-guide/definition_files.html) without programming language restrictions while maintaining support for existing Win32 C++ and Java bots active out there. 
+The purpose of this competition is enable Brood War AI bots native support for the Linux® environment, access to multi-core and GPU's, as well of the use of popular machine learning frameworks and data analysis tools, anything that authors could package inside a Linux® [Container](https://sylabs.io/guides/3.4/user-guide/definition_files.html) without programming language restrictions while maintaining support for existing Win32 C++ and Java bots active out there, competing in other StarCraft: Brood War AI Competitions. 

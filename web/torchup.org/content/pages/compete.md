@@ -1,14 +1,14 @@
 Title: Compete
-Date: 2019-10-09 16:20
+Date: 2020-01-17 16:20
 
-## Torch Up: Brood War AI Registration Open!
+## Torch Up: Brood War AI Tournament Registration Open!
 
-You must register by January 15th, 2021 in order to compete.
+You must register by January 15th, 2020 in order to compete.
 
 To register, send an email to [Jean Chassoul](mailto:jchassoul@gmail.com) with the following information:
 
 ```
-    Subject: TORCH-UP'21 ENTRY
+    Subject: FOSDEM'20 ENTRY
     Entry Name:
     Contact Name (First Last): 
     Contact Email Address: 

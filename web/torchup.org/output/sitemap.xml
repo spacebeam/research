@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-01-18T11:13:39-00:00</lastmod>
+<lastmod>2020-01-18T11:37:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-01-18T11:13:39-00:00</lastmod>
+<lastmod>2020-01-18T11:37:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-01-18T11:13:39-00:00</lastmod>
+<lastmod>2020-01-18T11:37:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-01-18T11:13:39-00:00</lastmod>
+<lastmod>2020-01-18T11:37:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,6 +60,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/2020/01/16/2020-torch-up-brood-war-ai-registration-list/</loc>
+<lastmod>2020-01-16T00:00:00+01:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
+</url>
+
+<url>
 <loc>/2020/01/15/torch-up-brood-war-ai-tournament/</loc>
 <lastmod>2020-01-15T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2020-01-15T00:00:00+00:18</lastmod>
+<lastmod>2020-01-16T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

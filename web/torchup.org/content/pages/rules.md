@@ -206,7 +206,7 @@ This includes but is not limit to:
 
 Bot names can only contain alphanumeric characters with no spaces, e.g. "ExampleBot", not "Example bot".
 
-Bots are not allowed play random at this tournament, bots must stay one race for the entire event.
+Bots are not allowed play random race, bots must choose and stay one race for the entire event.
 
 The `bwapi-data/read/` and `bwapi-data/write/` folders for participating bots will be cleared after testing. Every bot’s `bwapi-data/read/` and `bwapi-data/write/` folders will be empty at the start of the competition. Entries are not allowed to submit files for their bot to read from `bwapi-data/read/`. If your bot needs static files such as configuration files or pre-trained data, please ensure you bot reads such files from the `bwapi-data/AI/` folder, not from the `bwapi-data/read/` folder. The purpose of the `bwapi-data/read/` folder is for reading data that your bot previously wrote during earlier games in this competition.
 

@@ -1,6 +1,6 @@
 title: Torch Up | Brood War AI Tournament
 date: 2020-01-15
-description: We are excited to announce the first Torch Up: FOSDEM'20 Brood War AI Tournament. See you in Brussels!
+description: We are excited to announce the first Torch Up: Brood War AI Tournament.
 
 Torch Up: Brood War AI Tournament is currently organized by the Spacebeam community as annual FOSDEM side event (end of Jannuary/beginning of February).
 

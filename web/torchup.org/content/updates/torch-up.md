@@ -6,7 +6,7 @@ Torch Up: Brood War AI Tournament is currently organized by the Spacebeam commun
 
 The results are presented at FOSDEM in Brussels Belgium, planet Earth.
 
-Are you new to a StarCraft: Brood War AI competition? want a fully functional bot to start with and modify? We have links to open-source bot projects which you can use as good point of entry and join the arena.
+Are you new to a StarCraft: Brood War AI competition? want a fully functional bot to start with and modify? We have links to open-source bot projects which you can use as good point of entry.
 
 During this event, programs wil play StarCraft: Brood War games against each other using BWAPI, a software library that makes it all possible connecting bots to the game engine.
 

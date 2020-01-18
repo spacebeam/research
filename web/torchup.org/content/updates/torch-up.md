@@ -1,4 +1,4 @@
-title: Torch Up | Brood War AI Tournament
+title: Torch Up: Brood War AI Tournament
 date: 2020-01-15
 description: We are excited to announce the first Torch Up: Brood War AI Tournament.
 

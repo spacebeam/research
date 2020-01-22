@@ -6,7 +6,7 @@ Date: 2020-01-14 16:20
 
 Torch Up: FOSDEM 2020 Brood War AI Tournament registration and submission are now open. You have until January 15th to submit your registration for the competition. Submission deadline for bots will be January 25th, 2020. Good luck, have fun!
 
-Are you new to a StarCraft: Brood War AI Competition? Want a fully functional bot to start with and modify? We have a [liquipedia page](https://liquipedia.net/starcraft/Torch_Up) with [links](https://github.com/jchassoul/awesome-broodwarAI) to open source bot projects which you can use as a good point of entry to the competition. 
+Are you new to a StarCraft: Brood War AI Competition? Want a fully functional bot to start with and modify? We have a [liquipedia page](https://liquipedia.net/starcraft/Torch_Up) with [links](https://github.com/jchassoul/awesome-broodwarAI) to open-source bot projects which you can use as a good point of entry to the competition. 
 
 ###Overview
 

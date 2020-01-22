@@ -75,17 +75,6 @@ All open-source or closed source entries, submission folders will be published o
 ### Game Speed
 All games will be played in a LAN UDP network game between the two players at setLocalSpeed(0) with no delay between each frame, so simulation will be as fast as possible and the Game Speed slider in the game lobby set to "Normal" (i.e. latency frames = 3, also known as LF3).
 
-### Software Time-Out
-Make sure that each onframe call does not run longer than 42ms. Entries that slow down games by repeatedly exceeding this time limit will lose games on time. In particular:
-
-In a match a bot LOSES (immediately) on time
-```
->= 1 frames exceed 10 seconds, or
->= 10 frames exceed 1 second, or
->= 320 frames exceed 55ms
-```
-No observer players will join any games.
-
 ## Persistent File I/O
 File I/O will work the same way as AIIDE StarCraft AI Competition Rules. You will have read access to folder `bwapi-data/read/` and write access to folder `bwapi-data/write/`, both of which will be in the standard location under the StarCraft root directory.
 *IMPORTANT*: File I/O works as follows:

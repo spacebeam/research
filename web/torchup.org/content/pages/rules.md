@@ -26,7 +26,7 @@ This competition officially supports Lua, Python, C++ and Java.
 We also offer unofficial support for anything with a working BWAPI wrapper available in supported BWAPI versions, please [contact us](https://torchup.org/pages/contact/) if your bot is under this category and you want to compete.
 
 ## Tournament Structure
-The tournament will be round-robin, with as many rounds as possible, starting on Monday January 27th, 2020 until Friday January 31th, 2020.
+The tournament will be round-robin, with as many rounds as possible, starting on Monday January 27th until Friday January 31th, 2020.
 
 The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.
 

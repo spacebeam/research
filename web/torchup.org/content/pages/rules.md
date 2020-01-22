@@ -30,7 +30,7 @@ The round format is 1v1, best-of-99 games per match, bots always play exactly 99
 
 ### Tournament winner
 
-The top bots will play a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.
+The top bots will play best-of-9 games in a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.
 
 ### BWAPI Versions
 The following BWAPI [release versions](https://torchup.org/files/bwapi.zip) will be supported this year:
@@ -66,7 +66,7 @@ Games will have a `frame limit` of `86400 frames`, to simulate one hour of gamep
 ### Conflict of Interest
 Organizing AND participating in events like this can be tricky, we address these problems as follows:
 
-Before accepting submissions, we will distribute the `SHA-2` check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.
+Before accepting submissions, we will distribute the `SHA-2` check sums of our bot to all participants. This way, participants can be confident that we will not change our entry after running their submitted program.
 
 ## Software Requirements
 ### All bot types are welcome!
@@ -92,6 +92,8 @@ Due to the nature of overwriting the read folder, your file names should be uniq
 
 ## Detailed Rules
 No entry fee.
+
+Accessing the internet/network is generally permitted.
 
 All replay files and bot binaries will be made publicly available after the contest.
 
@@ -203,7 +205,7 @@ The `bwapi-data/read/` and `bwapi-data/write/` folders for participating bots wi
 
 Bots might be used to play against humans in show-matches using Game Speed slider in the game lobby set to “Normal”, i.e. LF3
 
-The bot submissions from the authors, the bot binaries plus any initial configuration/pre-trained data that was actually used during the competition, replays, read/write folders, detailed game results table and summary tables/charts etc will be published but not until after the organizers are ready after their submission deadline.
+The bot submissions from the authors, the bot binaries plus any initial configuration/pre-trained data that was actually used during the competition, replays, read/write folders, detailed game results table and summary tables/charts etc will be published on the `updates` section of this website.
 
 If you copy other bots or use IP/files/source code/logic/techniques etc from other bots, you must familiarize yourself with their licenses and ensure that you are not infringing their licenses. Copying other bot(s) is allowed, so long as it does not infringe their licenses and so long as you modify their logic or if you use/wrap it without modifying it and add some of your own logic on top of it.
 

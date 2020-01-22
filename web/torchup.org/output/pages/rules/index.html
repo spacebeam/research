@@ -101,7 +101,7 @@
 <p>The tournament will be round-robin, with as many rounds as possible, starting on Monday January 27th until Friday January 31th, 2020.</p>
 <p>The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.</p>
 <h3>Tournament winner</h3>
-<p>The top bots will play a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.</p>
+<p>The top bots will play best-of-9 games in a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.</p>
 <h3>BWAPI Versions</h3>
 <p>The following BWAPI <a href="https://torchup.org/files/bwapi.zip">release versions</a> will be supported this year:</p>
 <p>Version <code>4.1.2, 4.2.0, 4.4.0</code>.</p>
@@ -129,7 +129,7 @@
 <p>Games will have a <code>frame limit</code> of <code>86400 frames</code>, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.</p>
 <h3>Conflict of Interest</h3>
 <p>Organizing AND participating in events like this can be tricky, we address these problems as follows:</p>
-<p>Before accepting submissions, we will distribute the <code>SHA-2</code> check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.</p>
+<p>Before accepting submissions, we will distribute the <code>SHA-2</code> check sums of our bot to all participants. This way, participants can be confident that we will not change our entry after running their submitted program.</p>
 <h2>Software Requirements</h2>
 <h3>All bot types are welcome!</h3>
 <p>All open-source or closed source entries, submission folders will be published on this website once the competition has finished.</p>
@@ -151,6 +151,7 @@
 <p>Due to the nature of overwriting the read folder, your file names should be unique at least to the current opponent.</p>
 <h2>Detailed Rules</h2>
 <p>No entry fee.</p>
+<p>Accessing the internet/network is generally permitted.</p>
 <p>All replay files and bot binaries will be made publicly available after the contest.</p>
 <p>StarCraft Brood War version 1.16.1 will be used for all games.</p>
 <p>All the games are 1 vs. 1 Game type is set to Melee.</p>
@@ -280,7 +281,7 @@
 <p>Bots are not allowed play random race, bots must choose and stay one race for the entire event.</p>
 <p>The <code>bwapi-data/read/</code> and <code>bwapi-data/write/</code> folders for participating bots will be cleared after testing. Every bot’s <code>bwapi-data/read/</code> and <code>bwapi-data/write/</code> folders will be empty at the start of the competition. Entries are not allowed to submit files for their bot to read from <code>bwapi-data/read/</code>. If your bot needs static files such as configuration files or pre-trained data, please ensure you bot reads such files from the <code>bwapi-data/AI/</code> folder, not from the <code>bwapi-data/read/</code> folder. The purpose of the <code>bwapi-data/read/</code> folder is for reading data that your bot previously wrote during earlier games in this competition.</p>
 <p>Bots might be used to play against humans in show-matches using Game Speed slider in the game lobby set to “Normal”, i.e. LF3</p>
-<p>The bot submissions from the authors, the bot binaries plus any initial configuration/pre-trained data that was actually used during the competition, replays, read/write folders, detailed game results table and summary tables/charts etc will be published but not until after the organizers are ready after their submission deadline.</p>
+<p>The bot submissions from the authors, the bot binaries plus any initial configuration/pre-trained data that was actually used during the competition, replays, read/write folders, detailed game results table and summary tables/charts etc will be published on the <code>updates</code> section of this website.</p>
 <p>If you copy other bots or use IP/files/source code/logic/techniques etc from other bots, you must familiarize yourself with their licenses and ensure that you are not infringing their licenses. Copying other bot(s) is allowed, so long as it does not infringe their licenses and so long as you modify their logic or if you use/wrap it without modifying it and add some of your own logic on top of it.</p>
 <p>If you copy a bot, please uphold the spirit of competition and ensure you make significant modification or addition before you submit it. We don’t want multiple apparently near-identical copies of the same bot competing!</p>
 <p>Please <em>DO NOT</em> have any logic that only works on a specific version of windows or specific types of environment or only works on a hard-coded list of bot names that register. Entries must run/play properly when run in other similar environments and against other players. This is so that they can easily be used in next year’s competition – the players will be different, and the environment might be different – and so that they can easily be used in future by other researchers / developers / competitions. Bots should run/play properly regardless of what context it is run in. </p>

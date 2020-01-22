@@ -27,7 +27,7 @@ Submission deadline for bots will be 09:59 26th January 2020 UTC.
 
 ### Bot Submission Guidelines
 
-When submitting your bot, *please* follow these guidelines for submitting your bot's final version. To submit the final version of your bot, email [jchassoul@gmail.com](mailto:jchassoul@gmail.com) an URL (*NOT* by attachment because may be blocked by Gmail because it might think it's malware) etc. send a link to download a single zip file containing:
+When submitting your bot, *please* follow these guidelines for submitting your bot's final version. To submit the final version of your bot, email [jchassoul@gmail.com](mailto:jchassoul@gmail.com) an URL (*NOT* by attachment because may be blocked by Gmail, etc) send a link to download a single zip file containing:
 
 A folder containing the dll or executable of your bot we will use in the tournament and for immediate testing. (EXE/Linux/Java) bot files must contain a file named run_proxy.bat or run_proxy.sh which runs your bot.
 

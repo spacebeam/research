@@ -10,7 +10,7 @@ Are you new to a StarCraft: Brood War AI Competition? Want a fully functional bo
 
 ###Overview
 
-Welcome to the home of the 1th Torch Up Brood War AI tournament which is organized by the [Spacebeam](https://spacebeam.org) community as an annual [FOSDEM](https://fosdem.org) side event (end of January/begining of February) at Brussels Belgium, planet Earth.
+Welcome to the home of the 1st Torch Up Brood War AI tournament which is organized by the [Spacebeam](https://spacebeam.org) community as an annual [FOSDEM](https://fosdem.org) side event (end of January/begining of February) at Brussels Belgium, planet Earth.
 
 During this event, programs will play StarCraft: Brood War games against each other using BWAPI, a software library that makes it possible to connect programs to the game engine.
 

@@ -7,8 +7,6 @@ Administration tries to provide authors participating in the tournament with a w
 
 The spirit of the rules should be followed, rather than the wording.
 
-We are more interested in seeing all bots playing, rather than in authors trying their best to bend the rules in their favor, while trying to force their will, OS or programming language over opponents.
-
 ## Available hardware
 Every AI run inside its own Linux container and have the following hardware reserved with no shared resources between competitors.
 
@@ -48,9 +46,9 @@ The official maps for the event are:
 (3) Aztec 2.1,
 (2) Heartbreak Ridge,
 (4) Gladiator 1.1,
-(3) Gold Rush 1.1,
+(3) Gold Rush,
 (2) Blue Storm 1.2,
-(4) Fighting Spirit,
+(4) Fighting Spirit 1.3,
 (3) Power Bond,
 (2) Overwatch 2.2,
 (4) Sparkle 1.1 (optional) challenge.
@@ -111,6 +109,8 @@ All replay files and bot binaries will be made publicly available after the cont
 StarCraft Brood War version 1.16.1 will be used for all games.
 
 All the games are 1 vs. 1 Game type is set to Melee.
+
+Race either Terran, Protoss or Zerg, (Not allowed to Choose Random).
 
 Bots that perform malicious behavior will be disqualified and banned from all future contests. This includes but is not limited to:
 

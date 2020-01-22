@@ -13,7 +13,7 @@ The tournament offer access to multicore and GPU, Linux containers and native su
 ## Maps
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
-| (4) Circuit Breaker | &nbsp; | (3) Neo Aztec | &nbsp; | (2) Blue Storm | 
+| (4) Circuit Breaker | &nbsp; | (3) Aztec | &nbsp; | (2) Blue Storm | 
 |:---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Circuit_Breaker.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Neo_Aztec.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Bluestorm.jpg 200 %} |
 

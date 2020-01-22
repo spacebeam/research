@@ -10,7 +10,7 @@ The spirit of the rules should be followed, rather than the wording.
 ## Available hardware
 Every AI run inside its own Linux container and have the following hardware reserved with no shared resources between competitors.
 
-- Operating System: Debian 10 "buster" 64-bit
+- Operating System: Debian 10 64-bit
 - Processor: 4 vCPU Xeon E5-2686 v4 (Broadwell) at 2.7 GHz
 - Graphics Card: 1 NVIDIA Tesla M60
 - System Memory: 8 GB RAM

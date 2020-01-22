@@ -61,7 +61,7 @@ The official maps for the event are:
 The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.
 
 ### Time Limit
-Games will have a `frame limit` of `86400 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner calculated using the same formula as AIIDE/CoG, i.e. calculated on frame 86400 as getKillScore() + getBuildingScore() + getRazingScore() + gatheredMinerals() + gatheredGas().
+Games will have a `frame limit` of `86400 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.
 
 ### Conflict of Interest
 Organizing AND participating in events like this can be tricky, we address these problems as follows:

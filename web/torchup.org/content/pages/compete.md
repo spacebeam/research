@@ -19,11 +19,10 @@ To register, send an email to [Jean Chassoul](mailto:jchassoul@gmail.com) with t
 ```
 
 ### Registration
-Registration deadline is 15 January 2020.
-
+You have until 09:59 16th January 2020 UTC to submit your registration for the competition. 
 
 ### Submission
-Submission deadline is 25 January 2020.
+Submission deadline for bots will be 09:59 26th January 2020 UTC.
 
 
 ### Bot Submission Guidelines

@@ -45,15 +45,15 @@ You are not allowed to use of other BWAPI version.
 The official maps for the event are:
 ```
 (4) Circuit Breaker,
-(3) Neo Aztec,
+(3) Aztec 2.1,
 (2) Heartbreak Ridge,
-(4) Gladiator,
-(3) Gold Rush,
-(2) Blue Storm,
+(4) Gladiator 1.1,
+(3) Gold Rush 1.1,
+(2) Blue Storm 1.2,
 (4) Fighting Spirit,
 (3) Power Bond,
-(2) Overwatch,
-(4) Sparkle (optional) challenge.
+(2) Overwatch 2.2,
+(4) Sparkle 1.1 (optional) challenge.
 ```
 *NOTE* Sparkle is used after the main event for a completely optional `Island challenge`, bot authors could opt out of this round at any time without this affecting or reflecting into the tournament results.
 

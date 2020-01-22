@@ -99,10 +99,10 @@
 <p>This competition officially supports Lua, Python, C++ and Java.</p>
 <p>We also offer unofficial support for anything with a working BWAPI wrapper available in supported BWAPI versions, please <a href="https://torchup.org/pages/contact/">contact us</a> if your bot is under this category and you want to compete.</p>
 <h2>Tournament Structure</h2>
-<p>The tournament will be round-robin, with as many rounds as possible.</p>
+<p>The tournament will be round-robin, with as many rounds as possible, starting on Monday January 27th, 2020 until Friday January 31th, 2020.</p>
 <p>The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.</p>
 <h3>Tournament winner</h3>
-<p>The top bots will play a single elimination bracket seeded 1-4 and 2-3.</p>
+<p>The top bots will play a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.</p>
 <h3>BWAPI Versions</h3>
 <p>The following BWAPI <a href="https://torchup.org/files/bwapi.zip">release versions</a> will be supported this year:</p>
 <p>Version <code>4.1.2, 4.2.0, 4.4.0</code>.</p>
@@ -127,7 +127,7 @@
 <h3>Game Type</h3>
 <p>The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.</p>
 <h3>Time Limit</h3>
-<p>Games will have a <code>frame limit</code> of <code>86400 frames</code>, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.</p>
+<p>Games will have a <code>frame limit</code> of <code>86400 frames</code>, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner calculated using the same formula as AIIDE/CoG, i.e. calculated on frame 86400 as getKillScore() + getBuildingScore() + getRazingScore() + gatheredMinerals() + gatheredGas().</p>
 <h3>Conflict of Interest</h3>
 <p>Organizing AND participating in events like this can be tricky, we address these problems as follows:</p>
 <p>Before accepting submissions, we will distribute the <code>SHA-2</code> check sums of our bot to all participants. This way, participants can be confident that we don’t change our entry after runing their submitted program.</p>

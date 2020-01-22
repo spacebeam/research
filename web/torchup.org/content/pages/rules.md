@@ -26,13 +26,13 @@ This competition officially supports Lua, Python, C++ and Java.
 We also offer unofficial support for anything with a working BWAPI wrapper available in supported BWAPI versions, please [contact us](https://torchup.org/pages/contact/) if your bot is under this category and you want to compete.
 
 ## Tournament Structure
-The tournament will be round-robin, with as many rounds as possible.
+The tournament will be round-robin, with as many rounds as possible, starting on Monday January 27th, 2020 until Friday January 31th, 2020.
 
 The round format is 1v1, best-of-99 games per match, bots always play exactly 99 games per match to determine the winner of that match.
 
 ### Tournament winner
 
-The top bots will play a single elimination bracket seeded 1-4 and 2-3.
+The top bots will play a single elimination bracket seeded 1st place against 4th place, 2nd place against 3rd place.
 
 ### BWAPI Versions
 The following BWAPI [release versions](https://torchup.org/files/bwapi.zip) will be supported this year:
@@ -63,7 +63,7 @@ The official maps for the event are:
 The game type for the competition will be 1 vs. 1 Melee full game StarCraft: BroodWar 1.16.1 with fog of war enabled.
 
 ### Time Limit
-Games will have a `frame limit` of `86400 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner.
+Games will have a `frame limit` of `86400 frames`, to simulate one hour of gameplay. If a game goes this long, it will be stopped and the in-game score will be used to determine the winner calculated using the same formula as AIIDE/CoG, i.e. calculated on frame 86400 as getKillScore() + getBuildingScore() + getRazingScore() + gatheredMinerals() + gatheredGas().
 
 ### Conflict of Interest
 Organizing AND participating in events like this can be tricky, we address these problems as follows:

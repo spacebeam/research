@@ -1,5 +1,5 @@
 Title: Rules
-Date: 2020-01-14 16:20
+Date: 2020-01-22 16:20
 
 The following rules should be read in the context of fair play.
 

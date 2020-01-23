@@ -53,7 +53,7 @@ The official maps for the event are:
 (2) Overwatch 2.2,
 (4) Sparkle 1.1 (optional) challenge.
 ```
-*NOTE* Sparkle is used after the main event for a completely optional `Island challenge`, bot authors could opt out of this round at any time without this affecting or reflecting into the tournament results.
+*NOTE* Sparkle is used after the main event for a completely optional single `Island challenge` round with clean `ead` and `write` directories, bot authors could opt out of this additional round at any time without this affecting or reflecting into the tournament results.
 
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 

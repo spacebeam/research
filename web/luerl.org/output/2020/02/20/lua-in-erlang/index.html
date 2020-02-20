@@ -5,16 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Luerl: Lua in Erlang Full Atom Feed" />
+        <link href="/feeds/updates.atom.xml" type="application/atom+xml" rel="alternate" title="Luerl: Lua in Erlang Categories Atom Feed" />
         <!-- twitter card metadata -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/luerl.png">
 <meta name="twitter:site" content="@rvirding">
-<meta name="twitter:title" content="Community">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Lua in Erlang">
+<meta name="twitter:description" content=""Scripting is a relevant technique for any programmer's toolbox." &mdash; Roberto Ierusalimschy">
         <!-- OG Tags -->
-<meta property="og:url" content="/pages/community/"/>
-<meta property="og:title" content="Luerl: Lua in Erlang | Community" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="/2020/02/20/lua-in-erlang/"/>
+<meta property="og:title" content="Luerl: Lua in Erlang | Lua in Erlang" />
+<meta property="og:description" content=""Scripting is a relevant technique for any programmer's toolbox." &mdash; Roberto Ierusalimschy" />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/images/luerl.png">
         <!-- moment.js for date formatting -->
@@ -45,6 +46,7 @@
             };
         </script>
 
+    <meta name="description" content=""Scripting is a relevant technique for any programmer's toolbox." &mdash; Roberto Ierusalimschy" />
 
 
 </head>
@@ -56,10 +58,10 @@
             <nav id="menu">
                 <ul>
                         <li><a href="/pages/about/">about</a></li>
-                        <li class="active"><a href="/pages/community/">community</a></li>
+                        <li><a href="/pages/community/">community</a></li>
                         <li><a href="/pages/questions/">questions</a></li>
                         <li><a href="/pages/showroom/">showroom</a></li>
-                            <li><a href="/category/updates">updates</a></li>
+                            <li class="active"><a href="/category/updates">updates</a></li>
                 </ul>
             </nav>
         </header>
@@ -70,36 +72,45 @@
         <footer>
             <a name="top"></a>
             <p>
-              <time datetime=" 2017-01-07 16:20:00+01:00">
-                <script>document.write(moment('2017-01-07 16:20:00+01:00').format('LL'));</script>
+              <time datetime=" 2020-02-20 00:00:00+01:00">
+                <script>document.write(moment('2020-02-20 00:00:00+01:00').format('LL'));</script>
               </time>
             </p>
         </footer>
         <header>
           <h2>
-            Community
+            Lua in Erlang
           </h2>
         </header>
       <div class="content">
-         <p>Luerl embrace both <a href="https://www.lua.org/">Lua</a> and <a href="https://www.erlang.org/">Erlang</a> the two of them are simple, diverse and complementary communities and ecosystems.</p>
-<h3>Join the Community</h3>
-<p><a href="https://luerl.slack.com">Luerl on Slack</a>, join by requesting an invite <a href="http://luerl-slack.herokuapp.com/">here</a></p>
-<p><a href="https://github.com/rvirding/luerl/issues">Issues</a></p>
-<p><a href="https://github.com/rvirding/luerl/wiki">Wiki</a></p>
-<p><a href="https://github.com/rvirding/luerl">Code</a></p>
-<h3>Learning</h3>
-<p>The official definition of the Lua language is given in the <a href="https://www.lua.org/manual/5.2/">reference manual</a>.</p>
-<h3>Videos</h3>
+         <p>Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP.</p>
+<p>Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, machine learning and scientific computing research.</p>
+<p>It supports procedural, object-oriented, functional, data-driven, reactive, organizational programming and data description.</p>
+<p>Being an extension language, Lua has no notion of a "main" program: it works as a library embedded in a host. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang functions by Lua code.</p>
+<p>Luerl is a library, written in clean Erlang/OTP. For more information, check out the <a href="https://github.com/rvirding/luerl/wiki/0.2-Getting-started">get started</a> tutorial. You may want to browse the <a href="https://github.com/rvirding/luerl/tree/develop/examples">examples</a> source code.</p>
+<h2>Luerl goal</h2>
+<p>A proper implementation of the Lua language
+- It SHOULD look and behave the same as Lua 5.3
+- It SHOULD include the Lua standard libraries
+- It MUST interface well with Erlang</p>
+<h2>Embedded language</h2>
+<p>Lua is an embeddable language implemented as a library that offers a clear API for applications inside a register-based virtual machine.</p>
+<p>This ability to be used as a library to extend an application is what makes Lua an extension language. </p>
+<p>At the same time, a program that uses Lua can register new functions in the Luerl environment; such functions are implemented in Erlang (or another language) and can add facilities that cannot be written directly in Lua. This is what makes any Lua implementation an extensible language.</p>
+<p>These two views of Lua (as extension language and as extensible language) correspond of two kinds of interaction between Erlang and Lua. In the first kind, Erlang has the control and Lua is the library. The Erlang code in this kind of interaction is what we call application code. </p>
+<p>In the second kind, Lua has the control and Erlang is the library. Here, the Erlang code is called library code. Both application code and library code use the same API to communicate with Lua, the so called Luerl API.</p>
+<p>Modules, Object Oriented programming and iterators need no extra features in the Lua API. They are all done with standard mechanisms for tables and first-class functions with lexical scope.</p>
+<p>Exception handling and code load go the opposite way: primitives in the API are exported to Lua from the base system C, JIT, BEAM.</p>
+<p>Lua implementations are based on the idea of closures, a closure represents the code of a function plus the environment where the function was defined.</p>
+<p>Like with tables, Luerl itself uses functions for several important constructs in the language. The use of constructors based on functions helps to make the API simple and general.</p>
+<h2>The result</h2>
+<p>Luerl is a native Erlang implementation of standard Lua 5.3 written for the BEAM ecosystem.</p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=fZG-K_zgDyI">Sandbox Wars: Elixir and Luerl</a></li>
-<li><a href="https://www.youtube.com/watch?v=A6_bt6tK2Is">Luerl - an implementation of Lua on the Erlang VM</a></li>
-<li><a href="https://www.youtube.com/watch?v=eHTePEtLV-c">Synchronizing Game Components</a></li>
-<li><a href="https://www.youtube.com/watch?v=f3rP3JRq7Mw">On Language Design</a></li>
-<li><a href="https://www.youtube.com/watch?v=du6qWa8lWZA">Implementing Languages in Erlang</a></li>
-<li><a href="https://www.youtube.com/watch?v=_Pwlvy3zz9M">Hitchhiker's Tour of the BEAM</a></li>
-<li><a href="https://www.youtube.com/watch?v=iypTz5HoE-U">The Erlang Ecosystem</a></li>
-<li><a href="https://www.youtube.com/watch?v=BiBvOGP-GNg">A reactive game stack: Using Erlang, Lua and Voltdb to enable a nonsharded game world</a></li>
+<li>Easy for Erlang to call </li>
+<li>Easy for Lua to call Erlang</li>
+<li>Erlang concurrency model and error handling</li>
 </ul>
+<p>Through the use of the BEAM languages, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-12-10T10:02:25-00:00</lastmod>
+<lastmod>2020-02-20T11:23:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-12-10T10:02:25-00:00</lastmod>
+<lastmod>2020-02-20T11:23:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-12-10T10:02:25-00:00</lastmod>
+<lastmod>2020-02-20T11:23:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-12-10T10:02:25-00:00</lastmod>
+<lastmod>2020-02-20T11:23:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -57,6 +57,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2019-11-08T16:20:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.75</priority>
+</url>
+
+<url>
+<loc>/2020/02/20/lua-in-erlang/</loc>
+<lastmod>2020-02-20T00:00:00+01:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
+</url>
+
+<url>
+<loc>/category/updates</loc>
+<lastmod>2020-02-20T00:00:00+00:18</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 </urlset>

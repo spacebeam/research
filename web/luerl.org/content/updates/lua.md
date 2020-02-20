@@ -1,6 +1,8 @@
 title: Lua in Erlang
 date: 2020-02-20
-description: "Scripting is a relevant technique for any programmer's toolbox." &mdash; Roberto Ierusalimschy
+description: Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP. Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, machine learning and scientific computing research.
+
+"Scripting is a relevant technique for any programmer's toolbox." &mdash; Roberto Ierusalimschy
 
 Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP.
 

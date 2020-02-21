@@ -1,2 +1,2 @@
 # starfruit
-Soft real-time communication carambolas!
+Soft real-time carambolas!

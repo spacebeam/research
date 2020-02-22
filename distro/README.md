@@ -1,6 +1,14 @@
-# Workspace
-
-Spacebeam present Luna a custom Debian (x86_64) distribution that enables easily build computational clusters, grid endpoints and visualization on tiled-displays; installation and support is also available from community members.
+# Luna
+```
+                                  |
+,--.                              |  **Spacebeam**
+|  |   ,--.,--.,--,--,  ,--,--.   |  Distributed Artificial Intelligence
+|  |   |  ||  ||      \' ,-.  |   |  **Type ? for help**
+|  '--.'  ''  '|  ||  |\ '-'  |   |  https://github.com/spacebeam
+`-----' `----' `--''--' `--`--'   |  https://spacebeam.org
+                                  |
+```
+Spacebeam present Luna a custom Debian (x86_64) distribution that enables easily build Linux clusters, grid endpoints and visualization on tiled-displays; installation and support is also available.
 
 ## Core ideas
 - Functions are a form of objects.

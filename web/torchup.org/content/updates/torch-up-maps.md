@@ -32,4 +32,8 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Hannibal.jpg 200 %} |
 
+| (5) Quintessence | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Vampire |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} |
+
 

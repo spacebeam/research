@@ -28,8 +28,8 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 
+| (5) Hwangsanbeol | &nbsp; | (4) Sparkle | &nbsp; | (4) Hannibal |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Hannibal.jpg 200 %} |
 
-### Optional: Island Challenge
-| (4) Sparkle | 
-:---:|
-| {% img [class name(s)] /images/Sparkle.jpg 200 %} |
+

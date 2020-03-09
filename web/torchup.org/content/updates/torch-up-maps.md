@@ -20,7 +20,7 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 
 ### Optional Challenge
 
-| (5) Hwangsanbeol | &nbsp; | (4) Sparkle | &nbsp; | (4) Hannibal |
+| (5) Hwangsanbeol | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Hannibal |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Hannibal.jpg 200 %} |
 
@@ -32,7 +32,7 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 
-| (5) Quintessence | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Vampire |
+| (5) Quintessence | &nbsp; | (4) Sparkle | &nbsp; | (4) Vampire |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} |
 

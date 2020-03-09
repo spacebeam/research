@@ -28,12 +28,11 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Magrathea.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Crossing.jpg 200 %} |
 
-| (4) Eddy | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
-:---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
-
 | (5) Quintessence | &nbsp; | (4) Sparkle | &nbsp; | (4) Vampire |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} |
 
+| (4) In the Way of an Eddy | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 

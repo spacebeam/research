@@ -24,15 +24,15 @@ description: Here are the maps updated with some interesting surprises.
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Eddy.jpg 200 %} |
 
-| (4) Magrathea | &nbsp; | (3) Medusa | &nbsp; | (2) Crossing Field |
+| (4) Magrathea | &nbsp; | (3) Inner Coven | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Magrathea.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/Magrathea.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Crossing.jpg 200 %} |
 
 | (5) Quintessence | &nbsp; | (4) Vampire | &nbsp; | (4) Sparkle |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} |
 
-| (4) Hannibal | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
+| (4) Hannibal | &nbsp; | (3) Medusa | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Hannibal.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
+| {% img [class name(s)] /images/Hannibal.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 

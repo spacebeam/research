@@ -1,6 +1,6 @@
-title: Torch Up: Maps and bonus-rounds
+title: Torch Up: Maps and Optional Challenge
 date: 2020-03-10
-description: Here are the maps for the first Torch Up: Brood War AI Tournament updated with some interesting surprises.
+description: Here are the Torch Up: Brood War AI Tournament maps updated with some interesting surprises.
 
 ## Maps
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
@@ -20,19 +20,19 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 
 ### Optional Challenge
 
-| (5) Hwangsanbeol | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Hannibal |
+| (5) Hwangsanbeol | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Eddy |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Hannibal.jpg 200 %} |
+| {% img [class name(s)] /images/Hwangsanbeol.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Eddy.jpg 200 %} |
 
 | (4) Magrathea | &nbsp; | (3) Medusa | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/Magrathea.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Crossing.jpg 200 %} |
 
-| (5) Quintessence | &nbsp; | (4) Sparkle | &nbsp; | (4) Vampire |
+| (5) Quintessence | &nbsp; | (4) Vampire | &nbsp; | (4) Sparkle |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} |
+| {% img [class name(s)] /images/Quintessence.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Vampire.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Sparkle.jpg 200 %} |
 
-| (4) In the Way of an Eddy | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
+| (4) Hannibal | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
+| {% img [class name(s)] /images/Hannibal.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 

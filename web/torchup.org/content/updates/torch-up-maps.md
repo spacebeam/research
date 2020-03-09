@@ -1,6 +1,6 @@
 title: Torch Up: Maps and Optional Challenge
 date: 2020-03-10
-description: Here are the Torch Up: Brood War AI Tournament maps updated with some interesting surprises.
+description: Here are the maps updated with some interesting surprises.
 
 ## Maps
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.

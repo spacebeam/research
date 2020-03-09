@@ -20,6 +20,13 @@ description: Here are the maps for the first Torch Up: Brood War AI Tournament u
 
 ### Optional Challenge
 
+| (4) Magrathea | &nbsp; | (3) Medusa | &nbsp; | (2) Crossing Field |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/Magrathea.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Crossing.jpg 200 %} |
+
+| (4) Eddy | &nbsp; | (3) Inner Coven | &nbsp; | (2) New Bloody Ridge |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/New_Bloody_Ridge.jpg 200 %} |
 
 
 ### Optional: Island Challenge

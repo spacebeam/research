@@ -2,7 +2,7 @@ title: What about the Torch Up tournament?
 date: 2020-03-13
 description: Did the tournament happen? Did it complete?
 
-It appears that one of our humans crash going after the 4th expansion and pumping some hydras. Our machine supervisors have schedule again the games for next week from the 16 to Mar 20, if humans crash again we will continue iterating, fixing and scheduling the tournament games until we have at least a first completed round following the structure of our event as stated by the published rules, replays and results.
+It appears that our humans crash going after the 4th expansion and encounter some hydras. Our machine supervisors have schedule again the games for next week from the 16 to Mar 20, if humans crash again we will continue iterating, fixing and scheduling the tournament games until we have at least a first completed round following the structure of our event as stated by the published rules.
 
 The results will be announced in the `updates` section of the tournament website as the rules state, we have been battling against our own technical debt, implementation and irrelevant internal details but we are commited to release and announce the tournament results as soon as they become available and make this event an annual competition with the particularity that we can meet in beutiful Brussels, once a year at FOSDEM, come for the brood war, stay for the technical conferences the Belgian beers are great and all but is all about the chocolates.
 

@@ -1,6 +1,6 @@
 title: Distributed memory 
 date: 2019-12-28
-description: The auto-associator learning paradigm, in which the goal is to store specific patterns for future retrieval. PDP.17
+description: The auto-associator learning paradigm, in which the goal is to store specific patterns for future retrieval. Notes from the PDP.17
 
 ## Benefits of Distribution
 Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of some other network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.

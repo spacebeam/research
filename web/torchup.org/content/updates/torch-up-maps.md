@@ -21,9 +21,9 @@ description: Here are the maps updated with some interesting surprises.
 
 #### 1v1 maps
 
-| (4) La Mancha | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
+| (4) Colosseum II | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/LaMancha.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Colosseum_II.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
 | (4) Andromeda | &nbsp; |  (3) Inner Coven | &nbsp; | (2) Hitchhiker |
 :---:|:---:|:---:|:---:|:---:|

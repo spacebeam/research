@@ -19,6 +19,12 @@ description: Here are the maps updated with some interesting surprises.
 
 ### Optional Challenge
 
+#### 2v2 maps
+
+| (4) Gods Garden  | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Vampire  |
+:---:|:---:|:---:|:---:|:---:|
+| {% img [class name(s)] /images/maps/GodsGarden.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Vampire.jpg 200 %} |
+
 #### 1v1 maps
 
 | (4) Colosseum II | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
@@ -32,9 +38,3 @@ description: Here are the maps updated with some interesting surprises.
 | (4) Sparkle | &nbsp; | (3) Uzi Sara | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Uzi.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/New_Bloody_Ridge.jpg 200 %} |
-
-#### 2v2 maps
-
-| (4) Gods Garden  | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Vampire  |
-:---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/GodsGarden.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Vampire.jpg 200 %} |

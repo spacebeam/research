@@ -5,6 +5,8 @@ description: Here are the maps updated with some interesting surprises.
 ## Maps
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
+#### 1v1 maps
+
 | (4) Circuit Breaker | &nbsp; | (3) Aztec | &nbsp; | (2) Blue Storm | 
 |:---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Circuit_Breaker.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Neo_Aztec.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Bluestorm.jpg 200 %} |

@@ -68,7 +68,7 @@
 &lt;tr&gt;
 &lt;th align="center"&gt;(4) La Mancha&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;(3) Inner Coven&lt;/th&gt;
+&lt;th align="center"&gt;(3) Neo Sylphid&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(2) Crossing Field&lt;/th&gt;
 &lt;/tr&gt;
@@ -77,7 +77,7 @@
 &lt;tr&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/LaMancha.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Inner.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/NeoSylphid.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Crossing.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -88,7 +88,7 @@
 &lt;tr&gt;
 &lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;(3) Neo …&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;</summary><content type="html">&lt;h2&gt;Maps&lt;/h2&gt;
+&lt;th align="center"&gt;(3) Inner …&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;</summary><content type="html">&lt;h2&gt;Maps&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -157,7 +157,7 @@
 &lt;tr&gt;
 &lt;th align="center"&gt;(4) La Mancha&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;(3) Inner Coven&lt;/th&gt;
+&lt;th align="center"&gt;(3) Neo Sylphid&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(2) Crossing Field&lt;/th&gt;
 &lt;/tr&gt;
@@ -166,7 +166,7 @@
 &lt;tr&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/LaMancha.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Inner.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/NeoSylphid.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Crossing.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -177,7 +177,7 @@
 &lt;tr&gt;
 &lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;(3) Neo Sylphid&lt;/th&gt;
+&lt;th align="center"&gt;(3) Inner Coven&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(2) Hitchhiker&lt;/th&gt;
 &lt;/tr&gt;
@@ -186,7 +186,7 @@
 &lt;tr&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/NeoSylphid.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Inner.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Hitchhiker.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -216,20 +216,20 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
+&lt;th align="center"&gt;(4) Gods Garden&lt;/th&gt;
+&lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(4) Iron Curtain&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(4) Vampire&lt;/th&gt;
-&lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;Gods Garden (4)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/GodsGarden" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Iron_Curtain.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Vampire.jpg" width="200"&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/GodsGarden.jpg" width="200"&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content></entry><entry><title>Torch Up: Brood War AI registration list</title><link href="/2020/01/17/torch-up-brood-war-ai-registration-list/" rel="alternate"></link><published>2020-01-17T00:00:00+01:00</published><updated>2020-01-17T00:00:00+01:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-01-17:/2020/01/17/torch-up-brood-war-ai-registration-list/</id><summary type="html">&lt;p&gt;If you registered but don't see your bot &lt;a href="https://docs.google.com/spreadsheets/d/1gcR86Mrzq_spKA_gKDkvdmiPajhwCkJa9aHFDstf6JM/edit?usp=sharing"&gt;listed here&lt;/a&gt; please contact us immediately, thank you all that join the competition! if you didn't but you are competitive and curious hope to see you next year!&lt;/p&gt;

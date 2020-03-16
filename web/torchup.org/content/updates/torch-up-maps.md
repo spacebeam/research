@@ -21,13 +21,13 @@ description: Here are the maps updated with some interesting surprises.
 
 #### 1v1 maps
 
-| (4) La Mancha | &nbsp; | (3) Inner Coven | &nbsp; | (2) Crossing Field |
+| (4) La Mancha | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/LaMancha.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/maps/LaMancha.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
-| (4) Sparkle | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Hitchhiker |
+| (4) Sparkle | &nbsp; |  (3) Inner Coven | &nbsp; | (2) Hitchhiker |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Inner.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
 
 | (4) Andromeda  | &nbsp; | (3) Uzi Sara | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
@@ -35,6 +35,6 @@ description: Here are the maps updated with some interesting surprises.
 
 #### 2v2 maps
 
-| (4) Iron Curtain | &nbsp; | (4) Vampire | &nbsp; | Gods Garden (4)  |
+| (4) Gods Garden  | &nbsp; | (4) Iron Curtain | &nbsp; | (4) Vampire  |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Vampire.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/GodsGarden.jpg 200 %} |
+| {% img [class name(s)] /images/maps/GodsGarden 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Vampire.jpg 200 %} |

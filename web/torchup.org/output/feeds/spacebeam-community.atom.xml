@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Torch Up: Brood War AI Tournament - Spacebeam Community</title><link href="/" rel="alternate"></link><link href="/feeds/spacebeam-community.atom.xml" rel="self"></link><id>/</id><updated>2020-03-10T00:00:00+01:00</updated><entry><title>Torch Up: Maps and Optional Challenge</title><link href="/2020/03/10/torch-up-maps-and-optional-challenge/" rel="alternate"></link><published>2020-03-10T00:00:00+01:00</published><updated>2020-03-10T00:00:00+01:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-03-10:/2020/03/10/torch-up-maps-and-optional-challenge/</id><summary type="html">&lt;h2&gt;Maps&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
-&lt;h4&gt;1v1 maps&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -66,7 +65,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
+&lt;th align="center"&gt;(4) Andromeda&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(3) Neo Sylphid&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
@@ -75,7 +74,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Andromeda.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/NeoSylphid.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
@@ -86,11 +85,12 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align="center"&gt;(4) Andromeda&lt;/th&gt;
+&lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th align="center"&gt;(4) Iron Curtain …&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;</summary><content type="html">&lt;h2&gt;Maps&lt;/h2&gt;
+&lt;th align="center"&gt;(4) Iron Curtain&lt;/th&gt;
+&lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th align="center"&gt;(2) Hitchhiker …&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;</summary><content type="html">&lt;h2&gt;Maps&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
-&lt;h4&gt;1v1 maps&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -155,7 +155,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
+&lt;th align="center"&gt;(4) Andromeda&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(3) Neo Sylphid&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
@@ -164,7 +164,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Andromeda.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/NeoSylphid.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
@@ -175,7 +175,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align="center"&gt;(4) Andromeda&lt;/th&gt;
+&lt;th align="center"&gt;(4) Sparkle&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
 &lt;th align="center"&gt;(4) Iron Curtain&lt;/th&gt;
 &lt;th align="center"&gt;&amp;nbsp;&lt;/th&gt;
@@ -184,7 +184,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Andromeda.jpg" width="200"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Sparkle.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;img class="[class name(s)]" src="/images/maps/Iron_Curtain.jpg" width="200"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&amp;nbsp;&lt;/td&gt;

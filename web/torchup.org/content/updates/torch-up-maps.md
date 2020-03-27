@@ -5,8 +5,6 @@ description: Here are the maps updated with some interesting surprises.
 ## Maps
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
-#### 1v1 maps
-
 | (4) Circuit Breaker | &nbsp; | (3) Aztec | &nbsp; | (2) Blue Storm | 
 |:---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Circuit_Breaker.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Neo_Aztec.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Bluestorm.jpg 200 %} |
@@ -21,13 +19,13 @@ description: Here are the maps updated with some interesting surprises.
 
 ### Optional Challenge
 
-| (4) Sparkle | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
+| (4) Andromeda | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Andromeda.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
-| (4) Andromeda | &nbsp; | (4) Iron Curtain | &nbsp; | (2) Hitchhiker |
+| (4) Sparkle | &nbsp; | (4) Iron Curtain | &nbsp; | (2) Hitchhiker |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Andromeda.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
 
 | (4) Vampire | &nbsp; | (3) Neo Medusa | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|

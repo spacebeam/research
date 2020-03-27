@@ -21,14 +21,14 @@ description: Here are the maps updated with some interesting surprises.
 
 ### Optional Challenge
 
-| (4) Vampire | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
+| (4) Vampire | &nbsp; | (3) Neo Medusa | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Colosseum_II.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Vampire.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
 | (4) Andromeda | &nbsp; | (4) Iron Curtain | &nbsp; | (2) Hitchhiker |
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Andromeda.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Iron_Curtain.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
 
-| (4) Sparkle | &nbsp; | (3) Medusa | &nbsp; | (2) New Bloody Ridge |
+| (4) Sparkle | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/New_Bloody_Ridge.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/New_Bloody_Ridge.jpg 200 %} |

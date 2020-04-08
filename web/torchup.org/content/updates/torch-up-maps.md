@@ -31,6 +31,6 @@ description: Here are the maps updated with some interesting surprises.
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Eddy.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
-| (8) The Hunters | &nbsp; | (8) Hs | &nbsp; | (2) Match Point |
+| (8) The Hunters | &nbsp; | (8) Equilibrium | &nbsp; | (2) Match Point |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/TheHunters.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hs.jpeg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/MatchPoint.jpg 200 %} |
+| {% img [class name(s)] /images/maps/TheHunters.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Equilibrium.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/MatchPoint.jpg 200 %} |

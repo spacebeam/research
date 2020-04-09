@@ -23,9 +23,9 @@ description: Here are the maps updated with some interesting surprises.
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/MatchPoint.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
 
-| (4) Colosseum II | &nbsp; | (3) Neo Sylphid | &nbsp; | (2) Crossing Field |
+| (3) Neo Sylphid | &nbsp; | (3) Colosseum II | &nbsp; | (2) Crossing Field |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/ColosseumII.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
+| {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/ColosseumII.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
 | (4) Kiseyras | &nbsp; | (3) Neo Medusa | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|

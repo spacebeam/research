@@ -13,7 +13,7 @@ Spacebeam present Luna a custom Debian (x86_64) distribution that enables easily
 ## Core ideas
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
-- Asynchronous message passing is necessary for non-blocking.
+- Asynchronous message passing is necessary for non-blocking systems.
 - Selective receive allow to ignore messages uninteresting now.
 
 ## Screenshots

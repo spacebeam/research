@@ -27,6 +27,6 @@ description: Here are the maps updated with some interesting surprises.
 :---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/ColosseumII.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Crossing.jpg 200 %} |
 
-| (4) Kiseyras | &nbsp; | (3) Neo Medusa | &nbsp; | (2) New Bloody Ridge |
+| (4) Kiseyras | &nbsp; | (3) Core Breach | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Kiseyras.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Medusa.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/New_Bloody_Ridge.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Kiseyras.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/CoreBreach.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/New_Bloody_Ridge.jpg 200 %} |

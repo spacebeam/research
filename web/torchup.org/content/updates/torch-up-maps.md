@@ -19,13 +19,13 @@ description: Here are the maps updated with some interesting surprises.
 
 ### Optional Challenge
 
-| (4) Sparkle | &nbsp; | (2) Match Point | &nbsp; | (2) Hitchhiker |
+| (4) Sparkle | &nbsp; | (3) Reap the Storm | &nbsp; | (2) Hitchhiker |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/MatchPoint.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
+| {% img [class name(s)] /images/maps/Sparkle.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Reap_the_Storm.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Hitchhiker.jpg 200 %} |
 
-| (3) Neo Sylphid | &nbsp; | (4) Colosseum II | &nbsp; | (3) Reap the Storm |
+| (3) Neo Sylphid | &nbsp; | (4) Colosseum II | &nbsp; | (2) Match Point |
 :---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/ColosseumII.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Reap_the_Storm.jpg 200 %} |
+| {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/ColosseumII.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/MatchPoint.jpg 200 %} |
 
 | (4) Empire of the Sun | &nbsp; | (3) Core Breach | &nbsp; | (2) New Bloody Ridge |
 :---:|:---:|:---:|:---:|:---:|

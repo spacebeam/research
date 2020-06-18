@@ -6,13 +6,13 @@ description: Luerl is an implementation of standard Lua written in Erlang/OTP a 
 
 Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP.
 
-Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artificial intelligence and scientific computing research.
+A powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artificial intelligence and scientific computing research.
 
 It supports procedural, object-oriented, functional, data-driven, reactive, organizational programming and data description.
 
 Being an extension language, Lua has no notion of a "main" program: it works as a library embedded in a host. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang functions by Lua code.
 
-Luerl is a library, written in clean Erlang/OTP. For more information, check out the [get started](https://github.com/rvirding/luerl/wiki/0.2-Getting-started) tutorial. You may want to browse the [examples](https://github.com/rvirding/luerl/tree/develop/examples) source code.
+Luerl is written in clean Erlang/OTP. For more information, check out the [get started](https://github.com/rvirding/luerl/wiki/0.2-Getting-started) tutorial. You may want to browse the [examples](https://github.com/rvirding/luerl/tree/develop/examples) source code.
 
 ## Luerl goal
 A proper implementation of the Lua language

@@ -1,4 +1,4 @@
-title: What about the Torch Up again?
+title: What about Torch Up again?
 date: 2020-06-18
-description: Did the tournament happen? Did it complete?
+description: Is it going to ever happen? is this a meme?
 

@@ -71,7 +71,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'w3c_validate',
            'ipynb.markup',
            'optimize_images', 'gzip_cache', 
-           'liquid_tags.youtube', 'liquid_tags.speakerdeck',
+           'liquid_tags.youtube', 'liquid_tags.img',
            'liquid_tags.audio', 'liquid_tags.include_code']
 IGNORE_FILES = [".ipynb_checkpoints"]
 ## SITEMAP PLUGIN

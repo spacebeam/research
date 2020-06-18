@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Luerl: Lua in Erlang - BEAM Community</title><link>/</link><description></description><lastBuildDate>Thu, 20 Feb 2020 00:00:00 +0100</lastBuildDate><item><title>Lua in Erlang</title><link>/2020/02/20/lua-in-erlang/</link><description>&lt;p&gt;"Scripting is a relevant technique for any programmer's toolbox." &amp;mdash; Roberto Ierusalimschy&lt;/p&gt;
 &lt;p&gt;Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP.&lt;/p&gt;
-&lt;p&gt;Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, machine learning and scientific computing research.&lt;/p&gt;
+&lt;p&gt;Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, artificial intelligence and scientific computing research.&lt;/p&gt;
 &lt;p&gt;It supports procedural, object-oriented, functional, data-driven …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">BEAM Community</dc:creator><pubDate>Thu, 20 Feb 2020 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:None,2020-02-20:/2020/02/20/lua-in-erlang/</guid></item></channel></rss>

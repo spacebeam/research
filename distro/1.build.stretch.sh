@@ -38,7 +38,7 @@ apt install --install-recommends \
     libgtk-3-dev\
     gtk-doc-tools\
     gnutls-bin\
-    valac\
+    valac\ # valac and supporting lots of c++ tooling and dependencies vs use st from suckless in c... termite vs st? I'm really doing this? :S
     intltool\
     libtool\
     libpcre2-dev\
@@ -58,13 +58,11 @@ apt install --install-recommends \
     ntfs-3g\
     hfsprogs\
     dosfstools\
-    vifm\
     pv\
     network-manager-gnome\
     network-manager-openvpn-gnome\
     network-manager-pptp-gnome\
     network-manager-vpnc-gnome\
-    i3lock\
     compton\
     htop\
     urlview\
@@ -109,7 +107,9 @@ apt install --install-recommends \
     vim\
     less\
     tmux\
-    i3\
+    runit\
+    bspwm\
+    polybar\
     lightdm\
     pcmanfm\
     transmission\
@@ -133,10 +133,6 @@ apt install --install-recommends \
     gfortran\
     bc\
     cron\
-    exim4\
-    exim4-base\
-    exim4-config\
-    exim4-daemon-light\
     gir1.2-atk-1.0\
     gir1.2-freedesktop\
     gir1.2-gdkpixbuf-2.0\
@@ -234,7 +230,7 @@ apt install --install-recommends\
     winehq-staging\
  -y
 
-pip3 install riak queries py3status jupyter pywal ueberzug
+pip3 install riak queries jupyter pywal
 
 chsh -s /bin/mksh
 

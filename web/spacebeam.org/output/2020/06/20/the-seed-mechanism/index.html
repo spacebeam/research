@@ -82,16 +82,16 @@
           </h2>
         </header>
       <div class="content">
-         <p>The seed mechanism consist of a central knowledge strore, a set of programable modules, and connections between them.</p>
+         <p>The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.</p>
 <p>The structure is set in a such a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.</p>
-<p>Incomming lines from the programmable module allow information in each module to access the central knowledge,
+<p>Incoming lines from the programmable module allow information in each module to access the central knowledge,
 and output lines from the central knowledge store to the programmable modules allow connection activation information
 to be distributed back to the programmable modules.</p>
 <p>The two programmable modules are <em>just copies</em> of the module. It is assumed that lower-level mechanisms, outside
-of the model itself, are responsible for alingning inputs with the two modules, so that shwn two units are presented,
-the zergling activates appropritate programmable zergling units in the module, and the hydralisk activates
-appropritate programmable hydralisk units in the right module.</p>
+of the model itself, are responsible for aligning inputs with the two modules, so that shown two units are presented,
+the zergling activates appropriate programmable zergling units in the module, and the hydralisk activates
+appropriate programmable hydralisk units in the right module.</p>
 <p>In summary, the mechanism consists of </p>
 <ul>
 <li>(a) the programmable modules</li>
@@ -100,13 +100,21 @@ appropritate programmable hydralisk units in the right module.</p>
 <li>(d) diverging outputs from the central knowledge store back to the programmable modules</li>
 </ul>
 <h2>Benefits</h2>
-<p>Connection information distribution allow us to instruct parallel processing strucutures from outside the network
-making their behavior contingent on instructions originating elsehere in the network.</p>
+<p>Connection information distribution allow us to instruct parallel processing structures from outside the network
+making their behavior contingent on instructions originating elsewhere in the network.</p>
 <p>This means, that the way a network responds to a particular input can be made contingent on the state of some other
 network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.</p>
 <p>Perhaps the most general way of stating the benefit of connection information distribution is to note that is in a way,
-analogous to the invetion of the stored program!</p>
+analogous to the invention of the stored program!</p>
 <h2>Conclusion</h2>
+<p>Using connection information distribution, we can create local copies of relevant portions of the contents of a central
+knowledge store. These copies then serve as the basis for interactive processing amount the conceptual entities they
+program local hardware units to represent.</p>
+<p>With this mechanism, parallel distributed processing models can now be said to be able to create multiple
+<em>instantiations</em> of the same <em>schema</em>, bound appropriately to the correct local variables, though subject to just
+the same kind of crashes and errors human programmers seem to make.</p>
+<p>We have not really done anything more than show how existing tools in the arsenal of parallel distributed processing
+mechanisms can be used to create local copies of networks.</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

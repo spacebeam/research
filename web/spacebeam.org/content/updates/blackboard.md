@@ -4,7 +4,7 @@ description: We are now ready to move up to a complete connection information di
 
 The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.
 
-The structure is set in a such a way that all of the connection information that is specific to recognition
+The structure is set in a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.
 
 Incoming lines from the programmable module allow information in each module to access the central knowledge,

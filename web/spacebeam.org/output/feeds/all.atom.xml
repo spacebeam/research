@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-20T00:00:00+02:00</updated><entry><title>The Seed Mechanism</title><link href="/2020/06/20/the-seed-mechanism/" rel="alternate"></link><published>2020-06-20T00:00:00+02:00</published><updated>2020-06-20T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</id><summary type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
-&lt;p&gt;The structure is set in a such a way that all of the connection information that is specific to recognition
+&lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.&lt;/p&gt;
-&lt;p&gt;Incoming lines from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
-&lt;p&gt;The structure is set in a such a way that all of the connection information that is specific to recognition
+&lt;p&gt;Incoming lines from the programmable …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.&lt;/p&gt;
 &lt;p&gt;Incoming lines from the programmable module allow information in each module to access the central knowledge,
 and output lines from the central knowledge store to the programmable modules allow connection activation information

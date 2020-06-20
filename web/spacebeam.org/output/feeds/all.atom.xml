@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-18T00:00:00+02:00</updated><entry><title>What about Torch Up again?</title><link href="/2020/06/18/what-about-torch-up-again/" rel="alternate"></link><published>2020-06-18T00:00:00+02:00</published><updated>2020-06-18T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-18:/2020/06/18/what-about-torch-up-again/</id><summary type="html">&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-20T00:00:00+02:00</updated><entry><title>The Seed Mechanism</title><link href="/2020/06/20/the-seed-mechanism/" rel="alternate"></link><published>2020-06-20T00:00:00+02:00</published><updated>2020-06-20T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</id><summary type="html">&lt;p&gt;The seed mechanism consist of a central knowledge strore, a set of programable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a such a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.&lt;/p&gt;
+&lt;p&gt;Incomming lines from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The seed mechanism consist of a central knowledge strore, a set of programable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a such a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.&lt;/p&gt;
+&lt;p&gt;Incomming lines from the programmable module allow information in each module to access the central knowledge,
+and output lines from the central knowledge store to the programmable modules allow connection activation information
+to be distributed back to the programmable modules.&lt;/p&gt;
+&lt;p&gt;The two programmable modules are &lt;em&gt;just copies&lt;/em&gt; of the module. It is assumed that lower-level mechanisms, outside
+of the model itself, are responsible for alingning inputs with the two modules, so that shwn two units are presented,
+the zergling activates appropritate programmable zergling units in the module, and the hydralisk activates
+appropritate programmable hydralisk units in the right module.&lt;/p&gt;
+&lt;p&gt;In summary, the mechanism consists of &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(a) the programmable modules&lt;/li&gt;
+&lt;li&gt;(b) the central knowledge store&lt;/li&gt;
+&lt;li&gt;(c) converging inputs to the central knowledge store from the programmable modules&lt;/li&gt;
+&lt;li&gt;(d) diverging outputs from the central knowledge store back to the programmable modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Benefits&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allow us to instruct parallel processing strucutures from outside the network
+making their behavior contingent on instructions originating elsehere in the network.&lt;/p&gt;
+&lt;p&gt;This means, that the way a network responds to a particular input can be made contingent on the state of some other
+network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.&lt;/p&gt;
+&lt;p&gt;Perhaps the most general way of stating the benefit of connection information distribution is to note that is in a way,
+analogous to the invetion of the stored program!&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;</content></entry><entry><title>What about Torch Up again?</title><link href="/2020/06/18/what-about-torch-up-again/" rel="alternate"></link><published>2020-06-18T00:00:00+02:00</published><updated>2020-06-18T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-18:/2020/06/18/what-about-torch-up-again/</id><summary type="html">&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

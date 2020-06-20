@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0200</lastBuildDate><item><title>What about Torch Up again?</title><link>/2020/06/18/what-about-torch-up-again/</link><description>&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
+<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0200</lastBuildDate><item><title>The Seed Mechanism</title><link>/2020/06/20/the-seed-mechanism/</link><description>&lt;p&gt;The seed mechanism consist of a central knowledge strore, a set of programable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a such a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.&lt;/p&gt;
+&lt;p&gt;Incomming lines from …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Sat, 20 Jun 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</guid></item><item><title>What about Torch Up again?</title><link>/2020/06/18/what-about-torch-up-again/</link><description>&lt;p&gt;&lt;a href="https://torchup.org/files/maps.zip"&gt;click here&lt;/a&gt;, to download them on zip file.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

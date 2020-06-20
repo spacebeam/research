@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Spacebeam: Distributed Artificial Intelligence - June 2020 archives</title>
+          <title>Spacebeam: Distributed Artificial Intelligence</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Full Atom Feed" />
+        <link href="/feeds/updates.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Categories Atom Feed" />
         <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:site" content="@SpacebeamOrg">
+<meta name="twitter:title" content="The Seed Mechanism">
+<meta name="twitter:description" content="We are now ready to move up to a complete connection information distribution mechanism containing a number of programable modules along with the structure to program them.">
         <!-- OG Tags -->
+<meta property="og:url" content="/2020/06/20/the-seed-mechanism/"/>
+<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence | The Seed Mechanism" />
+<meta property="og:description" content="We are now ready to move up to a complete connection information distribution mechanism containing a number of programable modules along with the structure to program them." />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/images/logo.png">
         <!-- moment.js for date formatting -->
@@ -36,6 +45,10 @@
                     });
             };
         </script>
+
+    <meta name="description" content="We are now ready to move up to a complete connection information distribution mechanism containing a number of programable modules along with the structure to program them." />
+
+
 </head>
 <body>
     <div role="banner" id="masthead">
@@ -47,20 +60,70 @@
                         <li><a href="/pages/about/">about</a></li>
                         <li><a href="/pages/research/">research</a></li>
                         <li><a href="/pages/technology/">technology</a></li>
-                            <li><a href="/category/updates">updates</a></li>
+                            <li class="active"><a href="/category/updates">updates</a></li>
                 </ul>
             </nav>
         </header>
     </div>
         <div class="page" role="main">
-<h1>Archives for June 2020</h1>
-
-<dl>
-    <dt>Sat 20 June 2020</dt>
-    <dd><a href="/2020/06/20/the-seed-mechanism/">The Seed Mechanism</a></dd>
-    <dt>Thu 18 June 2020</dt>
-    <dd><a href="/2020/06/18/what-about-torch-up-again/">What about Torch Up again?</a></dd>
-</dl>
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2020-06-20 00:00:00+02:00">
+                <script>document.write(moment('2020-06-20 00:00:00+02:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            The Seed Mechanism
+          </h2>
+        </header>
+      <div class="content">
+         <p>The seed mechanism consist of a central knowledge strore, a set of programable modules, and connections between them.</p>
+<p>The structure is set in a such a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.</p>
+<p>Incomming lines from the programmable module allow information in each module to access the central knowledge,
+and output lines from the central knowledge store to the programmable modules allow connection activation information
+to be distributed back to the programmable modules.</p>
+<p>The two programmable modules are <em>just copies</em> of the module. It is assumed that lower-level mechanisms, outside
+of the model itself, are responsible for alingning inputs with the two modules, so that shwn two units are presented,
+the zergling activates appropritate programmable zergling units in the module, and the hydralisk activates
+appropritate programmable hydralisk units in the right module.</p>
+<p>In summary, the mechanism consists of </p>
+<ul>
+<li>(a) the programmable modules</li>
+<li>(b) the central knowledge store</li>
+<li>(c) converging inputs to the central knowledge store from the programmable modules</li>
+<li>(d) diverging outputs from the central knowledge store back to the programmable modules</li>
+</ul>
+<h2>Benefits</h2>
+<p>Connection information distribution allow us to instruct parallel processing strucutures from outside the network
+making their behavior contingent on instructions originating elsehere in the network.</p>
+<p>This means, that the way a network responds to a particular input can be made contingent on the state of some other
+network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.</p>
+<p>Perhaps the most general way of stating the benefit of connection information distribution is to note that is in a way,
+analogous to the invetion of the stored program!</p>
+<h2>Conclusion</h2>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+      <div id="disqus_thread"></div>
+        <script>
+        (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://spacebeam.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </article>
+  </div>
+<!-- end article -->
                 <footer>
                     <div class="icons">
                         <a href="https://twitter.com/SpacebeamOrg" target="_blank"><div class="icon-twitter icon"></div></a>

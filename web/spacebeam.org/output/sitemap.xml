@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-06-19T08:08:27-00:00</lastmod>
+<lastmod>2020-06-20T15:04:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-06-19T08:08:27-00:00</lastmod>
+<lastmod>2020-06-20T15:04:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-06-19T08:08:27-00:00</lastmod>
+<lastmod>2020-06-20T15:04:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-06-19T08:08:27-00:00</lastmod>
+<lastmod>2020-06-20T15:04:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -50,6 +50,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2019-07-12T16:20:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.75</priority>
+</url>
+
+<url>
+<loc>/2020/06/20/the-seed-mechanism/</loc>
+<lastmod>2020-06-20T00:00:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
 </url>
 
 <url>
@@ -131,7 +138,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2020-06-18T00:00:00+00:18</lastmod>
+<lastmod>2020-06-20T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

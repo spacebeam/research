@@ -9,7 +9,7 @@ of zergs is stored in the central knowledge store.
 
 Incoming lines from the programmable module allow information in each module to access the central knowledge,
 and output lines from the central knowledge store to the programmable modules allow connection activation information
-to be distributed back to the programmable modules.
+to be distributed back to the modules.
 
 The two programmable modules are *just copies* of the module. It is assumed that lower-level mechanisms, outside
 of the model itself, are responsible for aligning inputs with the two modules, so that shown two units are presented,

@@ -57,7 +57,6 @@
                 <ul>
                         <li class="active"><a href="/pages/about/">about</a></li>
                         <li><a href="/pages/community/">community</a></li>
-                        <li><a href="/pages/showroom/">showroom</a></li>
                             <li><a href="/category/updates">updates</a></li>
                 </ul>
             </nav>
@@ -69,8 +68,8 @@
         <footer>
             <a name="top"></a>
             <p>
-              <time datetime=" 2019-11-07 16:20:00+01:00">
-                <script>document.write(moment('2019-11-07 16:20:00+01:00').format('LL'));</script>
+              <time datetime=" 2020-06-23 16:20:00+02:00">
+                <script>document.write(moment('2020-06-23 16:20:00+02:00').format('LL'));</script>
               </time>
             </p>
         </footer>
@@ -81,12 +80,28 @@
         </header>
       <div class="content">
          <p>Luerl is an implementation of standard Lua 5.3 written in Erlang/OTP.</p>
-<p>Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT devices, machine learning and scientific computing research.</p>
+<p>Lua is a powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artificial intelligence and scientific computing research.</p>
 <p>It supports procedural, object-oriented, functional, data-driven, reactive, organizational programming and data description.</p>
 <p>Being an extension language, Lua has no notion of a "main" program: it works as a library embedded in a host. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang functions by Lua code.</p>
 <p>The Luerl VM is a mixture of interpreting Lua VM instructions and using Erlang directly to implement function calls.</p>
 <p>Through the use of Erlang functions, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework. </p>
 <p>Luerl is a library, written in clean Erlang/OTP. For more information, click on the <a href="https://github.com/rvirding/luerl/wiki/0.2-Getting-started">get started</a> tutorial. You may also browse the <a href="https://github.com/rvirding/luerl/tree/develop/examples">examples</a> and learn from the source code.</p>
+<h2>Luerl goal</h2>
+<p>A proper implementation of the Lua language</p>
+<ul>
+<li>It SHOULD look and behave the same as Lua</li>
+<li>It SHOULD include the Lua standard libraries</li>
+<li>It MUST interface well with Erlang/OTP</li>
+</ul>
+<h2>The result</h2>
+<p>Luerl is a native Erlang implementation of standard Lua 5.3 written for the BEAM ecosystem.</p>
+<ul>
+<li>Easy for Erlang to call</li>
+<li>Easy for Lua to call Erlang</li>
+<li>Erlang concurrency model and error handling</li>
+</ul>
+<p>Through the use of Erlang/OTP, Luerl can be augmented to cope with a wide range of different domains, creating
+a customized language sharing a syntactical framework.</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-06-18T12:59:13-00:00</lastmod>
+<lastmod>2020-06-23T10:57:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-06-18T12:59:13-00:00</lastmod>
+<lastmod>2020-06-23T10:57:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-06-18T12:59:13-00:00</lastmod>
+<lastmod>2020-06-23T10:57:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-06-18T12:59:13-00:00</lastmod>
+<lastmod>2020-06-23T10:57:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/about/</loc>
-<lastmod>2019-11-07T16:20:00+01:00</lastmod>
+<lastmod>2020-06-23T16:20:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.75</priority>
 </url>
@@ -41,13 +41,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/pages/community/</loc>
 <lastmod>2017-01-07T16:20:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.75</priority>
-</url>
-
-<url>
-<loc>/pages/showroom/</loc>
-<lastmod>2019-11-08T16:20:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.75</priority>
 </url>

@@ -30,4 +30,4 @@
 &lt;li&gt;Easy for Lua to call Erlang&lt;/li&gt;
 &lt;li&gt;Erlang concurrency model and error handling&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Through the use of the BEAM languages, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Through the use of Erlang/OTP, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.&lt;/p&gt;</content></entry></feed>

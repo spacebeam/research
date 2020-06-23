@@ -46,4 +46,4 @@ Luerl is a native Erlang implementation of standard Lua 5.3 written for the BEAM
 - Easy for Lua to call Erlang
 - Erlang concurrency model and error handling
 
-Through the use of the BEAM languages, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.
+Through the use of Erlang/OTP, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.

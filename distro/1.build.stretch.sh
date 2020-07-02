@@ -38,7 +38,7 @@ apt install --install-recommends \
     libgtk-3-dev\
     gtk-doc-tools\
     gnutls-bin\
-    valac\ # valac and supporting lots of c++ tooling and dependencies vs use st from suckless in c... termite vs st? I'm really doing this? :S
+    valac\
     intltool\
     libtool\
     libpcre2-dev\
@@ -132,7 +132,6 @@ apt install --install-recommends \
     automake\
     gfortran\
     bc\
-    cron\
     gir1.2-atk-1.0\
     gir1.2-freedesktop\
     gir1.2-gdkpixbuf-2.0\

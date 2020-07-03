@@ -1835,7 +1835,7 @@ Done... In the pipe, five by five.&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Creating-a-complete-tournament-test-round"&gt;Creating a complete tournament test round&lt;a class="anchor-link" href="#Creating-a-complete-tournament-test-round"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If you want to know more about how are we using this API to generate a complete round of test games, pairing the bots, scheduling the maps or anything in between, there is an &lt;a href="https://github.com/spacebeam/research/blob/master/notebook/Unsequenced%20Chaos.ipynb"&gt;avaible notebook&lt;/a&gt; with all the details, in general we are using Python 3, Erlang and Lua to hack our way around things.&lt;/p&gt;
-&lt;p&gt;While we wait toguether for this to end as a meme and actually get to a good port having some published results, hopefully this serve to update any curious one of our progress, future goals and current state of things!&lt;/p&gt;
+&lt;p&gt;While we wait toguether for this to end as a meme and actually get to a good port having some published results, hopefully this serve to update any curious one of our progress, goals and current state.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;

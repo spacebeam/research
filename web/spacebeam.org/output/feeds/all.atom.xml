@@ -1334,7 +1334,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Luerl-updates"&gt;Luerl updates&lt;a class="anchor-link" href="#Luerl-updates"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We got a brand new logo for Luerl the language of our favorite simulator, &lt;a href="https://github.com/rvirding/luerl/issues/102"&gt;watch&lt;/a&gt; the history unfold!&lt;/p&gt;
+&lt;h2 id="Luerl-updates"&gt;Luerl updates&lt;a class="anchor-link" href="#Luerl-updates"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We got a brand new logo for Luerl the language of our favorite game simulator, &lt;a href="https://github.com/rvirding/luerl/issues/102"&gt;watch&lt;/a&gt; the history unfold!&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1342,7 +1342,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="API-updates"&gt;API updates&lt;a class="anchor-link" href="#API-updates"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting our favorite distributed data base just in case!&lt;/p&gt;
+&lt;h2 id="API-updates"&gt;API updates&lt;a class="anchor-link" href="#API-updates"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting our favorite distributed data base to store from our API calls to game replays.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# luna -u riak start                                                         
 7b76fab9-d6bf-413f-c1d3-3b8d654b8933
@@ -1839,19 +1839,6 @@ Done... In the pipe, five by five.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
 &lt;/div&gt;
  
 

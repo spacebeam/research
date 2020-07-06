@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Spacebeam: Distributed Artificial Intelligence</title>
+          <title>Spacebeam: Distributed Artificial Intelligence</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Full Atom Feed" />
+        <link href="/feeds/updates.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Categories Atom Feed" />
         <!-- twitter card metadata -->
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/logo.png">
-<meta name="twitter:creator" content="@SpacebeamOrg">
 <meta name="twitter:site" content="@SpacebeamOrg">
-<meta name="twitter:title" content="Spacebeam: Distributed Artificial Intelligence">
-<meta name="twitter:description" content="Live for the Swarm!">
+<meta name="twitter:title" content="Stage 2 Supervision">
+<meta name="twitter:description" content="runit is a collection of tools for managing UNIX services.. Supervision means the system will restart the process immediately if it disappers for some reason, e.g a crash!">
         <!-- OG Tags -->
-<meta property="og:url" content=""/>
-<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence" />
-<meta property="og:description" content="Live for the Swarm!" />
-<meta property="og:image" content="/images/logo.png" />
+<meta property="og:url" content="/2020/07/06/stage-2-supervision/"/>
+<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence | Stage 2 Supervision" />
+<meta property="og:description" content="runit is a collection of tools for managing UNIX services.. Supervision means the system will restart the process immediately if it disappers for some reason, e.g a crash!" />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/images/logo.png">
         <!-- moment.js for date formatting -->
@@ -46,6 +45,10 @@
                     });
             };
         </script>
+
+    <meta name="description" content="runit is a collection of tools for managing UNIX services.. Supervision means the system will restart the process immediately if it disappers for some reason, e.g a crash!" />
+
+
 </head>
 <body>
     <div role="banner" id="masthead">
@@ -57,97 +60,53 @@
                         <li><a href="/pages/about/">about</a></li>
                         <li><a href="/pages/research/">research</a></li>
                         <li><a href="/pages/technology/">technology</a></li>
-                            <li><a href="/category/updates">updates</a></li>
+                            <li class="active"><a href="/category/updates">updates</a></li>
                 </ul>
             </nav>
         </header>
     </div>
         <div class="page" role="main">
-<div class="articles">
-    <ol>
-        <li>
-            <article>
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2020-07-06 00:00:00+02:00">
+                <script>document.write(moment('2020-07-06 00:00:00+02:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Stage 2 Supervision
+          </h2>
+        </header>
+      <div class="content">
+         <h2>Process supervision</h2>
+<p>At its code, runit is a process supervision suite.</p>
+<p>The concept of process supervision comes from several observations:</p>
+<ul>
+<li>UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.</li>
+</ul>
+<p>That one is the core design principle of UNIX: one service -&gt; one daemon.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+      <div id="disqus_thread"></div>
+        <script>
+        (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://spacebeam.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </article>
+  </div>
+<!-- end article -->
                 <footer>
-                     <p>
-                        <time datetime="2019-10-19 00:00:00+02:00">
-                            <script>document.write(moment('2019-10-19 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2019/10/19/organizational-behavior/">
-                        <h2>Organizational behavior</h2>
-                    </a>
-                </header>
-                <div class="summary">What is an organization? A monkey, a building, a drone: each is a concrete object and can be easily identified. One difficulty attending the study of organizations is that an organization is not as readily visible or describable. </div>
-                <div class="tags">
-                    <ul class="tags">
-                    </ul>
-                </div>
-                <a href="/2019/10/19/organizational-behavior/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2019-10-19 00:00:00+02:00">
-                            <script>document.write(moment('2019-10-19 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2019/10/19/process-of-abstraction/">
-                        <h2>Process of abstraction</h2>
-                    </a>
-                </header>
-                <div class="summary">If a system is to be stable the number of states of its control mechanism must be greater than or equal to the number of states in the system being controlled. </div>
-                <div class="tags">
-                    <ul class="tags">
-                    </ul>
-                </div>
-                <a href="/2019/10/19/process-of-abstraction/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2019-10-13 00:00:00+02:00">
-                            <script>document.write(moment('2019-10-13 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2019/10/13/cognitive-framework/">
-                        <h2>Cognitive framework</h2>
-                    </a>
-                </header>
-                <div class="summary">Organization refers to the tendency of all species to systematize or organize their processes into coherent systems which may be either physical or psychological. Adaptation is the balance between the independent processes of assimilation and accomodation. </div>
-                <div class="tags">
-                    <ul class="tags">
-                    </ul>
-                </div>
-                <a href="/2019/10/13/cognitive-framework/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-    </ol>
-<p class="paginator">
-        <a href="/3/" class="previous">&laquo;</a>
-    <span>4 / 5</span>
-        <a href="/5/" class="next">&raquo;</a>
-</p>
-    
-</div>                <footer>
                     <div class="icons">
                         <a href="https://twitter.com/SpacebeamOrg" target="_blank"><div class="icon-twitter icon"></div></a>
                         <a href="https://github.com/spacebeam" target="_blank"><div class="icon-github icon"></div></a>

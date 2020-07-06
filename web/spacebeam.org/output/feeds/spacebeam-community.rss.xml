@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0200</lastBuildDate><item><title>The Seed Mechanism</title><link>/2020/06/20/the-seed-mechanism/</link><description>&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
+<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;h2&gt;Process supervision&lt;/h2&gt;
+&lt;p&gt;At its code, runit is a process supervision suite.&lt;/p&gt;
+&lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That one is the core design principle of UNIX: one service -&amp;gt; one daemon.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Mon, 06 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-06:/2020/07/06/stage-2-supervision/</guid></item><item><title>The Seed Mechanism</title><link>/2020/06/20/the-seed-mechanism/</link><description>&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
 &lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.&lt;/p&gt;
 &lt;p&gt;Incoming lines from the programmable …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Sat, 20 Jun 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</guid></item><item><title>What about Torch Up again?</title><link>/2020/06/18/what-about-torch-up-again/</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;

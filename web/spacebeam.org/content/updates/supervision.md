@@ -29,3 +29,19 @@ our needs. The core runit utilities are `runsvdir`, `runsv`, `chpst`, `svlogd`, 
 Each service is associated with a service directory, and each service daemon runs as a child process of a supervising `runsv` process runing in this directory.
 
 The `runsv` program provides a reliable interface for signalling the service daemon and controlling the service and supervisor.
+
+Normally the `sv` program is used to send commands throught this interface, and to query status information about the service.
+
+The `runsv` program supervises the corresponding service daemon. By default a service is defined to be up, that means, if the service daemon dies, will be restarted. Of course you can tell it otherwise.
+
+The promise is that this reliable interface to control daemons and supervisors obsolete pid-guessing programs, such as pidoff, killall, start-stop-daemon, which, due to guessing are prone to failures by design.
+
+It also obsoletes so called pid-files, no need for each and every service daemon to include code to daemonize, to write the new process id into a file, and to take care that file is removed properly on shutdown, which might be very difficult in case of a crash!
+
+## Clean process state
+
+`runit` guarantees each service a clean process state, no matter if the service is activated for the first time or automatically at boot time, reactivated, or simply restarted. This means that the service always is started with the same environment, resource limits, open file descriptors, and controlling terminals.
+
+## Reliable logging mechanism
+
+

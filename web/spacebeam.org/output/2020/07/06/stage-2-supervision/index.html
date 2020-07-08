@@ -111,7 +111,13 @@ our needs. The core runit utilities are <code>runsvdir</code>, <code>runsv</code
 <p>It also obsoletes so called pid-files, no need for each and every service daemon to include code to daemonize, to write the new process id into a file, and to take care that file is removed properly on shutdown, which might be very difficult in case of a crash!</p>
 <h2>Clean process state</h2>
 <p><code>runit</code> guarantees each service a clean process state, no matter if the service is activated for the first time or automatically at boot time, reactivated, or simply restarted. This means that the service always is started with the same environment, resource limits, open file descriptors, and controlling terminals.</p>
-<h2>Reliable logging mechanism</h2>
+<h2>Reliable logging facility</h2>
+<p>The <code>runsv</code> program provides a reliable logging facility for the service daemon. If configured, <code>runsv</code> creates a pipe, starts and supervises an additional log service, redirects the log daemon's standard input to read from the pipe, and redirects the service daemon's standard output to write to the pipe.</p>
+<p>Restarting the service does not require restarting the log service, and vice versa.</p>
+<p>A good choice for log daemon is runit's service logging daemon <code>svlogd</code>.</p>
+<p>The service daemon and log daemon run with different process statesm and can run under different user id's.</p>
+<p><code>runit</code> supports easy and realiable logging for service daemons running inside <code>singularity</code> containers.</p>
+<h2>Stage 2</h2>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

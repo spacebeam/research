@@ -42,6 +42,18 @@ It also obsoletes so called pid-files, no need for each and every service daemon
 
 `runit` guarantees each service a clean process state, no matter if the service is activated for the first time or automatically at boot time, reactivated, or simply restarted. This means that the service always is started with the same environment, resource limits, open file descriptors, and controlling terminals.
 
-## Reliable logging mechanism
+## Reliable logging facility
+
+The `runsv` program provides a reliable logging facility for the service daemon. If configured, `runsv` creates a pipe, starts and supervises an additional log service, redirects the log daemon's standard input to read from the pipe, and redirects the service daemon's standard output to write to the pipe.
+
+Restarting the service does not require restarting the log service, and vice versa.
+
+A good choice for log daemon is runit's service logging daemon `svlogd`.
+
+The service daemon and log daemon run with different process statesm and can run under different user id's.
+
+`runit` supports easy and realiable logging for service daemons running inside `singularity` containers.
+
+## Stage 2
 
 

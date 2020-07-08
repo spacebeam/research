@@ -118,13 +118,18 @@ our needs. The core runit utilities are <code>runsvdir</code>, <code>runsv</code
 <p>The service daemon and log daemon run with different process states and can run under different user id's.</p>
 <h2>Stage 2</h2>
 <p>Stage 2 handles the systems's uptime tasks (via the <code>runsvdir</code> program) and is running the whole system's uptime life spawn.</p>
-<p>Stage 2 is portable across UNIX systems. <code>runit</code> is well suited for <a href="ihttps://news.ycombinator.com/item?id=19193572">autopilot nodes</a>, servers and embedded systems, and also does its job well on everyday working environments.</p>
+<p>Stage 2 is portable across UNIX systems. <code>runit</code> is well suited for <a href="https://old.reddit.com/r/teslamotors/comments/arfwvm/some_sw_internals_of_tesla_autopilot_node_hw2/">autopilot nodes</a>, servers and embedded systems, and also does its job well on everyday working environments.</p>
 <p>Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in <code>/etc/service/</code>. The service will be started within five seconds, and automatically at boot time.</p>
 <p>The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.</p>
 <p>On package removal, the symbolic link simply is removed. The service will be taken down automatically.</p>
 <h2>Service dependencies</h2>
 <p>runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.</p>
-<p>The service daemon (or the corresponding run script) schould behave as follows:</p>
+<p>The service daemon (or the corresponding run script) should behave as follows:</p>
+<ul>
+<li>before providing the service, check if all services it depends on are available. If not, exit with an error, the supervisor will then try again.</li>
+<li>write all logs through runit's logging facility. The <code>runsv</code> program takes care that all logs for the service are written safely to disk.</li>
+<li>optionally when the service is told to become down, take down other services that depend on this one after disabling the service.</li>
+</ul>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

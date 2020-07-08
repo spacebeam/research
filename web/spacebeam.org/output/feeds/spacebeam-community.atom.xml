@@ -42,13 +42,18 @@ our needs. The core runit utilities are &lt;code&gt;runsvdir&lt;/code&gt;, &lt;c
 &lt;p&gt;The service daemon and log daemon run with different process states and can run under different user id's.&lt;/p&gt;
 &lt;h2&gt;Stage 2&lt;/h2&gt;
 &lt;p&gt;Stage 2 handles the systems's uptime tasks (via the &lt;code&gt;runsvdir&lt;/code&gt; program) and is running the whole system's uptime life spawn.&lt;/p&gt;
-&lt;p&gt;Stage 2 is portable across UNIX systems. &lt;code&gt;runit&lt;/code&gt; is well suited for &lt;a href="ihttps://news.ycombinator.com/item?id=19193572"&gt;autopilot nodes&lt;/a&gt;, servers and embedded systems, and also does its job well on everyday working environments.&lt;/p&gt;
+&lt;p&gt;Stage 2 is portable across UNIX systems. &lt;code&gt;runit&lt;/code&gt; is well suited for &lt;a href="https://old.reddit.com/r/teslamotors/comments/arfwvm/some_sw_internals_of_tesla_autopilot_node_hw2/"&gt;autopilot nodes&lt;/a&gt;, servers and embedded systems, and also does its job well on everyday working environments.&lt;/p&gt;
 &lt;p&gt;Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in &lt;code&gt;/etc/service/&lt;/code&gt;. The service will be started within five seconds, and automatically at boot time.&lt;/p&gt;
 &lt;p&gt;The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.&lt;/p&gt;
 &lt;p&gt;On package removal, the symbolic link simply is removed. The service will be taken down automatically.&lt;/p&gt;
 &lt;h2&gt;Service dependencies&lt;/h2&gt;
 &lt;p&gt;runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.&lt;/p&gt;
-&lt;p&gt;The service daemon (or the corresponding run script) schould behave as follows:&lt;/p&gt;</content></entry><entry><title>The Seed Mechanism</title><link href="/2020/06/20/the-seed-mechanism/" rel="alternate"></link><published>2020-06-20T00:00:00+02:00</published><updated>2020-06-20T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</id><summary type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The service daemon (or the corresponding run script) should behave as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;before providing the service, check if all services it depends on are available. If not, exit with an error, the supervisor will then try again.&lt;/li&gt;
+&lt;li&gt;write all logs through runit's logging facility. The &lt;code&gt;runsv&lt;/code&gt; program takes care that all logs for the service are written safely to disk.&lt;/li&gt;
+&lt;li&gt;optionally when the service is told to become down, take down other services that depend on this one after disabling the service.&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>The Seed Mechanism</title><link href="/2020/06/20/the-seed-mechanism/" rel="alternate"></link><published>2020-06-20T00:00:00+02:00</published><updated>2020-06-20T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-06-20:/2020/06/20/the-seed-mechanism/</id><summary type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
 &lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
 of zergs is stored in the central knowledge store.&lt;/p&gt;
 &lt;p&gt;Incoming lines from the programmable …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;

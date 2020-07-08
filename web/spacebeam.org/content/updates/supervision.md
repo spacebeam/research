@@ -56,7 +56,7 @@ The service daemon and log daemon run with different process states and can run 
 
 Stage 2 handles the systems's uptime tasks (via the `runsvdir` program) and is running the whole system's uptime life spawn.
 
-Stage 2 is portable across UNIX systems. `runit` is well suited for [autopilot nodes](ihttps://news.ycombinator.com/item?id=19193572), servers and embedded systems, and also does its job well on everyday working environments.
+Stage 2 is portable across UNIX systems. `runit` is well suited for [autopilot nodes](https://old.reddit.com/r/teslamotors/comments/arfwvm/some_sw_internals_of_tesla_autopilot_node_hw2/), servers and embedded systems, and also does its job well on everyday working environments.
 
 Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in `/etc/service/`. The service will be started within five seconds, and automatically at boot time.
 
@@ -68,6 +68,8 @@ On package removal, the symbolic link simply is removed. The service will be tak
 
 runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.
 
-The service daemon (or the corresponding run script) schould behave as follows:
+The service daemon (or the corresponding run script) should behave as follows:
 
-
+- before providing the service, check if all services it depends on are available. If not, exit with an error, the supervisor will then try again.
+- write all logs through runit's logging facility. The `runsv` program takes care that all logs for the service are written safely to disk.
+- optionally when the service is told to become down, take down other services that depend on this one after disabling the service.

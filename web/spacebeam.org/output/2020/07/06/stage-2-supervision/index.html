@@ -115,12 +115,16 @@ our needs. The core runit utilities are <code>runsvdir</code>, <code>runsv</code
 <p>The <code>runsv</code> program provides a reliable logging facility for the service daemon. If configured, <code>runsv</code> creates a pipe, starts and supervises an additional log service, redirects the log daemon's standard input to read from the pipe, and redirects the service daemon's standard output to write to the pipe.</p>
 <p>Restarting the service does not require restarting the log service, and vice versa.</p>
 <p>A good choice for log daemon is runit's service logging daemon <code>svlogd</code>.</p>
-<p>The service daemon and log daemon run with different process statesm and can run under different user id's.</p>
-<p><code>runit</code> supports easy and realiable logging for service daemons running inside <a href="https://github.com/hpcng/singularity">singularity</a> containers.</p>
+<p>The service daemon and log daemon run with different process states and can run under different user id's.</p>
 <h2>Stage 2</h2>
 <p>Stage 2 handles the systems's uptime tasks (via the <code>runsvdir</code> program) and is running the whole system's uptime life spawn.</p>
-<p>Stage 2 is portable across UNIX systems. <code>runit</code> is well suited for <a href="https://news.ycombinator.com/item?id=19193572">tesla</a> ev's, servers and embedded systems, and also does its job well on everyday working environments.</p>
-<p>Stage 2 is packaging friendly:</p>
+<p>Stage 2 is portable across UNIX systems. <code>runit</code> is well suited for <a href="ihttps://news.ycombinator.com/item?id=19193572">autopilot nodes</a>, servers and embedded systems, and also does its job well on everyday working environments.</p>
+<p>Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in <code>/etc/service/</code>. The service will be started within five seconds, and automatically at boot time.</p>
+<p>The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.</p>
+<p>On package removal, the symbolic link simply is removed. The service will be taken down automatically.</p>
+<h2>Service dependencies</h2>
+<p>runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.</p>
+<p>The service daemon (or the corresponding run script) schould behave as follows:</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

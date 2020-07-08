@@ -50,15 +50,24 @@ Restarting the service does not require restarting the log service, and vice ver
 
 A good choice for log daemon is runit's service logging daemon `svlogd`.
 
-The service daemon and log daemon run with different process statesm and can run under different user id's.
-
-`runit` supports easy and realiable logging for service daemons running inside [singularity](https://github.com/hpcng/singularity) containers.
+The service daemon and log daemon run with different process states and can run under different user id's.
 
 ## Stage 2
 
 Stage 2 handles the systems's uptime tasks (via the `runsvdir` program) and is running the whole system's uptime life spawn.
 
-Stage 2 is portable across UNIX systems. `runit` is well suited for [tesla](https://news.ycombinator.com/item?id=19193572) ev's, servers and embedded systems, and also does its job well on everyday working environments.
+Stage 2 is portable across UNIX systems. `runit` is well suited for [autopilot nodes](ihttps://news.ycombinator.com/item?id=19193572), servers and embedded systems, and also does its job well on everyday working environments.
 
-Stage 2 is packaging friendly:
+Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in `/etc/service/`. The service will be started within five seconds, and automatically at boot time.
+
+The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.
+
+On package removal, the symbolic link simply is removed. The service will be taken down automatically.
+
+## Service dependencies
+
+runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.
+
+The service daemon (or the corresponding run script) schould behave as follows:
+
 

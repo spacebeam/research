@@ -52,8 +52,13 @@ A good choice for log daemon is runit's service logging daemon `svlogd`.
 
 The service daemon and log daemon run with different process statesm and can run under different user id's.
 
-`runit` supports easy and realiable logging for service daemons running inside `singularity` containers.
+`runit` supports easy and realiable logging for service daemons running inside [singularity](https://github.com/hpcng/singularity) containers.
 
 ## Stage 2
 
+Stage 2 handles the systems's uptime tasks (via the `runsvdir` program) and is running the whole system's uptime life spawn.
+
+Stage 2 is portable across UNIX systems. `runit` is well suited for [tesla](https://news.ycombinator.com/item?id=19193572) ev's, servers and embedded systems, and also does its job well on everyday working environments.
+
+Stage 2 is packaging friendly:
 

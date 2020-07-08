@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;code&gt;runit&lt;/code&gt; is a process supervision suite.&lt;/p&gt;
+<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
 &lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;

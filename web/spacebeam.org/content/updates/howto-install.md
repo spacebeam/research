@@ -8,7 +8,7 @@ Python is an interpreted, high-level, general-purpose programming language with 
 
 This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.
 
-## Step 1 - Update and Upgrade
+## Step 0 - Update and Upgrade
 
 Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.
 
@@ -23,7 +23,7 @@ apt upgrade
 Confirm upgrade when prompted to do so.
 
 
-## Step 2 - Check Version of Python
+## Step 1 - Check Version of Python
 
 Check your version of Python 3 installed by typing:
 
@@ -37,7 +37,7 @@ You'll receive output similar to the following.
 Python 3.7.3
 ```
 
-## Step 3 - Install pip
+## Step 2 - Install pip
 
 To manage software packages for Python, install `pip`, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. 
 
@@ -53,7 +53,7 @@ pip3 install schematics
 
 Here, `schematics` can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. 
 
-## Step 4 - Install Additional Tools
+## Step 3 - Install Additional Tools
 
 There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:
 
@@ -78,7 +78,7 @@ apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
  libgl1-mesa-dri:i386 libsdl2-2.0-0 libstb0 libstb0:i386 mesa-vulkan-drivers
 ```
 
-## Step 5 - Add the WineHQ Debian repository
+## Step 4 - Add the WineHQ Debian repository
 
 Get and install the repository key.
 
@@ -93,7 +93,7 @@ apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
 ```
 apt update && rm winehq.key
 ```
-## Step 6 - Install libfaudio0 and Wine
+## Step 5 - Install libfaudio0 and Wine
 
 Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.
 
@@ -117,9 +117,9 @@ dpkg -i libfaudio0_20.01-0~buster_i386.deb
 apt -y install --install-recommends winehq-staging winetricks
 ```
 
-## Step 7 - Configuring WINE
+## Step 6 - Configuring WINE
 
-## Step 8 - StarCraft: Brood War 1.16.1
+## Step 7 - StarCraft: Brood War 1.16.1
 
 At the moment StarCraft: Remastered is *NOT* yet supported, the only working version is 1.16.1.
 
@@ -136,6 +136,6 @@ cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
 tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 ```
 
-## Step 9 - Coding & Building
+## Step 8 - Coding & Building
 
-## Step 10 - Setting up bwapi.ini
+## Step 9 - Setting up bwapi.ini

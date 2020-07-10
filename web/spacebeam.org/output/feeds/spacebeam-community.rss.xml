@@ -2,7 +2,7 @@
 <rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Thu, 09 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link>/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</link><description>&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
-&lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
+&lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</guid></item><item><title>Python TorchCraft Tutorial</title><link>/2020/07/09/python-torchcraft-tutorial/</link><description>&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;

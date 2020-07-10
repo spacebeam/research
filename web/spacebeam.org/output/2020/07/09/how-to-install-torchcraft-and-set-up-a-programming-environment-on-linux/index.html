@@ -85,7 +85,7 @@
          <p><img class="[class name(s)]" src="/images/python.jpg"></p>
 <p>Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.</p>
 <p>This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.</p>
-<h2>Step 1 - Update and Upgrade</h2>
+<h2>Step 0 - Update and Upgrade</h2>
 <p>Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.</p>
 <div class="highlight"><pre><span></span>apt update
 </pre></div>
@@ -96,7 +96,7 @@
 
 
 <p>Confirm upgrade when prompted to do so.</p>
-<h2>Step 2 - Check Version of Python</h2>
+<h2>Step 1 - Check Version of Python</h2>
 <p>Check your version of Python 3 installed by typing:</p>
 <div class="highlight"><pre><span></span>python3 --version
 </pre></div>
@@ -107,7 +107,7 @@
 </pre></div>
 
 
-<h2>Step 3 - Install pip</h2>
+<h2>Step 2 - Install pip</h2>
 <p>To manage software packages for Python, install <code>pip</code>, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. </p>
 <div class="highlight"><pre><span></span>apt install -y python3-pip
 </pre></div>
@@ -119,7 +119,7 @@
 
 
 <p>Here, <code>schematics</code> can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. </p>
-<h2>Step 4 - Install Additional Tools</h2>
+<h2>Step 3 - Install Additional Tools</h2>
 <p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:</p>
 <div class="highlight"><pre><span></span>apt -y install --install-recommends git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
@@ -142,7 +142,7 @@
 </pre></div>
 
 
-<h2>Step 5 - Add the WineHQ Debian repository</h2>
+<h2>Step 4 - Add the WineHQ Debian repository</h2>
 <p>Get and install the repository key.</p>
 <div class="highlight"><pre><span></span>wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;&amp; apt-key add winehq.key
 </pre></div>
@@ -156,7 +156,7 @@
 </pre></div>
 
 
-<h2>Step 6 - Install libfaudio0 and Wine</h2>
+<h2>Step 5 - Install libfaudio0 and Wine</h2>
 <p>Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.</p>
 <div class="highlight"><pre><span></span>wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 </pre></div>
@@ -178,8 +178,8 @@
 </pre></div>
 
 
-<h2>Step 7 - Configuring WINE</h2>
-<h2>Step 8 - StarCraft: Brood War 1.16.1</h2>
+<h2>Step 6 - Configuring WINE</h2>
+<h2>Step 7 - StarCraft: Brood War 1.16.1</h2>
 <p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 </pre></div>
@@ -194,8 +194,8 @@
 </pre></div>
 
 
-<h2>Step 9 - Coding &amp; Building</h2>
-<h2>Step 10 - Setting up bwapi.ini</h2>
+<h2>Step 8 - Coding &amp; Building</h2>
+<h2>Step 9 - Setting up bwapi.ini</h2>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

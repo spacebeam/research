@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - updates</title><link href="/" rel="alternate"></link><link href="/feeds/updates.atom.xml" rel="self"></link><id>/</id><updated>2020-07-09T00:00:00+02:00</updated><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
-&lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
+&lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
-&lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
+&lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt update
 &lt;/pre&gt;&lt;/div&gt;
@@ -17,7 +17,7 @@
 
 
 &lt;p&gt;Confirm upgrade when prompted to do so.&lt;/p&gt;
-&lt;h2&gt;Step 2 - Check Version of Python&lt;/h2&gt;
+&lt;h2&gt;Step 1 - Check Version of Python&lt;/h2&gt;
 &lt;p&gt;Check your version of Python 3 installed by typing:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python3 --version
 &lt;/pre&gt;&lt;/div&gt;
@@ -28,7 +28,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 3 - Install pip&lt;/h2&gt;
+&lt;h2&gt;Step 2 - Install pip&lt;/h2&gt;
 &lt;p&gt;To manage software packages for Python, install &lt;code&gt;pip&lt;/code&gt;, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt install -y python3-pip
 &lt;/pre&gt;&lt;/div&gt;
@@ -40,7 +40,7 @@
 
 
 &lt;p&gt;Here, &lt;code&gt;schematics&lt;/code&gt; can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
-&lt;h2&gt;Step 4 - Install Additional Tools&lt;/h2&gt;
+&lt;h2&gt;Step 3 - Install Additional Tools&lt;/h2&gt;
 &lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
@@ -63,7 +63,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 5 - Add the WineHQ Debian repository&lt;/h2&gt;
+&lt;h2&gt;Step 4 - Add the WineHQ Debian repository&lt;/h2&gt;
 &lt;p&gt;Get and install the repository key.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;amp;&amp;amp; apt-key add winehq.key
 &lt;/pre&gt;&lt;/div&gt;
@@ -77,7 +77,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 6 - Install libfaudio0 and Wine&lt;/h2&gt;
+&lt;h2&gt;Step 5 - Install libfaudio0 and Wine&lt;/h2&gt;
 &lt;p&gt;Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
@@ -99,8 +99,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 7 - Configuring WINE&lt;/h2&gt;
-&lt;h2&gt;Step 8 - StarCraft: Brood War 1.16.1&lt;/h2&gt;
+&lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
+&lt;h2&gt;Step 7 - StarCraft: Brood War 1.16.1&lt;/h2&gt;
 &lt;p&gt;At the moment StarCraft: Remastered is &lt;em&gt;NOT&lt;/em&gt; yet supported, the only working version is 1.16.1.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 &lt;/pre&gt;&lt;/div&gt;
@@ -115,8 +115,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 9 - Coding &amp;amp; Building&lt;/h2&gt;
-&lt;h2&gt;Step 10 - Setting up bwapi.ini&lt;/h2&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
+&lt;h2&gt;Step 8 - Coding &amp;amp; Building&lt;/h2&gt;
+&lt;h2&gt;Step 9 - Setting up bwapi.ini&lt;/h2&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Gather resources&lt;/li&gt;

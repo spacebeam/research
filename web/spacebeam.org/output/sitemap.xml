@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-10T08:57:42-00:00</lastmod>
+<lastmod>2020-07-10T09:05:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-10T08:57:42-00:00</lastmod>
+<lastmod>2020-07-10T09:05:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-10T08:57:42-00:00</lastmod>
+<lastmod>2020-07-10T09:05:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-10T08:57:42-00:00</lastmod>
+<lastmod>2020-07-10T09:05:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,8 +53,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2020/07/10/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</loc>
-<lastmod>2020-07-10T00:00:00+02:00</lastmod>
+<loc>/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</loc>
+<lastmod>2020-07-09T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>
 </url>
@@ -159,7 +159,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2020-07-10T00:00:00+00:18</lastmod>
+<lastmod>2020-07-09T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

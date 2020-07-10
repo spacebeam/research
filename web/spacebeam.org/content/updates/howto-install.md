@@ -67,6 +67,14 @@ dpkg --add-architecture i386
 ```
 
 ```
+apt-add-repository contrib 
+```
+
+```
+apt update
+```
+
+```
 wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 ```
 
@@ -82,7 +90,23 @@ apt update && rm winehq.key
 apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
  libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
  libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
- libgl1-mesa-dri:i386 mesa-vulkan-drivers
+ libgl1-mesa-dri:i386 libsdl2-2.0-0 libstb0 libstb0:i386 mesa-vulkan-drivers
+```
+
+```
+wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
+```
+
+```
+wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/i386/libfaudio0_20.01-0~buster_i386.deb
+```
+
+```
+dpkg -i libfaudio0_20.01-0~buster_amd64.deb
+```
+
+```
+dpkg -i libfaudio0_20.01-0~buster_i386.deb
 ```
 
 ```
@@ -99,7 +123,6 @@ cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
 ```
 tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 ```
-
 
 ```
 pip3 install torch

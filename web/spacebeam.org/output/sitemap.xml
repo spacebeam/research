@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-10T00:28:00-00:00</lastmod>
+<lastmod>2020-07-10T00:34:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-10T00:28:00-00:00</lastmod>
+<lastmod>2020-07-10T00:34:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-10T00:28:00-00:00</lastmod>
+<lastmod>2020-07-10T00:34:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-10T00:28:00-00:00</lastmod>
+<lastmod>2020-07-10T00:34:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,7 +53,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2020/07/10/how-to-install-torchcraft-on-debian-10/</loc>
+<loc>/2020/07/10/how-to-install-starcraft-on-debian/</loc>
 <lastmod>2020-07-10T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>

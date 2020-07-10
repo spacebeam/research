@@ -54,17 +54,8 @@ Here, schematics can refer to any Python package or library, such as tornado for
 There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:
 
 ```
-sed -i 's/$/ contrib/' /etc/apt/sources.list
-sed -i 's/$/ non-free/' /etc/apt/sources.list
-```
-
-```
-apt update
-```
-
-```
-apt -y install --install-recommends git apt-transport-https\
-gnupg2 wget software-properties-common curl build-essential\
+apt -y install --install-recommends git apt-transport-https\ 
+gnupg2 wget software-properties-common curl build-essential\ 
 gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
 ```
 
@@ -83,9 +74,9 @@ apt update && rm winehq.key
 ```
 
 ```
-apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
-libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
-libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
+apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\ 
+libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\ 
+libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\ 
 libgl1-mesa-dri:i386 mesa-vulkan-drivers
 ```
 

@@ -13,8 +13,8 @@ This tutorial will walk you through installing Python 3 and setting up a program
 Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.
 
 ```
-# apt update
-# apt upgrade
+apt update
+apt upgrade
 ```
 
 Confirm upgrade when prompted to do so.
@@ -25,7 +25,7 @@ Confirm upgrade when prompted to do so.
 Check your version of Python 3 installed by typing:
 
 ```
-# python3 --version
+python3 --version
 ```
 
 You'll receive output similar to the following.
@@ -39,13 +39,13 @@ Python 3.7.3
 To manage software packages for Python, install `pip`, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. 
 
 ```
-# apt install -y python3-pip
+apt install -y python3-pip
 ```
 
 Python packages can be installed by typing:
 
 ```
-$ pip3 install schematics 
+pip3 install schematics 
 ```
 
 Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. 

@@ -9,7 +9,10 @@
 &lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt update
-apt upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -49,13 +52,15 @@ apt upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key
-apt-key add winehq.key
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;amp;&amp;amp; apt-key add winehq.key
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-add-repository &amp;#39;deb https://dl.winehq.org/wine-builds/debian/ buster main&amp;#39;
-apt update &amp;amp;&amp;amp; rm winehq.key
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt update &amp;amp;&amp;amp; rm winehq.key
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -71,8 +76,14 @@ apt update &amp;amp;&amp;amp; rm winehq.key
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
-cat /usr/src/starcraft-sif/include/core/core* &amp;gt; /opt/StarCraft.tar.gz
-tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat /usr/src/starcraft-sif/include/core/core* &amp;gt; /opt/StarCraft.tar.gz
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 &lt;/pre&gt;&lt;/div&gt;
 
 

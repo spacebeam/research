@@ -14,6 +14,9 @@ Logged into your system as root, first update and upgrade to ensure your shipped
 
 ```
 apt update
+```
+
+```
 apt upgrade
 ```
 
@@ -64,12 +67,14 @@ dpkg --add-architecture i386
 ```
 
 ```
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-apt-key add winehq.key
+wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 ```
 
 ```
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
+```
+
+```
 apt update && rm winehq.key
 ```
 
@@ -86,7 +91,12 @@ apt -y install --install-recommends winehq-staging winetricks
 
 ```
 git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
+```
+```
 cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
+```
+
+```
 tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 ```
 

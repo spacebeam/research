@@ -5,12 +5,12 @@ description: This tutorial is only meant to explore the TorchCraft Python API, n
 Welcome to the tutorial for StarCraft: Brood War Python bots using TorchCraft; we will learn to:
 
 1. Setup the environment
-2. Gathering resources
-3. Training units
-4. Building buildings
-5. Scouting the enemy
+2. Gather resources
+3. Train your units
+4. Build your buildings
+5. Scout the enemy(s)
 6. Expand on the map
-7. Attack and defense
+7. Attack and defend
 
 Finally we can test and deploy by:
 

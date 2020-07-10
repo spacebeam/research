@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-07-09T00:00:00+02:00</updated><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-07-09T00:00:00+02:00</updated><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
-&lt;p&gt;Logged into your system as root, first update and upgrade to ensure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian.&lt;/p&gt;
+&lt;p&gt;Logged into your system as root, first update and upgrade to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.&lt;/p&gt;
-&lt;p&gt;`&lt;/p&gt;
-&lt;h1&gt;apt update&lt;/h1&gt;
-&lt;h1&gt;apt upgrade&lt;/h1&gt;
-&lt;p&gt;`
-Confirm upgrade when prompted to do so.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt update
+# apt upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Confirm upgrade when prompted to do so.&lt;/p&gt;
 &lt;h2&gt;Step 2 - Check Version of Python&lt;/h2&gt;
 &lt;p&gt;Check your version of Python 3 installed by typing:&lt;/p&gt;
-&lt;p&gt;`&lt;/p&gt;
-&lt;h1&gt;python3 --version&lt;/h1&gt;
-&lt;p&gt;`&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# python3 --version
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;You'll receive output similar to the following.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Python 3.7.3&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 3.7.3
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Step 3 - Install pip&lt;/h2&gt;
 &lt;p&gt;To manage software packages for Python, install &lt;code&gt;pip&lt;/code&gt;, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. &lt;/p&gt;
-&lt;p&gt;`&lt;/p&gt;
-&lt;h1&gt;apt install -y python3-pip&lt;/h1&gt;
-&lt;p&gt;`&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt install -y python3-pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Python packages can be installed by typing:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ pip3 install schematics&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip3 install schematics 
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
 &lt;h2&gt;Step 4 - Install Additional Tools&lt;/h2&gt;
 &lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:&lt;/p&gt;
-&lt;p&gt;`&lt;/p&gt;
-&lt;h1&gt;apt install -y&lt;/h1&gt;
-&lt;p&gt;`&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt install -y 
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Use WINE&lt;/h2&gt;
 &lt;h2&gt;Running TorchCraft&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;$ python python/example.py -t $server_ip&lt;/code&gt;&lt;/p&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using the TorchCraft Python API; we will learn to:&lt;/p&gt;

@@ -6,7 +6,7 @@ description: TorchCraft is a BWAPI module that sends StarCraft data out over a Z
 
 Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.
 
-This tutorial will walk you through installing Python and setting up a programming environment on Debian 10.
+This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.
 
 ## Step 1 - Update and Upgrade
 

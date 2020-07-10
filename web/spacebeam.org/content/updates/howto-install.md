@@ -117,7 +117,9 @@ dpkg -i libfaudio0_20.01-0~buster_i386.deb
 apt -y install --install-recommends winehq-staging winetricks
 ```
 
-## Step 7 - StarCraft: Brood War 1.16.1
+## Step 7 - Configuring WINE
+
+## Step 8 - StarCraft: Brood War 1.16.1
 
 At the moment StarCraft: Remastered is *NOT* yet supported, the only working version is 1.16.1.
 
@@ -134,13 +136,6 @@ cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
 tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 ```
 
-```
-pip3 install torch
-``` 
+## Step 9 - Coding & Building
 
-## Use WINE
-
-## Running TorchCraft
-
-`$ python python/example.py -t $server_ip`
-
+## Step 10 - Setting up bwapi.ini

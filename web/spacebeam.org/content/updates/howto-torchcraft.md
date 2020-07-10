@@ -1,6 +1,6 @@
 title: How to install TorchCraft on Debian 10 
 date: 2020-07-10
-description: TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI from anywhere. 
+description: TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI 4.2.0. 
 
 We provide off the shelf solutions for Python and Lua:
 

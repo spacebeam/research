@@ -15,7 +15,7 @@
 &lt;/ol&gt;
 &lt;p&gt;Finally we can test and deploy by:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Testing our bot …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</guid></item><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
+&lt;li&gt;Test your bot …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</guid></item><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
 &lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;

@@ -14,5 +14,5 @@ Welcome to our tutorial for StarCraft: Brood War bots using the TorchCraft Pytho
 
 Finally we can test and deploy by:
 
-- Testing our bot using bw
-- Join the Torch Up tournament
+- Test your bot using bw
+- Join the [Torch Up](https://torchup.org/pages/compete/) tournament

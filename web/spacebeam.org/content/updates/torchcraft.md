@@ -2,7 +2,7 @@ title: Python TorchCraft Tutorial
 date: 2020-07-09
 description: Only meant to explore the TorchCraft Python API, not to build the best bot possible, you should probably approach your own differently!
 
-Welcome to our tutorial for StarCraft: Brood War bots using the TorchCraft Python API; we will learn to:
+Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:
 
 1. [Setup the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/)
 2. Gather resources

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Thu, 09 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>Python TorchCraft Tutorial</title><link>/2020/07/09/python-torchcraft-tutorial/</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</guid></item><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
+<rss version="2.0"><channel><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link>/</link><description></description><lastBuildDate>Thu, 09 Jul 2020 00:00:00 +0200</lastBuildDate><item><title>Python TorchCraft Tutorial</title><link>/2020/07/09/python-torchcraft-tutorial/</link><description>&lt;p&gt;Welcome to the tutorial for StarCraft: Brood War Python bots using TorchCraft; we will learn to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Setup the environment&lt;/li&gt;
+&lt;li&gt;Gathering resources&lt;/li&gt;
+&lt;li&gt;Training units&lt;/li&gt;
+&lt;li&gt;Building buildings&lt;/li&gt;
+&lt;li&gt;Scouting the enemy&lt;/li&gt;
+&lt;li&gt;Expand on the map&lt;/li&gt;
+&lt;li&gt;Attack and defense&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally we can test and deploy by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing our bot using bw&lt;/li&gt;
+&lt;li&gt;Join the Torch …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</guid></item><item><title>Stage 2 Supervision</title><link>/2020/07/06/stage-2-supervision/</link><description>&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
 &lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;

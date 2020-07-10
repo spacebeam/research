@@ -82,8 +82,35 @@
           </h2>
         </header>
       <div class="content">
-         <p>We provide off the shelf solutions for Python and Lua!</p>
-<p>Requirements:</p>
+         <p>Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.</p>
+<p>This tutorial will walk you through installing Python and setting up a programming environment on Debian.</p>
+<h2>Step 1 - Update and Upgrade</h2>
+<p>Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.</p>
+<p>`</p>
+<h1>apt update</h1>
+<h1>apt upgrade</h1>
+<p>`
+Confirm upgrade when prompted to do so.</p>
+<h2>Step 2 - Check Version of Python</h2>
+<p>Check your version of Python 3 installed by typing:</p>
+<p>`</p>
+<h1>python3 --version</h1>
+<p>`</p>
+<p>You'll receive output similar to the following.</p>
+<p><code>Python 3.7.3</code></p>
+<h2>Step 3 - Install pip</h2>
+<p>To manage software packages for Python, install <code>pip</code>, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. </p>
+<p>`</p>
+<h1>apt install -y python3-pip</h1>
+<p>`</p>
+<p>Python packages can be installed by typing:</p>
+<p><code>$ pip3 install schematics</code></p>
+<p>Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. </p>
+<h2>Step 4 - Install Additional Tools</h2>
+<p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:</p>
+<p>`</p>
+<h1>apt install -y</h1>
+<p>`</p>
 <h2>Use WINE</h2>
 <h2>Running TorchCraft</h2>
 <p><code>$ python python/example.py -t $server_ip</code></p>

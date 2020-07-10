@@ -54,7 +54,49 @@ Here, schematics can refer to any Python package or library, such as tornado for
 There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:
 
 ```
-# apt install -y 
+# sed -i 's/$/ contrib/' /etc/apt/sources.list
+# sed -i 's/$/ non-free/' /etc/apt/sources.list
+# apt update
+# apt -y install --install-recommends git apt-transport-https\
+# gnupg2 wget software-properties-common curl build-essential\
+# gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
+# dpkg --add-architecture i386
+# wget -nc https://dl.winehq.org/wine-builds/winehq.key
+# apt-key add winehq.key
+```
+
+```
+apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
+    apt update
+    rm winehq.key
+    apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
+    libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
+    libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
+    libgl1-mesa-dri:i386 mesa-vulkan-drivers xvfb 
+    Xvfb :1 -screen 0 640x480x24 &
+    apt -y install --install-recommends winehq-staging winetricks
+    cd /opt && git clone https://github.com/torch/distro.git torch --recursive
+    bash /opt/torch/install-deps
+    cd /opt/torch/ && ./install.sh
+    . /opt/torch/install/bin/torch-activate
+    cd /usr/src && git clone https://github.com/spacebeam/starcraft-scif.git
+    cd starcraft-scif
+    cat include/core/core* > /opt/StarCraft.tar.gz
+    tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+    apt -y install --install-recommends zlib1g-dev libncurses5-dev\
+    libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev 
+    cd /usr/src && curl -O https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
+    tar -xf Python-3.7.4.tar.xz
+    cd Python-3.7.4 && ./configure --enable-optimizations
+    make -j8 build_all && make -j8 altinstall
+    apt-get clean
+    pip3.7 install torch
+```
+
+
+
+```
+# apt install -y 0 
 ```
 
 

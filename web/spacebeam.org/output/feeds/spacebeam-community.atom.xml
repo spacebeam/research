@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link href="/" rel="alternate"></link><link href="/feeds/spacebeam-community.atom.xml" rel="self"></link><id>/</id><updated>2020-07-09T00:00:00+02:00</updated><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian 10.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
-&lt;p&gt;Logged into your system as root, first update and upgrade to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Logged into your system as root, first update and upgrade …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through installing Python and setting up a programming environment on Debian 10.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 1 - Update and Upgrade&lt;/h2&gt;
 &lt;p&gt;Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt update
@@ -39,7 +39,47 @@
 &lt;p&gt;Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
 &lt;h2&gt;Step 4 - Install Additional Tools&lt;/h2&gt;
 &lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt install -y 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# sed -i &amp;#39;s/$/ contrib/&amp;#39; /etc/apt/sources.list
+# sed -i &amp;#39;s/$/ non-free/&amp;#39; /etc/apt/sources.list
+# apt update
+# apt -y install --install-recommends git apt-transport-https\
+# gnupg2 wget software-properties-common curl build-essential\
+# gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
+# dpkg --add-architecture i386
+# wget -nc https://dl.winehq.org/wine-builds/winehq.key
+# apt-key add winehq.key
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-add-repository &amp;#39;deb https://dl.winehq.org/wine-builds/debian/ buster main&amp;#39;
+    apt update
+    rm winehq.key
+    apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
+    libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
+    libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
+    libgl1-mesa-dri:i386 mesa-vulkan-drivers xvfb 
+    Xvfb :1 -screen 0 640x480x24 &amp;amp;
+    apt -y install --install-recommends winehq-staging winetricks
+    cd /opt &amp;amp;&amp;amp; git clone https://github.com/torch/distro.git torch --recursive
+    bash /opt/torch/install-deps
+    cd /opt/torch/ &amp;amp;&amp;amp; ./install.sh
+    . /opt/torch/install/bin/torch-activate
+    cd /usr/src &amp;amp;&amp;amp; git clone https://github.com/spacebeam/starcraft-scif.git
+    cd starcraft-scif
+    cat include/core/core* &amp;gt; /opt/StarCraft.tar.gz
+    tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+    apt -y install --install-recommends zlib1g-dev libncurses5-dev\
+    libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev 
+    cd /usr/src &amp;amp;&amp;amp; curl -O https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
+    tar -xf Python-3.7.4.tar.xz
+    cd Python-3.7.4 &amp;amp;&amp;amp; ./configure --enable-optimizations
+    make -j8 build_all &amp;amp;&amp;amp; make -j8 altinstall
+    apt-get clean
+    pip3.7 install torch
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# apt install -y 0 
 &lt;/pre&gt;&lt;/div&gt;
 
 

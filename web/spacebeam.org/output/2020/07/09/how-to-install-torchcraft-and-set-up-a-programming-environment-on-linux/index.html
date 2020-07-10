@@ -118,9 +118,9 @@
 </pre></div>
 
 
-<p>Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. </p>
+<p>Here, <code>schematics</code> can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. </p>
 <h2>Step 4 - Install Additional Tools</h2>
-<p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:</p>
+<p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:</p>
 <div class="highlight"><pre><span></span>apt -y install --install-recommends git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
  gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
@@ -143,6 +143,7 @@
 
 
 <h2>Step 5 - Add the WineHQ Debian repository</h2>
+<p>Get and install the repository key.</p>
 <div class="highlight"><pre><span></span>wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;&amp; apt-key add winehq.key
 </pre></div>
 
@@ -156,6 +157,7 @@
 
 
 <h2>Step 6 - Install libfaudio0 and Wine</h2>
+<p>Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.</p>
 <div class="highlight"><pre><span></span>wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 </pre></div>
 
@@ -177,10 +179,12 @@
 
 
 <h2>Step 7 - StarCraft: Brood War 1.16.1</h2>
+<p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 </pre></div>
 
 
+<p>In this tutorial we have StarCraft installed in <code>/opt/StarCraft/</code></p>
 <div class="highlight"><pre><span></span>cat /usr/src/starcraft-sif/include/core/core* &gt; /opt/StarCraft.tar.gz
 </pre></div>
 

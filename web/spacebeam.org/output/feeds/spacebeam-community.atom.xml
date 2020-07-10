@@ -39,9 +39,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
+&lt;p&gt;Here, &lt;code&gt;schematics&lt;/code&gt; can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
 &lt;h2&gt;Step 4 - Install Additional Tools&lt;/h2&gt;
-&lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:&lt;/p&gt;
+&lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
  gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
@@ -64,6 +64,7 @@
 
 
 &lt;h2&gt;Step 5 - Add the WineHQ Debian repository&lt;/h2&gt;
+&lt;p&gt;Get and install the repository key.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;amp;&amp;amp; apt-key add winehq.key
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -77,6 +78,7 @@
 
 
 &lt;h2&gt;Step 6 - Install libfaudio0 and Wine&lt;/h2&gt;
+&lt;p&gt;Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -98,10 +100,12 @@
 
 
 &lt;h2&gt;Step 7 - StarCraft: Brood War 1.16.1&lt;/h2&gt;
+&lt;p&gt;At the moment StarCraft: Remastered is &lt;em&gt;NOT&lt;/em&gt; yet supported, the only working version is 1.16.1.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;In this tutorial we have StarCraft installed in &lt;code&gt;/opt/StarCraft/&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat /usr/src/starcraft-sif/include/core/core* &amp;gt; /opt/StarCraft.tar.gz
 &lt;/pre&gt;&lt;/div&gt;
 

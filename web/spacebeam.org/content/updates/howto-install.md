@@ -51,10 +51,11 @@ Python packages can be installed by typing:
 pip3 install schematics 
 ```
 
-Here, schematics can refer to any Python package or library, such as tornado for backend development or NumPy for scientific computing. 
+Here, `schematics` can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. 
 
 ## Step 4 - Install Additional Tools
-There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War bots programming environment:
+
+There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:
 
 ```
 apt -y install --install-recommends git apt-transport-https\
@@ -79,6 +80,8 @@ apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
 
 ## Step 5 - Add the WineHQ Debian repository
 
+Get and install the repository key.
+
 ```
 wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 ```
@@ -91,6 +94,8 @@ apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
 apt update && rm winehq.key
 ```
 ## Step 6 - Install libfaudio0 and Wine
+
+Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.
 
 ```
 wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
@@ -114,9 +119,13 @@ apt -y install --install-recommends winehq-staging winetricks
 
 ## Step 7 - StarCraft: Brood War 1.16.1
 
+At the moment StarCraft: Remastered is *NOT* yet supported, the only working version is 1.16.1.
+
 ```
 git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 ```
+
+In this tutorial we have StarCraft installed in `/opt/StarCraft/`
 ```
 cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
 ```

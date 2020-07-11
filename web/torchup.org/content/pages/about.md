@@ -1,7 +1,7 @@
 title: Torch Up
 Date: 2020-01-14 16:20
 
-Welcome to the home of the 1st Torch Up Brood War AI tournament which is organized by the [Spacebeam](https://spacebeam.org) community as an annual [FOSDEM](https://fosdem.org) side event (end of January/begining of February) at Brussels Belgium, planet Earth.
+Welcome to the home of the 1st Torch Up Brood War AI tournament which is organized by the [Spacebeam](https://spacebeam.org) community as an annual [FOSDEM](https://fosdem.org) side event (end of January/begining of February) at Brussels Belgium.
 
 ## Torch Up: Brood War AI Tournament
 

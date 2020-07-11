@@ -95,7 +95,7 @@ apt update && rm winehq.key
 ```
 ## Step 5 - Install libfaudio0 and Wine
 
-Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.
+As of Wine 4.5+, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10. Distributions which include libfaudio0 in their repository are not subject to this problem.
 
 ```
 wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
@@ -119,7 +119,42 @@ apt -y install --install-recommends winehq-staging winetricks
 
 ## Step 6 - Configuring WINE
 
-## Step 7 - StarCraft: Brood War 1.16.1
+Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.
+
+### (default) hanlde things using your own session
+
+```
+TBD
+```
+
+
+### (optional) handle things using a separate `wine` user
+```
+adduser --disabled-login --gecos "" --shell /forbid/login wine
+```
+
+```
+usermod --append --groups audio wine
+```
+
+```
+chown wine:wine -R /home/wine
+```
+
+```
+sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+```
+
+
+
+
+## Step 7 - TorchCraft: Brood War 1.16.1
+
+### TorchCraft
+
+TDB
+
+### StarCraft
 
 At the moment StarCraft: Remastered is *NOT* yet supported, the only working version is 1.16.1.
 
@@ -137,5 +172,17 @@ tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 ```
 
 ## Step 8 - Coding & Building
+
+Lets create a small Terran bot with a single timing attack. Check out the examples!
+
+### Run your bot
+```
+TBD
+```
+
+### Run Chaoslauncher
+```
+TBD
+```
 
 ## Step 9 - Setting up bwapi.ini

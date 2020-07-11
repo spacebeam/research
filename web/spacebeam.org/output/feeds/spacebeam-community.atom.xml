@@ -78,7 +78,7 @@
 
 
 &lt;h2&gt;Step 5 - Install libfaudio0 and Wine&lt;/h2&gt;
-&lt;p&gt;Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.&lt;/p&gt;
+&lt;p&gt;As of Wine 4.5+, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10. Distributions which include libfaudio0 in their repository are not subject to this problem.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -100,7 +100,33 @@
 
 
 &lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
-&lt;h2&gt;Step 7 - StarCraft: Brood War 1.16.1&lt;/h2&gt;
+&lt;p&gt;Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.&lt;/p&gt;
+&lt;h3&gt;(default) hanlde things using your own session&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;(optional) handle things using a separate &lt;code&gt;wine&lt;/code&gt; user&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;adduser --disabled-login --gecos &amp;quot;&amp;quot; --shell /forbid/login wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;usermod --append --groups audio wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chown wine:wine -R /home/wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 7 - TorchCraft: Brood War 1.16.1&lt;/h2&gt;
+&lt;h3&gt;TorchCraft&lt;/h3&gt;
+&lt;p&gt;TDB&lt;/p&gt;
+&lt;h3&gt;StarCraft&lt;/h3&gt;
 &lt;p&gt;At the moment StarCraft: Remastered is &lt;em&gt;NOT&lt;/em&gt; yet supported, the only working version is 1.16.1.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 &lt;/pre&gt;&lt;/div&gt;
@@ -116,6 +142,17 @@
 
 
 &lt;h2&gt;Step 8 - Coding &amp;amp; Building&lt;/h2&gt;
+&lt;p&gt;Lets create a small Terran bot with a single timing attack. Check out the examples!&lt;/p&gt;
+&lt;h3&gt;Run your bot&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Run Chaoslauncher&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Step 9 - Setting up bwapi.ini&lt;/h2&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;

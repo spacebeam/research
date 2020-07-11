@@ -157,7 +157,7 @@
 
 
 <h2>Step 5 - Install libfaudio0 and Wine</h2>
-<p>Beginning with Wine 5.0, both Wine Stable and Wine Development require amd64 and i386 versions of libfaudio0, but libfaudio0 is not available from the repository. Therefore, libfaudio0 must be downloaded and installed manually.</p>
+<p>As of Wine 4.5+, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10. Distributions which include libfaudio0 in their repository are not subject to this problem.</p>
 <div class="highlight"><pre><span></span>wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 </pre></div>
 
@@ -179,7 +179,33 @@
 
 
 <h2>Step 6 - Configuring WINE</h2>
-<h2>Step 7 - StarCraft: Brood War 1.16.1</h2>
+<p>Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.</p>
+<h3>(default) hanlde things using your own session</h3>
+<div class="highlight"><pre><span></span>TBD
+</pre></div>
+
+
+<h3>(optional) handle things using a separate <code>wine</code> user</h3>
+<div class="highlight"><pre><span></span>adduser --disabled-login --gecos &quot;&quot; --shell /forbid/login wine
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>usermod --append --groups audio wine
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>chown wine:wine -R /home/wine
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+</pre></div>
+
+
+<h2>Step 7 - TorchCraft: Brood War 1.16.1</h2>
+<h3>TorchCraft</h3>
+<p>TDB</p>
+<h3>StarCraft</h3>
 <p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 </pre></div>
@@ -195,6 +221,17 @@
 
 
 <h2>Step 8 - Coding &amp; Building</h2>
+<p>Lets create a small Terran bot with a single timing attack. Check out the examples!</p>
+<h3>Run your bot</h3>
+<div class="highlight"><pre><span></span>TBD
+</pre></div>
+
+
+<h3>Run Chaoslauncher</h3>
+<div class="highlight"><pre><span></span>TBD
+</pre></div>
+
+
 <h2>Step 9 - Setting up bwapi.ini</h2>
       </div>
       <div class="back-to-top">

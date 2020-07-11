@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-11T17:21:45-00:00</lastmod>
+<lastmod>2020-07-11T17:26:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-11T17:21:45-00:00</lastmod>
+<lastmod>2020-07-11T17:26:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-11T17:21:45-00:00</lastmod>
+<lastmod>2020-07-11T17:26:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-11T17:21:45-00:00</lastmod>
+<lastmod>2020-07-11T17:26:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,7 +53,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2020/07/11/8-supply-11-gas-12-rax-that-is-the-basics-and-14-scout/</loc>
+<loc>/2020/07/11/8-supply-11-gas-12-rax-that-is-the-basics/</loc>
 <lastmod>2020-07-11T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>

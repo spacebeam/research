@@ -190,6 +190,8 @@ tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 
 ### Installing the provided Python examples
 
+This will install Tornado, PyTorch, NumPy and SciPy!
+
 ```
 pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
 ```

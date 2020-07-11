@@ -164,7 +164,7 @@
 
 
 &lt;h3&gt;Installing the provided Python examples&lt;/h3&gt;
-&lt;p&gt;This will install Tornado, PyTorch, NumPy and SciPy!&lt;/p&gt;
+&lt;p&gt;This will install Tornado, PyTorch, PyZMQ, NumPy and SciPy!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
 &lt;/pre&gt;&lt;/div&gt;
 

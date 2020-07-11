@@ -95,7 +95,7 @@ apt update && rm winehq.key
 ```
 ## Step 5 - Install libfaudio0 and Wine
 
-Starting on Wine 4.5 and up, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10.
+Starting on Wine 4.5 and up, libfaudio0 is required by the staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10.
 
 ```
 wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
@@ -121,7 +121,7 @@ apt -y install --install-recommends winehq-staging winetricks
 
 Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't always the case.
 
-### (default) hanlde things using your own session
+### (default) using your own non-root user
 
 The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can *REMOVE* it and start clean with `rm -rf ~/.wine/`
 
@@ -141,7 +141,7 @@ $ winetricks -q vcrun2013
 $ winetricks -q vcrun2015
 ```
 
-### (optional) handle things using a separate `wine` user
+### (optional) using a separate `wine` user
 
 ```
 adduser --disabled-login --gecos "" --shell /forbid/login wine

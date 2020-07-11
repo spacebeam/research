@@ -123,8 +123,22 @@ Many programs work under WINE with absolutely no configuration. Unfurtunately, t
 
 ### (default) hanlde things using your own session
 
+The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can *REMOVE* it and start clean with `rm -rf ~/.wine/`
+
 ```
-TBD
+$ WINEARCH=win32; wineboot
+```
+
+```
+$ winetricks -q vcrun2012
+```
+
+```
+$ winetricks -q vcrun2013
+```
+
+```
+$ winetricks -q vcrun2015
 ```
 
 ### (optional) handle things using a separate `wine` user

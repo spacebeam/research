@@ -181,7 +181,20 @@
 <h2>Step 6 - Configuring WINE</h2>
 <p>Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.</p>
 <h3>(default) hanlde things using your own session</h3>
-<div class="highlight"><pre><span></span>TBD
+<p>The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can <em>REMOVE</em> it and start clean with <code>rm -rf ~/.wine/</code></p>
+<div class="highlight"><pre><span></span>$ <span class="nv">WINEARCH</span><span class="o">=</span>win32<span class="p">;</span> wineboot
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ winetricks -q vcrun2012
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ winetricks -q vcrun2013
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ winetricks -q vcrun2015
 </pre></div>
 
 

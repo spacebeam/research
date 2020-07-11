@@ -102,7 +102,20 @@
 &lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
 &lt;p&gt;Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.&lt;/p&gt;
 &lt;h3&gt;(default) hanlde things using your own session&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;p&gt;The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can &lt;em&gt;REMOVE&lt;/em&gt; it and start clean with &lt;code&gt;rm -rf ~/.wine/&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;WINEARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;win32&lt;span class="p"&gt;;&lt;/span&gt; wineboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2012
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2013
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2015
 &lt;/pre&gt;&lt;/div&gt;
 
 

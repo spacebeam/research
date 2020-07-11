@@ -171,13 +171,7 @@ sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks
 sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
 ```
 
-## Step 7 - TorchCraft: Brood War 1.16.1
-
-### TorchCraft
-
-TDB
-
-### StarCraft
+## Step 7 - StarCraft: Brood War 1.16.1
 
 At the moment StarCraft: Remastered is *NOT* yet supported, the only working version is 1.16.1.
 
@@ -192,6 +186,22 @@ cat /usr/src/starcraft-sif/include/core/core* > /opt/StarCraft.tar.gz
 
 ```
 tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+```
+
+### Installing the provided Python examples
+
+```
+pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
+```
+
+### Installing TorchCraft
+
+```
+git clone https://github.com/TorchCraft/TorchCraft.git /usr/src/TorchCraft --recursive
+```
+
+```
+pip3 install /usr/src/TorchCraft
 ```
 
 ## Step 8 - Coding & Building

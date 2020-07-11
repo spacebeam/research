@@ -227,10 +227,7 @@
 </pre></div>
 
 
-<h2>Step 7 - TorchCraft: Brood War 1.16.1</h2>
-<h3>TorchCraft</h3>
-<p>TDB</p>
-<h3>StarCraft</h3>
+<h2>Step 7 - StarCraft: Brood War 1.16.1</h2>
 <p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
 </pre></div>
@@ -242,6 +239,20 @@
 
 
 <div class="highlight"><pre><span></span>tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+</pre></div>
+
+
+<h3>Installing the provided Python examples</h3>
+<div class="highlight"><pre><span></span>pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
+</pre></div>
+
+
+<h3>Installing TorchCraft</h3>
+<div class="highlight"><pre><span></span>git clone https://github.com/TorchCraft/TorchCraft.git /usr/src/TorchCraft --recursive
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>pip3 install /usr/src/TorchCraft
 </pre></div>
 
 

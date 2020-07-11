@@ -5,7 +5,7 @@ description: Only meant to explore the TorchCraft Python API, not to build the b
 Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:
 
 1. [Setup the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/)
-2. Gather resources
+2. [Gather resources](https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/)
 3. Train your units
 4. Build your buildings
 5. Scout the enemy(s)

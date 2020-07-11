@@ -95,7 +95,7 @@ apt update && rm winehq.key
 ```
 ## Step 5 - Install libfaudio0 and Wine
 
-As of Wine 4.5+, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10. Distributions which include libfaudio0 in their repository are not subject to this problem.
+Starting on Wine 4.5 and up, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10.
 
 ```
 wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
@@ -119,7 +119,7 @@ apt -y install --install-recommends winehq-staging winetricks
 
 ## Step 6 - Configuring WINE
 
-Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.
+Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't always the case.
 
 ### (default) hanlde things using your own session
 

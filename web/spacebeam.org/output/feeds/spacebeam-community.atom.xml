@@ -78,7 +78,7 @@
 
 
 &lt;h2&gt;Step 5 - Install libfaudio0 and Wine&lt;/h2&gt;
-&lt;p&gt;As of Wine 4.5+, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10. Distributions which include libfaudio0 in their repository are not subject to this problem.&lt;/p&gt;
+&lt;p&gt;Starting on Wine 4.5 and up, libfaudio0 is required by the devel and staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This tutorial explains how to obtain libfaudio0 for Debian 10.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -100,7 +100,7 @@
 
 
 &lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
-&lt;p&gt;Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't the case.&lt;/p&gt;
+&lt;p&gt;Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't always the case.&lt;/p&gt;
 &lt;h3&gt;(default) hanlde things using your own session&lt;/h3&gt;
 &lt;p&gt;The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can &lt;em&gt;REMOVE&lt;/em&gt; it and start clean with &lt;code&gt;rm -rf ~/.wine/&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;WINEARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;win32&lt;span class="p"&gt;;&lt;/span&gt; wineboot

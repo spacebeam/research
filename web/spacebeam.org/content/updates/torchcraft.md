@@ -6,7 +6,7 @@ Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchC
 
 1. [Setup the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/)
 2. [Gather resources](https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/)
-3. [Train your units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-that-is-the-basics/)
+3. [Train your units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/)
 4. Build your buildings
 5. Scout the enemy(s)
 6. Expand on the map

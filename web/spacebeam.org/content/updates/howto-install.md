@@ -212,10 +212,11 @@ Lets continue this tutorial with the ambitious goal of create a small Terran bot
 python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 ```
 
-Don't expect much of the original Python examples.. if you follow this steps your output reads hopefully:
+if you follow the steps your output read hopefully:
 
 ```
 CTRL-C to stop
+
 
 ```
 

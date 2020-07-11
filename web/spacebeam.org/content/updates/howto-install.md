@@ -206,14 +206,9 @@ pip3 install /usr/src/TorchCraft
 
 ## Step 8 - Coding & Building
 
-Lets create a small Terran bot with a single timing attack. 
+Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. lets check that everything is installed correctly and that we can run the original TorchCraft Python examples.
 
-### Run your bot
+### TorchCraft Client 
 ```
-TBD
-```
-
-### Run Chaoslauncher
-```
-TBD
+python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 ```

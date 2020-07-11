@@ -217,5 +217,3 @@ TBD
 ```
 TBD
 ```
-
-## Step 9 - Setting up bwapi.ini

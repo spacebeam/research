@@ -206,9 +206,20 @@ pip3 install /usr/src/TorchCraft
 
 ## Step 8 - Coding & Building
 
-Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. lets check that everything is installed correctly and that we can run the original TorchCraft Python examples.
+Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. check that everything is installed correctly and that we can run the original examples.
 
-### TorchCraft Client 
 ```
 python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 ```
+
+Don't expect much of the original Python examples.. if you follow this steps your output reads hopefully:
+
+```
+CTRL-C to stop
+
+```
+
+You are ready to start coding some new awesome StarCraft:Brood War bot using Python 3, we hope this tutorial is helpful and provide a good start, have fun now creating your own bot on Linux!
+
+After this short success, let's learn how to [start gathering some resources](https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/) and growing our new bot's economy. 
+

@@ -58,9 +58,9 @@ Here, `schematics` can refer to any Python package, such as tornado for backend 
 There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:
 
 ```
-apt -y install --install-recommends git apt-transport-https\
+apt -y install --install-recommends vim git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
- gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
 ```
 
 ```
@@ -127,8 +127,8 @@ Many programs work under WINE with absolutely no configuration. Unfurtunately, t
 TBD
 ```
 
-
 ### (optional) handle things using a separate `wine` user
+
 ```
 adduser --disabled-login --gecos "" --shell /forbid/login wine
 ```
@@ -145,8 +145,17 @@ chown wine:wine -R /home/wine
 sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
 ```
 
+```
+sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+```
 
+```
+sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+```
 
+```
+sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
+```
 
 ## Step 7 - TorchCraft: Brood War 1.16.1
 

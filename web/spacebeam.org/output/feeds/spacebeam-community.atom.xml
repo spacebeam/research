@@ -42,9 +42,9 @@
 &lt;p&gt;Here, &lt;code&gt;schematics&lt;/code&gt; can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
 &lt;h2&gt;Step 3 - Install Additional Tools&lt;/h2&gt;
 &lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends git apt-transport-https\
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends vim git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
- gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -120,6 +120,18 @@
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
 &lt;/pre&gt;&lt;/div&gt;
 
 

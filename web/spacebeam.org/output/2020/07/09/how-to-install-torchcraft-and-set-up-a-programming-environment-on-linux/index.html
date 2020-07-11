@@ -121,9 +121,9 @@
 <p>Here, <code>schematics</code> can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. </p>
 <h2>Step 3 - Install Additional Tools</h2>
 <p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:</p>
-<div class="highlight"><pre><span></span>apt -y install --install-recommends git apt-transport-https\
+<div class="highlight"><pre><span></span>apt -y install --install-recommends vim git apt-transport-https\
  gnupg2 wget software-properties-common curl build-essential\
- gfortran pkg-config make cmake libyaml-0-2 libyaml-dev vim
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
 </pre></div>
 
 
@@ -199,6 +199,18 @@
 
 
 <div class="highlight"><pre><span></span>sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
 </pre></div>
 
 

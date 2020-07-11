@@ -100,7 +100,7 @@
 
 
 &lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
-&lt;p&gt;Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't always the case.&lt;/p&gt;
+&lt;p&gt;Many programs work under WINE with absolutely no configuration.. unfortunately, this isn't always the case.&lt;/p&gt;
 &lt;h3&gt;(default) using your own &lt;code&gt;non-root&lt;/code&gt; user&lt;/h3&gt;
 &lt;p&gt;The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can &lt;em&gt;REMOVE&lt;/em&gt; it and start clean with &lt;code&gt;rm -rf ~/.wine/&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;WINEARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;win32&lt;span class="p"&gt;;&lt;/span&gt; wineboot
@@ -167,7 +167,7 @@
 
 
 &lt;h2&gt;Step 8 - Coding &amp;amp; Building&lt;/h2&gt;
-&lt;p&gt;Lets create a small Terran bot with a single timing attack. Check out the examples!&lt;/p&gt;
+&lt;p&gt;Lets create a small Terran bot with a single timing attack. &lt;/p&gt;
 &lt;h3&gt;Run your bot&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;

@@ -119,7 +119,7 @@ apt -y install --install-recommends winehq-staging winetricks
 
 ## Step 6 - Configuring WINE
 
-Many programs work under WINE with absolutely no configuration. Unfurtunately, this isn't always the case.
+Many programs work under WINE with absolutely no configuration.. unfortunately, this isn't always the case.
 
 ### (default) using your own `non-root` user
 
@@ -196,7 +196,7 @@ tar -zxvf /opt/StarCraft.tar.gz -C /opt/
 
 ## Step 8 - Coding & Building
 
-Lets create a small Terran bot with a single timing attack. Check out the examples!
+Lets create a small Terran bot with a single timing attack. 
 
 ### Run your bot
 ```

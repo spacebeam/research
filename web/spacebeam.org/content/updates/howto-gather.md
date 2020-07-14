@@ -66,13 +66,20 @@ $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 
 ```
 
-### Run `launcher.py` 
-
-If everything worked as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, if you follow the steps as they are you have that on `/opt/StarCraft/`, confirm, it will ask probably to restart the program, if needed run the `launcher.py` again, click on `Start` after enable  the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins, click on `Start` if and hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -> Local PC and confirm that you see a `blueberry` waiting to learn how to gather some resources.
+### Run the `launcher.py` script
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
+
+If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on `/opt/StarCraft/` confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the `launcher.py` and run it again.
+
+
+```
+$ python3 /usr/src/starcraft-sif/examples/launcher.py
+```
+
+Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins and click on `Start` hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -> Local PC and confirm that you see a `blueberry` waiting for us on the lobby.
 
 ## Minerals and Vespene Gas
 

@@ -70,12 +70,17 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Run &lt;code&gt;launcher.py&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;If everything worked as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, if you follow the steps as they are you have that on &lt;code&gt;/opt/StarCraft/&lt;/code&gt;, confirm, it will ask probably to restart the program, if needed run the &lt;code&gt;launcher.py&lt;/code&gt; again, click on &lt;code&gt;Start&lt;/code&gt; after enable  the &lt;code&gt;BWAPI 2.4.0 Injector [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE 1.02&lt;/code&gt; plugins, click on &lt;code&gt;Start&lt;/code&gt; if and hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -&amp;gt; Local PC and confirm that you see a &lt;code&gt;blueberry&lt;/code&gt; waiting to learn how to gather some resources.&lt;/p&gt;
+&lt;h3&gt;Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 2.4.0 Injector [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE 1.02&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -&amp;gt; Local PC and confirm that you see a &lt;code&gt;blueberry&lt;/code&gt; waiting for us on the lobby.&lt;/p&gt;
 &lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and develop strong teeth and lungs.&lt;/p&gt;
 &lt;p&gt;Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.&lt;/p&gt;

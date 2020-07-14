@@ -4,13 +4,13 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Minerals&lt;/h2&gt;
-&lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Learn to run the game and configure bwapi.ini before we can continue!&lt;/p&gt;
+&lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
+&lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Learn to run the game and configure bwapi.ini before we can continue!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Minerals&lt;/h2&gt;
+&lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and develop strong teeth and lungs.&lt;/p&gt;
 &lt;p&gt;Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.&lt;/p&gt;
 &lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require &lt;code&gt;vespene gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;extractor&lt;/code&gt; for &lt;code&gt;zergs&lt;/code&gt;, &lt;code&gt;refinery&lt;/code&gt; for &lt;code&gt;terrans&lt;/code&gt; and &lt;code&gt;assimilator&lt;/code&gt; for &lt;code&gt;protoss&lt;/code&gt;).&lt;/p&gt;

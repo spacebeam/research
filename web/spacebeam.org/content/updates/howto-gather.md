@@ -8,13 +8,13 @@ Learn to run the game and configure bwapi.ini before we can continue!
 TBD
 ```
 
-## Minerals
+## Minerals and Vespene Gas
 
 Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong teeth and lungs.
 
 Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.
 
-Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require `vespene gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`extractor` for `zergs`, `refinery` for `terrans` and `assimilator` for `protoss`).
+Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
 ### Gathering Minerals
 

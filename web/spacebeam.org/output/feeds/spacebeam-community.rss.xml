@@ -4,8 +4,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Minerals&lt;/h2&gt;
-&lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Fri, 10 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</guid></item><item><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link>/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</link><description>&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
+&lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Fri, 10 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</guid></item><item><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link>/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</link><description>&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;

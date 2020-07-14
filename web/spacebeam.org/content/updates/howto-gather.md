@@ -16,7 +16,7 @@ wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
 wine Chaoslauncher/Chaoslauncher.exe
 ```
 
-That is what we are actually executing, let's build a little `launcher.py` script first.
+That is what we are actually executing, let's build a little `launcher.py` script.
 
 ```
 :::python

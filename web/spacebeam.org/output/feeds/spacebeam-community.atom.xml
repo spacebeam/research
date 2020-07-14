@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link href="/" rel="alternate"></link><link href="/feeds/spacebeam-community.atom.xml" rel="self"></link><id>/</id><updated>2020-07-11T00:00:00+02:00</updated><entry><title>8 supply, 11 gas, 12 rax, 14 scout</title><link href="/2020/07/11/8-supply-11-gas-12-rax-14-scout/" rel="alternate"></link><published>2020-07-11T00:00:00+02:00</published><updated>2020-07-11T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-11:/2020/07/11/8-supply-11-gas-12-rax-14-scout/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>Gathering Minerals to someday Build a Refinery and extract Vespene Gas</title><link href="/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;Learn to run the game and configure bwapi.ini before we can continue!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
+&lt;/pre&gt;&lt;/div&gt;
 
-wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
  -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
  --name blueberry --game blueberry --race T\
  --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;amp;\
@@ -12,8 +14,10 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 &lt;p&gt;That is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Learn to run the game and configure bwapi.ini before we can continue!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
+&lt;/pre&gt;&lt;/div&gt;
 
-wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
  -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
  --name blueberry --game blueberry --race T\
  --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;amp;\

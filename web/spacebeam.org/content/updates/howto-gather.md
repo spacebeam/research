@@ -85,7 +85,7 @@ Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and an
 
 What is actually doing the original example?
 
-'''
+```
 :::python
 import argparse
 import torchcraft as tc
@@ -188,7 +188,7 @@ while total_battles < 40:
         dprint("Sending actions: " + str(actions), 1)
         cl.send(actions)
     cl.close()
-'''
+```
 
 ## Minerals and Vespene Gas
 

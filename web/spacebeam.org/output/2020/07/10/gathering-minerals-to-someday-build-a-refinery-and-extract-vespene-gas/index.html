@@ -153,105 +153,110 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>Now with Chaoslauncher ready, enable the <code>BWAPI 2.4.0 Injector [RELEASE]</code> and and <code>W-MODE 1.02</code> plugins and click on <code>Start</code> hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -&gt; Local PC and confirm that you see a <code>blueberry</code> waiting for us on the lobby.</p>
 <h3>Analyzing TorchCraft <code>example.py</code></h3>
 <p>What is actually doing the original example?</p>
-<p>'''
-:::python
-import argparse
-import torchcraft as tc
-import torchcraft.Constants as tcc</p>
-<p>parser = argparse.ArgumentParser(
-    description='Plays simple micro battles with an attack closest heuristic')
-parser.add_argument('-t', '--hostname', type=str,
-                    help='Hostname where SC is running')
-parser.add_argument('-p', '--port', default=11111,
-                    help="Port to use")
-parser.add_argument('-d', '--debug', default=0, type=int, help="Debug level")</p>
-<p>args = parser.parse_args()</p>
-<p>DEBUG = args.debug
-def dprint(msg, level):
-    if DEBUG &gt; level:
-        print(msg)</p>
-<p>def get_closest(x, y, units):
-    dist = float('inf')
-    u = None
-    for unit in units:
-        d = (unit.x - x)<strong>2 + (unit.y - y)</strong>2
-        if d &lt; dist:
-            dist = d
-            u = unit
-    return u</p>
-<p>maps = [
-    'Maps/BroodWar/micro/dragoons_zealots.scm',
-    'Maps/BroodWar/micro/m5v5_c_far.scm'
-]</p>
-<p>skip_frames = 7
-nrestarts = 0
-total_battles = 0</p>
-<p>while total_battles &lt; 40:
-    print("")
-    print("CTRL-C to stop")
-    print("")</p>
-<div class="highlight"><pre><span></span>battles_won = 0
-battles_game = 0
-frames_in_battle = 1
-nloop = 1
-nrestarts += 1
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
 
-cl = tc.Client()
-cl.connect(args.hostname, args.port)
-state = cl.init(micro_battles=True)
-for pid, player in state.player_info.items():
-    print(&quot;player {} named {} is {}&quot;.format(player.id, player.name,
-        tc.Constants.races._dict[player.race]))
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Plays simple micro battles with an attack closest heuristic&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="s1">&#39;--hostname&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Hostname where SC is running&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-p&#39;</span><span class="p">,</span> <span class="s1">&#39;--port&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Port to use&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-d&#39;</span><span class="p">,</span> <span class="s1">&#39;--debug&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Debug level&quot;</span><span class="p">)</span>
 
-# Initial setup
-cl.send([
-    [tcc.set_speed, 0],
-    [tcc.set_gui, 1],
-    [tcc.set_cmd_optim, 1],
-])
-while not state.game_ended:
-    nloop += 1
-    state = cl.recv()
-    actions = []
-    if state.game_ended:
-        break
-    elif state.battle_just_ended:
-        dprint(&quot;BATTLE ENDED&quot;, 0)
-        if state.battle_won: battles_won += 1
-        battles_game += 1
-        total_battles += 1
-        frames_in_battle = 0
-        if battles_game &gt;= 10:
-            actions = [
-                [tcc.set_map, maps[nrestarts % len(maps)], 0],
-                [tcc.quit],
-            ]
-            print(maps[nrestarts % len(maps)])
-    elif state.waiting_for_restart:
-        dprint(&quot;WAITING FOR RESTART&quot;, 0)
-    else:
-        myunits = state.units[0]
-        enemyunits = state.units[1]
-        if state.battle_frame_count % skip_frames == 0:
-            for unit in myunits:
-                target = get_closest(unit.x, unit.y, enemyunits)
-                if target is not None:
-                    actions.append([
-                        tcc.command_unit_protected,
-                        unit.id,
-                        tcc.unitcommandtypes.Attack_Unit,
-                        target.id,
-                    ])
-    if frames_in_battle &gt; 2 * 60 * 24:
-        actions = [[tc.quit]]
-        nrestarts += 1
-    dprint(&quot;Sending actions: &quot; + str(actions), 1)
-    cl.send(actions)
-cl.close()
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">debug</span>
+<span class="k">def</span> <span class="nf">dprint</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">DEBUG</span> <span class="o">&gt;</span> <span class="n">level</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_closest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">:</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">d</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="n">unit</span>
+    <span class="k">return</span> <span class="n">u</span>
+
+<span class="n">maps</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Maps/BroodWar/micro/dragoons_zealots.scm&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Maps/BroodWar/micro/m5v5_c_far.scm&#39;</span>
+<span class="p">]</span>
+
+<span class="n">skip_frames</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">nrestarts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_battles</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">total_battles</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CTRL-C to stop&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="n">battles_won</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">battles_game</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">frames_in_battle</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">nloop</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">nrestarts</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">cl</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+    <span class="n">cl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">micro_battles</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">state</span><span class="o">.</span><span class="n">player_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;player {} named {} is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">tc</span><span class="o">.</span><span class="n">Constants</span><span class="o">.</span><span class="n">races</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">race</span><span class="p">]))</span>
+
+    <span class="c1"># Initial setup</span>
+    <span class="n">cl</span><span class="o">.</span><span class="n">send</span><span class="p">([</span>
+        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_gui</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_cmd_optim</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">])</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
+        <span class="n">nloop</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">battle_just_ended</span><span class="p">:</span>
+            <span class="n">dprint</span><span class="p">(</span><span class="s2">&quot;BATTLE ENDED&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">battle_won</span><span class="p">:</span> <span class="n">battles_won</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">battles_game</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">total_battles</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">frames_in_battle</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">battles_game</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_map</span><span class="p">,</span> <span class="n">maps</span><span class="p">[</span><span class="n">nrestarts</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="p">)],</span> <span class="mi">0</span><span class="p">],</span>
+                    <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">quit</span><span class="p">],</span>
+                <span class="p">]</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="n">nrestarts</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="p">)])</span>
+        <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">waiting_for_restart</span><span class="p">:</span>
+            <span class="n">dprint</span><span class="p">(</span><span class="s2">&quot;WAITING FOR RESTART&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">myunits</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">enemyunits</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">battle_frame_count</span> <span class="o">%</span> <span class="n">skip_frames</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">myunits</span><span class="p">:</span>
+                    <span class="n">target</span> <span class="o">=</span> <span class="n">get_closest</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">unit</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">enemyunits</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                            <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit_protected</span><span class="p">,</span>
+                            <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                            <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Attack_Unit</span><span class="p">,</span>
+                            <span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                        <span class="p">])</span>
+        <span class="k">if</span> <span class="n">frames_in_battle</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">:</span>
+            <span class="n">actions</span> <span class="o">=</span> <span class="p">[[</span><span class="n">tc</span><span class="o">.</span><span class="n">quit</span><span class="p">]]</span>
+            <span class="n">nrestarts</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">dprint</span><span class="p">(</span><span class="s2">&quot;Sending actions: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">actions</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">cl</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+    <span class="n">cl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 
-<p>'''</p>
 <h2>Minerals and Vespene Gas</h2>
 <p>Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the <code>Zerg</code> require minerals to harder their caparaces and develop strong teeth and lungs.</p>
 <p>Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.</p>

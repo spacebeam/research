@@ -3,9 +3,9 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
 
 wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
--l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
---name blueberry --game blueberry --race T\
---map maps/TorchUp/\\(4\\)FightingSpirit1.3.scx&amp;amp;\
+ -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
+ --name blueberry --game blueberry --race T\
+ --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;amp;\
 wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 

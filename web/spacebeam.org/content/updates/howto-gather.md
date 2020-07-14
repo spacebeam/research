@@ -5,6 +5,14 @@ description: Let's learn to order our workers to gather some resources closest t
 Learn to run the game and configure bwapi.ini before we can continue!
 
 ```
+cd /opt/StarCraft
+
+wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe -l /opt/StarCraft/bwapi-data/BWAPI.dll --host --name blueberry --game blueberry --race T --map X& wine Chaoslauncher/Chaoslauncher.exe
+```
+
+That is what we are actually executing, lets put it inside a little script first.
+
+```
 TBD
 ```
 

@@ -16,6 +16,16 @@ Workers mine 8 minerals per trip. MInerals are the more important of the two phy
 
 ## Gathering Minerals
 
+```
+TBD
+```
+
+if all went well, the workers should now start gathering the mineral patches closest to them!
+
+```
+TBD
+```
+
 Don't expect an optimal spread of workers, but that is left as an exercise to the reader.
 
 ## Build a Refinery

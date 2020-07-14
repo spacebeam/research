@@ -95,7 +95,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p>That is what we are actually executing, lets put it inside a little script first.</p>
+<p>That is what we are actually executing, let's build a little <code>launcher.py</code> script first.</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="c1"># Run bwheadless.exe and Chaoslauncher.exe from here!</span>
@@ -131,6 +131,11 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="n">execute</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Let's start the game for the first time and test the original examples again to see what gives?</p>
+<div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 

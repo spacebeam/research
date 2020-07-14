@@ -25,7 +25,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That is what we are actually executing, lets put it inside a little script first.&lt;/p&gt;
+&lt;p&gt;That is what we are actually executing, let's build a little &lt;code&gt;launcher.py&lt;/code&gt; script first.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Run bwheadless.exe and Chaoslauncher.exe from here!&lt;/span&gt;
@@ -61,6 +61,11 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let's start the game for the first time and test the original examples again to see what gives?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 

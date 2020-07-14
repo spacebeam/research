@@ -16,7 +16,7 @@ wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
 wine Chaoslauncher/Chaoslauncher.exe
 ```
 
-That is what we are actually executing, lets put it inside a little script first.
+That is what we are actually executing, let's build a little `launcher.py` script first.
 
 ```
 :::python
@@ -55,6 +55,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 os.chdir(args.path)
 os.popen(execute).read()
+```
+
+Let's start the game for the first time and test the original examples again to see what gives?
+
+```
+$ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
 ## Minerals and Vespene Gas

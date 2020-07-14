@@ -59,6 +59,17 @@ os.popen(execute).read()
 
 Let's start the game for the first time and test the original examples again to see what gives?
 
+### Run the original `example.py` again
+
+```
+$ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
+
+```
+
+### Run `launcher.py` 
+
+If everything worked as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, if you follow the steps as they are you have that on `/opt/StarCraft/`, confirm, it will ask probably to restart the program, if needed run the `launcher.py` again, click on `Start` after enable  the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins, click on `Start` if and hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -> Local PC and confirm that you see a `blueberry` waiting to learn how to gather some resources.
+
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```

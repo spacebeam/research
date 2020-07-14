@@ -152,70 +152,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <p>Now with Chaoslauncher ready, enable the <code>BWAPI 2.4.0 Injector [RELEASE]</code> and and <code>W-MODE 1.02</code> plugins and click on <code>Start</code> hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -&gt; Local PC and confirm that you see a <code>blueberry</code> waiting for us on the lobby.</p>
 <h3>Analyzing TorchCraft <code>example.py</code></h3>
-<p>What is actually doing the original example?</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
-<span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
-<span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
-
-<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
-    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Plays simple micro battles with an attack closest heuristic&#39;</span><span class="p">)</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="s1">&#39;--hostname&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-                    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Hostname where SC is running&#39;</span><span class="p">)</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-p&#39;</span><span class="p">,</span> <span class="s1">&#39;--port&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span>
-                    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Port to use&quot;</span><span class="p">)</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-d&#39;</span><span class="p">,</span> <span class="s1">&#39;--debug&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Debug level&quot;</span><span class="p">)</span>
-
-<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-
-<span class="n">DEBUG</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">debug</span>
-<span class="k">def</span> <span class="nf">dprint</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">DEBUG</span> <span class="o">&gt;</span> <span class="n">level</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">get_closest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
-    <span class="n">dist</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">:</span>
-            <span class="n">dist</span> <span class="o">=</span> <span class="n">d</span>
-            <span class="n">u</span> <span class="o">=</span> <span class="n">unit</span>
-    <span class="k">return</span> <span class="n">u</span>
-
-<span class="n">maps</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Maps/BroodWar/micro/dragoons_zealots.scm&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Maps/BroodWar/micro/m5v5_c_far.scm&#39;</span>
-<span class="p">]</span>
-
-<span class="n">skip_frames</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">nrestarts</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">total_battles</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">while</span> <span class="n">total_battles</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CTRL-C to stop&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-    <span class="n">battles_won</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">battles_game</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">frames_in_battle</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">nloop</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">nrestarts</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="n">cl</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-    <span class="n">cl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
-    <span class="n">state</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">micro_battles</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">state</span><span class="o">.</span><span class="n">player_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;player {} named {} is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="n">tc</span><span class="o">.</span><span class="n">Constants</span><span class="o">.</span><span class="n">races</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">race</span><span class="p">]))</span>
-
-    <span class="c1"># Initial setup</span>
-    <span class="n">cl</span><span class="o">.</span><span class="n">send</span><span class="p">([</span>
-        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_gui</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_cmd_optim</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-    <span class="p">])</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
+<p>What is the original <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a> actually doing?</p>
+<div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
         <span class="n">nloop</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">state</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
         <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>

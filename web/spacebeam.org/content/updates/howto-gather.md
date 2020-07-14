@@ -83,72 +83,10 @@ Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and an
 
 ### Analyzing TorchCraft `example.py`
 
-What is actually doing the original example?
+What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing?
 
 ```
 :::python
-import argparse
-import torchcraft as tc
-import torchcraft.Constants as tcc
-
-parser = argparse.ArgumentParser(
-    description='Plays simple micro battles with an attack closest heuristic')
-parser.add_argument('-t', '--hostname', type=str,
-                    help='Hostname where SC is running')
-parser.add_argument('-p', '--port', default=11111,
-                    help="Port to use")
-parser.add_argument('-d', '--debug', default=0, type=int, help="Debug level")
-
-args = parser.parse_args()
-
-DEBUG = args.debug
-def dprint(msg, level):
-    if DEBUG > level:
-        print(msg)
-
-def get_closest(x, y, units):
-    dist = float('inf')
-    u = None
-    for unit in units:
-        d = (unit.x - x)**2 + (unit.y - y)**2
-        if d < dist:
-            dist = d
-            u = unit
-    return u
-
-maps = [
-    'Maps/BroodWar/micro/dragoons_zealots.scm',
-    'Maps/BroodWar/micro/m5v5_c_far.scm'
-]
-
-skip_frames = 7
-nrestarts = 0
-total_battles = 0
-
-while total_battles < 40:
-    print("")
-    print("CTRL-C to stop")
-    print("")
-
-    battles_won = 0
-    battles_game = 0
-    frames_in_battle = 1
-    nloop = 1
-    nrestarts += 1
-
-    cl = tc.Client()
-    cl.connect(args.hostname, args.port)
-    state = cl.init(micro_battles=True)
-    for pid, player in state.player_info.items():
-        print("player {} named {} is {}".format(player.id, player.name,
-            tc.Constants.races._dict[player.race]))
-
-    # Initial setup
-    cl.send([
-        [tcc.set_speed, 0],
-        [tcc.set_gui, 1],
-        [tcc.set_cmd_optim, 1],
-    ])
     while not state.game_ended:
         nloop += 1
         state = cl.recv()

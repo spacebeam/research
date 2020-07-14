@@ -81,6 +81,107 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 2.4.0 Injector [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE 1.02&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -&amp;gt; Local PC and confirm that you see a &lt;code&gt;blueberry&lt;/code&gt; waiting for us on the lobby.&lt;/p&gt;
+&lt;h3&gt;Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;What is actually doing the original example?&lt;/p&gt;
+&lt;p&gt;'''
+:::python
+import argparse
+import torchcraft as tc
+import torchcraft.Constants as tcc&lt;/p&gt;
+&lt;p&gt;parser = argparse.ArgumentParser(
+    description='Plays simple micro battles with an attack closest heuristic')
+parser.add_argument('-t', '--hostname', type=str,
+                    help='Hostname where SC is running')
+parser.add_argument('-p', '--port', default=11111,
+                    help="Port to use")
+parser.add_argument('-d', '--debug', default=0, type=int, help="Debug level")&lt;/p&gt;
+&lt;p&gt;args = parser.parse_args()&lt;/p&gt;
+&lt;p&gt;DEBUG = args.debug
+def dprint(msg, level):
+    if DEBUG &amp;gt; level:
+        print(msg)&lt;/p&gt;
+&lt;p&gt;def get_closest(x, y, units):
+    dist = float('inf')
+    u = None
+    for unit in units:
+        d = (unit.x - x)&lt;strong&gt;2 + (unit.y - y)&lt;/strong&gt;2
+        if d &amp;lt; dist:
+            dist = d
+            u = unit
+    return u&lt;/p&gt;
+&lt;p&gt;maps = [
+    'Maps/BroodWar/micro/dragoons_zealots.scm',
+    'Maps/BroodWar/micro/m5v5_c_far.scm'
+]&lt;/p&gt;
+&lt;p&gt;skip_frames = 7
+nrestarts = 0
+total_battles = 0&lt;/p&gt;
+&lt;p&gt;while total_battles &amp;lt; 40:
+    print("")
+    print("CTRL-C to stop")
+    print("")&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;battles_won = 0
+battles_game = 0
+frames_in_battle = 1
+nloop = 1
+nrestarts += 1
+
+cl = tc.Client()
+cl.connect(args.hostname, args.port)
+state = cl.init(micro_battles=True)
+for pid, player in state.player_info.items():
+    print(&amp;quot;player {} named {} is {}&amp;quot;.format(player.id, player.name,
+        tc.Constants.races._dict[player.race]))
+
+# Initial setup
+cl.send([
+    [tcc.set_speed, 0],
+    [tcc.set_gui, 1],
+    [tcc.set_cmd_optim, 1],
+])
+while not state.game_ended:
+    nloop += 1
+    state = cl.recv()
+    actions = []
+    if state.game_ended:
+        break
+    elif state.battle_just_ended:
+        dprint(&amp;quot;BATTLE ENDED&amp;quot;, 0)
+        if state.battle_won: battles_won += 1
+        battles_game += 1
+        total_battles += 1
+        frames_in_battle = 0
+        if battles_game &amp;gt;= 10:
+            actions = [
+                [tcc.set_map, maps[nrestarts % len(maps)], 0],
+                [tcc.quit],
+            ]
+            print(maps[nrestarts % len(maps)])
+    elif state.waiting_for_restart:
+        dprint(&amp;quot;WAITING FOR RESTART&amp;quot;, 0)
+    else:
+        myunits = state.units[0]
+        enemyunits = state.units[1]
+        if state.battle_frame_count % skip_frames == 0:
+            for unit in myunits:
+                target = get_closest(unit.x, unit.y, enemyunits)
+                if target is not None:
+                    actions.append([
+                        tcc.command_unit_protected,
+                        unit.id,
+                        tcc.unitcommandtypes.Attack_Unit,
+                        target.id,
+                    ])
+    if frames_in_battle &amp;gt; 2 * 60 * 24:
+        actions = [[tc.quit]]
+        nrestarts += 1
+    dprint(&amp;quot;Sending actions: &amp;quot; + str(actions), 1)
+    cl.send(actions)
+cl.close()
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;'''&lt;/p&gt;
 &lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and develop strong teeth and lungs.&lt;/p&gt;
 &lt;p&gt;Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.&lt;/p&gt;

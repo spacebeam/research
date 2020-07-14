@@ -31,3 +31,5 @@ Don't expect an optimal spread of workers, but that is left as an exercise to th
 ## Build a Refinery
 
 ## We Require More Vespone Gas
+
+In the next tutorial we will [Train different units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/), to improve our Terran skills!

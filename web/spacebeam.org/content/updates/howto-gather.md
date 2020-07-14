@@ -87,45 +87,45 @@ What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/
 
 ```
 :::python
-    while not state.game_ended:
-        nloop += 1
-        state = cl.recv()
-        actions = []
-        if state.game_ended:
-            break
-        elif state.battle_just_ended:
-            dprint("BATTLE ENDED", 0)
-            if state.battle_won: battles_won += 1
-            battles_game += 1
-            total_battles += 1
-            frames_in_battle = 0
-            if battles_game >= 10:
-                actions = [
-                    [tcc.set_map, maps[nrestarts % len(maps)], 0],
-                    [tcc.quit],
-                ]
-                print(maps[nrestarts % len(maps)])
-        elif state.waiting_for_restart:
-            dprint("WAITING FOR RESTART", 0)
-        else:
-            myunits = state.units[0]
-            enemyunits = state.units[1]
-            if state.battle_frame_count % skip_frames == 0:
-                for unit in myunits:
-                    target = get_closest(unit.x, unit.y, enemyunits)
-                    if target is not None:
-                        actions.append([
-                            tcc.command_unit_protected,
-                            unit.id,
-                            tcc.unitcommandtypes.Attack_Unit,
-                            target.id,
-                        ])
-        if frames_in_battle > 2 * 60 * 24:
-            actions = [[tc.quit]]
-            nrestarts += 1
-        dprint("Sending actions: " + str(actions), 1)
-        cl.send(actions)
-    cl.close()
+while not state.game_ended:
+    nloop += 1
+    state = cl.recv()
+    actions = []
+    if state.game_ended:
+        break
+    elif state.battle_just_ended:
+        dprint("BATTLE ENDED", 0)
+        if state.battle_won: battles_won += 1
+        battles_game += 1
+        total_battles += 1
+        frames_in_battle = 0
+        if battles_game >= 10:
+            actions = [
+                [tcc.set_map, maps[nrestarts % len(maps)], 0],
+                [tcc.quit],
+            ]
+            print(maps[nrestarts % len(maps)])
+    elif state.waiting_for_restart:
+        dprint("WAITING FOR RESTART", 0)
+    else:
+        myunits = state.units[0]
+        enemy = state.units[1]
+        if state.battle_frame_count % skip_frames == 0:
+            for unit in myunits:
+                target = get_closest(unit.x, unit.y, enemy)
+                if target is not None:
+                    actions.append([
+                        tcc.command_unit_protected,
+                        unit.id,
+                        tcc.unitcommandtypes.Attack_Unit,
+                        target.id,
+                    ])
+    if frames_in_battle > 2 * 60 * 24:
+        actions = [[tc.quit]]
+        nrestarts += 1
+    dprint("Sending actions: " + str(actions), 1)
+    cl.send(actions)
+cl.close()
 ```
 
 ## Minerals and Vespene Gas

@@ -2,13 +2,11 @@ title:  Gathering Minerals to someday Build a Refinery and extract Vespene Gas
 date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
-If you followed the steps, you have now pytorch and lots of goodies installed, let's learn to execute the game and configure bwapi.ini before we continue!
+Let's learn to execute the game and configure bwapi.ini before we continue!
 
 ## Minerals
 
-Minerals are a form of crystal resource.
-
-Terrans and protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `zerg` require minerals to harder their caparaces and develop strong teeth and lungs.
+Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong teeth and lungs.
 
 Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.
 
@@ -30,6 +28,10 @@ Don't expect an optimal spread of workers, but that is left as an exercise to th
 
 ## Build a Refinery
 
+```
+TBD
+```
+
 ## We Require More Vespone Gas
 
-In the next tutorial we will [Train different units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/), to improve our Terran skills!
+Next we will [train different units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/) to improve our Terran skills!

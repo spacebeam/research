@@ -54,8 +54,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 '''.format(args.path, args.bot, args.race[:1], args.map)
 
 os.chdir(args.path)
-command = os.popen(execute).read()
-print(command)
+os.popen(execute).read()
 ```
 
 ## Minerals and Vespene Gas

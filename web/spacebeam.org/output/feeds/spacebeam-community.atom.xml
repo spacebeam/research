@@ -25,7 +25,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That is what we are actually executing, let's build a little &lt;code&gt;launcher.py&lt;/code&gt; script.&lt;/p&gt;
+&lt;p&gt;That is what we are actually executing, let's build a &lt;code&gt;launcher.py&lt;/code&gt; script.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Run bwheadless.exe and Chaoslauncher.exe from here!&lt;/span&gt;

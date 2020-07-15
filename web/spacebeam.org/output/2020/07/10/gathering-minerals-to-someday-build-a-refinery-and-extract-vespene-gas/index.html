@@ -158,6 +158,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
 <span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
 
+<span class="o">...</span>
+
 <span class="k">def</span> <span class="nf">get_closest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
     <span class="n">dist</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
     <span class="n">u</span> <span class="o">=</span> <span class="bp">None</span>
@@ -167,6 +169,7 @@ wine Chaoslauncher/Chaoslauncher.exe
             <span class="n">dist</span> <span class="o">=</span> <span class="n">d</span>
             <span class="n">u</span> <span class="o">=</span> <span class="n">unit</span>
     <span class="k">return</span> <span class="n">u</span>
+
 <span class="o">...</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
@@ -178,6 +181,7 @@ wine Chaoslauncher/Chaoslauncher.exe
     <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_gui</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
     <span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">set_cmd_optim</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
 <span class="p">])</span>
+
 <span class="o">...</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>

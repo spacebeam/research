@@ -76,7 +76,6 @@ $ python3 /usr/src/starcraft-sif/examples/launcher.py
 
 If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on `/opt/StarCraft/` confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the `launcher.py` and run it again.
 
-
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
@@ -192,8 +191,12 @@ We believe that an efficient bridge between low level existin APIs and machine l
 TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
 
 ### A frame data
+In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".
 
-TBD
+The frame is formatted in a table in roughly the following structure:
+```
+
+```
 
 ## Minerals and Vespene Gas
 

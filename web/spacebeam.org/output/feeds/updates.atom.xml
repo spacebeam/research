@@ -127,7 +127,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;What is TorchCraft again?&lt;/h3&gt;
+&lt;h2&gt;What is TorchCraft again?&lt;/h2&gt;
 &lt;p&gt;TorchCraft a library that enables deep learing research in the real-time strategy game of StarCraft: Brood War, by making easier to control these game from a machine learning framework, here Torch.&lt;/p&gt;
 &lt;p&gt;Most of the work spawned in this new era has tackled environments where the state is fully observable. To solve the great majority of real life problems agents must instead be able to handle partial observability, structured and complex dynamics and noise and high-dimensional control interfaces.&lt;/p&gt;
 &lt;p&gt;To provide the community with useful research environments, work was done towards build platforms based on videgames. TorchCraft propose a bridge between StarCraft: Brood War, an RTS game with an active AI research community and annual AI competitions and Lua, with examples in Torch (a machine learning library).&lt;/p&gt;
@@ -145,9 +145,12 @@ wine Chaoslauncher/Chaoslauncher.exe
     &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send_state&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;receive_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="kr"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;torchcraft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;featurize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;tc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;torchcraft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kr"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt; &lt;span class="kr"&gt;do&lt;/span&gt;
@@ -163,13 +166,13 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;p&gt;This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.&lt;/p&gt;
 &lt;p&gt;Finally, StarCraft: Brood War is a highly popular game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.&lt;/p&gt;
 &lt;p&gt;There is also exists an active academic community that organizes AI competitions.&lt;/p&gt;
-&lt;h4&gt;TorchCraft Design&lt;/h4&gt;
+&lt;h3&gt;TorchCraft Design&lt;/h3&gt;
 &lt;p&gt;TorchCraft connects Torch to a low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client (our machine learning code), and receives commands to send to the game.&lt;/p&gt;
 &lt;p&gt;The two modules are entirely asynchronous. TorchCraft is seen by the AI programmer as a library that provides: &lt;code&gt;connect()&lt;/code&gt;, &lt;code&gt;receive()&lt;/code&gt; to get the state, &lt;code&gt;send(commands)&lt;/code&gt;, and some helper functions about specifics of STarCRaft's rules and state representation.&lt;/p&gt;
 &lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
 &lt;p&gt;We believe that an efficient bridge between low level existin APIs and machine learning frameworks would enable and foster research on such games.&lt;/p&gt;
 &lt;p&gt;TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.&lt;/p&gt;
-&lt;h4&gt;A frame data&lt;/h4&gt;
+&lt;h3&gt;A frame data&lt;/h3&gt;
 &lt;p&gt;TBD&lt;/p&gt;
 &lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces and develop strong teeth and lungs.&lt;/p&gt;

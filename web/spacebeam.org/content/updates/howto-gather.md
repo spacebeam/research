@@ -130,7 +130,7 @@ while not state.game_ended:
 cl.close()
 ```
 
-### What is TorchCraft again?
+## What is TorchCraft again?
 
 TorchCraft a library that enables deep learing research in the real-time strategy game of StarCraft: Brood War, by making easier to control these game from a machine learning framework, here Torch.
 
@@ -160,9 +160,13 @@ while true do
     torchcraft.send_state()
     torchcraft.receive_actions()
 end
+```
+
+```
+:::lua
+tc = require('torchcraft')
 
 featurize, model = init()
-tc = require('torchcraft')
 
 tc:connect(port)
 while not tc.state.game_ended do
@@ -181,7 +185,7 @@ Finally, StarCraft: Brood War is a highly popular game with professional players
 
 There is also exists an active academic community that organizes AI competitions.
 
-#### TorchCraft Design
+### TorchCraft Design
 
 TorchCraft connects Torch to a low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client (our machine learning code), and receives commands to send to the game.
 
@@ -193,7 +197,7 @@ We believe that an efficient bridge between low level existin APIs and machine l
 
 TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
 
-#### A frame data
+### A frame data
 
 TBD
 

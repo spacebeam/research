@@ -85,28 +85,42 @@ Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and an
 
 ### Analyzing TorchCraft `example.py`
 
-What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing?
+What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing? 
 
 ```
 :::python
+
+import torchcraft as tc
+import torchcraft.Constants as tcc
+
+def get_closest(x, y, units)
+    dist = float('inf')
+    u = None
+    for unit in units:
+        d = (unit.x - x)**2 + (unit.y - y)**2
+        if d < dist:
+            dist = d
+            u = unit
+    return u
+...
+
+client = tc.Client()
+client.connect(hostname, port)
+
+# Initial setup
+client.send([
+    [tcc.set_speed, 0],
+    [tcc.set_gui, 1],
+    [tcc.set_cmd_optim, 1],
+])
+...
+
 while not state.game_ended:
     loop += 1
-    state = cl.recv()
+    state = client.recv()
     actions = []
     if state.game_ended:
         break
-    elif state.battle_just_ended:
-        print("BATTLE ENDED")
-        if state.battle_won: battles_won += 1
-        battles_game += 1
-        total_battles += 1
-        frames_in_battle = 0
-        if battles_game >= 10:
-            actions = [
-                [tcc.set_map, maps[restarts % len(maps)], 0],
-                [tcc.quit],
-            ]
-            print(maps[restarts % len(maps)])
     elif state.waiting_for_restart:
         print("WAITING FOR RESTART")
     else:
@@ -126,8 +140,8 @@ while not state.game_ended:
         actions = [[tc.quit]]
         restarts += 1
     print("Sending actions: " + str(actions))
-    cl.send(actions)
-cl.close()
+    client.send(actions)
+client.close()
 ```
 
 ## What is TorchCraft again?

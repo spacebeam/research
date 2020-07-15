@@ -365,7 +365,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;p&gt;Finally we can test and deploy by:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Test your bot using bw&lt;/li&gt;
-&lt;li&gt;Join the &lt;a href="https://torchup.org/pages/compete/"&gt;Torch Up&lt;/a&gt; tournament&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://torchup.org/pages/compete/"&gt;Join the Torch Up tournament&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>Stage 2 Supervision</title><link href="/2020/07/06/stage-2-supervision/" rel="alternate"></link><published>2020-07-06T00:00:00+02:00</published><updated>2020-07-06T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-06:/2020/07/06/stage-2-supervision/</id><summary type="html">&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
 &lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
 &lt;ul&gt;

@@ -134,10 +134,6 @@ cl.close()
 
 TorchCraft a library that enables deep learing research in the real-time strategy game of StarCraft: Brood War, by making easier to control these game from a machine learning framework, here Torch.
 
-Most of the work spawned in this new era has tackled environments where the state is fully observable. To solve the great majority of real life problems agents must instead be able to handle partial observability, structured and complex dynamics and noise and high-dimensional control interfaces.
-
-To provide the community with useful research environments, work was done towards build platforms based on videgames. TorchCraft propose a bridge between StarCraft: Brood War, an RTS game with an active AI research community and annual AI competitions and Lua, with examples in Torch (a machine learning library).
-
 The goal of the player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
 
 These games exhibit durative moves with complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and partial observability (a "fog of war": opponet units not in the vicinity of a player's units are not shown).
@@ -165,9 +161,7 @@ end
 ```
 :::lua
 tc = require('torchcraft')
-
 featurize, model = init()
-
 tc:connect(port)
 while not tc.state.game_ended do
     tc:receive()

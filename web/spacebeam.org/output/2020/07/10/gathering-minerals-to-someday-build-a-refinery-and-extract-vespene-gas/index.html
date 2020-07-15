@@ -241,66 +241,66 @@ wine Chaoslauncher/Chaoslauncher.exe
 <h3>A frame data</h3>
 <p>In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".</p>
 <p>The frame is formatted in a table in roughly the following structure:</p>
-<div class="highlight"><pre><span></span>received_update: {
+<div class="highlight"><pre><span></span><span class="nx">received_update</span><span class="o">:</span> <span class="p">{</span>
 
-    // Number of frames in the current game
-    frame_from_bwapi: int
+    <span class="c1">// Number of frames in the current game</span>
+    <span class="nx">frame_from_bwapi</span><span class="o">:</span> <span class="kr">int</span>
 
-    units_myself: {
-        // Unit ID
-        int: {
-            // Unit ID
-            target: int
-            targetpos: {
-                // Absolute x
-                1: int
-                // Absolute y
-                2: int
-            }
-            // Type of air weapon
-            awtype: int
-            // Type of ground weapon
-            gwtype: int
-            // Number of frames before next air weapon possible attack
-            awcd: int
-            // Number of hit points
-            hp: int
-            // Number of energy points, if any
-            energy: int
-            // Unit type
-            type: int
-            // Position
-            position: {
-                // Absolute x
-                1: int
-                // Absolute y
-                2: int
-            }
-            // Number of armor points
-            armor: int
-            // Number of frames before next ground weapon possible attack
-            gwcd: int
-            // Ground weapon attack damae
-            gwattack: int
-            // Protoss shield points
-            shield: int
-            // Air weapon attack damage
-            awattack: int
-            // Size of the unit
-            size: int
-            // Whether unit is enemy or not
-            enemy: bool
-            // Whether unit is idle or not
-            idle: bool
-            // Ground weapon max range
-            gwrange: int
-            // Air weapon max range
-            awrange: int
-        }
-    }
-    // Same format as &quot;units_myself&quot;
-    units_enemy: ...
-}
+    <span class="nx">units_myself</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// Unit ID</span>
+        <span class="kr">int</span><span class="o">:</span> <span class="p">{</span>
+            <span class="c1">// Unit ID</span>
+            <span class="nx">target</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="nx">targetpos</span><span class="o">:</span> <span class="p">{</span>
+                <span class="c1">// Absolute x</span>
+                <span class="mi">1</span><span class="o">:</span> <span class="kr">int</span>
+                <span class="c1">// Absolute y</span>
+                <span class="mi">2</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="p">}</span>
+            <span class="c1">// Type of air weapon</span>
+            <span class="nx">awtype</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Type of ground weapon</span>
+            <span class="nx">gwtype</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Frames before next air weapon attack</span>
+            <span class="nx">awcd</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Number of hit points</span>
+            <span class="nx">hp</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Number of energy points, if any</span>
+            <span class="nx">energy</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Unit type</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Position</span>
+            <span class="nx">position</span><span class="o">:</span> <span class="p">{</span>
+                <span class="c1">// Absolute x</span>
+                <span class="mi">1</span><span class="o">:</span> <span class="kr">int</span>
+                <span class="c1">// Absolute y</span>
+                <span class="mi">2</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="p">}</span>
+            <span class="c1">// Number of armor points</span>
+            <span class="nx">armor</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Frames before next ground weapon attack</span>
+            <span class="nx">gwcd</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Ground weapon attack damae</span>
+            <span class="nx">gwattack</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Protoss shield points</span>
+            <span class="nx">shield</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Air weapon attack damage</span>
+            <span class="nx">awattack</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Size of the unit</span>
+            <span class="nx">size</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Whether unit is enemy or not</span>
+            <span class="nx">enemy</span><span class="o">:</span> <span class="nx">bool</span>
+            <span class="c1">// Whether unit is idle or not</span>
+            <span class="nx">idle</span><span class="o">:</span> <span class="nx">bool</span>
+            <span class="c1">// Ground weapon max range</span>
+            <span class="nx">gwrange</span><span class="o">:</span> <span class="kr">int</span>
+            <span class="c1">// Air weapon max range</span>
+            <span class="nx">awrange</span><span class="o">:</span> <span class="kr">int</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// Same format as &quot;units_myself&quot;</span>
+    <span class="nx">units_enemy</span><span class="o">:</span> <span class="p">...</span>
+<span class="p">}</span>
 </pre></div>
 
 

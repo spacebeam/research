@@ -198,6 +198,7 @@ In addition to the visual data, the TorchCraft server extracts certain informati
 
 The frame is formatted in a table in roughly the following structure:
 ```
+:::javascript
 received_update: {
 
     // Number of frames in the current game
@@ -218,7 +219,7 @@ received_update: {
             awtype: int
             // Type of ground weapon
             gwtype: int
-            // Number of frames before next air weapon possible attack
+            // Frames before next air weapon attack
             awcd: int
             // Number of hit points
             hp: int
@@ -235,7 +236,7 @@ received_update: {
             }
             // Number of armor points
             armor: int
-            // Number of frames before next ground weapon possible attack
+            // Frames before next ground weapon attack
             gwcd: int
             // Ground weapon attack damae
             gwattack: int

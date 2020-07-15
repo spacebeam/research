@@ -61,7 +61,7 @@ os.popen(execute).read()
 
 Let's start the game for the first time and test the original examples again to see what gives?
 
-### Run the original `example.py` again
+### Run the original `example.py`
 
 ```
 $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
@@ -131,6 +131,69 @@ cl.close()
 ```
 
 ### What is TorchCraft again?
+
+TorchCraft a library that enables deep learing research in the real-time strategy game of StarCraft: Brood War, by making easier to control these game from a machine learning framework, here Torch.
+
+Most of the work spawned in this new era has tackled environments where the state is fully observable. To solve the great majority of real life problems agents must instead be able to handle partial observability, structured and complex dynamics and noise and high-dimensional control interfaces.
+
+To provide the community with useful research environments, work was done towards build platforms based on videgames. TorchCraft propose a bridge between StarCraft: Brood War, an RTS game with an active AI research community and annual AI competitions and Lua, with examples in Torch (a machine learning library).
+
+The goal of the player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
+
+These games exhibit durative moves with complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and partial observability (a "fog of war": opponet units not in the vicinity of a player's units are not shown).
+
+Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
+
+An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in CHess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which tech paths to pursue.
+
+Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the arbitrage between investing in the economy, in thecnological advancement, and in units productio is the crux of the strategy during the whole game.
+
+TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state, as in
+
+```
+:::lua
+-- main game engine loop:
+while true do
+    game.receive_player_actions()
+    game.compute_dynamics()
+    -- our injected code:
+    torchcraft.send_state()
+    torchcraft.receive_actions()
+end
+
+featurize, model = init()
+tc = require('torchcraft')
+
+tc:connect(port)
+while not tc.state.game_ended do
+    tc:receive()
+    features = featurize(tc.state)
+    actions = model:forward(features)
+    tc:send(tc:tocommand(actions))
+end
+```
+
+A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).
+
+This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
+
+Finally, StarCraft: Brood War is a highly popular game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
+
+There is also exists an active academic community that organizes AI competitions.
+
+#### TorchCraft Design
+
+TorchCraft connects Torch to a low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client (our machine learning code), and receives commands to send to the game.
+
+The two modules are entirely asynchronous. TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of STarCRaft's rules and state representation.
+
+TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
+
+We believe that an efficient bridge between low level existin APIs and machine learning frameworks would enable and foster research on such games.
+
+TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
+
+#### A frame data
 
 TBD
 

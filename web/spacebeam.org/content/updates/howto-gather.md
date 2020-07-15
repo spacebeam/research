@@ -174,23 +174,26 @@ A simplified client/server model that runs in the game engine (server, on top) a
 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
-Finally, StarCraft: Brood War is a highly popular game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
-
-There is also exists an active academic community that organizes AI competitions.
+StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
 
 ### TorchCraft Design
 
-TorchCraft connects Torch to a low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client (our machine learning code), and receives commands to send to the game.
+TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.
 
-The two modules are entirely asynchronous. TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of STarCRaft's rules and state representation.
+The two modules are entirely asynchronous. TorchCraft execution moduel inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).
+
+The server starts at the beginning of the match and shuts down when that ends.
+
+TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of STarCRaft's rules and state representation.
 
 TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
 
-We believe that an efficient bridge between low level existin APIs and machine learning frameworks would enable and foster research on such games.
+We believe that an efficient bridge between BWAPI and machine learning frameworks would enable and foster research on such games.
 
 TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
 
 ### A frame data
+
 In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".
 
 The frame is formatted in a table in roughly the following structure:

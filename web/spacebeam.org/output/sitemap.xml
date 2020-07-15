@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-14T18:44:19-00:00</lastmod>
+<lastmod>2020-07-14T18:53:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-14T18:44:19-00:00</lastmod>
+<lastmod>2020-07-14T18:53:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-14T18:44:19-00:00</lastmod>
+<lastmod>2020-07-14T18:53:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-14T18:44:19-00:00</lastmod>
+<lastmod>2020-07-14T18:53:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,7 +53,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/2020/07/13/tear-it-down-to-the-ground-and-build-another-one/</loc>
+<loc>/2020/07/13/the-building-of-buildings/</loc>
 <lastmod>2020-07-13T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>

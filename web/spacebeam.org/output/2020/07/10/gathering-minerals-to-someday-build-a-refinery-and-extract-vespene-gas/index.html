@@ -240,7 +240,55 @@ wine Chaoslauncher/Chaoslauncher.exe
 <h3>A frame data</h3>
 <p>In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".</p>
 <p>The frame is formatted in a table in roughly the following structure:</p>
-<div class="highlight"><pre><span></span>
+<div class="highlight"><pre><span></span>received_update: {
+
+    // Number of frames in the current game
+    // NB: a &#39;game&#39; can be composed of several battles
+
+    frame_from_bwapi: int
+
+    units_myself: {
+        // Unit ID
+        int: {
+            // Unit ID
+            target: int
+            targetpos: {
+                // Absolute x
+                1: int
+                // Absolute y
+                2: int
+            }
+            // Type of air weapon
+
+            // Type of ground weapon
+
+            // Number of frames before next air weapon possible attack
+
+            // Number of hit points
+
+            // Number of energy points, if any
+
+            // Unit type
+
+            // Position
+
+            // Number of armor points
+
+            // Ground weapon attack damage
+
+            // Protoss shield points
+
+            // Air weapon attack damage
+
+            // Size of the unit
+
+            // Whether unit is enemy or not
+
+            // Whether unit is idle or not
+
+            // Ground weapon max range
+
+            // Air weapon max range
 </pre></div>
 
 

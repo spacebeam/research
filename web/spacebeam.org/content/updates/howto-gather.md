@@ -195,6 +195,56 @@ In addition to the visual data, the TorchCraft server extracts certain informati
 
 The frame is formatted in a table in roughly the following structure:
 ```
+received_update: {
+
+    // Number of frames in the current game
+    // NB: a 'game' can be composed of several battles
+    
+    frame_from_bwapi: int
+    
+    units_myself: {
+        // Unit ID
+        int: {
+            // Unit ID
+            target: int
+            targetpos: {
+                // Absolute x
+                1: int
+                // Absolute y
+                2: int
+            }
+            // Type of air weapon
+            
+            // Type of ground weapon
+            
+            // Number of frames before next air weapon possible attack
+            
+            // Number of hit points
+            
+            // Number of energy points, if any
+            
+            // Unit type
+            
+            // Position
+            
+            // Number of armor points
+            
+            // Ground weapon attack damage
+            
+            // Protoss shield points
+            
+            // Air weapon attack damage
+            
+            // Size of the unit
+            
+            // Whether unit is enemy or not
+            
+            // Whether unit is idle or not
+            
+            // Ground weapon max range
+            
+            // Air weapon max range
+            
 
 ```
 

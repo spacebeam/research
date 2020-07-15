@@ -243,8 +243,6 @@ wine Chaoslauncher/Chaoslauncher.exe
 <div class="highlight"><pre><span></span>received_update: {
 
     // Number of frames in the current game
-    // NB: a &#39;game&#39; can be composed of several battles
-
     frame_from_bwapi: int
 
     units_myself: {
@@ -259,36 +257,49 @@ wine Chaoslauncher/Chaoslauncher.exe
                 2: int
             }
             // Type of air weapon
-
+            awtype: int
             // Type of ground weapon
-
+            gwtype: int
             // Number of frames before next air weapon possible attack
-
+            awcd: int
             // Number of hit points
-
+            hp: int
             // Number of energy points, if any
-
+            energy: int
             // Unit type
-
+            type: int
             // Position
-
+            position: {
+                // Absolute x
+                1: int
+                // Absolute y
+                2: int
+            }
             // Number of armor points
-
-            // Ground weapon attack damage
-
+            armor: int
+            // Number of frames before next ground weapon possible attack
+            gwcd: int
+            // Ground weapon attack damae
+            gwattack: int
             // Protoss shield points
-
+            shield: int
             // Air weapon attack damage
-
+            awattack: int
             // Size of the unit
-
+            size: int
             // Whether unit is enemy or not
-
+            enemy: bool
             // Whether unit is idle or not
-
+            idle: bool
             // Ground weapon max range
-
+            gwrange: int
             // Air weapon max range
+            awrange: int
+        }
+    }
+    // Same format as &quot;units_myself&quot;
+    units_enemy: ...
+}
 </pre></div>
 
 

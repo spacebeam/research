@@ -104,7 +104,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
-<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;host a game with bwheadless&#39;</span><span class="p">)</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;host a game with bwheadless&#39;</span><span class="p">)</span>
 
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-p&#39;</span><span class="p">,</span> <span class="s1">&#39;--path&#39;</span><span class="p">,</span>
                     <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
@@ -205,6 +206,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the arbitrage between investing in the economy, in thecnological advancement, and in units productio is the crux of the strategy during the whole game.</p>
 <p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state, as in</p>
 <div class="highlight"><pre><span></span><span class="c1">-- main game engine loop:</span>
+<span class="c1">-- this illustrates the DLL that gets inyected into the game engine as a BWAPI 4.2.0 bot</span>
+<span class="c1">-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`</span>
 <span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
     <span class="n">game</span><span class="p">.</span><span class="n">receive_player_actions</span><span class="p">()</span>
     <span class="n">game</span><span class="p">.</span><span class="n">compute_dynamics</span><span class="p">()</span>
@@ -242,10 +245,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".</p>
 <p>The frame is formatted in a table in roughly the following structure:</p>
 <div class="highlight"><pre><span></span><span class="nx">received_update</span><span class="o">:</span> <span class="p">{</span>
-
     <span class="c1">// Number of frames in the current game</span>
     <span class="nx">frame_from_bwapi</span><span class="o">:</span> <span class="kr">int</span>
-
     <span class="nx">units_myself</span><span class="o">:</span> <span class="p">{</span>
         <span class="c1">// Unit ID</span>
         <span class="kr">int</span><span class="o">:</span> <span class="p">{</span>

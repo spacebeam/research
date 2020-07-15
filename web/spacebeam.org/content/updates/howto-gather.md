@@ -29,7 +29,8 @@ That is what we are actually executing, let's build a `launcher.py` script.
 import argparse
 import os
 
-parser = argparse.ArgumentParser(description='host a game with bwheadless')
+parser = argparse.ArgumentParser(
+    description='host a game with bwheadless')
 
 parser.add_argument('-p', '--path',
                     type=str,
@@ -148,6 +149,8 @@ TorchCraft advocate to have not only the pixels as input and keyboard/mouse for 
 ```
 :::lua
 -- main game engine loop:
+-- this illustrates the DLL that gets inyected into the game engine as a BWAPI 4.2.0 bot
+-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`
 while true do
     game.receive_player_actions()
     game.compute_dynamics()
@@ -200,10 +203,8 @@ The frame is formatted in a table in roughly the following structure:
 ```
 :::javascript
 received_update: {
-
     // Number of frames in the current game
     frame_from_bwapi: int
-    
     units_myself: {
         // Unit ID
         int: {

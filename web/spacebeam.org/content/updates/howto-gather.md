@@ -130,6 +130,10 @@ while not state.game_ended:
 cl.close()
 ```
 
+### What is TorchCraft again?
+
+TBD
+
 ## Minerals and Vespene Gas
 
 Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong teeth and lungs.

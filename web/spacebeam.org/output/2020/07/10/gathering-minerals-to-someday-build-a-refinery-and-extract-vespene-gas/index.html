@@ -173,6 +173,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
+<p>A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).</p>
 <div class="highlight"><pre><span></span><span class="c1">-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`</span>
 <span class="c1">-- it acts as the machine learning client where we integrate Torch to return in-game actions</span>
 <span class="n">tc</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;torchcraft&#39;</span><span class="p">)</span>
@@ -187,7 +188,6 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p>A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).</p>
 <p>This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.</p>
 <p>StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.</p>
 <h3>TorchCraft Design</h3>
@@ -263,10 +263,10 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <h3>Analyzing TorchCraft <code>example.py</code></h3>
+<p>What is <a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py">example.py</a> actually doing?</p>
 <blockquote>
 <p>Plays simple micro battles with an attack closest heuristic</p>
 </blockquote>
-<p>What is <a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py">example.py</a> actually doing?</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
 <span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
 </pre></div>

@@ -112,6 +112,8 @@ while true do
 end
 ```
 
+A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).
+
 ```
 :::lua
 -- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
@@ -126,8 +128,6 @@ while not tc.state.game_ended do
     tc:send(tc:tocommand(actions))
 end
 ```
-
-A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).
 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
@@ -218,9 +218,9 @@ received_update: {
 
 ### Analyzing TorchCraft `example.py`
 
-> Plays simple micro battles with an attack closest heuristic
-
 What is [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
+
+> Plays simple micro battles with an attack closest heuristic
 
 ```
 :::python

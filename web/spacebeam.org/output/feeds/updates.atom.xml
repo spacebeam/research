@@ -99,6 +99,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`&lt;/span&gt;
 &lt;span class="c1"&gt;-- it acts as the machine learning client where we integrate Torch to return in-game actions&lt;/span&gt;
 &lt;span class="n"&gt;tc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;torchcraft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -113,7 +114,6 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).&lt;/p&gt;
 &lt;p&gt;This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.&lt;/p&gt;
 &lt;p&gt;StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.&lt;/p&gt;
 &lt;h3&gt;TorchCraft Design&lt;/h3&gt;
@@ -189,10 +189,10 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;h3&gt;Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;What is &lt;a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Plays simple micro battles with an attack closest heuristic&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;What is &lt;a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

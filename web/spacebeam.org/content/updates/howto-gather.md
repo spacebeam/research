@@ -89,12 +89,12 @@ What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/
 
 ```
 :::python
-
 import torchcraft as tc
 import torchcraft.Constants as tcc
+```
 
-...
-
+```
+:::python
 def get_closest(x, y, units)
     dist = float('inf')
     u = None
@@ -104,21 +104,22 @@ def get_closest(x, y, units)
             dist = d
             u = unit
     return u
+```
 
-...
-
+```
+:::python
 client = tc.Client()
 client.connect(hostname, port)
-
 # Initial setup
 client.send([
     [tcc.set_speed, 0],
     [tcc.set_gui, 1],
     [tcc.set_cmd_optim, 1],
 ])
+```
 
-...
-
+```
+:::python
 while not state.game_ended:
     loop += 1
     state = client.recv()

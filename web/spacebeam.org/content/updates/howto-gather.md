@@ -81,92 +81,27 @@ $ python3 /usr/src/starcraft-sif/examples/launcher.py
 
 Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 Injector [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
 
-### Analyzing TorchCraft `example.py`
-
-What is the original [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing? 
-
-```
-:::python
-import torchcraft as tc
-import torchcraft.Constants as tcc
-```
-
-```
-:::python
-def get_closest(x, y, units)
-    dist = float('inf')
-    u = None
-    for unit in units:
-        d = (unit.x - x)**2 + (unit.y - y)**2
-        if d < dist:
-            dist = d
-            u = unit
-    return u
-```
-
-```
-:::python
-client = tc.Client()
-client.connect(hostname, port)
-# Initial setup
-client.send([
-    [tcc.set_speed, 0],
-    [tcc.set_gui, 1],
-    [tcc.set_cmd_optim, 1],
-])
-```
-
-```
-:::python
-while not state.game_ended:
-    loop += 1
-    state = client.recv()
-    actions = []
-    if state.game_ended:
-        break
-    elif state.waiting_for_restart:
-        print("WAITING FOR RESTART")
-    else:
-        my_units = state.units[0]
-        enemy = state.units[1]
-        if state.battle_frame_count % skip_frames == 0:
-            for unit in my_units:
-                target = get_closest(unit.x, unit.y, enemy)
-                if target is not None:
-                    actions.append([
-                        tcc.command_unit_protected,
-                        unit.id,
-                        tcc.unitcommandtypes.Attack_Unit,
-                        target.id,
-                    ])
-    if frames_in_battle > 2 * 60 * 24:
-        actions = [[tc.quit]]
-        restarts += 1
-    print("Sending actions: " + str(actions))
-    client.send(actions)
-client.close()
-```
 
 ## What is TorchCraft again?
 
-TorchCraft a library that enables deep learing research in the real-time strategy game of StarCraft: Brood War, by making easier to control these game from a machine learning framework, here Torch.
+TorchCraft is a library that enables deep learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here Torch.
 
-The goal of the player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
+The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
 
-These games exhibit durative moves with complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and partial observability (a "fog of war": opponet units not in the vicinity of a player's units are not shown).
+These games exhibit durative moves with complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and partial observability (a "fog of war": opponent units not in the vicinity of a player's units are not shown).
 
 Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
 
-An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in CHess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which tech paths to pursue.
+An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which tech paths to pursue.
 
-Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the arbitrage between investing in the economy, in thecnological advancement, and in units productio is the crux of the strategy during the whole game.
+Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the arbitrage between investing in the economy, in tecnological advancement, and in units production is the crux of the strategy during the whole game.
 
-TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state, as in
+TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state..
 
 ```
 :::lua
 -- main game engine loop:
--- this illustrates the DLL that gets inyected into the game engine as a BWAPI 4.2.0 bot
+-- illustrates the DLL that gets into the game engine as a BWAPI bot
 -- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`
 while true do
     game.receive_player_actions()
@@ -179,6 +114,8 @@ end
 
 ```
 :::lua
+-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
+-- it acts as the machine learning client where we integrate Torch to return in-game actions
 tc = require('torchcraft')
 featurize, model = init()
 tc:connect(port)
@@ -204,7 +141,7 @@ The two modules are entirely asynchronous. TorchCraft execution moduel inject a 
 
 The server starts at the beginning of the match and shuts down when that ends.
 
-TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of STarCRaft's rules and state representation.
+TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of StarCraft's rules and state representation.
 
 TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
 
@@ -279,6 +216,73 @@ received_update: {
 }
 ```
 
+### Analyzing TorchCraft `example.py`
+
+> Plays simple micro battles with an attack closest heuristic
+
+What is [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
+
+```
+:::python
+import torchcraft as tc
+import torchcraft.Constants as tcc
+```
+
+```
+:::python
+def get_closest(x, y, units)
+    dist = float('inf')
+    u = None
+    for unit in units:
+        d = (unit.x - x)**2 + (unit.y - y)**2
+        if d < dist:
+            dist = d
+            u = unit
+    return u
+```
+
+```
+:::python
+client = tc.Client()
+client.connect(hostname, port)
+# Initial setup
+client.send([
+    [tcc.set_speed, 0],
+    [tcc.set_gui, 1],
+    [tcc.set_cmd_optim, 1],
+])
+```
+
+```
+:::python
+while not state.game_ended:
+    loop += 1
+    state = client.recv()
+    actions = []
+    if state.game_ended:
+        break
+    elif state.waiting_for_restart:
+        print("WAITING FOR RESTART")
+    else:
+        my_units = state.units[0]
+        enemy = state.units[1]
+        if state.battle_frame_count % skip_frames == 0:
+            for unit in my_units:
+                target = get_closest(unit.x, unit.y, enemy)
+                if target is not None:
+                    actions.append([
+                        tcc.command_unit_protected,
+                        unit.id,
+                        tcc.unitcommandtypes.Attack_Unit,
+                        target.id,
+                    ])
+    if frames_in_battle > 2 * 60 * 24:
+        actions = [[tc.quit]]
+        restarts += 1
+    print("Sending actions: " + str(actions))
+    client.send(actions)
+client.close()
+```
 ## Minerals and Vespene Gas
 
 Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong teeth and lungs.

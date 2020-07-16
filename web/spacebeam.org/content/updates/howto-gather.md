@@ -2,9 +2,7 @@ title:  Gathering Minerals to someday Build a Refinery and extract Vespene Gas
 date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
-{% img [class name(s)] /images/blueberry.jpg %}
-
-Learn to run the game and configure bwapi.ini before we can continue!
+We are going to learn to run the game and a bit more about TorchCraft before we can continue!
 
 ```
 cd /opt/StarCraft
@@ -60,7 +58,7 @@ os.chdir(args.path)
 os.popen(execute).read()
 ```
 
-Let's start the game for the first time and test the original examples again to see what gives?
+Let's start Brood War for the first time and test the original examples again to see what gives?
 
 ### Run the original `example.py`
 
@@ -81,7 +79,7 @@ If everything works as expected, you will see Chaoslauncher, the first time it w
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins and click on `Start` hopefully that will launch StarCraft: Brood War on your new environment for the first time, Check on Multiplayer -> Local PC and confirm that you see a `blueberry` waiting for us on the lobby.
+Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
 
 ### Analyzing TorchCraft `example.py`
 

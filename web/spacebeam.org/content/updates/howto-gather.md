@@ -58,7 +58,7 @@ os.chdir(args.path)
 os.popen(execute).read()
 ```
 
-Let's start Brood War for the first time and test the original examples again to see what gives?
+Let's test the original examples again and start `launcher.py` to see what gives?
 
 ### Run the original `example.py`
 
@@ -73,13 +73,13 @@ $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on `/opt/StarCraft/` confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the `launcher.py` and run it again.
+If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm, it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-Now with Chaoslauncher ready, enable the `BWAPI 2.4.0 Injector [RELEASE]` and and `W-MODE 1.02` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
+Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 Injector [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
 
 ### Analyzing TorchCraft `example.py`
 

@@ -135,7 +135,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p>Let's start Brood War for the first time and test the original examples again to see what gives?</p>
+<p>Let's test the original examples again and start <code>launcher.py</code> to see what gives?</p>
 <h3>Run the original <code>example.py</code></h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/TorchCraft/examples/py/example.py -t <span class="m">127</span>.0.0.1
 </pre></div>
@@ -146,12 +146,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p>If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on <code>/opt/StarCraft/</code> confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the <code>launcher.py</code> and run it again.</p>
+<p>If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of <code>StarCraft.exe</code>, you will find it on <code>/opt/StarCraft/</code> confirm, it will ask probably to restart <code>Chaoslauncher.exe</code>, kill the current session with <code>Control-C</code> in the terminal where you start <code>launcher.py</code> and run it again.</p>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 
-<p>Now with Chaoslauncher ready, enable the <code>BWAPI 2.4.0 Injector [RELEASE]</code> and and <code>W-MODE 1.02</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, Check <code>Multiplayer -&gt; Local PC</code> and confirm that you see a <code>blueberry</code> waiting in the lobby.</p>
+<p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 Injector [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, Check <code>Multiplayer -&gt; Local PC</code> and confirm that you see a <code>blueberry</code> waiting in the lobby.</p>
 <h3>Analyzing TorchCraft <code>example.py</code></h3>
 <p>What is the original <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a> actually doing? </p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>

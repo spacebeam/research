@@ -61,7 +61,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Let's start Brood War for the first time and test the original examples again to see what gives?&lt;/p&gt;
+&lt;p&gt;Let's test the original examples again and start &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
 &lt;h3&gt;Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
 &lt;/pre&gt;&lt;/div&gt;
@@ -72,12 +72,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of StarCraft.exe, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm, it will ask probably to restart the Chaoslauncher program, kill the current execution with Control-C in the terminal where you execute the &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
+&lt;p&gt;If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of &lt;code&gt;StarCraft.exe&lt;/code&gt;, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm, it will ask probably to restart &lt;code&gt;Chaoslauncher.exe&lt;/code&gt;, kill the current session with &lt;code&gt;Control-C&lt;/code&gt; in the terminal where you start &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 2.4.0 Injector [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE 1.02&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, Check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see a &lt;code&gt;blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
+&lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 4.2.0 Injector [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, Check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see a &lt;code&gt;blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
 &lt;h3&gt;Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;What is the original &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing? &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;

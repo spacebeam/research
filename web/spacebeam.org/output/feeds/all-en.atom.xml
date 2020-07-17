@@ -59,7 +59,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Let's test the original examples again and start &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
+&lt;p&gt;Start the original example again and run &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
 &lt;h3&gt;Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
 &lt;/pre&gt;&lt;/div&gt;

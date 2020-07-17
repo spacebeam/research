@@ -64,7 +64,7 @@ os.chdir(args.path)
 os.popen(execute).read()
 ```
 
-Let's test the original examples again and start `launcher.py` to see what gives?
+Start the original example again and run `launcher.py` to see what gives?
 
 ### Run the original `example.py`
 

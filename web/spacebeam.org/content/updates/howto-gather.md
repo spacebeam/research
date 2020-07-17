@@ -8,7 +8,12 @@ This lets you parse game data and interact with the Brood War API from anywhere.
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
 we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.
 
-Let's start the game and learn a bit more about [TorchCraft](https://github.com/TorchCraft/TorchCraft/).
+Let's start the game and learn a bit more about [TorchCraft](https://github.com/TorchCraft/TorchCraft/). A general overview can be found in:
+
+Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
+Richoux, F. and Usunier, N., 2016. _TorchCraft: a Library for Machine Learning Research
+on Real-Time Strategy Games_ - [arXiv:1611.00625](https://arxiv.org/abs/1611.00625).
+
 
 ```
 cd /opt/StarCraft

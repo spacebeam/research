@@ -6,7 +6,10 @@ we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;TorchCraft is a BWAP
 This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through execute the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
 we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.&lt;/p&gt;
-&lt;p&gt;Let's start the game and learn a bit more about &lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let's start the game and learn a bit more about &lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt;. A general overview can be found in:&lt;/p&gt;
+&lt;p&gt;Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
+Richoux, F. and Usunier, N., 2016. &lt;em&gt;TorchCraft: a Library for Machine Learning Research
+on Real-Time Strategy Games&lt;/em&gt; - &lt;a href="https://arxiv.org/abs/1611.00625"&gt;arXiv:1611.00625&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
 &lt;/pre&gt;&lt;/div&gt;
 

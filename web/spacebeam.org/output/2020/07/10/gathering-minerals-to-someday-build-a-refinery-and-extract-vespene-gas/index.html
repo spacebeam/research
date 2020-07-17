@@ -307,13 +307,11 @@ wine Chaoslauncher/Chaoslauncher.exe
     <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
         <span class="k">break</span>
-    <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">waiting_for_restart</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;WAITING FOR RESTART&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">my_units</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">enemy</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">battle_frame_count</span> <span class="o">%</span> <span class="n">skip_frames</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">my_units</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
                 <span class="n">target</span> <span class="o">=</span> <span class="n">get_closest</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">unit</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">enemy</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                     <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
@@ -322,9 +320,6 @@ wine Chaoslauncher/Chaoslauncher.exe
                         <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Attack_Unit</span><span class="p">,</span>
                         <span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="p">])</span>
-    <span class="k">if</span> <span class="n">frames_in_battle</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">actions</span> <span class="o">=</span> <span class="p">[[</span><span class="n">tc</span><span class="o">.</span><span class="n">quit</span><span class="p">]]</span>
-        <span class="n">restarts</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending actions: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span>
     <span class="n">client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
 <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -332,7 +327,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <h2>Minerals and Vespene Gas</h2>
-<p>Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the <code>Zerg</code> require minerals to harder their caparaces and develop strong lungs.</p>
+<p>Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the <code>Zerg</code> require minerals to harder their caparaces.</p>
 <p>Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.</p>
 <p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
 <h3>Gathering Minerals</h3>

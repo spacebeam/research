@@ -271,13 +271,11 @@ while not state.game_ended:
     actions = []
     if state.game_ended:
         break
-    elif state.waiting_for_restart:
-        print("WAITING FOR RESTART")
     else:
-        my_units = state.units[0]
+        units = state.units[0]
         enemy = state.units[1]
         if state.battle_frame_count % skip_frames == 0:
-            for unit in my_units:
+            for unit in units:
                 target = get_closest(unit.x, unit.y, enemy)
                 if target is not None:
                     actions.append([
@@ -286,16 +284,13 @@ while not state.game_ended:
                         tcc.unitcommandtypes.Attack_Unit,
                         target.id,
                     ])
-    if frames_in_battle > 2 * 60 * 24:
-        actions = [[tc.quit]]
-        restarts += 1
     print("Sending actions: " + str(actions))
     client.send(actions)
 client.close()
 ```
 ## Minerals and Vespene Gas
 
-Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong lungs.
+Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces.
 
 Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.
 

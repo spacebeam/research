@@ -2,9 +2,11 @@ title:  Gathering Minerals to someday Build a Refinery and extract Vespene Gas
 date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
-TorchCraft is a BWAPI module that sends StarCraft: Brood War data out over a ZeroMQ connection. This lets you parse StarCraft data and interact with BWAPI from anywhere.
+TorchCraft is a BWAPI module that sends StarCraft: Brood War data out over a ZMQ connection.
+This lets you parse StarCraft data and interact with BWAPI from anywhere.
 
-This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/), we are going to dive into TorchCraft example.py and start gathering resources.
+This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
+we are going to dive into TorchCraft example.py and start gathering minerals to someday build a refinery and extract vespene gas.
 
 Let's start the game and learn a bit more about TorchCraft!
 

@@ -145,7 +145,7 @@ TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. 
 
 The two modules are entirely asynchronous. TorchCraft execution moduel inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).
 
-The server starts at the beginning of the match and shuts down when that ends.
+The server starts at the beginning of the match and stops when that ends.
 
 TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of StarCraft's rules and state representation.
 

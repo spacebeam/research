@@ -197,7 +197,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 <h3>TorchCraft Design</h3>
 <p>TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.</p>
 <p>The two modules are entirely asynchronous. TorchCraft execution moduel inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).</p>
-<p>The server starts at the beginning of the match and shuts down when that ends.</p>
+<p>The server starts at the beginning of the match and stops when that ends.</p>
 <p>TorchCraft is seen by the AI programmer as a library that provides: <code>connect()</code>, <code>receive()</code> to get the state, <code>send(commands)</code>, and some helper functions about specifics of StarCraft's rules and state representation.</p>
 <p>TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.</p>
 <p>We believe that an efficient bridge between BWAPI and machine learning frameworks would enable and foster research on such games.</p>

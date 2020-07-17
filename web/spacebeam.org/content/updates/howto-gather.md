@@ -274,16 +274,15 @@ while not state.game_ended:
     else:
         units = state.units[0]
         enemy = state.units[1]
-        if state.battle_frame_count % skip_frames == 0:
-            for unit in units:
-                target = get_closest(unit.x, unit.y, enemy)
-                if target is not None:
-                    actions.append([
-                        tcc.command_unit_protected,
-                        unit.id,
-                        tcc.unitcommandtypes.Attack_Unit,
-                        target.id,
-                    ])
+        for unit in units:
+            target = get_closest(unit.x, unit.y, enemy)
+            if target is not None:
+                actions.append([
+                    tcc.command_unit_protected,
+                    unit.id,
+                    tcc.unitcommandtypes.Attack_Unit,
+                    target.id,
+                ])
     print("Sending actions: " + str(actions))
     client.send(actions)
 client.close()

@@ -183,10 +183,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;h3&gt;Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;What is &lt;a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Plays simple micro battles with an attack closest heuristic&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;What is TorchCraft's &lt;a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -217,7 +214,9 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;TBD&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Plays simple micro battles with an attack closest heuristic&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;loop&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;

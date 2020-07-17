@@ -222,9 +222,7 @@ received_update: {
 
 ### Analyzing TorchCraft `example.py`
 
-What is [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
-
-> Plays simple micro battles with an attack closest heuristic
+What is TorchCraft's [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
 
 ```
 :::python
@@ -261,7 +259,7 @@ client.send([
 ])
 ```
 
-TBD
+> Plays simple micro battles with an attack closest heuristic
 
 ```
 :::python

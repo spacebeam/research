@@ -6,7 +6,7 @@ TorchCraft is a BWAPI module that sends StarCraft: Brood War data out over a ZMQ
 This lets you parse StarCraft data and interact with BWAPI from anywhere.
 
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
-we are going to dive into TorchCraft example.py and start gathering minerals to someday build a refinery and extract vespene gas.
+we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.
 
 Let's start the game and learn a bit more about TorchCraft!
 

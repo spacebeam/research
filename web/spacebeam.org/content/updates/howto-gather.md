@@ -232,6 +232,8 @@ import torchcraft as tc
 import torchcraft.Constants as tcc
 ```
 
+Get closest function, seem very self explanatory
+
 ```
 :::python
 def get_closest(x, y, units)
@@ -245,6 +247,8 @@ def get_closest(x, y, units)
     return u
 ```
 
+TorchCraft Python API client initial setup
+
 ```
 :::python
 client = tc.Client()
@@ -256,6 +260,8 @@ client.send([
     [tcc.set_cmd_optim, 1],
 ])
 ```
+
+TBD
 
 ```
 :::python
@@ -289,7 +295,7 @@ client.close()
 ```
 ## Minerals and Vespene Gas
 
-Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong teeth and lungs.
+Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces and develop strong lungs.
 
 Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.
 
@@ -307,9 +313,9 @@ if all went well, the workers should now start gathering the mineral patches clo
 TBD
 ```
 
-Don't expect an optimal spread of workers, but that is left as an exercise to the reader.
+Don't expect an optimal spread of workers, but that is left as an exercise.
 
-## We Require More Vespone Gas
+## We Require More Vespene Gas
 
 ### Build a Refinery
 

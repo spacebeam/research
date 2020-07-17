@@ -3,7 +3,7 @@ date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
 TorchCraft is a BWAPI module that sends StarCraft: Brood War data out over a [ZMQ](https://zeromq.org) connection.
-This lets you parse game data and interact with BWAPI from anywhere.
+This lets you parse game data and interact with the Brood War API from anywhere.
 
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
 we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.
@@ -85,7 +85,7 @@ If everything works as expected, you will see Chaoslauncher, the first time it w
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 Injector [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
+Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
 
 
 ## What is TorchCraft again?

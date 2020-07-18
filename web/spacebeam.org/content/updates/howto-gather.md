@@ -98,15 +98,7 @@ Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE
 
 TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here [PyTorch](https://pytorch.org).
 
-The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
-
-RTS games exhibit complex dynamics with simultaneous actions where all players can give commands to any of their units at any time, each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
-
-An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which technology paths to pursue.
-
-Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the balancing act between investing in the economy, in tecnological advancement, or in units production is the crux of the strategy during the whole game.
-
-We advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
+TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 

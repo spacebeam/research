@@ -243,9 +243,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;h2&gt;Step 5 - Minerals and Vespene Gas&lt;/h2&gt;
-&lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces.&lt;/p&gt;
-&lt;p&gt;Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.&lt;/p&gt;
-&lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
 &lt;h2&gt;Step 6 -  Gathering Minerals&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;

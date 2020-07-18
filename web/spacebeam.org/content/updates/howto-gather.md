@@ -14,7 +14,7 @@ Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. _TorchCraft: a Library for Machine Learning Research
 on Real-Time Strategy Games_ - [arXiv:1611.00625](https://arxiv.org/abs/1611.00625).
 
-## Step 0 - Building a `launcher.py` script
+## Step 0 - Build a `launcher.py` script
 
 ```
 cd /opt/StarCraft

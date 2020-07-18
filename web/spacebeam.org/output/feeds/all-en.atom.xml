@@ -10,7 +10,7 @@ we are going to dive into TorchCraft example.py and start gathering minerals to 
 &lt;p&gt;Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. &lt;em&gt;TorchCraft: a Library for Machine Learning Research
 on Real-Time Strategy Games&lt;/em&gt; - &lt;a href="https://arxiv.org/abs/1611.00625"&gt;arXiv:1611.00625&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Step 0 - Building a &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
+&lt;h2&gt;Step 0 - Build a &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
 &lt;/pre&gt;&lt;/div&gt;
 

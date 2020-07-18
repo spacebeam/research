@@ -10,6 +10,7 @@ we are going to dive into TorchCraft example.py and start gathering minerals to 
 &lt;p&gt;Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. &lt;em&gt;TorchCraft: a Library for Machine Learning Research
 on Real-Time Strategy Games&lt;/em&gt; - &lt;a href="https://arxiv.org/abs/1611.00625"&gt;arXiv:1611.00625&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Step 0 - Building a &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -63,23 +64,23 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Start the original example again and run &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
-&lt;h3&gt;Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
+&lt;h2&gt;Step 1 - Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
+&lt;h2&gt;Step 2 - Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of &lt;code&gt;StarCraft.exe&lt;/code&gt;, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm and it will ask probably to restart &lt;code&gt;Chaoslauncher.exe&lt;/code&gt;, kill the current session with &lt;code&gt;Control-C&lt;/code&gt; in the terminal where you start &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
+&lt;p&gt;If everything works as expected, you will see &lt;code&gt;Chaoslauncher&lt;/code&gt;, the first time it will ask for the location of &lt;code&gt;StarCraft.exe&lt;/code&gt;, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm and it will ask probably to restart &lt;code&gt;Chaoslauncher.exe&lt;/code&gt;, kill the current session with &lt;code&gt;Control-C&lt;/code&gt; in the terminal where you start &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 4.2.0 [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see &lt;code&gt;blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
-&lt;h2&gt;What is TorchCraft again?&lt;/h2&gt;
+&lt;h2&gt;Step 3 - What is TorchCraft again?&lt;/h2&gt;
 &lt;p&gt;TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here &lt;a href="https://pytorch.org"&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.&lt;/p&gt;
 &lt;p&gt;RTS games exhibit complex dynamics with simultaneous actions where all players can give commands to any of their units at any time, each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.&lt;/p&gt;
@@ -122,7 +123,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 &lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
 &lt;p&gt;TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.&lt;/p&gt;
-&lt;h3&gt;A frame data&lt;/h3&gt;
+&lt;h3&gt;The frame data structure&lt;/h3&gt;
 &lt;p&gt;In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".&lt;/p&gt;
 &lt;p&gt;The frame is formatted in a table in roughly the following structure:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;received_update&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -186,7 +187,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
+&lt;h2&gt;Step 4 - Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;What is TorchCraft's &lt;a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
@@ -245,11 +246,11 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
+&lt;h2&gt;Step 5 - Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the &lt;code&gt;Zerg&lt;/code&gt; require minerals to harder their caparaces.&lt;/p&gt;
 &lt;p&gt;Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.&lt;/p&gt;
 &lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
-&lt;h3&gt;Gathering Minerals&lt;/h3&gt;
+&lt;h2&gt;Step 6 -  Gathering Minerals&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -260,8 +261,13 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Don't expect an optimal spread of workers, but that is left as an exercise.&lt;/p&gt;
-&lt;h2&gt;We Require More Vespene Gas&lt;/h2&gt;
-&lt;h3&gt;Build a Refinery&lt;/h3&gt;
+&lt;h2&gt;Step 7 - Build a Refinery&lt;/h2&gt;
+&lt;p&gt;We Require More Vespene Gas&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 8 - Vespene Gas&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 

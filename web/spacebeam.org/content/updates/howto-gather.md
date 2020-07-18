@@ -14,6 +14,7 @@ Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. _TorchCraft: a Library for Machine Learning Research
 on Real-Time Strategy Games_ - [arXiv:1611.00625](https://arxiv.org/abs/1611.00625).
 
+## Step 0 - Building a `launcher.py` script
 
 ```
 cd /opt/StarCraft
@@ -71,20 +72,20 @@ os.popen(execute).read()
 
 Start the original example again and run `launcher.py` to see what gives?
 
-### Run the original `example.py`
+## Step 1 - Run the original `example.py`
 
 ```
 $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 
 ```
 
-### Run the `launcher.py` script
+## Step 2 - Run the `launcher.py` script
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm and it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
+If everything works as expected, you will see `Chaoslauncher`, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm and it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
@@ -93,7 +94,7 @@ $ python3 /usr/src/starcraft-sif/examples/launcher.py
 Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `blueberry` waiting in the lobby.
 
 
-## What is TorchCraft again?
+## Step 3 - What is TorchCraft again?
 
 TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here [PyTorch](https://pytorch.org).
 
@@ -155,7 +156,7 @@ TorchCraft also provides an efficient way to store game frames data from past ga
 
 TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.
 
-### A frame data
+### The frame data structure
 
 In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".
 
@@ -222,7 +223,7 @@ received_update: {
 }
 ```
 
-### Analyzing TorchCraft `example.py`
+## Step 4 - Analyzing TorchCraft `example.py`
 
 What is TorchCraft's [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
 
@@ -287,7 +288,7 @@ while not state.game_ended:
     client.send(actions)
 client.close()
 ```
-## Minerals and Vespene Gas
+## Step 5 - Minerals and Vespene Gas
 
 Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces.
 
@@ -295,7 +296,7 @@ Extracting minerals takes time and the specilized equipment or anatomy found on 
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
-### Gathering Minerals
+## Step 6 -  Gathering Minerals
 
 ```
 TBD
@@ -309,10 +310,15 @@ TBD
 
 Don't expect an optimal spread of workers, but that is left as an exercise.
 
-## We Require More Vespene Gas
+## Step 7 - Build a Refinery
 
-### Build a Refinery
+We Require More Vespene Gas
 
+```
+TBD
+```
+
+## Step 8 - Vespene Gas 
 ```
 TBD
 ```

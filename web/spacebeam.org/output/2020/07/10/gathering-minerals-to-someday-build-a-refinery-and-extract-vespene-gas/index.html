@@ -90,6 +90,7 @@ we are going to dive into TorchCraft example.py and start gathering minerals to 
 <p>Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. <em>TorchCraft: a Library for Machine Learning Research
 on Real-Time Strategy Games</em> - <a href="https://arxiv.org/abs/1611.00625">arXiv:1611.00625</a>.</p>
+<h2>Step 0 - Building a <code>launcher.py</code> script</h2>
 <div class="highlight"><pre><span></span>cd /opt/StarCraft
 </pre></div>
 
@@ -143,23 +144,23 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p>Start the original example again and run <code>launcher.py</code> to see what gives?</p>
-<h3>Run the original <code>example.py</code></h3>
+<h2>Step 1 - Run the original <code>example.py</code></h2>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/TorchCraft/examples/py/example.py -t <span class="m">127</span>.0.0.1
 </pre></div>
 
 
-<h3>Run the <code>launcher.py</code> script</h3>
+<h2>Step 2 - Run the <code>launcher.py</code> script</h2>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 
-<p>If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of <code>StarCraft.exe</code>, you will find it on <code>/opt/StarCraft/</code> confirm and it will ask probably to restart <code>Chaoslauncher.exe</code>, kill the current session with <code>Control-C</code> in the terminal where you start <code>launcher.py</code> and run it again.</p>
+<p>If everything works as expected, you will see <code>Chaoslauncher</code>, the first time it will ask for the location of <code>StarCraft.exe</code>, you will find it on <code>/opt/StarCraft/</code> confirm and it will ask probably to restart <code>Chaoslauncher.exe</code>, kill the current session with <code>Control-C</code> in the terminal where you start <code>launcher.py</code> and run it again.</p>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 
 <p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>blueberry</code> waiting in the lobby.</p>
-<h2>What is TorchCraft again?</h2>
+<h2>Step 3 - What is TorchCraft again?</h2>
 <p>TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here <a href="https://pytorch.org">PyTorch</a>.</p>
 <p>The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.</p>
 <p>RTS games exhibit complex dynamics with simultaneous actions where all players can give commands to any of their units at any time, each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.</p>
@@ -202,7 +203,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <p>TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.</p>
 <p>TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.</p>
-<h3>A frame data</h3>
+<h3>The frame data structure</h3>
 <p>In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".</p>
 <p>The frame is formatted in a table in roughly the following structure:</p>
 <div class="highlight"><pre><span></span><span class="nx">received_update</span><span class="o">:</span> <span class="p">{</span>
@@ -266,7 +267,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<h3>Analyzing TorchCraft <code>example.py</code></h3>
+<h2>Step 4 - Analyzing TorchCraft <code>example.py</code></h2>
 <p>What is TorchCraft's <a href="https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py">example.py</a> actually doing?</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
 <span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
@@ -325,11 +326,11 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<h2>Minerals and Vespene Gas</h2>
+<h2>Step 5 - Minerals and Vespene Gas</h2>
 <p>Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the <code>Zerg</code> require minerals to harder their caparaces.</p>
 <p>Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.</p>
 <p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
-<h3>Gathering Minerals</h3>
+<h2>Step 6 -  Gathering Minerals</h2>
 <div class="highlight"><pre><span></span>TBD
 </pre></div>
 
@@ -340,8 +341,13 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p>Don't expect an optimal spread of workers, but that is left as an exercise.</p>
-<h2>We Require More Vespene Gas</h2>
-<h3>Build a Refinery</h3>
+<h2>Step 7 - Build a Refinery</h2>
+<p>We Require More Vespene Gas</p>
+<div class="highlight"><pre><span></span>TBD
+</pre></div>
+
+
+<h2>Step 8 - Vespene Gas</h2>
 <div class="highlight"><pre><span></span>TBD
 </pre></div>
 

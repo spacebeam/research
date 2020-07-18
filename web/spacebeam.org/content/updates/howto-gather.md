@@ -2,7 +2,7 @@ title:  Gathering Minerals to someday Build a Refinery and extract Vespene Gas
 date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
-TorchCraft is a BWAPI module that sends StarCraft: Brood War data out over a [ZMQ](https://zeromq.org) connection.
+TorchCraft is a [BWAPI](https://bwapi.github.io/) module that sends StarCraft: Brood War data out over a [ZMQ](https://zeromq.org) connection.
 This lets you parse game data and interact with the Brood War API from anywhere.
 
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
@@ -95,50 +95,17 @@ Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE
 
 ## What is TorchCraft again?
 
-TorchCraft is a library that enables deep learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here Torch.
+TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here [PyTorch](https://pytorch.org).
 
 The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
 
-These games exhibit durative moves with complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and partial observability (a "fog of war": opponent units not in the vicinity of a player's units are not shown).
+RTS games exhibit complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
 
-Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
+An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which technology paths to pursue.
 
-An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which tech paths to pursue.
+Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the balancing act between investing in the economy, in tecnological advancement, or in units production is the crux of the strategy during the whole game.
 
-Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the arbitrage between investing in the economy, in tecnological advancement, and in units production is the crux of the strategy during the whole game.
-
-TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state..
-
-```
-:::lua
--- main game engine loop:
--- illustrates the DLL that gets into the game engine as a BWAPI bot
--- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`
-while true do
-    game.receive_player_actions()
-    game.compute_dynamics()
-    -- our injected code:
-    torchcraft.send_state()
-    torchcraft.receive_actions()
-end
-```
-
-A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).
-
-```
-:::lua
--- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
--- it acts as the machine learning client where we integrate Torch to return in-game actions
-tc = require('torchcraft')
-featurize, model = init()
-tc:connect(port)
-while not tc.state.game_ended do
-    tc:receive()
-    features = featurize(tc.state)
-    actions = model:forward(features)
-    tc:send(tc:tocommand(actions))
-end
-```
+TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
@@ -154,9 +121,38 @@ The server starts at the beginning of the match and stops when that ends.
 
 TorchCraft is seen by the AI programmer as a library that provides: `connect()`, `receive()` to get the state, `send(commands)`, and some helper functions about specifics of StarCraft's rules and state representation.
 
-TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
+```
+:::lua
+-- main game engine loop:
+-- illustrates the DLL that gets into the game engine as a BWAPI 4.2.0 bot
+-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`
+while true do
+    game.receive_player_actions()
+    game.compute_dynamics()
+    -- our injected code:
+    torchcraft.send_state()
+    torchcraft.receive_actions()
+end
+```
 
-We believe that an efficient bridge between BWAPI and machine learning frameworks would enable and foster research on such games.
+A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).
+
+```
+:::lua
+-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
+-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions
+tc = require('torchcraft')
+featurize, model = init()
+tc:connect(port)
+while not tc.state.game_ended do
+    tc:receive()
+    features = featurize(tc.state)
+    actions = model:forward(features)
+    tc:send(tc:tocommand(actions))
+end
+```
+
+TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
 
 TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
 

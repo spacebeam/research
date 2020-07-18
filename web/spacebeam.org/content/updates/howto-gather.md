@@ -8,7 +8,7 @@ This lets you parse game data and interact with the Brood War API from anywhere.
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
 we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.
 
-Let's start the game and learn a bit more about [TorchCraft](https://github.com/TorchCraft/TorchCraft/). A general overview can be found in:
+Let's start the game and learn a bit more about [TorchCraft](https://github.com/TorchCraft/TorchCraft/) a general overview can be found in:
 
 Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. _TorchCraft: a Library for Machine Learning Research
@@ -84,13 +84,13 @@ $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm, it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
+If everything works as expected, you will see Chaoslauncher, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm and it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, Check `Multiplayer -> Local PC` and confirm that you see a `blueberry` waiting in the lobby.
+Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `blueberry` waiting in the lobby.
 
 
 ## What is TorchCraft again?
@@ -105,7 +105,7 @@ An `opening` denotes the same thing as in Chess: an early game plan for which th
 
 Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the balancing act between investing in the economy, in tecnological advancement, or in units production is the crux of the strategy during the whole game.
 
-TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
+We advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
@@ -115,7 +115,7 @@ StarCraft: Brood War is a highly competitive game with professional players, whi
 
 TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.
 
-The two modules are entirely asynchronous. TorchCraft execution moduel inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).
+The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).
 
 The server starts at the beginning of the match and stops when that ends.
 
@@ -124,7 +124,6 @@ TorchCraft is seen by the AI programmer as a library that provides: `connect()`,
 ```
 :::lua
 -- main game engine loop:
--- illustrates the DLL that gets into the game engine as a BWAPI 4.2.0 bot
 -- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`
 while true do
     game.receive_player_actions()
@@ -140,7 +139,7 @@ A simplified client/server model that runs in the game engine (server, on top) a
 ```
 :::lua
 -- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
--- it acts as the machine learning client where we can integrate Torch7 to return in-game actions
+-- it acts as the machine learning client where we can integrate Torch to return in-game actions
 tc = require('torchcraft')
 featurize, model = init()
 tc:connect(port)
@@ -154,11 +153,11 @@ end
 
 TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
 
-TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing Torch with StarCraft: Brood War.
+TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.
 
 ### A frame data
 
-In addition to the visual data, the TorchCraft server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".
+In addition to visual data, the server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".
 
 The frame is formatted in a table in roughly the following structure:
 ```

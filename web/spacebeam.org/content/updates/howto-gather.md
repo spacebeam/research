@@ -99,7 +99,7 @@ TorchCraft is a library that enables machine learning research in the real-time 
 
 The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.
 
-RTS games exhibit complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
+Games exhibit complex dynamics with simultaneous actions where all players can give commands to any of their units at any time, and Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.
 
 An `opening` denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which technology paths to pursue.
 
@@ -157,7 +157,7 @@ TorchCraft is a library that enables state-of-the-art machine learning reserch o
 
 ### A frame data
 
-In addition to visual data, the server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".
+In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".
 
 The frame is formatted in a table in roughly the following structure:
 ```

@@ -82,7 +82,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;h2&gt;What is TorchCraft again?&lt;/h2&gt;
 &lt;p&gt;TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here &lt;a href="https://pytorch.org"&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The goal of the StarCraft player is to collect resources which can be used to expand their control on the map, create buildings and units to fight off enemy deployments, and ultimately destroy the opponents.&lt;/p&gt;
-&lt;p&gt;RTS games exhibit complex game dynamics with simultaneous actions where all players can give commands to any of their units at any time, and Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.&lt;/p&gt;
+&lt;p&gt;Games exhibit complex dynamics with simultaneous actions where all players can give commands to any of their units at any time, and Each unit and building has range of sight that provides the player with a view of the map. Parts of the map not in the sight range of the player's units are under fog of war and the player cannot observe what happens there. A considerable part of the strategy and the tactics lies in which units to deploy and where.&lt;/p&gt;
 &lt;p&gt;An &lt;code&gt;opening&lt;/code&gt; denotes the same thing as in Chess: an early game plan for which the player has to make choices. That is the case in Chess because on can move only one piece at a time (each turn), and in RTS games because, during the development phase, one is economically limited and has to choose which technology paths to pursue.&lt;/p&gt;
 &lt;p&gt;Available resources constrain the technology advancements and the number of units one can produce. As producing buildings and units also take time, the balancing act between investing in the economy, in tecnological advancement, or in units production is the crux of the strategy during the whole game.&lt;/p&gt;
 &lt;p&gt;We advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.&lt;/p&gt;
@@ -123,7 +123,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
 &lt;p&gt;TorchCraft is a library that enables state-of-the-art machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.&lt;/p&gt;
 &lt;h3&gt;A frame data&lt;/h3&gt;
-&lt;p&gt;In addition to visual data, the server extracts certain information for the game state and sends it over to the connected clients in a structured "frame".&lt;/p&gt;
+&lt;p&gt;In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".&lt;/p&gt;
 &lt;p&gt;The frame is formatted in a table in roughly the following structure:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;received_update&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// Number of frames in the current game&lt;/span&gt;

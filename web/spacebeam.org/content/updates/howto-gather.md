@@ -224,7 +224,7 @@ received_update: {
 
 ## Step 4 - Analyzing TorchCraft `example.py`
 
-What is TorchCraft's [example.py](https://github.com/TorchCraft/TorchCraft/bilob/master/examples/py/example.py) actually doing?
+What is TorchCraft's [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing?
 
 ```
 :::python
@@ -232,7 +232,7 @@ import torchcraft as tc
 import torchcraft.Constants as tcc
 ```
 
-Get closest function, seem very self explanatory
+Get closest function, very self explanatory!
 
 ```
 :::python

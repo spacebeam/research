@@ -85,14 +85,19 @@ $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
+{% img [class name(s)] /images/1.png %}
+
 If everything works as expected, you will see `Chaoslauncher`, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm and it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
+{%img [class name(s)] /images/2.png %}
+
 Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `blueberry` waiting in the lobby.
 
+{%img [class name(s)] /images/3.png %}
 
 ## Step 3 - What is TorchCraft again?
 
@@ -103,6 +108,9 @@ TorchCraft advocate to have not only the pixels as input and keyboard/mouse for 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
 StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
+
+
+{%img [class name(s)] /images/4.png %}
 
 ### TorchCraft Design
 
@@ -256,6 +264,8 @@ client.send([
 
 > Plays simple micro battles with an attack closest heuristic
 
+{%img [class name(s)] /images/4.png %}
+
 ```
 :::python
 while not state.game_ended:
@@ -282,11 +292,7 @@ client.close()
 ```
 ## Step 5 - Minerals and Vespene Gas
 
-Minerals are a form of crystal resource. Terran and Protoss melt these minerals down to create the armored hulls of starships, behicles and personal armor. Even the `Zerg` require minerals to harder their caparaces.
-
-Extracting minerals takes time and the specilized equipment or anatomy found on SCVs, probes and drones.
-
-Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produces, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
+Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
 ## Step 6 -  Gathering Minerals
 

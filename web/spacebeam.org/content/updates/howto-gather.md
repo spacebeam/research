@@ -139,7 +139,7 @@ A simplified client/server model that runs in the game engine (server, on top) a
 ```
 :::lua
 -- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`
--- it acts as the machine learning client where we can integrate Torch to return in-game actions
+-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions
 tc = require('torchcraft')
 featurize, model = init()
 tc:connect(port)
@@ -285,7 +285,7 @@ while not state.game_ended:
                     tcc.unitcommandtypes.Attack_Unit,
                     target.id,
                 ])
-    print("Sending actions: " + str(actions))
+    print("Sending actions: {}".format(str(actions)))
     client.send(actions)
 client.close()
 ```

@@ -188,7 +188,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <p>A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).</p>
 <div class="highlight"><pre><span></span><span class="c1">-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`</span>
-<span class="c1">-- it acts as the machine learning client where we can integrate Torch to return in-game actions</span>
+<span class="c1">-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions</span>
 <span class="n">tc</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;torchcraft&#39;</span><span class="p">)</span>
 <span class="n">featurize</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">init</span><span class="p">()</span>
 <span class="n">tc</span><span class="p">:</span><span class="n">connect</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
@@ -321,7 +321,7 @@ wine Chaoslauncher/Chaoslauncher.exe
                     <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Attack_Unit</span><span class="p">,</span>
                     <span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                 <span class="p">])</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending actions: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending actions: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">actions</span><span class="p">)))</span>
     <span class="n">client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
 <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>

@@ -154,21 +154,21 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p><img class="[class name(s)]" src="/images/1.png"></p>
 <p>If everything works as expected, you will see <code>Chaoslauncher</code>, the first time it will ask for the location of <code>StarCraft.exe</code>, you will find it on <code>/opt/StarCraft/</code> confirm and it will ask probably to restart <code>Chaoslauncher.exe</code>, kill the current session with <code>Control-C</code> in the terminal where you start <code>launcher.py</code> and run it again.</p>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 
-<p><img class="[class name(s)]" src="/images/2.png"></p>
+<p><img class="[class name(s)]" src="/images/1.png"></p>
 <p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>blueberry</code> waiting in the lobby.</p>
+<p><img class="[class name(s)]" src="/images/2.png"></p>
 <p><img class="[class name(s)]" src="/images/3.png"></p>
 <h2>Step 3 - What is TorchCraft again?</h2>
+<p><img class="[class name(s)]" src="/images/4.png"></p>
 <p>TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here <a href="https://pytorch.org">PyTorch</a>.</p>
 <p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.</p>
 <p>This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.</p>
 <p>StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.</p>
-<p><img class="[class name(s)]" src="/images/4.png"></p>
 <h3>TorchCraft Design</h3>
 <p>TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.</p>
 <p>The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).</p>
@@ -302,7 +302,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 <blockquote>
 <p>Plays simple micro battles with an attack closest heuristic</p>
 </blockquote>
-<p><img class="[class name(s)]" src="/images/4.png"></p>
+<p><img class="[class name(s)]" src="/images/5.png"></p>
 <div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">game_ended</span><span class="p">:</span>
     <span class="n">loop</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">state</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>

@@ -85,7 +85,6 @@ $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-{% img [class name(s)] /images/1.png %}
 
 If everything works as expected, you will see `Chaoslauncher`, the first time it will ask for the location of `StarCraft.exe`, you will find it on `/opt/StarCraft/` confirm and it will ask probably to restart `Chaoslauncher.exe`, kill the current session with `Control-C` in the terminal where you start `launcher.py` and run it again.
 
@@ -93,13 +92,16 @@ If everything works as expected, you will see `Chaoslauncher`, the first time it
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-{%img [class name(s)] /images/2.png %}
+{% img [class name(s)] /images/1.png %}
 
 Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `blueberry` waiting in the lobby.
 
-{%img [class name(s)] /images/3.png %}
+{%img [class name(s)] /images/2.png %}
 
+{%img [class name(s)] /images/3.png %}
 ## Step 3 - What is TorchCraft again?
+
+{%img [class name(s)] /images/4.png %}
 
 TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here [PyTorch](https://pytorch.org).
 
@@ -108,9 +110,6 @@ TorchCraft advocate to have not only the pixels as input and keyboard/mouse for 
 This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
 
 StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
-
-
-{%img [class name(s)] /images/4.png %}
 
 ### TorchCraft Design
 
@@ -264,7 +263,7 @@ client.send([
 
 > Plays simple micro battles with an attack closest heuristic
 
-{%img [class name(s)] /images/4.png %}
+{%img [class name(s)] /images/5.png %}
 
 ```
 :::python

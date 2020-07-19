@@ -315,9 +315,11 @@ We Require More Vespene Gas
 TBD
 ```
 
-## Step 8 - Vespene Gas 
+## Step 8 - Gas harvesting 
 ```
 TBD
 ```
+
+## Further Reading
 
 Next we will [train different units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/) to improve our Terran skills!

@@ -94,7 +94,7 @@
 <h3>Cooperative multitasking</h3>
 <p>Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.</p>
 <p>Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.</p>
-<h2>Python <code>await</code> and <code>yield</code> keywords</h2>
+<h2>Python 3 <code>await</code> and <code>yield</code></h2>
 <p>Real-time features require (?)</p>
 <p>Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
 <p>Asynchronous operations generally return placeholder objects (Futures).
@@ -123,7 +123,7 @@
 <p>Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
 were synchronous, important for error handling since in coroutines <code>try/expect</code> blocks work as you would expect.</p>
-<h2>Coroutines</h2>
+<h2>Coroutines again</h2>
 <p>Coroutines are the recommended way to write asynchronous code.</p>
 <p><em>Coroutines</em> use the Python 3 <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>
 <p>Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.</p>

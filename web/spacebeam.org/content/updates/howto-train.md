@@ -26,7 +26,7 @@ Also known as non-preemptive multitasking, is a style of computer multitasking i
 
 Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.
 
-## Python `await` and `yield` keywords 
+## Python 3 `await` and `yield`
 
 Real-time features require (?)
 
@@ -65,7 +65,7 @@ Anything you can do with coroutines you can also do by passing callback around, 
 provide an important simplification by letting you organize your code in the same way you would if it
 were synchronous, important for error handling since in coroutines `try/expect` blocks work as you would expect.
 
-## Coroutines
+## Coroutines again
 
 Coroutines are the recommended way to write asynchronous code.
 

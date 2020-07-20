@@ -43,7 +43,7 @@ THEME = 'themes/brutalist'
 ## used for OG tags and Twitter Card data on index page
 SITEIMAGE = 'logo.png'
 ## used for OG tags and Twitter Card data of index page
-SITEDESCRIPTION = 'Live for the Swarm!'
+SITEDESCRIPTION = 'StarCraft AI, Distributed systems, HPC'
 ## path to favicon
 FAVICON = 'logo.png'
 ## path to logo for nav menu (optional)

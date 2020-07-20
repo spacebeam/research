@@ -85,8 +85,8 @@
          <p>That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.</p>
 <h2>Asynchronous and non-Blocking I/O</h2>
 <p>Real-time features require (?)</p>
-<p>Python 3 uses a single-threaded event loop to enable concurrent actions. This means that all aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
-<p>Asynchronous operations generally return placehorlder objects (Futures), with the expecion of some low-level components like the <code>IOLoop</code> that use callbacks.
+<p>Python 3 uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
+<p>Asynchronous operations generally return placeholder objects (Futures).
 <code>Futures</code> are usually transformed into their result with the <code>await</code> and <code>yield</code> keywords.</p>
 <h3>Examples</h3>
 <p>Here is a sample synchronous function:</p>
@@ -109,10 +109,9 @@
 </pre></div>
 
 
-<p>Anything you can do with coroutines you can also do by passing callback objects around, but coroutines
+<p>Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous.</p>
-<p>The is especially important for error handling, since in coroutines <code>try/expect</code> blocks work as you would expect</p>
+were synchronous, important for error handling since in coroutines <code>try/expect</code> blocks work as you would expect.</p>
 <h2>Coroutines</h2>
 <p>Coroutines are the recommended way to write asynchronous code.</p>
 <p><em>Coroutines</em> use the Python 3 <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>

@@ -8,9 +8,9 @@ That's the basics you go out, 16 supply, 16 factory, train 2 marines and put the
 
 Real-time features require (?)
 
-Python 3 uses a single-threaded event loop to enable concurrent actions. This means that all aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.
+Python 3 uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.
 
-Asynchronous operations generally return placehorlder objects (Futures), with the expecion of some low-level components like the `IOLoop` that use callbacks.
+Asynchronous operations generally return placeholder objects (Futures).
 `Futures` are usually transformed into their result with the `await` and `yield` keywords.
 
 ### Examples
@@ -39,11 +39,9 @@ async def asynchronous_fetch(url):
     return response.body
 ```
 
-Anything you can do with coroutines you can also do by passing callback objects around, but coroutines
+Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous.
-
-The is especially important for error handling, since in coroutines `try/expect` blocks work as you would expect
+were synchronous, important for error handling since in coroutines `try/expect` blocks work as you would expect.
 
 ## Coroutines
 

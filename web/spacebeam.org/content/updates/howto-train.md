@@ -4,11 +4,33 @@ description: Let's train some workers when we have the minerals for them!
 
 That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.
 
-## Asynchronous and non-Blocking I/O
+## Coroutines
+
+*Coroutines* are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.
+
+Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.
+
+A sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.
+
+Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.
+
+In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.
+
+### Difference with processes
+
+Processes are idependen units of execution instead of a subroutine that lives inside a process.
+
+### Cooperative multitasking
+
+Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.
+
+Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.
+
+## Python `await` and `yield` keywords 
 
 Real-time features require (?)
 
-Python 3 uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.
+Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.
 
 Asynchronous operations generally return placeholder objects (Futures).
 `Futures` are usually transformed into their result with the `await` and `yield` keywords.

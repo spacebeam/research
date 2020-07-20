@@ -114,8 +114,8 @@ provide an important simplification by letting you organize your code in the sam
 were synchronous.</p>
 <p>The is especially important for error handling, since in coroutines <code>try/expect</code> blocks work as you would expect</p>
 <h2>Coroutines</h2>
-<p>Coroutines are the recommended way to write asynchronous code in Python.</p>
-<p><em>Coroutines</em> use the Python <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>
+<p>Coroutines are the recommended way to write asynchronous code.</p>
+<p><em>Coroutines</em> use the Python 3 <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>
 <p>Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.</p>
 <h3>How to call a coroutine</h3>
 <p>Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded. This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:</p>

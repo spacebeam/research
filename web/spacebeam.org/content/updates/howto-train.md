@@ -47,9 +47,9 @@ The is especially important for error handling, since in coroutines `try/expect`
 
 ## Coroutines
 
-*Coroutines* are the recommended way to write asynchronous code in Python 3.
+Coroutines are the recommended way to write asynchronous code in Python.
 
-Coroutines use the Python `await` or `yield` keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.
+*Coroutines* use the Python `await` or `yield` keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.
 
 Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.
 

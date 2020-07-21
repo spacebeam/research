@@ -4,6 +4,14 @@ description: Let's train some workers when we have the minerals for them!
 
 That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.
 
+This tutorial will walk you through real-time strategy bot development with Python 3, we are going to dive deep into Coroutines!
+
+Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach, splitting the game into separate components and developong separate systems to solve each.
+
+This trend gives rise to a new problem: how to tie these systems together into a functional real-time strategy playing bot.
+
+In this tutorial we discuss the architecture of [Blueberry](https://liquipedia.net/starcraft/Blueberry), our entry into the 2019/2020 StarCraft AI competitions, and the techniques used.
+
 ## Coroutines
 
 *Coroutines* are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.
@@ -27,8 +35,6 @@ Also known as non-preemptive multitasking, is a style of computer multitasking i
 Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.
 
 ## Python 3 `await` and `yield`
-
-Real-time features require (?)
 
 Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.
 

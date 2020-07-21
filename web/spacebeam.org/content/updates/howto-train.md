@@ -4,9 +4,9 @@ description: Let's train some workers when we have the minerals for them!
 
 That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.
 
-This tutorial will walk you through real-time strategy bot development with Python 3, we are going to dive deep into Coroutines!
+This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into Coroutines!
 
-Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach, splitting the game into separate components and developong separate systems to solve each.
+Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach using multiple languages and zmq, splitting the game into separate components and developing separate systems to solve each.
 
 This trend gives rise to a new problem: how to tie these systems together into a functional real-time strategy playing bot.
 

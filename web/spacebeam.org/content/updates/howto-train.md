@@ -24,7 +24,7 @@ In different programming languages, a subroutine may be called a procedure, a fu
 
 ### Difference with processes
 
-Processes are idependent units of execution instead of a subroutine that lives inside a process.
+Processes are idependent units of execution, a subroutine lives inside a process.
 
 ### Cooperative multitasking
 
@@ -82,12 +82,6 @@ Multilingual Distributed Messaging thanks to the ZeroMQ Community.
 
 It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.
 
-### Protocols
-TBD
-
-### Community
-TBD
-
 ## Coroutines again
 
 Coroutines are the recommended way to write asynchronous code.
@@ -98,6 +92,92 @@ Coroutines are almost as simple as synchronous code, but without the expense of 
 
 ### How to call a coroutine
 
-Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded. This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:
+Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
+This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:
 
+```
+:::python
+async def divide(x, y):
+    return x / y
+    
+def bad_call()
+    # This should raise ZeroDivisionError, but it won't cuz the coroutine is called incorrectly!
+    divide(1, 0)
+```
+In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
+and use the `await` or `yield` keyword in the call.
+
+```
+:::python
+async def good_call():
+    # await will unwrap the object returned by divide() and raise the expection.
+    await divide(1, 0)
+```
+#### Fire and forget
+
+Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use `IOLoop.spawn_callback`, which makes the `IOLoop` responsible for the call.
+If it fails, the `IOLoop` will log a stack trace:
+
+```
+:::python
+# The IOLoop will catch the expection and print a stack trace
+# in the logs. Note that this doesn't look like a normal call,
+# since we pass the function object to be called by the IOLoop.
+IOLoop.current().spawn_callback(divide, 1, 0)
+```
+
+## Coroutine patterns
+
+### Calling blocing functions
+
+The simplest way to call a blocking function from a coroutine is to use `IOLoop.run_in_executor`, which returns `Futures` that are compatible with coroutines:
+
+```
+:::python
+async def call_blocking():
+    await IOLoop.current().run_in_executor(None, blocking_func, args)
+```
+
+### Parallelism
+
+The `multi` function accepts lists and dicts whose values are `Futures` and waits for all of those `Futures` in parallel:
+
+```
+:::python
+from tornado.gen import multi
+
+async def parallel_fetch()
+
+async def parallel_fetch_many(urls)
+
+async def parallel_fetch_dict(urls)
+```
+
+In decorated coroutines, it is possible to `yield` the list or dict directly:
+
+```
+```
+
+### Interleaving
+
+### Looping
+
+In native coroutines, `async for` can be used.
+
+### Running in the background
+`PeriodicCallback` is not normally used with coroutines. Instead, a coroutine can contain a `while True:` loop and use `tornado.gen.sleep`:
+
+```
+:::python
+async def minute_loop():
+    while True:
+        await do_something()
+        await gen.sleep(60)
+
+# Coroutines that loop forever are generally started with
+# spawn_callback().
+IOLoop.current().spawn_callback(minute_loop)
+```
+
+Sometimes a more complicated loop may be desirable.
 

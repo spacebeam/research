@@ -170,9 +170,47 @@ If it fails, the <code>IOLoop</code> will log a stack trace:</p>
 
 
 <h2>Coroutine patterns</h2>
-<p>TBD</p>
+<h3>Calling blocing functions</h3>
+<p>The simplest way to call a blocking function from a coroutine is to use <code>IOLoop.run_in_executor</code>, which returns <code>Futures</code> that are compatible with coroutines:</p>
+<div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">call_blocking</span><span class="p">():</span>
+    <span class="n">await</span> <span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">run_in_executor</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">blocking_func</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>Parallelism</h3>
+<p>The <code>multi</code> function accepts lists and dicts whose values are <code>Futures</code> and waits for all of those <code>Futures</code> in parallel:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tornado.gen</span> <span class="kn">import</span> <span class="n">multi</span>
+
+<span class="n">async</span> <span class="k">def</span> <span class="nf">parallel_fetch</span><span class="p">()</span>
+
+<span class="n">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_many</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+
+<span class="n">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_dict</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In decorated coroutines, it is possible to <code>yield</code> the list or dict directly:</p>
 <div class="highlight"><pre><span></span>
 </pre></div>
+
+
+<h3>Interleaving</h3>
+<h3>Looping</h3>
+<p>In native coroutines, <code>async for</code> can be used.</p>
+<h3>Running in the background</h3>
+<p><code>PeriodicCallback</code> is not normally used with coroutines. Instead, a coroutine can contain a <code>while True:</code> loop and use <code>tornado.gen.sleep</code>:</p>
+<div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">minute_loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">await</span> <span class="n">do_something</span><span class="p">()</span>
+        <span class="n">await</span> <span class="n">gen</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Coroutines that loop forever are generally started with</span>
+<span class="c1"># spawn_callback().</span>
+<span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">spawn_callback</span><span class="p">(</span><span class="n">minute_loop</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Sometimes a more complicated loop may be desirable.</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

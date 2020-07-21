@@ -88,9 +88,47 @@ If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&g
 
 
 &lt;h2&gt;Coroutine patterns&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;
+&lt;h3&gt;Calling blocing functions&lt;/h3&gt;
+&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible with coroutines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;call_blocking&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_in_executor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blocking_func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Parallelism&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;multi&lt;/code&gt; function accepts lists and dicts whose values are &lt;code&gt;Futures&lt;/code&gt; and waits for all of those &lt;code&gt;Futures&lt;/code&gt; in parallel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_many&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In decorated coroutines, it is possible to &lt;code&gt;yield&lt;/code&gt; the list or dict directly:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Gathering Minerals to someday Build a Refinery and extract Vespene Gas</title><link href="/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Interleaving&lt;/h3&gt;
+&lt;h3&gt;Looping&lt;/h3&gt;
+&lt;p&gt;In native coroutines, &lt;code&gt;async for&lt;/code&gt; can be used.&lt;/p&gt;
+&lt;h3&gt;Running in the background&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;PeriodicCallback&lt;/code&gt; is not normally used with coroutines. Instead, a coroutine can contain a &lt;code&gt;while True:&lt;/code&gt; loop and use &lt;code&gt;tornado.gen.sleep&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Coroutines that loop forever are generally started with&lt;/span&gt;
+&lt;span class="c1"&gt;# spawn_callback().&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sometimes a more complicated loop may be desirable.&lt;/p&gt;</content></entry><entry><title>Gathering Minerals to someday Build a Refinery and extract Vespene Gas</title><link href="/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
 This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through execute the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
 we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.

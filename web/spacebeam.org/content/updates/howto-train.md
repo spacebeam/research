@@ -4,11 +4,11 @@ description: Let's train some workers when we have the minerals for them!
 
 That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.
 
-This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into Coroutines!
+This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into [Coroutines](https://en.wikipedia.org/wiki/Coroutine)!
 
-Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with zmq and multiple languages, splitting the game into separate components and developing separate systems to solve each.
+Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with [ZMQ](https://zeromq.org) and multiple languages, splitting the game into separate components and developing separate systems to solve each task.
 
-This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot.
+This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?
 
 ## Coroutines
 
@@ -68,6 +68,25 @@ async def asynchronous_fetch(url):
 Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
 were synchronous, important for error handling since in coroutines `try/expect` blocks work as you would expect.
+
+## Why ZeroMQ helps?
+ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.
+
+You can use this feature to queue, route, and filter messages according to various `patterns`.
+
+Multilingual Distributed Messaging thanks to the ZeroMQ Community.
+
+- Carries messages across inproc, IPC, TCP, multicast.
+- Smart patterns like pub-sub, push-pull, request-reply.
+- Backed by a large and active open-source community.
+
+It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.
+
+### Protocols
+TBD
+
+### Community
+TBD
 
 ## Coroutines again
 

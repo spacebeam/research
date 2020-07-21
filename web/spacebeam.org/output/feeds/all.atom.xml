@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-15T00:00:00+02:00</updated><entry><title>One in a million, repeats very often</title><link href="/2020/07/15/one-in-a-million-repeats-very-often/" rel="alternate"></link><published>2020-07-15T00:00:00+02:00</published><updated>2020-07-15T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-15:/2020/07/15/one-in-a-million-repeats-very-often/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>BUILD A WALL &amp; LINGS WILL FALL</title><link href="/2020/07/13/build-a-wall-lings-will-fall/" rel="alternate"></link><published>2020-07-13T00:00:00+02:00</published><updated>2020-07-13T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-13:/2020/07/13/build-a-wall-lings-will-fall/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>8 Supply, 11 Gas, 12 Rax, 14 Scout</title><link href="/2020/07/11/8-supply-11-gas-12-rax-14-scout/" rel="alternate"></link><published>2020-07-11T00:00:00+02:00</published><updated>2020-07-11T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-11:/2020/07/11/8-supply-11-gas-12-rax-14-scout/</id><summary type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going …&lt;/p&gt;</summary><content type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into Coroutines!&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into &lt;a href="https://en.wikipedia.org/wiki/Coroutine"&gt;Coroutines&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; and multiple languages, splitting the game into separate components and developing separate systems to solve each task.&lt;/p&gt;
 &lt;p&gt;This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?&lt;/p&gt;
 &lt;h2&gt;Coroutines&lt;/h2&gt;
@@ -43,6 +43,20 @@
 &lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
 were synchronous, important for error handling since in coroutines &lt;code&gt;try/expect&lt;/code&gt; blocks work as you would expect.&lt;/p&gt;
+&lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
+&lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
+&lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Multilingual Distributed Messaging thanks to the ZeroMQ Community.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Carries messages across inproc, IPC, TCP, multicast.&lt;/li&gt;
+&lt;li&gt;Smart patterns like pub-sub, push-pull, request-reply.&lt;/li&gt;
+&lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.&lt;/p&gt;
+&lt;h3&gt;Protocols&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h3&gt;Community&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
 &lt;h2&gt;Coroutines again&lt;/h2&gt;
 &lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;

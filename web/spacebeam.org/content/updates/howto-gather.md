@@ -111,6 +111,18 @@ This makes it easier to try a broad variety of models, and may be useful in shap
 
 StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
 
+### BWAPI
+
+BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:
+
+- Perform unit actions, i.e: `Attack`, `Move`, `Build`
+- Obtain current data about any visible unit, such as: `Position`, `HP`, `Energy`
+- Obtain offline data about any unit type, such as: `MaxSpeed`, `Damage`, `MaxHP`, `Size`
+
+Programs written with BWAPI alone are usually compiled into a Windows dynamically linked library (DLL) which is injected into the game. BWAPI allows the user to perform any of the aboce functionality while the game is running, after each logic frame update within the game's software.
+
+After each logic frame, BWAPI interrupts the StarCraft process and allows the user to read game data and issue commands, which are stored in a queue to be executed during the game's next logic frame.
+
 ### TorchCraft Design
 
 TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.

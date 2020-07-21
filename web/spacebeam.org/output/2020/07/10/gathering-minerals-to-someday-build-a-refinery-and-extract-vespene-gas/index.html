@@ -169,6 +169,15 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.</p>
 <p>This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.</p>
 <p>StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.</p>
+<h3>BWAPI</h3>
+<p>BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:</p>
+<ul>
+<li>Perform unit actions, i.e: <code>Attack</code>, <code>Move</code>, <code>Build</code></li>
+<li>Obtain current data about any visible unit, such as: <code>Position</code>, <code>HP</code>, <code>Energy</code></li>
+<li>Obtain offline data about any unit type, such as: <code>MaxSpeed</code>, <code>Damage</code>, <code>MaxHP</code>, <code>Size</code></li>
+</ul>
+<p>Programs written with BWAPI alone are usually compiled into a Windows dynamically linked library (DLL) which is injected into the game. BWAPI allows the user to perform any of the aboce functionality while the game is running, after each logic frame update within the game's software.</p>
+<p>After each logic frame, BWAPI interrupts the StarCraft process and allows the user to read game data and issue commands, which are stored in a queue to be executed during the game's next logic frame.</p>
 <h3>TorchCraft Design</h3>
 <p>TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.</p>
 <p>The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).</p>

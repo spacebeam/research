@@ -144,7 +144,27 @@ were synchronous, important for error handling since in coroutines <code>try/exp
 <p><em>Coroutines</em> use the Python 3 <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>
 <p>Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.</p>
 <h3>How to call a coroutine</h3>
-<p>Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded. This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:</p>
+<p>Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
+This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:</p>
+<div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">bad_call</span><span class="p">()</span>
+    <span class="c1"># This should raise ZeroDivisionError, but it won&#39;t cuz the coroutine is called incorrectly!</span>
+    <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
+and use the <code>await</code> or <code>yield</code> keyword in the call.</p>
+<div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">good_call</span><span class="p">():</span>
+    <span class="c1"># await will unwrap the object returned by divide() and raise the expection.</span>
+    <span class="n">await</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<h4>Fire and forget</h4>
+<p>```</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

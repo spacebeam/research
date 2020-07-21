@@ -84,9 +84,8 @@
       <div class="content">
          <p>That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.</p>
 <p>This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into Coroutines!</p>
-<p>Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach using multiple languages and zmq, splitting the game into separate components and developing separate systems to solve each.</p>
-<p>This trend gives rise to a new problem: how to tie these systems together into a functional real-time strategy playing bot.</p>
-<p>In this tutorial we discuss the architecture of <a href="https://liquipedia.net/starcraft/Blueberry">Blueberry</a>, our entry into the 2019/2020 StarCraft AI competitions, and the techniques used.</p>
+<p>Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with zmq and multiple languages, splitting the game into separate components and developing separate systems to solve each.</p>
+<p>This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot.</p>
 <h2>Coroutines</h2>
 <p><em>Coroutines</em> are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.</p>
 <p>Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.</p>
@@ -94,7 +93,7 @@
 <p>Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.</p>
 <p>In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.</p>
 <h3>Difference with processes</h3>
-<p>Processes are idependen units of execution instead of a subroutine that lives inside a process.</p>
+<p>Processes are idependent units of execution instead of a subroutine that lives inside a process.</p>
 <h3>Cooperative multitasking</h3>
 <p>Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.</p>
 <p>Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.</p>

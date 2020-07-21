@@ -6,11 +6,9 @@ That's the basics you go out, 16 supply, 16 factory, train 2 marines and put the
 
 This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into Coroutines!
 
-Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach using multiple languages and zmq, splitting the game into separate components and developing separate systems to solve each.
+Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with zmq and multiple languages, splitting the game into separate components and developing separate systems to solve each.
 
-This trend gives rise to a new problem: how to tie these systems together into a functional real-time strategy playing bot.
-
-In this tutorial we discuss the architecture of [Blueberry](https://liquipedia.net/starcraft/Blueberry), our entry into the 2019/2020 StarCraft AI competitions, and the techniques used.
+This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot.
 
 ## Coroutines
 
@@ -26,7 +24,7 @@ In different programming languages, a subroutine may be called a procedure, a fu
 
 ### Difference with processes
 
-Processes are idependen units of execution instead of a subroutine that lives inside a process.
+Processes are idependent units of execution instead of a subroutine that lives inside a process.
 
 ### Cooperative multitasking
 

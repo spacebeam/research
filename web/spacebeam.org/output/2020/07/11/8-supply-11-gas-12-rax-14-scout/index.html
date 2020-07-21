@@ -210,7 +210,14 @@ If it fails, the <code>IOLoop</code> will log a stack trace:</p>
 </pre></div>
 
 
-<p>Sometimes a more complicated loop may be desirable.</p>
+<p>Sometimes a more complicated loop may be desirable. For example, the previous loop runs every <code>60+N</code> seconds,
+where <code>N</code> is the running time of <code>do_something()</code>. To run exactly every 60 seconds, use the interleaving pattern from above:</p>
+<div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">menute_loop2</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="nb">next</span> <span class="o">=</span> <span class="n">gen</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span> <span class="c1"># Start the clock.</span>
+    <span class="n">await</span> <span class="n">do_something</span><span class="p">()</span> <span class="c1"># Run while the clock is ticking.</span>
+    <span class="n">await</span> <span class="nb">next</span>           <span class="c1"># Wait fot he timer to run out.</span>
+</pre></div>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

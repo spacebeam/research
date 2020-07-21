@@ -179,5 +179,14 @@ async def minute_loop():
 IOLoop.current().spawn_callback(minute_loop)
 ```
 
-Sometimes a more complicated loop may be desirable.
+Sometimes a more complicated loop may be desirable. For example, the previous loop runs every `60+N` seconds,
+where `N` is the running time of `do_something()`. To run exactly every 60 seconds, use the interleaving pattern from above:
 
+```
+:::python
+async def menute_loop2():
+    while True:
+    next = gen.sleep(60) # Start the clock.
+    await do_something() # Run while the clock is ticking.
+    await next           # Wait fot he timer to run out.
+```

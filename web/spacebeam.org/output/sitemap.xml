@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-21T15:09:06-00:00</lastmod>
+<lastmod>2020-07-21T15:40:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-21T15:09:06-00:00</lastmod>
+<lastmod>2020-07-21T15:40:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-21T15:09:06-00:00</lastmod>
+<lastmod>2020-07-21T15:40:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-21T15:09:06-00:00</lastmod>
+<lastmod>2020-07-21T15:40:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -181,6 +181,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/2019/10/06/the-undermind-podcast-33/</loc>
 <lastmod>2019-10-06T00:00:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
+</url>
+
+<url>
+<loc>/2019/05/13/the-undermind-podcast-21/</loc>
+<lastmod>2019-05-13T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>
 </url>

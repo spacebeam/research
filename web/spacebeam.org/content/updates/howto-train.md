@@ -146,19 +146,61 @@ The `multi` function accepts lists and dicts whose values are `Futures` and wait
 :::python
 from tornado.gen import multi
 
-async def parallel_fetch()
+async def parallel_fetch(url1, url2):
+    resp1, resp2 = await multi([http_client.fetch(url1),
+                                http_client.fetch(url2)]
 
-async def parallel_fetch_many(urls)
+async def parallel_fetch_many(urls):
+    responses = await multi([http_client.fetch(url) for url in urls])
+    # responses is a list of HTTPResponses in the same order
 
-async def parallel_fetch_dict(urls)
+async def parallel_fetch_dict(urls):
 ```
 
 In decorated coroutines, it is possible to `yield` the list or dict directly:
 
 ```
+:::python
+@gen.coroutine
+def parallel_fetch_decorated(url1, url2):
+    resp1, resp2 = yield [http_client.fetch(url1),
+                          http_client.fetch(url2)]
 ```
 
 ### Interleaving
+
+Sometimes it is useful to save a `Future` instead of yielding it immediately, so you can start another operation before waiting.
+
+```
+:::python
+
+from tornado.gen import convert_yielded
+
+async def get(self):
+    # convert_yielded() starts the native coroutine in the background.
+    # This is equivalent to asyncio.ensure_future() (both work)
+    fetch_future = convert_yielded(self.fetch_next_chunk())
+    while True:
+        chunk = yield fetch_future
+        if chunk is None: break
+        self.write(chunk)
+        fetch_future = convert_yielded(self.fetch_next_chunk())
+        yield self.flush()
+```
+
+This is a little easier to do with decorated coroutines, because they start immediately when called:
+
+```
+@gen.coroutine
+def gen(self):
+    fetch_future = self.fetch_next_chunk()
+    while True:
+        chunk = yield fetch_future
+        is chunk is None: break
+        self.write(chunk)
+        fetch_future = self.fetch_next_chunk()
+        yield self.flush()
+```
 
 ### Looping
 
@@ -184,9 +226,9 @@ where `N` is the running time of `do_something()`. To run exactly every 60 secon
 
 ```
 :::python
-async def menute_loop2():
+async def minute_loop2():
     while True:
-    next = gen.sleep(60) # Start the clock.
-    await do_something() # Run while the clock is ticking.
-    await next           # Wait fot he timer to run out.
+        nxt = gen.sleep(60)  # Start the clock.
+        await do_something() # Run while the clock is ticking.
+        await nxt            # Wait fot he timer to run out.
 ```

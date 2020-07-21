@@ -11,7 +11,7 @@
 &lt;p&gt;Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.&lt;/p&gt;
 &lt;p&gt;In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.&lt;/p&gt;
 &lt;h3&gt;Difference with processes&lt;/h3&gt;
-&lt;p&gt;Processes are idependent units of execution instead of a subroutine that lives inside a process.&lt;/p&gt;
+&lt;p&gt;Processes are idependent units of execution, a subroutine lives inside a process.&lt;/p&gt;
 &lt;h3&gt;Cooperative multitasking&lt;/h3&gt;
 &lt;p&gt;Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.&lt;/p&gt;
 &lt;p&gt;Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.&lt;/p&gt;
@@ -53,10 +53,6 @@ were synchronous, important for error handling since in coroutines &lt;code&gt;t
 &lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.&lt;/p&gt;
-&lt;h3&gt;Protocols&lt;/h3&gt;
-&lt;p&gt;TBD&lt;/p&gt;
-&lt;h3&gt;Community&lt;/h3&gt;
-&lt;p&gt;TBD&lt;/p&gt;
 &lt;h2&gt;Coroutines again&lt;/h2&gt;
 &lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;
@@ -82,7 +78,19 @@ and use the &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; key
 
 
 &lt;h4&gt;Fire and forget&lt;/h4&gt;
-&lt;p&gt;```&lt;/p&gt;</content></entry><entry><title>Gathering Minerals to someday Build a Refinery and extract Vespene Gas</title><link href="/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+&lt;p&gt;Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use &lt;code&gt;IOLoop.spawn_callback&lt;/code&gt;, which makes the &lt;code&gt;IOLoop&lt;/code&gt; responsible for the call.
+If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# The IOLoop will catch the expection and print a stack trace&lt;/span&gt;
+&lt;span class="c1"&gt;# in the logs. Note that this doesn&amp;#39;t look like a normal call,&lt;/span&gt;
+&lt;span class="c1"&gt;# since we pass the function object to be called by the IOLoop.&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Coroutine patterns&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Gathering Minerals to someday Build a Refinery and extract Vespene Gas</title><link href="/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
 This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through execute the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
 we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.

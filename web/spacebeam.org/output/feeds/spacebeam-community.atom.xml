@@ -17,7 +17,7 @@
 &lt;p&gt;Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.&lt;/p&gt;
 &lt;h2&gt;Python 3 &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.&lt;/p&gt;
-&lt;p&gt;Asynchronous operations generally return placeholder objects (Futures).
+&lt;p&gt;Asynchronous operations generally return placeholder objects (&lt;a href="https://docs.python.org/3.7/library/concurrent.futures.html"&gt;Futures&lt;/a&gt;).
 &lt;code&gt;Futures&lt;/code&gt; are usually transformed into their result with the &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt; keywords.&lt;/p&gt;
 &lt;h3&gt;Examples&lt;/h3&gt;
 &lt;p&gt;Here is a sample synchronous function:&lt;/p&gt;

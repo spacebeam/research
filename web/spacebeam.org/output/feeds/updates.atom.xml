@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - updates</title><link href="/" rel="alternate"></link><link href="/feeds/updates.atom.xml" rel="self"></link><id>/</id><updated>2020-07-15T00:00:00+02:00</updated><entry><title>One in a million, repeats very often</title><link href="/2020/07/15/one-in-a-million-repeats-very-often/" rel="alternate"></link><published>2020-07-15T00:00:00+02:00</published><updated>2020-07-15T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-15:/2020/07/15/one-in-a-million-repeats-very-often/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>BUILD A WALL &amp; LINGS WILL FALL</title><link href="/2020/07/13/build-a-wall-lings-will-fall/" rel="alternate"></link><published>2020-07-13T00:00:00+02:00</published><updated>2020-07-13T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-13:/2020/07/13/build-a-wall-lings-will-fall/</id><summary type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
 (and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
-&lt;p&gt;Workers are often also builders, and are weak in fights compared to other units.&lt;/p&gt;
-&lt;p&gt;Buldings …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
+&lt;p&gt;Buldings and research define technology …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
 (and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
-&lt;p&gt;Workers are often also builders, and are weak in fights compared to other units.&lt;/p&gt;
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
 &lt;p&gt;Buldings and research define technology trees (directed acyclic graphs) and each state of a tech tree allow for the production of different unit types 
 and the training of new unit abilities.&lt;/p&gt;
 &lt;p&gt;An opening denotes the same thing as in Chess: an early game plan for which the player has to make choices.&lt;/p&gt;

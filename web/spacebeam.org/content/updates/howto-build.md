@@ -5,7 +5,7 @@ description: Now that we are training our workers, eventually we'll be running o
 Players gather resources to build units and defeat their opponents. To that end, they often have worker units
 (and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.
 
-Workers are often also builders, and are weak in fights compared to other units.
+Workers are often weak in fights compared to other units.
 
 Buldings and research define technology trees (directed acyclic graphs) and each state of a tech tree allow for the production of different unit types 
 and the training of new unit abilities.

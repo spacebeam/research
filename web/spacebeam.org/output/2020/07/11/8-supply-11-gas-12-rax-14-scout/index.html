@@ -146,7 +146,8 @@ This means it is important to call coroutines in the right way, or you may have 
     <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
 
 <span class="k">def</span> <span class="nf">bad_call</span><span class="p">()</span>
-    <span class="c1"># This should raise ZeroDivisionError, but it won&#39;t cuz the coroutine is called incorrectly!</span>
+    <span class="c1"># This should raise ZeroDivisionError, but it won&#39;t</span>
+    <span class="c1"># because the coroutine is called incorrectly!</span>
     <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
@@ -154,7 +155,8 @@ This means it is important to call coroutines in the right way, or you may have 
 <p>In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
 and use the <code>await</code> or <code>yield</code> keyword in the call.</p>
 <div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">good_call</span><span class="p">():</span>
-    <span class="c1"># await will unwrap the object returned by divide() and raise the expection.</span>
+    <span class="c1"># await will unwrap the object returned by divide()</span>
+    <span class="c1"># and raise the expection.</span>
     <span class="n">await</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 

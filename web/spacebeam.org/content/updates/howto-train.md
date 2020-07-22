@@ -101,7 +101,8 @@ async def divide(x, y):
     return x / y
     
 def bad_call()
-    # This should raise ZeroDivisionError, but it won't cuz the coroutine is called incorrectly!
+    # This should raise ZeroDivisionError, but it won't
+    # because the coroutine is called incorrectly!
     divide(1, 0)
 ```
 In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
@@ -110,7 +111,8 @@ and use the `await` or `yield` keyword in the call.
 ```
 :::python
 async def good_call():
-    # await will unwrap the object returned by divide() and raise the expection.
+    # await will unwrap the object returned by divide()
+    # and raise the expection.
     await divide(1, 0)
 ```
 #### Fire and forget

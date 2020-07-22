@@ -64,7 +64,8 @@ This means it is important to call coroutines in the right way, or you may have 
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bad_call&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="c1"&gt;# This should raise ZeroDivisionError, but it won&amp;#39;t cuz the coroutine is called incorrectly!&lt;/span&gt;
+    &lt;span class="c1"&gt;# This should raise ZeroDivisionError, but it won&amp;#39;t&lt;/span&gt;
+    &lt;span class="c1"&gt;# because the coroutine is called incorrectly!&lt;/span&gt;
     &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -72,7 +73,8 @@ This means it is important to call coroutines in the right way, or you may have 
 &lt;p&gt;In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
 and use the &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword in the call.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;good_call&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c1"&gt;# await will unwrap the object returned by divide() and raise the expection.&lt;/span&gt;
+    &lt;span class="c1"&gt;# await will unwrap the object returned by divide()&lt;/span&gt;
+    &lt;span class="c1"&gt;# and raise the expection.&lt;/span&gt;
     &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 

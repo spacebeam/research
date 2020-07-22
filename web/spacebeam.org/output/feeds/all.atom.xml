@@ -42,7 +42,7 @@
 
 &lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since in coroutines &lt;code&gt;try/expect&lt;/code&gt; blocks work as you would expect.&lt;/p&gt;
+were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; blocks work as you would expect.&lt;/p&gt;
 &lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
 &lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
 &lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
@@ -52,7 +52,7 @@ were synchronous, important for error handling since in coroutines &lt;code&gt;t
 &lt;li&gt;Smart patterns like pub-sub, push-pull, request-reply.&lt;/li&gt;
 &lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.&lt;/p&gt;
+&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. &lt;a href="http://zguide.zeromq.org/"&gt;Read the guide&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Coroutines again&lt;/h2&gt;
 &lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;

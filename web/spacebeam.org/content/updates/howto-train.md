@@ -67,7 +67,7 @@ async def asynchronous_fetch(url):
 
 Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since in coroutines `try/expect` blocks work as you would expect.
+were synchronous, important for error handling since `try/expect` blocks work as you would expect.
 
 ## Why ZeroMQ helps?
 ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.
@@ -80,7 +80,7 @@ Multilingual Distributed Messaging thanks to the ZeroMQ Community.
 - Smart patterns like pub-sub, push-pull, request-reply.
 - Backed by a large and active open-source community.
 
-It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. Read the guide and learn the basics.
+It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. [Read the guide](http://zguide.zeromq.org/).
 
 ## Coroutines again
 

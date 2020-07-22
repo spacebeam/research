@@ -112,7 +112,7 @@
 </pre></div>
 
 
-<p>And here the same function rewritten asynchronously as a native coroutine:</p>
+<p>And here the same rewritten asynchronously as a native coroutine:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tornado.httpclient</span> <span class="kn">import</span> <span class="n">AsyncHTTPClient</span>
 
 <span class="n">async</span> <span class="k">def</span> <span class="nf">asynchronous_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
@@ -124,7 +124,7 @@
 
 <p>Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since <code>try/expect</code> blocks work as you would expect.</p>
+were synchronous, important for error handling since <code>try/expect</code> work as you would expect.</p>
 <h2>Why ZeroMQ helps?</h2>
 <p>ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.</p>
 <p>You can use this feature to queue, route, and filter messages according to various <code>patterns</code>.</p>
@@ -172,8 +172,8 @@ If it fails, the <code>IOLoop</code> will log a stack trace:</p>
 
 
 <h2>Coroutine patterns</h2>
-<h3>Calling blocing functions</h3>
-<p>The simplest way to call a blocking function from a coroutine is to use <code>IOLoop.run_in_executor</code>, which returns <code>Futures</code> that are compatible with coroutines:</p>
+<h3>Calling blocking functions</h3>
+<p>The simplest way to call a blocking function from a coroutine is to use <code>IOLoop.run_in_executor</code>, which returns <code>Futures</code> that are compatible:</p>
 <div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">call_blocking</span><span class="p">():</span>
     <span class="n">await</span> <span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">run_in_executor</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">blocking_func</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
 </pre></div>

@@ -30,7 +30,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And here the same function rewritten asynchronously as a native coroutine:&lt;/p&gt;
+&lt;p&gt;And here the same rewritten asynchronously as a native coroutine:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;
 
 &lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;asynchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -42,7 +42,7 @@
 
 &lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; blocks work as you would expect.&lt;/p&gt;
+were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; work as you would expect.&lt;/p&gt;
 &lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
 &lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
 &lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
@@ -90,8 +90,8 @@ If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&g
 
 
 &lt;h2&gt;Coroutine patterns&lt;/h2&gt;
-&lt;h3&gt;Calling blocing functions&lt;/h3&gt;
-&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible with coroutines:&lt;/p&gt;
+&lt;h3&gt;Calling blocking functions&lt;/h3&gt;
+&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;call_blocking&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_in_executor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blocking_func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

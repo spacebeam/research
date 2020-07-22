@@ -53,7 +53,7 @@ def synchronous_fetch(url):
     return response.body
 ```
 
-And here the same function rewritten asynchronously as a native coroutine:
+And here the same rewritten asynchronously as a native coroutine:
 
 ```
 :::python
@@ -67,7 +67,7 @@ async def asynchronous_fetch(url):
 
 Anything you can do with coroutines you can also do by passing callback around, but coroutines
 provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since `try/expect` blocks work as you would expect.
+were synchronous, important for error handling since `try/expect` work as you would expect.
 
 ## Why ZeroMQ helps?
 ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.
@@ -130,9 +130,9 @@ IOLoop.current().spawn_callback(divide, 1, 0)
 
 ## Coroutine patterns
 
-### Calling blocing functions
+### Calling blocking functions
 
-The simplest way to call a blocking function from a coroutine is to use `IOLoop.run_in_executor`, which returns `Futures` that are compatible with coroutines:
+The simplest way to call a blocking function from a coroutine is to use `IOLoop.run_in_executor`, which returns `Futures` that are compatible:
 
 ```
 :::python

@@ -188,8 +188,8 @@ If it fails, the <code>IOLoop</code> will log a stack trace:</p>
                                 <span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url2</span><span class="p">)]</span>
 
 <span class="n">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_many</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
-    <span class="n">responses</span> <span class="o">=</span> <span class="n">await</span> <span class="n">multi</span><span class="p">([</span><span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">])</span>
-    <span class="c1"># responses is a list of HTTPResponses in the same order</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">await</span> <span class="n">multi</span><span class="p">([</span><span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">])</span>
+    <span class="c1"># res is a list of HTTPResponses in the same order</span>
 
 <span class="n">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_dict</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
 </pre></div>

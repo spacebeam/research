@@ -19,6 +19,19 @@ Available resources constrain the technology advancement and the number of units
 and units also take time, the arbitrage between investing in the economy, in technological advancements, and in units production
 is the crux of the strategy during the whole game.
 
+## opening
+
+In StarCraft an opening refer to the initial moves of a game. The term can refer to the initial moves by either side, but an opening by Zerg may also be known as *defense*. 
+There are dozens of different openings, and hundreds of variants. These vary widely in character from quiet positional play to wild tactical play.
+
+In addition to referring to specific move sequences, the opening is the first phase of a game, the other phases being the middlegame and the endgame.
+
+Opening moves that are considered standard are referred to as "book moves". Reference works often present move sequnces in simple algebraic notation, opening trees or theory tables. When a game begins to deviate deom known, opening theory, the players are said to be "out of the book".
+
+Professional players spend yers studying openings, and continue doing so throughout their careers, as opening theory continues to evolve.
+
+The study of openings can become unbalanced if it is to the exclusion of tactical training and middlegame and endgame strategy.
+
 ## Further Reading
 
 TBD

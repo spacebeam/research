@@ -153,10 +153,13 @@ async def parallel_fetch(url1, url2):
                                 http_client.fetch(url2)]
 
 async def parallel_fetch_many(urls):
-    responses = await multi([http_client.fetch(url) for url in urls])
-    # responses is a list of HTTPResponses in the same order
+    res = await multi([http_client.fetch(u) for u in urls])
+    # res is a list of HTTPResponses in the same order
 
 async def parallel_fetch_dict(urls):
+    res = await multi({url: http_client.fetch(url)
+                      for url in urls})
+    # res is a dict {url: HTTPResponse}
 ```
 
 In decorated coroutines, it is possible to `yield` the list or dict directly:
@@ -175,7 +178,6 @@ Sometimes it is useful to save a `Future` instead of yielding it immediately, so
 
 ```
 :::python
-
 from tornado.gen import convert_yielded
 
 async def get(self):
@@ -193,6 +195,7 @@ async def get(self):
 This is a little easier to do with decorated coroutines, because they start immediately when called:
 
 ```
+:::python
 @gen.coroutine
 def gen(self):
     fetch_future = self.fetch_next_chunk()

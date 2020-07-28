@@ -5,8 +5,8 @@ description: Let's learn to order our workers to gather some resources closest t
 [TorchCraft](https://github.com/TorchCraft/TorchCraft/) is a [BWAPI](https://bwapi.github.io/) module that sends StarCraft: Brood War data out over a [ZMQ](https://zeromq.org) connection.
 This lets you parse game data and interact with the Brood War API from anywhere.
 
-This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
-we are going to dive into TorchCraft [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py), learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!
+This tutorial will walk you through start the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
+we are going to dive into TorchCraft's Python API and its provided [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py), learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!
 
 Let's start the game and learn a bit more about TorchCraft a general overview can be found in:
 
@@ -166,73 +166,6 @@ end
 TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.
 
 TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.
-
-### The frame data structure
-
-In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".
-
-The frame is formatted in a table in roughly the following structure:
-```
-:::javascript
-received_update: {
-    // Number of frames in the current game
-    frame_from_bwapi: int
-    units_myself: {
-        // Unit ID
-        int: {
-            // Unit ID
-            target: int
-            targetpos: {
-                // Absolute x
-                1: int
-                // Absolute y
-                2: int
-            }
-            // Type of air weapon
-            awtype: int
-            // Type of ground weapon
-            gwtype: int
-            // Frames before next air weapon attack
-            awcd: int
-            // Number of hit points
-            hp: int
-            // Number of energy points, if any
-            energy: int
-            // Unit type
-            type: int
-            // Position
-            position: {
-                // Absolute x
-                1: int
-                // Absolute y
-                2: int
-            }
-            // Number of armor points
-            armor: int
-            // Frames before next ground weapon attack
-            gwcd: int
-            // Ground weapon attack damae
-            gwattack: int
-            // Protoss shield points
-            shield: int
-            // Air weapon attack damage
-            awattack: int
-            // Size of the unit
-            size: int
-            // Whether unit is enemy or not
-            enemy: bool
-            // Whether unit is idle or not
-            idle: bool
-            // Ground weapon max range
-            gwrange: int
-            // Air weapon max range
-            awrange: int
-        }
-    }
-    // Same format as "units_myself"
-    units_enemy: ...
-}
-```
 
 ## Step 4 - Analyzing TorchCraft `example.py`
 

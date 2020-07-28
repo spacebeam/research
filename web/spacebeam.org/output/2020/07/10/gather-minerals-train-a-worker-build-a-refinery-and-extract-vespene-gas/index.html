@@ -84,8 +84,8 @@
       <div class="content">
          <p><a href="https://github.com/TorchCraft/TorchCraft/">TorchCraft</a> is a <a href="https://bwapi.github.io/">BWAPI</a> module that sends StarCraft: Brood War data out over a <a href="https://zeromq.org">ZMQ</a> connection.
 This lets you parse game data and interact with the Brood War API from anywhere.</p>
-<p>This tutorial will walk you through execute the game for the first time after <a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/">installing the environment</a>,
-we are going to dive into TorchCraft <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a>, learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!</p>
+<p>This tutorial will walk you through start the game for the first time after <a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/">installing the environment</a>,
+we are going to dive into TorchCraft's Python API and its provided <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a>, learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!</p>
 <p>Let's start the game and learn a bit more about TorchCraft a general overview can be found in:</p>
 <p>Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
 Richoux, F. and Usunier, N., 2016. <em>TorchCraft: a Library for Machine Learning Research
@@ -212,70 +212,6 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <p>TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.</p>
 <p>TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.</p>
-<h3>The frame data structure</h3>
-<p>In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".</p>
-<p>The frame is formatted in a table in roughly the following structure:</p>
-<div class="highlight"><pre><span></span><span class="nx">received_update</span><span class="o">:</span> <span class="p">{</span>
-    <span class="c1">// Number of frames in the current game</span>
-    <span class="nx">frame_from_bwapi</span><span class="o">:</span> <span class="kr">int</span>
-    <span class="nx">units_myself</span><span class="o">:</span> <span class="p">{</span>
-        <span class="c1">// Unit ID</span>
-        <span class="kr">int</span><span class="o">:</span> <span class="p">{</span>
-            <span class="c1">// Unit ID</span>
-            <span class="nx">target</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="nx">targetpos</span><span class="o">:</span> <span class="p">{</span>
-                <span class="c1">// Absolute x</span>
-                <span class="mi">1</span><span class="o">:</span> <span class="kr">int</span>
-                <span class="c1">// Absolute y</span>
-                <span class="mi">2</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="p">}</span>
-            <span class="c1">// Type of air weapon</span>
-            <span class="nx">awtype</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Type of ground weapon</span>
-            <span class="nx">gwtype</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Frames before next air weapon attack</span>
-            <span class="nx">awcd</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Number of hit points</span>
-            <span class="nx">hp</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Number of energy points, if any</span>
-            <span class="nx">energy</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Unit type</span>
-            <span class="nx">type</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Position</span>
-            <span class="nx">position</span><span class="o">:</span> <span class="p">{</span>
-                <span class="c1">// Absolute x</span>
-                <span class="mi">1</span><span class="o">:</span> <span class="kr">int</span>
-                <span class="c1">// Absolute y</span>
-                <span class="mi">2</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="p">}</span>
-            <span class="c1">// Number of armor points</span>
-            <span class="nx">armor</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Frames before next ground weapon attack</span>
-            <span class="nx">gwcd</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Ground weapon attack damae</span>
-            <span class="nx">gwattack</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Protoss shield points</span>
-            <span class="nx">shield</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Air weapon attack damage</span>
-            <span class="nx">awattack</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Size of the unit</span>
-            <span class="nx">size</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Whether unit is enemy or not</span>
-            <span class="nx">enemy</span><span class="o">:</span> <span class="nx">bool</span>
-            <span class="c1">// Whether unit is idle or not</span>
-            <span class="nx">idle</span><span class="o">:</span> <span class="nx">bool</span>
-            <span class="c1">// Ground weapon max range</span>
-            <span class="nx">gwrange</span><span class="o">:</span> <span class="kr">int</span>
-            <span class="c1">// Air weapon max range</span>
-            <span class="nx">awrange</span><span class="o">:</span> <span class="kr">int</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="c1">// Same format as &quot;units_myself&quot;</span>
-    <span class="nx">units_enemy</span><span class="o">:</span> <span class="p">...</span>
-<span class="p">}</span>
-</pre></div>
-
-
 <h2>Step 4 - Analyzing TorchCraft <code>example.py</code></h2>
 <p>What is TorchCraft's <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a> actually doing?</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>

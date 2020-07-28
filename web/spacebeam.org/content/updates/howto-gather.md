@@ -1,4 +1,4 @@
-title:  Gathering Minerals to someday Build a Refinery and extract Vespene Gas
+itle:  Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas
 date: 2020-07-10
 description: Let's learn to order our workers to gather some resources closest to them!
 
@@ -6,7 +6,7 @@ description: Let's learn to order our workers to gather some resources closest t
 This lets you parse game data and interact with the Brood War API from anywhere.
 
 This tutorial will walk you through execute the game for the first time after [installing the environment](https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/),
-we are going to dive into TorchCraft example.py and start gathering minerals to someday extract vespene gas.
+we are going to dive into TorchCraft [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py), learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!
 
 Let's start the game and learn a bit more about TorchCraft a general overview can be found in:
 

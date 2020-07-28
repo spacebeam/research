@@ -23,7 +23,7 @@ cd /opt/StarCraft
 ```
 wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
  -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
- --name blueberry --game blueberry --race T\
+ --name Blueberry --game Blueberry --race T\
  --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&\
 wine Chaoslauncher/Chaoslauncher.exe
 ```
@@ -48,7 +48,7 @@ parser.add_argument('-p', '--path',
                     help='StarCraft path')
 parser.add_argument('-b', '--bot',
                     type=str,
-                    default='blueberry')
+                    default='Blueberry')
 parser.add_argument('-r', '--race',
                     type=str,
                     default='Terran')
@@ -94,7 +94,7 @@ $ python3 /usr/src/starcraft-sif/examples/launcher.py
 
 {% img [class name(s)] /images/1.png %}
 
-Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `blueberry` waiting in the lobby.
+Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE` plugins and click on `Start` hopefully that will launch the game on your new environment, check `Multiplayer -> Local PC` and confirm that you see `Blueberry` waiting in the lobby.
 
 {%img [class name(s)] /images/2.png %}
 
@@ -105,9 +105,7 @@ Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE
 
 TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here [PyTorch](https://pytorch.org).
 
-TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.
-
-This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.
+TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.
 
 StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.
 

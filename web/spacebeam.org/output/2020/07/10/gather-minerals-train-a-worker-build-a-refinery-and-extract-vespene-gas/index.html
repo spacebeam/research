@@ -97,7 +97,7 @@ on Real-Time Strategy Games</em> - <a href="https://arxiv.org/abs/1611.00625">ar
 
 <div class="highlight"><pre><span></span>wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
  -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
- --name blueberry --game blueberry --race T\
+ --name Blueberry --game Blueberry --race T\
  --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;\
 wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
@@ -120,7 +120,7 @@ wine Chaoslauncher/Chaoslauncher.exe
                     <span class="n">help</span><span class="o">=</span><span class="s1">&#39;StarCraft path&#39;</span><span class="p">)</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span> <span class="s1">&#39;--bot&#39;</span><span class="p">,</span>
                     <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;blueberry&#39;</span><span class="p">)</span>
+                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Blueberry&#39;</span><span class="p">)</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;--race&#39;</span><span class="p">,</span>
                     <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                     <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Terran&#39;</span><span class="p">)</span>
@@ -160,14 +160,13 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p><img class="[class name(s)]" src="/images/1.png"></p>
-<p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>blueberry</code> waiting in the lobby.</p>
+<p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>Blueberry</code> waiting in the lobby.</p>
 <p><img class="[class name(s)]" src="/images/2.png"></p>
 <p><img class="[class name(s)]" src="/images/3.png"></p>
 <h2>Step 3 - What is TorchCraft again?</h2>
 <p><img class="[class name(s)]" src="/images/4.png"></p>
 <p>TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here <a href="https://pytorch.org">PyTorch</a>.</p>
-<p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.</p>
-<p>This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.</p>
+<p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.</p>
 <p>StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.</p>
 <h3>BWAPI</h3>
 <p>BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:</p>

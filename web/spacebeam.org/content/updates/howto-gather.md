@@ -233,37 +233,120 @@ while not state.game_ended:
 client.close()
 ```
 
-The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with C++ or Java bots.
+The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.
 
-## Minerals and Vespene Gas
+
+## Step 5 - Minerals and Vespene Gas
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
-## Step 5 -  Gathering Minerals
+### Step 5.1 - Run the `gathering.py` example
 
 ```
-TBD
+$ python3 /usr/src/starcraft-sif/examples/gathering.py
+
 ```
+
+### Step 5.2 - Run the `launcher.py` script
+
+```
+$ python3 /usr/src/starcraft-sif/examples/launcher.py
+```
+
+## Step 6 - Train a SCV
+
+```
+:::python
+for unit in units:
+    if tcc.isbuilding(unit.type)\
+     and tc.Constants.unittypes._dict[unit.type]\
+     == 'Terran_Command_Center':
+        if not producing\
+         and state.frame.resources[bot['id']].ore >= 50\
+         and state.frame.resources[bot['id']].used_psi\
+         != state.frame.resources[bot['id']].total_psi:
+            # Target, x, y are all 0
+            actions.append([
+                tcc.command_unit_protected,
+                unit.id,
+                tcc.unitcommandtypes.Train,
+                0,
+                0,
+                0,
+                tc.Constants.unittypes.Terran_SCV,
+            ])
+            # to train a unit you MUST input into "extra" field
+            producing = True
+```
+
+## Step 7 -  Gathering Minerals
 
 if all went well, the workers should now start gathering the mineral patches closest to them!
 
 ```
-TBD
+:::python
+for order in unit.orders:
+    if order.type not in tcc.command2order[tcc.unitcommandtypes.Gather]\
+     and order.type not in tcc.command2order[tcc.unitcommandtypes.Build]\
+     and order.type not in tcc.command2order[tcc.unitcommandtypes.Right_Click_Position]\
+     and not building_refinery:
+        target = get_closest(unit.x, unit.y, neutral)
+        if target is not None:
+            actions.append([
+                tcc.command_unit_protected,
+                unit.id,
+                tcc.unitcommandtypes.Right_Click_Unit,
+                target.id,
+            ])
 ```
 
 Don't expect an optimal spread of workers, but that is left as an exercise.
 
-## Step 6 - Build a Refinery
+## Step 8 - Build a Refinery
 
 We Require More Vespene Gas
 
 ```
-TBD
+:::python
+if tcc.isworker(unit.type):
+    workers.append(unit.id)
+    if state.frame.resources[bot['id']].ore >= 100 and not building_refinery:
+        for nu in neutral:
+            if tcc.unittypes._dict[nu.type] == 'Resource_Vespene_Geyser':
+                gas_harvesting.append(unit.id)
+                actions.append([
+                    tcc.command_unit,
+                    unit.id,
+                    tcc.unitcommandtypes.Build,
+                    -1,
+                    nu.x - 8,
+                    nu.y - 4,
+                    tcc.unittypes.Terran_Refinery,
+                ])
+                building_refinery = True
 ```
 
-## Step 7 - Gas harvesting 
+## Step 9 - Gas harvesting 
 ```
-TBD
+:::python
+if building_refinery and gas_harvesting[0] != unit.id\
+     and len(gas_harvesting) == 1 and refinery:
+        gas_harvesting.append(unit.id)
+        actions.append([
+            tcc.command_unit_protected,
+            unit.id,
+            tcc.unitcommandtypes.Right_Click_Unit,
+            refinery
+        ])
+elif refinery and gas_harvesting[0] != unit.id\
+     and gas_harvesting[1] != unit.id and len(gas_harvesting) == 2:
+        gas_harvesting.append(unit.id)
+        actions.append([
+            tcc.command_unit_protected,
+            unit.id,
+            tcc.unitcommandtypes.Right_Click_Unit,
+            refinery
+        ])
 ```
 
 ## Further Reading

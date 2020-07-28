@@ -271,28 +271,102 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<p>The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with C++ or Java bots.</p>
-<h2>Minerals and Vespene Gas</h2>
+<p>The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.</p>
+<h2>Step 5 - Minerals and Vespene Gas</h2>
 <p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
-<h2>Step 5 -  Gathering Minerals</h2>
-<div class="highlight"><pre><span></span>TBD
+<h3>Step 5.1 - Run the <code>gathering.py</code> example</h3>
+<div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/gathering.py
 </pre></div>
 
 
+<h3>Step 5.2 - Run the <code>launcher.py</code> script</h3>
+<div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
+</pre></div>
+
+
+<h2>Step 6 - Train a SCV</h2>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">isbuilding</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>\
+     <span class="ow">and</span> <span class="n">tc</span><span class="o">.</span><span class="n">Constants</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">]</span>\
+     <span class="o">==</span> <span class="s1">&#39;Terran_Command_Center&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">producing</span>\
+         <span class="ow">and</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">ore</span> <span class="o">&gt;=</span> <span class="mi">50</span>\
+         <span class="ow">and</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">used_psi</span>\
+         <span class="o">!=</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">total_psi</span><span class="p">:</span>
+            <span class="c1"># Target, x, y are all 0</span>
+            <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit_protected</span><span class="p">,</span>
+                <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Train</span><span class="p">,</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="n">tc</span><span class="o">.</span><span class="n">Constants</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">Terran_SCV</span><span class="p">,</span>
+            <span class="p">])</span>
+            <span class="c1"># to train a unit you MUST input into &quot;extra&quot; field</span>
+            <span class="n">producing</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+
+
+<h2>Step 7 -  Gathering Minerals</h2>
 <p>if all went well, the workers should now start gathering the mineral patches closest to them!</p>
-<div class="highlight"><pre><span></span>TBD
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">unit</span><span class="o">.</span><span class="n">orders</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Gather</span><span class="p">]</span>\
+     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Build</span><span class="p">]</span>\
+     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Position</span><span class="p">]</span>\
+     <span class="ow">and</span> <span class="ow">not</span> <span class="n">building_refinery</span><span class="p">:</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">get_closest</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">unit</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">neutral</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit_protected</span><span class="p">,</span>
+                <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Unit</span><span class="p">,</span>
+                <span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">])</span>
 </pre></div>
 
 
 <p>Don't expect an optimal spread of workers, but that is left as an exercise.</p>
-<h2>Step 6 - Build a Refinery</h2>
+<h2>Step 8 - Build a Refinery</h2>
 <p>We Require More Vespene Gas</p>
-<div class="highlight"><pre><span></span>TBD
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">isworker</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
+    <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">ore</span> <span class="o">&gt;=</span> <span class="mi">100</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">building_refinery</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">neutral</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">nu</span><span class="o">.</span><span class="n">type</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resource_Vespene_Geyser&#39;</span><span class="p">:</span>
+                <span class="n">gas_harvesting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+                <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                    <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit</span><span class="p">,</span>
+                    <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Build</span><span class="p">,</span>
+                    <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">nu</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">8</span><span class="p">,</span>
+                    <span class="n">nu</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="n">tcc</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">Terran_Refinery</span><span class="p">,</span>
+                <span class="p">])</span>
+                <span class="n">building_refinery</span> <span class="o">=</span> <span class="bp">True</span>
 </pre></div>
 
 
-<h2>Step 7 - Gas harvesting</h2>
-<div class="highlight"><pre><span></span>TBD
+<h2>Step 9 - Gas harvesting</h2>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">building_refinery</span> <span class="ow">and</span> <span class="n">gas_harvesting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">unit</span><span class="o">.</span><span class="n">id</span>\
+     <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">gas_harvesting</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">refinery</span><span class="p">:</span>
+        <span class="n">gas_harvesting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+            <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit_protected</span><span class="p">,</span>
+            <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Unit</span><span class="p">,</span>
+            <span class="n">refinery</span>
+        <span class="p">])</span>
+<span class="k">elif</span> <span class="n">refinery</span> <span class="ow">and</span> <span class="n">gas_harvesting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">unit</span><span class="o">.</span><span class="n">id</span>\
+     <span class="ow">and</span> <span class="n">gas_harvesting</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">unit</span><span class="o">.</span><span class="n">id</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">gas_harvesting</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">gas_harvesting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+            <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit_protected</span><span class="p">,</span>
+            <span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Unit</span><span class="p">,</span>
+            <span class="n">refinery</span>
+        <span class="p">])</span>
 </pre></div>
 
 

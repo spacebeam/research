@@ -1,208 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link href="/" rel="alternate"></link><link href="/feeds/spacebeam-community.atom.xml" rel="self"></link><id>/</id><updated>2020-07-15T00:00:00+02:00</updated><entry><title>One in a million, repeats very often</title><link href="/2020/07/15/one-in-a-million-repeats-very-often/" rel="alternate"></link><published>2020-07-15T00:00:00+02:00</published><updated>2020-07-15T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-15:/2020/07/15/one-in-a-million-repeats-very-often/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>BUILD A WALL &amp; LINGS WILL FALL</title><link href="/2020/07/13/build-a-wall-lings-will-fall/" rel="alternate"></link><published>2020-07-13T00:00:00+02:00</published><updated>2020-07-13T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-13:/2020/07/13/build-a-wall-lings-will-fall/</id><summary type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
-(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
-&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
-&lt;p&gt;Buldings and research define technology …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
-(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
-&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
-&lt;p&gt;Buldings and research define technology trees (directed acyclic graphs) and each state of a tech tree allow for the production of different unit types 
-and the training of new unit abilities.&lt;/p&gt;
-&lt;p&gt;An opening denotes the same thing as in Chess: an early game plan for which the player has to make choices.&lt;/p&gt;
-&lt;p&gt;That is the case in Chess because one can move only one piece at a time (each turn), and in StarCraft because,
-during the early game phase, one is economically limited and has to choose which tech paths to pursue.&lt;/p&gt;
-&lt;p&gt;Available resources constrain the technology advancement and the number of units one can produce. As producing buildings
-and units also take time, the arbitrage between investing in the economy, in technological advancements, and in units production
-is the crux of the strategy during the whole game.&lt;/p&gt;
-&lt;h2&gt;opening&lt;/h2&gt;
-&lt;p&gt;In StarCraft an opening refer to the initial moves of a game. The term can refer to the initial moves by either side, but an opening by Zerg may also be known as &lt;em&gt;defense&lt;/em&gt;. 
-There are dozens of different openings, and hundreds of variants. These vary widely in character from quiet positional play to wild tactical play.&lt;/p&gt;
-&lt;p&gt;In addition to referring to specific move sequences, the opening is the first phase of a game, the other phases being the middlegame and the endgame.&lt;/p&gt;
-&lt;p&gt;Opening moves that are considered standard are referred to as "book moves". Reference works often present move sequnces in simple algebraic notation, opening trees or theory tables. When a game begins to deviate deom known, opening theory, the players are said to be "out of the book".&lt;/p&gt;
-&lt;p&gt;Professional players spend yers studying openings, and continue doing so throughout their careers, as opening theory continues to evolve.&lt;/p&gt;
-&lt;p&gt;The study of openings can become unbalanced if it is to the exclusion of tactical training and middlegame and endgame strategy.&lt;/p&gt;
-&lt;h2&gt;Further Reading&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>8 Supply, 11 Gas, 12 Rax, 14 Scout</title><link href="/2020/07/11/8-supply-11-gas-12-rax-14-scout/" rel="alternate"></link><published>2020-07-11T00:00:00+02:00</published><updated>2020-07-11T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-11:/2020/07/11/8-supply-11-gas-12-rax-14-scout/</id><summary type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going …&lt;/p&gt;</summary><content type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
-&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into &lt;a href="https://en.wikipedia.org/wiki/Coroutine"&gt;Coroutines&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; and multiple languages, splitting the game into separate components and developing separate systems to solve each task.&lt;/p&gt;
-&lt;p&gt;This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?&lt;/p&gt;
-&lt;h2&gt;Coroutines&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.&lt;/p&gt;
-&lt;p&gt;Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.&lt;/p&gt;
-&lt;p&gt;A sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.&lt;/p&gt;
-&lt;p&gt;Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.&lt;/p&gt;
-&lt;p&gt;In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.&lt;/p&gt;
-&lt;h3&gt;Difference with processes&lt;/h3&gt;
-&lt;p&gt;Processes are idependent units of execution, a subroutine lives inside a process.&lt;/p&gt;
-&lt;h3&gt;Cooperative multitasking&lt;/h3&gt;
-&lt;p&gt;Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.&lt;/p&gt;
-&lt;p&gt;Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.&lt;/p&gt;
-&lt;h2&gt;Python 3 &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.&lt;/p&gt;
-&lt;p&gt;Asynchronous operations generally return placeholder objects (&lt;a href="https://docs.python.org/3.7/library/concurrent.futures.html"&gt;Futures&lt;/a&gt;).
-&lt;code&gt;Futures&lt;/code&gt; are usually transformed into their result with the &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Examples&lt;/h3&gt;
-&lt;p&gt;Here is a sample synchronous function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;synchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;And here the same rewritten asynchronously as a native coroutine:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;asynchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
-provide an important simplification by letting you organize your code in the same way you would if it
-were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; work as you would expect.&lt;/p&gt;
-&lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
-&lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
-&lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Multilingual Distributed Messaging thanks to the ZeroMQ Community.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Carries messages across inproc, IPC, TCP, multicast.&lt;/li&gt;
-&lt;li&gt;Smart patterns like pub-sub, push-pull, request-reply.&lt;/li&gt;
-&lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. &lt;a href="http://zguide.zeromq.org/"&gt;Read the guide&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Coroutines again&lt;/h2&gt;
-&lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;
-&lt;p&gt;Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.&lt;/p&gt;
-&lt;h3&gt;How to call a coroutine&lt;/h3&gt;
-&lt;p&gt;Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
-This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bad_call&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="c1"&gt;# This should raise ZeroDivisionError, but it won&amp;#39;t&lt;/span&gt;
-    &lt;span class="c1"&gt;# because the coroutine is called incorrectly!&lt;/span&gt;
-    &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
-and use the &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword in the call.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;good_call&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c1"&gt;# await will unwrap the object returned by divide()&lt;/span&gt;
-    &lt;span class="c1"&gt;# and raise the expection.&lt;/span&gt;
-    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;Fire and forget&lt;/h4&gt;
-&lt;p&gt;Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use &lt;code&gt;IOLoop.spawn_callback&lt;/code&gt;, which makes the &lt;code&gt;IOLoop&lt;/code&gt; responsible for the call.
-If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# The IOLoop will catch the expection and print a stack trace&lt;/span&gt;
-&lt;span class="c1"&gt;# in the logs. Note that this doesn&amp;#39;t look like a normal call,&lt;/span&gt;
-&lt;span class="c1"&gt;# since we pass the function object to be called by the IOLoop.&lt;/span&gt;
-&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Coroutine patterns&lt;/h2&gt;
-&lt;h3&gt;Calling blocking functions&lt;/h3&gt;
-&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;call_blocking&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_in_executor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blocking_func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Parallelism&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;multi&lt;/code&gt; function accepts lists and dicts whose values are &lt;code&gt;Futures&lt;/code&gt; and waits for all of those &lt;code&gt;Futures&lt;/code&gt; in parallel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-                                &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_many&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="c1"&gt;# res is a list of HTTPResponses in the same order&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                      &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
-    &lt;span class="c1"&gt;# res is a dict {url: HTTPResponse}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In decorated coroutines, it is possible to &lt;code&gt;yield&lt;/code&gt; the list or dict directly:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_decorated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-                          &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Interleaving&lt;/h3&gt;
-&lt;p&gt;Sometimes it is useful to save a &lt;code&gt;Future&lt;/code&gt; instead of yielding it immediately, so you can start another operation before waiting.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="c1"&gt;# convert_yielded() starts the native coroutine in the background.&lt;/span&gt;
-    &lt;span class="c1"&gt;# This is equivalent to asyncio.ensure_future() (both work)&lt;/span&gt;
-    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This is a little easier to do with decorated coroutines, because they start immediately when called:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
-        &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Looping&lt;/h3&gt;
-&lt;p&gt;In native coroutines, &lt;code&gt;async for&lt;/code&gt; can be used.&lt;/p&gt;
-&lt;h3&gt;Running in the background&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;PeriodicCallback&lt;/code&gt; is not normally used with coroutines. Instead, a coroutine can contain a &lt;code&gt;while True:&lt;/code&gt; loop and use &lt;code&gt;tornado.gen.sleep&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Coroutines that loop forever are generally started with&lt;/span&gt;
-&lt;span class="c1"&gt;# spawn_callback().&lt;/span&gt;
-&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Sometimes a more complicated loop may be desirable. For example, the previous loop runs every &lt;code&gt;60+N&lt;/code&gt; seconds,
-where &lt;code&gt;N&lt;/code&gt; is the running time of &lt;code&gt;do_something()&lt;/code&gt;. To run exactly every 60 seconds, use the interleaving pattern from above:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop2&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;nxt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Start the clock.&lt;/span&gt;
-        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# Run while the clock is ticking.&lt;/span&gt;
-        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;nxt&lt;/span&gt;            &lt;span class="c1"&gt;# Wait fot he timer to run out.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Further Reading&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas</title><link href="/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spacebeam: Distributed Artificial Intelligence - Spacebeam Community</title><link href="/" rel="alternate"></link><link href="/feeds/spacebeam-community.atom.xml" rel="self"></link><id>/</id><updated>2020-07-28T00:00:00+02:00</updated><entry><title>Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas</title><link href="/2020/07/28/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-28T00:00:00+02:00</published><updated>2020-07-28T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-28:/2020/07/28/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
 This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through start the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
 we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
@@ -504,7 +301,210 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 &lt;h2&gt;Further Reading&lt;/h2&gt;
 &lt;p&gt;Here is a link to the complete &lt;a href="https://github.com/spacebeam/starcraft-sif/blob/master/examples/gathering.py"&gt;gathering.py&lt;/a&gt; script if you are just curious,
-Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content></entry><entry><title>One in a million, repeats very often</title><link href="/2020/07/15/one-in-a-million-repeats-very-often/" rel="alternate"></link><published>2020-07-15T00:00:00+02:00</published><updated>2020-07-15T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-15:/2020/07/15/one-in-a-million-repeats-very-often/</id><summary type="html">&lt;p&gt;TBD&lt;/p&gt;</summary><content type="html">&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>BUILD A WALL &amp; LINGS WILL FALL</title><link href="/2020/07/13/build-a-wall-lings-will-fall/" rel="alternate"></link><published>2020-07-13T00:00:00+02:00</published><updated>2020-07-13T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-13:/2020/07/13/build-a-wall-lings-will-fall/</id><summary type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
+(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
+&lt;p&gt;Buldings and research define technology …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
+(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
+&lt;p&gt;Buldings and research define technology trees (directed acyclic graphs) and each state of a tech tree allow for the production of different unit types 
+and the training of new unit abilities.&lt;/p&gt;
+&lt;p&gt;An opening denotes the same thing as in Chess: an early game plan for which the player has to make choices.&lt;/p&gt;
+&lt;p&gt;That is the case in Chess because one can move only one piece at a time (each turn), and in StarCraft because,
+during the early game phase, one is economically limited and has to choose which tech paths to pursue.&lt;/p&gt;
+&lt;p&gt;Available resources constrain the technology advancement and the number of units one can produce. As producing buildings
+and units also take time, the arbitrage between investing in the economy, in technological advancements, and in units production
+is the crux of the strategy during the whole game.&lt;/p&gt;
+&lt;h2&gt;opening&lt;/h2&gt;
+&lt;p&gt;In StarCraft an opening refer to the initial moves of a game. The term can refer to the initial moves by either side, but an opening by Zerg may also be known as &lt;em&gt;defense&lt;/em&gt;. 
+There are dozens of different openings, and hundreds of variants. These vary widely in character from quiet positional play to wild tactical play.&lt;/p&gt;
+&lt;p&gt;In addition to referring to specific move sequences, the opening is the first phase of a game, the other phases being the middlegame and the endgame.&lt;/p&gt;
+&lt;p&gt;Opening moves that are considered standard are referred to as "book moves". Reference works often present move sequnces in simple algebraic notation, opening trees or theory tables. When a game begins to deviate deom known, opening theory, the players are said to be "out of the book".&lt;/p&gt;
+&lt;p&gt;Professional players spend yers studying openings, and continue doing so throughout their careers, as opening theory continues to evolve.&lt;/p&gt;
+&lt;p&gt;The study of openings can become unbalanced if it is to the exclusion of tactical training and middlegame and endgame strategy.&lt;/p&gt;
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>8 Supply, 11 Gas, 12 Rax, 14 Scout</title><link href="/2020/07/11/8-supply-11-gas-12-rax-14-scout/" rel="alternate"></link><published>2020-07-11T00:00:00+02:00</published><updated>2020-07-11T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-11:/2020/07/11/8-supply-11-gas-12-rax-14-scout/</id><summary type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going …&lt;/p&gt;</summary><content type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into &lt;a href="https://en.wikipedia.org/wiki/Coroutine"&gt;Coroutines&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; and multiple languages, splitting the game into separate components and developing separate systems to solve each task.&lt;/p&gt;
+&lt;p&gt;This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?&lt;/p&gt;
+&lt;h2&gt;Coroutines&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.&lt;/p&gt;
+&lt;p&gt;Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.&lt;/p&gt;
+&lt;p&gt;A sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.&lt;/p&gt;
+&lt;p&gt;Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.&lt;/p&gt;
+&lt;p&gt;In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.&lt;/p&gt;
+&lt;h3&gt;Difference with processes&lt;/h3&gt;
+&lt;p&gt;Processes are idependent units of execution, a subroutine lives inside a process.&lt;/p&gt;
+&lt;h3&gt;Cooperative multitasking&lt;/h3&gt;
+&lt;p&gt;Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.&lt;/p&gt;
+&lt;p&gt;Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.&lt;/p&gt;
+&lt;h2&gt;Python 3 &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.&lt;/p&gt;
+&lt;p&gt;Asynchronous operations generally return placeholder objects (&lt;a href="https://docs.python.org/3.7/library/concurrent.futures.html"&gt;Futures&lt;/a&gt;).
+&lt;code&gt;Futures&lt;/code&gt; are usually transformed into their result with the &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Examples&lt;/h3&gt;
+&lt;p&gt;Here is a sample synchronous function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;synchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And here the same rewritten asynchronously as a native coroutine:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;asynchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
+provide an important simplification by letting you organize your code in the same way you would if it
+were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; work as you would expect.&lt;/p&gt;
+&lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
+&lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
+&lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Multilingual Distributed Messaging thanks to the ZeroMQ Community.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Carries messages across inproc, IPC, TCP, multicast.&lt;/li&gt;
+&lt;li&gt;Smart patterns like pub-sub, push-pull, request-reply.&lt;/li&gt;
+&lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. &lt;a href="http://zguide.zeromq.org/"&gt;Read the guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Coroutines again&lt;/h2&gt;
+&lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;
+&lt;p&gt;Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.&lt;/p&gt;
+&lt;h3&gt;How to call a coroutine&lt;/h3&gt;
+&lt;p&gt;Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
+This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bad_call&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c1"&gt;# This should raise ZeroDivisionError, but it won&amp;#39;t&lt;/span&gt;
+    &lt;span class="c1"&gt;# because the coroutine is called incorrectly!&lt;/span&gt;
+    &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
+and use the &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword in the call.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;good_call&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c1"&gt;# await will unwrap the object returned by divide()&lt;/span&gt;
+    &lt;span class="c1"&gt;# and raise the expection.&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Fire and forget&lt;/h4&gt;
+&lt;p&gt;Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use &lt;code&gt;IOLoop.spawn_callback&lt;/code&gt;, which makes the &lt;code&gt;IOLoop&lt;/code&gt; responsible for the call.
+If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# The IOLoop will catch the expection and print a stack trace&lt;/span&gt;
+&lt;span class="c1"&gt;# in the logs. Note that this doesn&amp;#39;t look like a normal call,&lt;/span&gt;
+&lt;span class="c1"&gt;# since we pass the function object to be called by the IOLoop.&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Coroutine patterns&lt;/h2&gt;
+&lt;h3&gt;Calling blocking functions&lt;/h3&gt;
+&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;call_blocking&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_in_executor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blocking_func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Parallelism&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;multi&lt;/code&gt; function accepts lists and dicts whose values are &lt;code&gt;Futures&lt;/code&gt; and waits for all of those &lt;code&gt;Futures&lt;/code&gt; in parallel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                                &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_many&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="c1"&gt;# res is a list of HTTPResponses in the same order&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                      &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="c1"&gt;# res is a dict {url: HTTPResponse}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In decorated coroutines, it is possible to &lt;code&gt;yield&lt;/code&gt; the list or dict directly:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_decorated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                          &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Interleaving&lt;/h3&gt;
+&lt;p&gt;Sometimes it is useful to save a &lt;code&gt;Future&lt;/code&gt; instead of yielding it immediately, so you can start another operation before waiting.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# convert_yielded() starts the native coroutine in the background.&lt;/span&gt;
+    &lt;span class="c1"&gt;# This is equivalent to asyncio.ensure_future() (both work)&lt;/span&gt;
+    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a little easier to do with decorated coroutines, because they start immediately when called:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
+        &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Looping&lt;/h3&gt;
+&lt;p&gt;In native coroutines, &lt;code&gt;async for&lt;/code&gt; can be used.&lt;/p&gt;
+&lt;h3&gt;Running in the background&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;PeriodicCallback&lt;/code&gt; is not normally used with coroutines. Instead, a coroutine can contain a &lt;code&gt;while True:&lt;/code&gt; loop and use &lt;code&gt;tornado.gen.sleep&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Coroutines that loop forever are generally started with&lt;/span&gt;
+&lt;span class="c1"&gt;# spawn_callback().&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sometimes a more complicated loop may be desirable. For example, the previous loop runs every &lt;code&gt;60+N&lt;/code&gt; seconds,
+where &lt;code&gt;N&lt;/code&gt; is the running time of &lt;code&gt;do_something()&lt;/code&gt;. To run exactly every 60 seconds, use the interleaving pattern from above:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop2&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;nxt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Start the clock.&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# Run while the clock is ticking.&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;nxt&lt;/span&gt;            &lt;span class="c1"&gt;# Wait fot he timer to run out.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;

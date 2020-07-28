@@ -1,5 +1,5 @@
 title: Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas
-date: 2020-07-10
+date: 2020-07-28
 description: Let's learn to order our workers to gather some resources closest to them!
 
 [TorchCraft](https://github.com/TorchCraft/TorchCraft/) is a [BWAPI](https://bwapi.github.io/) module that sends StarCraft: Brood War data out over a [ZMQ](https://zeromq.org) connection.

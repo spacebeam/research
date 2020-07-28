@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-07-28T11:27:16-00:00</lastmod>
+<lastmod>2020-07-28T11:31:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-07-28T11:27:16-00:00</lastmod>
+<lastmod>2020-07-28T11:31:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-07-28T11:27:16-00:00</lastmod>
+<lastmod>2020-07-28T11:31:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-07-28T11:27:16-00:00</lastmod>
+<lastmod>2020-07-28T11:31:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,6 +53,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/2020/07/28/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/</loc>
+<lastmod>2020-07-28T00:00:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.99</priority>
+</url>
+
+<url>
 <loc>/2020/07/15/one-in-a-million-repeats-very-often/</loc>
 <lastmod>2020-07-15T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
@@ -69,13 +76,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/2020/07/11/8-supply-11-gas-12-rax-14-scout/</loc>
 <lastmod>2020-07-11T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/</loc>
-<lastmod>2020-07-10T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.99</priority>
 </url>
@@ -194,7 +194,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/updates</loc>
-<lastmod>2020-07-15T00:00:00+00:18</lastmod>
+<lastmod>2020-07-28T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

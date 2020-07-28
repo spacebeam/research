@@ -274,12 +274,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.</p>
 <h2>Step 5 - Minerals and Vespene Gas</h2>
 <p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
-<h3>Step 5.1 - Run the <code>gathering.py</code> example</h3>
+<h3>Run the <code>gathering.py</code> example</h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/gathering.py
 </pre></div>
 
 
-<h3>Step 5.2 - Run the <code>launcher.py</code> script</h3>
+<h3>Run the <code>launcher.py</code> script</h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
@@ -310,10 +310,14 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <h2>Step 7 -  Gathering Minerals</h2>
 <p>if all went well, the workers should now start gathering the mineral patches closest to them!</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">unit</span><span class="o">.</span><span class="n">orders</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Gather</span><span class="p">]</span>\
-     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Build</span><span class="p">]</span>\
-     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Position</span><span class="p">]</span>\
+<div class="highlight"><pre><span></span><span class="n">gather</span> <span class="o">=</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Gather</span><span class="p">]</span> 
+<span class="n">build</span> <span class="o">=</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Build</span><span class="p">]</span>
+<span class="n">rc</span> <span class="o">=</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Right_Click_Position</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">unit</span><span class="o">.</span><span class="n">orders</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gather</span>\
+     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">build</span>\\
+     <span class="ow">and</span> <span class="n">order</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rc</span>\ 
      <span class="ow">and</span> <span class="ow">not</span> <span class="n">building_refinery</span><span class="p">:</span>
         <span class="n">target</span> <span class="o">=</span> <span class="n">get_closest</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">unit</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">neutral</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -329,11 +333,14 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>Don't expect an optimal spread of workers, but that is left as an exercise.</p>
 <h2>Step 8 - Build a Refinery</h2>
 <p>We Require More Vespene Gas</p>
-<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">isworker</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="n">vespene</span> <span class="o">=</span> <span class="s1">&#39;Resource_Vespene_Geyser&#39;</span>
+
+<span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">isworker</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
     <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">ore</span> <span class="o">&gt;=</span> <span class="mi">100</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">building_refinery</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">resources</span><span class="p">[</span><span class="n">bot</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">ore</span> <span class="o">&gt;=</span> <span class="mi">100</span>\
+     <span class="ow">and</span> <span class="ow">not</span> <span class="n">building_refinery</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">neutral</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">nu</span><span class="o">.</span><span class="n">type</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resource_Vespene_Geyser&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">nu</span><span class="o">.</span><span class="n">type</span><span class="p">]</span> <span class="o">==</span> <span class="n">vespene</span><span class="p">:</span>
                 <span class="n">gas_harvesting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                 <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
                     <span class="n">tcc</span><span class="o">.</span><span class="n">command_unit</span><span class="p">,</span>

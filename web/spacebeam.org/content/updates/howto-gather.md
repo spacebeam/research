@@ -240,14 +240,14 @@ The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact 
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
-### Step 5.1 - Run the `gathering.py` example
+### Run the `gathering.py` example
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/gathering.py
 
 ```
 
-### Step 5.2 - Run the `launcher.py` script
+### Run the `launcher.py` script
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
@@ -285,10 +285,15 @@ if all went well, the workers should now start gathering the mineral patches clo
 
 ```
 :::python
+
+gather = tcc.command2order[tcc.unitcommandtypes.Gather] 
+build = tcc.command2order[tcc.unitcommandtypes.Build]
+rc = tcc.command2order[tcc.unitcommandtypes.Right_Click_Position]
+
 for order in unit.orders:
-    if order.type not in tcc.command2order[tcc.unitcommandtypes.Gather]\
-     and order.type not in tcc.command2order[tcc.unitcommandtypes.Build]\
-     and order.type not in tcc.command2order[tcc.unitcommandtypes.Right_Click_Position]\
+    if order.type not in gather\
+     and order.type not in build\\
+     and order.type not in rc\ 
      and not building_refinery:
         target = get_closest(unit.x, unit.y, neutral)
         if target is not None:
@@ -308,11 +313,15 @@ We Require More Vespene Gas
 
 ```
 :::python
+
+vespene = 'Resource_Vespene_Geyser'
+
 if tcc.isworker(unit.type):
     workers.append(unit.id)
-    if state.frame.resources[bot['id']].ore >= 100 and not building_refinery:
+    if state.frame.resources[bot['id']].ore >= 100\
+     and not building_refinery:
         for nu in neutral:
-            if tcc.unittypes._dict[nu.type] == 'Resource_Vespene_Geyser':
+            if tcc.unittypes._dict[nu.type] == vespene:
                 gas_harvesting.append(unit.id)
                 actions.append([
                     tcc.command_unit,

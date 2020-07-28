@@ -202,7 +202,289 @@ where &lt;code&gt;N&lt;/code&gt; is the running time of &lt;code&gt;do_something
 
 
 &lt;h2&gt;Further Reading&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas</title><link href="/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/" rel="alternate"></link><published>2020-07-10T00:00:00+02:00</published><updated>2020-07-10T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-10:/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through execute the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
+we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through execute the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
+we are going to dive into TorchCraft &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt;, learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!&lt;/p&gt;
+&lt;p&gt;Let's start the game and learn a bit more about TorchCraft a general overview can be found in:&lt;/p&gt;
+&lt;p&gt;Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
+Richoux, F. and Usunier, N., 2016. &lt;em&gt;TorchCraft: a Library for Machine Learning Research
+on Real-Time Strategy Games&lt;/em&gt; - &lt;a href="https://arxiv.org/abs/1611.00625"&gt;arXiv:1611.00625&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Step 0 - Build a &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
+ -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
+ --name blueberry --game blueberry --race T\
+ --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;amp;\
+wine Chaoslauncher/Chaoslauncher.exe
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That is what we are actually executing, let's build a &lt;code&gt;launcher.py&lt;/code&gt; script.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Run bwheadless.exe and Chaoslauncher.exe from here!&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argparse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentParser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host a game with bwheadless&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-p&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/opt/StarCraft/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;StarCraft path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--bot&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blueberry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--race&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Terran&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-m&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--map&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\(4\)FightingSpirit1.3.scx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse_args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;wine bwheadless.exe -e {0}StarCraft.exe&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; -l {0}bwapi-data/BWAPI.dll --host&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; --name {1} --game {1} --race {2}&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; --map maps/TorchUp/{3}&amp;amp;&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt;wine Chaoslauncher/Chaoslauncher.exe&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;race&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Start the original example again and run &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
+&lt;h2&gt;Step 1 - Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 2 - Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If everything works as expected, you will see &lt;code&gt;Chaoslauncher&lt;/code&gt;, the first time it will ask for the location of &lt;code&gt;StarCraft.exe&lt;/code&gt;, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm and it will ask probably to restart &lt;code&gt;Chaoslauncher.exe&lt;/code&gt;, kill the current session with &lt;code&gt;Control-C&lt;/code&gt; in the terminal where you start &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 4.2.0 [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see &lt;code&gt;blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/3.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Step 3 - What is TorchCraft again?&lt;/h2&gt;
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/4.png"&gt;&lt;/p&gt;
+&lt;p&gt;TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here &lt;a href="https://pytorch.org"&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state.&lt;/p&gt;
+&lt;p&gt;This makes it easier to try a broad variety of models, and may be useful in shaping loss functions for pixel-based models.&lt;/p&gt;
+&lt;p&gt;StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.&lt;/p&gt;
+&lt;h3&gt;BWAPI&lt;/h3&gt;
+&lt;p&gt;BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Perform unit actions, i.e: &lt;code&gt;Attack&lt;/code&gt;, &lt;code&gt;Move&lt;/code&gt;, &lt;code&gt;Build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Obtain current data about any visible unit, such as: &lt;code&gt;Position&lt;/code&gt;, &lt;code&gt;HP&lt;/code&gt;, &lt;code&gt;Energy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Obtain offline data about any unit type, such as: &lt;code&gt;MaxSpeed&lt;/code&gt;, &lt;code&gt;Damage&lt;/code&gt;, &lt;code&gt;MaxHP&lt;/code&gt;, &lt;code&gt;Size&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Programs written with BWAPI alone are usually compiled into a Windows dynamically linked library (DLL) which is injected into the game. BWAPI allows the user to perform any of the aboce functionality while the game is running, after each logic frame update within the game's software.&lt;/p&gt;
+&lt;p&gt;After each logic frame, BWAPI interrupts the StarCraft process and allows the user to read game data and issue commands, which are stored in a queue to be executed during the game's next logic frame.&lt;/p&gt;
+&lt;h3&gt;TorchCraft Design&lt;/h3&gt;
+&lt;p&gt;TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.&lt;/p&gt;
+&lt;p&gt;The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).&lt;/p&gt;
+&lt;p&gt;The server starts at the beginning of the match and stops when that ends.&lt;/p&gt;
+&lt;p&gt;TorchCraft is seen by the AI programmer as a library that provides: &lt;code&gt;connect()&lt;/code&gt;, &lt;code&gt;receive()&lt;/code&gt; to get the state, &lt;code&gt;send(commands)&lt;/code&gt;, and some helper functions about specifics of StarCraft's rules and state representation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- main game engine loop:&lt;/span&gt;
+&lt;span class="c1"&gt;-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`&lt;/span&gt;
+&lt;span class="kr"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="kr"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;receive_player_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compute_dynamics&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c1"&gt;-- our injected code:&lt;/span&gt;
+    &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send_state&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;receive_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`&lt;/span&gt;
+&lt;span class="c1"&gt;-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions&lt;/span&gt;
+&lt;span class="n"&gt;tc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;torchcraft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;featurize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt; &lt;span class="kr"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;featurize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;actions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;tocommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
+&lt;p&gt;TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.&lt;/p&gt;
+&lt;h3&gt;The frame data structure&lt;/h3&gt;
+&lt;p&gt;In addition to visual data, the server extracts certain information for the game state and sends it over to the client in a structured "frame".&lt;/p&gt;
+&lt;p&gt;The frame is formatted in a table in roughly the following structure:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;received_update&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// Number of frames in the current game&lt;/span&gt;
+    &lt;span class="nx"&gt;frame_from_bwapi&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+    &lt;span class="nx"&gt;units_myself&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// Unit ID&lt;/span&gt;
+        &lt;span class="kr"&gt;int&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// Unit ID&lt;/span&gt;
+            &lt;span class="nx"&gt;target&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="nx"&gt;targetpos&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="c1"&gt;// Absolute x&lt;/span&gt;
+                &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+                &lt;span class="c1"&gt;// Absolute y&lt;/span&gt;
+                &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="c1"&gt;// Type of air weapon&lt;/span&gt;
+            &lt;span class="nx"&gt;awtype&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Type of ground weapon&lt;/span&gt;
+            &lt;span class="nx"&gt;gwtype&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Frames before next air weapon attack&lt;/span&gt;
+            &lt;span class="nx"&gt;awcd&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Number of hit points&lt;/span&gt;
+            &lt;span class="nx"&gt;hp&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Number of energy points, if any&lt;/span&gt;
+            &lt;span class="nx"&gt;energy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Unit type&lt;/span&gt;
+            &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Position&lt;/span&gt;
+            &lt;span class="nx"&gt;position&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="c1"&gt;// Absolute x&lt;/span&gt;
+                &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+                &lt;span class="c1"&gt;// Absolute y&lt;/span&gt;
+                &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="c1"&gt;// Number of armor points&lt;/span&gt;
+            &lt;span class="nx"&gt;armor&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Frames before next ground weapon attack&lt;/span&gt;
+            &lt;span class="nx"&gt;gwcd&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Ground weapon attack damae&lt;/span&gt;
+            &lt;span class="nx"&gt;gwattack&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Protoss shield points&lt;/span&gt;
+            &lt;span class="nx"&gt;shield&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Air weapon attack damage&lt;/span&gt;
+            &lt;span class="nx"&gt;awattack&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Size of the unit&lt;/span&gt;
+            &lt;span class="nx"&gt;size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Whether unit is enemy or not&lt;/span&gt;
+            &lt;span class="nx"&gt;enemy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;bool&lt;/span&gt;
+            &lt;span class="c1"&gt;// Whether unit is idle or not&lt;/span&gt;
+            &lt;span class="nx"&gt;idle&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;bool&lt;/span&gt;
+            &lt;span class="c1"&gt;// Ground weapon max range&lt;/span&gt;
+            &lt;span class="nx"&gt;gwrange&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+            &lt;span class="c1"&gt;// Air weapon max range&lt;/span&gt;
+            &lt;span class="nx"&gt;awrange&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kr"&gt;int&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="c1"&gt;// Same format as &amp;quot;units_myself&amp;quot;&lt;/span&gt;
+    &lt;span class="nx"&gt;units_enemy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 4 - Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;What is TorchCraft's &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Get closest function, very self explanatory!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_closest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;inf&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;
+            &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;TorchCraft Python API client initial setup&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Client&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Initial setup&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_speed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_gui&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_cmd_optim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Plays simple micro battles with an attack closest heuristic&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/5.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;loop&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;actions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;enemy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_closest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;enemy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Attack_Unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Sending actions: {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 5 - Minerals and Vespene Gas&lt;/h2&gt;
+&lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
+&lt;h2&gt;Step 6 -  Gathering Minerals&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;if all went well, the workers should now start gathering the mineral patches closest to them!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Don't expect an optimal spread of workers, but that is left as an exercise.&lt;/p&gt;
+&lt;h2&gt;Step 7 - Build a Refinery&lt;/h2&gt;
+&lt;p&gt;We Require More Vespene Gas&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 8 - Gas harvesting&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;

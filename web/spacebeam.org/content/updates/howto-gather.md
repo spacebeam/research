@@ -72,14 +72,14 @@ os.popen(execute).read()
 
 Start the original example again and run `launcher.py` to see what gives?
 
-## Step 1 - Run the original `example.py`
+### Run the original `example.py`
 
 ```
 $ python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
 
 ```
 
-## Step 2 - Run the `launcher.py` script
+### Run the `launcher.py` script
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
@@ -99,7 +99,7 @@ Now with Chaoslauncher ready, enable the `BWAPI 4.2.0 [RELEASE]` and and `W-MODE
 {%img [class name(s)] /images/2.png %}
 
 {%img [class name(s)] /images/3.png %}
-## Step 3 - What is TorchCraft again?
+## Step 1 - What is TorchCraft again?
 
 {%img [class name(s)] /images/4.png %}
 
@@ -165,7 +165,7 @@ TorchCraft also provides an efficient way to store game frames data from past ga
 
 TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.
 
-## Step 4 - Analyzing TorchCraft `example.py`
+## Step 2 - Analyzing TorchCraft `example.py`
 
 What is TorchCraft's [example.py](https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py) actually doing?
 
@@ -236,24 +236,24 @@ client.close()
 The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.
 
 
-## Step 5 - Minerals and Vespene Gas
+## Step 3 - Minerals and Vespene Gas
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
-### Run the `gathering.py` example
+### Run `gathering.py` example
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/gathering.py
 
 ```
 
-### Run the `launcher.py` script
+### Run `launcher.py` script
 
 ```
 $ python3 /usr/src/starcraft-sif/examples/launcher.py
 ```
 
-## Step 6 - Train a SCV
+### Train a SCV
 
 ```
 :::python
@@ -279,7 +279,7 @@ for unit in units:
             producing = True
 ```
 
-## Step 7 -  Gathering Minerals
+### Gathering Minerals
 
 if all went well, the workers should now start gathering the mineral patches closest to them!
 
@@ -306,7 +306,7 @@ for order in unit.orders:
 
 Don't expect an optimal spread of workers, but that is left as an exercise.
 
-## Step 8 - Build a Refinery
+###  Build a Refinery
 
 We Require More Vespene Gas
 
@@ -334,7 +334,7 @@ if tcc.isworker(unit.type):
                 building_refinery = True
 ```
 
-## Step 9 - Gas harvesting 
+###  Gas harvesting 
 ```
 :::python
 if building_refinery and gas_harvesting[0] != unit.id\

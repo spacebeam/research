@@ -144,12 +144,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p>Start the original example again and run <code>launcher.py</code> to see what gives?</p>
-<h2>Step 1 - Run the original <code>example.py</code></h2>
+<h3>Run the original <code>example.py</code></h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/TorchCraft/examples/py/example.py -t <span class="m">127</span>.0.0.1
 </pre></div>
 
 
-<h2>Step 2 - Run the <code>launcher.py</code> script</h2>
+<h3>Run the <code>launcher.py</code> script</h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
@@ -163,7 +163,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 <p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>Blueberry</code> waiting in the lobby.</p>
 <p><img class="[class name(s)]" src="/images/2.png"></p>
 <p><img class="[class name(s)]" src="/images/3.png"></p>
-<h2>Step 3 - What is TorchCraft again?</h2>
+<h2>Step 1 - What is TorchCraft again?</h2>
 <p><img class="[class name(s)]" src="/images/4.png"></p>
 <p>TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here <a href="https://pytorch.org">PyTorch</a>.</p>
 <p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.</p>
@@ -211,7 +211,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 <p>TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.</p>
 <p>TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.</p>
-<h2>Step 4 - Analyzing TorchCraft <code>example.py</code></h2>
+<h2>Step 2 - Analyzing TorchCraft <code>example.py</code></h2>
 <p>What is TorchCraft's <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a> actually doing?</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcraft</span> <span class="kn">as</span> <span class="nn">tc</span>
 <span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="kn">as</span> <span class="nn">tcc</span>
@@ -272,19 +272,19 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p>The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.</p>
-<h2>Step 5 - Minerals and Vespene Gas</h2>
+<h2>Step 3 - Minerals and Vespene Gas</h2>
 <p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
-<h3>Run the <code>gathering.py</code> example</h3>
+<h3>Run <code>gathering.py</code> example</h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/gathering.py
 </pre></div>
 
 
-<h3>Run the <code>launcher.py</code> script</h3>
+<h3>Run <code>launcher.py</code> script</h3>
 <div class="highlight"><pre><span></span>$ python3 /usr/src/starcraft-sif/examples/launcher.py
 </pre></div>
 
 
-<h2>Step 6 - Train a SCV</h2>
+<h3>Train a SCV</h3>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">tcc</span><span class="o">.</span><span class="n">isbuilding</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>\
      <span class="ow">and</span> <span class="n">tc</span><span class="o">.</span><span class="n">Constants</span><span class="o">.</span><span class="n">unittypes</span><span class="o">.</span><span class="n">_dict</span><span class="p">[</span><span class="n">unit</span><span class="o">.</span><span class="n">type</span><span class="p">]</span>\
@@ -308,7 +308,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<h2>Step 7 -  Gathering Minerals</h2>
+<h3>Gathering Minerals</h3>
 <p>if all went well, the workers should now start gathering the mineral patches closest to them!</p>
 <div class="highlight"><pre><span></span><span class="n">gather</span> <span class="o">=</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Gather</span><span class="p">]</span> 
 <span class="n">build</span> <span class="o">=</span> <span class="n">tcc</span><span class="o">.</span><span class="n">command2order</span><span class="p">[</span><span class="n">tcc</span><span class="o">.</span><span class="n">unitcommandtypes</span><span class="o">.</span><span class="n">Build</span><span class="p">]</span>
@@ -331,7 +331,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 <p>Don't expect an optimal spread of workers, but that is left as an exercise.</p>
-<h2>Step 8 - Build a Refinery</h2>
+<h3>Build a Refinery</h3>
 <p>We Require More Vespene Gas</p>
 <div class="highlight"><pre><span></span><span class="n">vespene</span> <span class="o">=</span> <span class="s1">&#39;Resource_Vespene_Geyser&#39;</span>
 
@@ -355,7 +355,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 </pre></div>
 
 
-<h2>Step 9 - Gas harvesting</h2>
+<h3>Gas harvesting</h3>
 <div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">building_refinery</span> <span class="ow">and</span> <span class="n">gas_harvesting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">unit</span><span class="o">.</span><span class="n">id</span>\
      <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">gas_harvesting</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">refinery</span><span class="p">:</span>
         <span class="n">gas_harvesting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>

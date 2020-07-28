@@ -267,12 +267,12 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Start the original example again and run &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
-&lt;h2&gt;Step 1 - Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
+&lt;h3&gt;Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 2 - Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
+&lt;h3&gt;Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -286,7 +286,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 4.2.0 [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see &lt;code&gt;Blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
 &lt;p&gt;&lt;img class="[class name(s)]" src="/images/2.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img class="[class name(s)]" src="/images/3.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Step 3 - What is TorchCraft again?&lt;/h2&gt;
+&lt;h2&gt;Step 1 - What is TorchCraft again?&lt;/h2&gt;
 &lt;p&gt;&lt;img class="[class name(s)]" src="/images/4.png"&gt;&lt;/p&gt;
 &lt;p&gt;TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here &lt;a href="https://pytorch.org"&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.&lt;/p&gt;
@@ -334,7 +334,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 &lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
 &lt;p&gt;TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.&lt;/p&gt;
-&lt;h2&gt;Step 4 - Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
+&lt;h2&gt;Step 2 - Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;What is TorchCraft's &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
@@ -395,19 +395,19 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.&lt;/p&gt;
-&lt;h2&gt;Step 5 - Minerals and Vespene Gas&lt;/h2&gt;
+&lt;h2&gt;Step 3 - Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
-&lt;h3&gt;Run the &lt;code&gt;gathering.py&lt;/code&gt; example&lt;/h3&gt;
+&lt;h3&gt;Run &lt;code&gt;gathering.py&lt;/code&gt; example&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/gathering.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
+&lt;h3&gt;Run &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 6 - Train a SCV&lt;/h2&gt;
+&lt;h3&gt;Train a SCV&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isbuilding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;\
      &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Constants&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unittypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;\
@@ -431,7 +431,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 7 -  Gathering Minerals&lt;/h2&gt;
+&lt;h3&gt;Gathering Minerals&lt;/h3&gt;
 &lt;p&gt;if all went well, the workers should now start gathering the mineral patches closest to them!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gather&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command2order&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Gather&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
 &lt;span class="n"&gt;build&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command2order&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Build&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -454,7 +454,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Don't expect an optimal spread of workers, but that is left as an exercise.&lt;/p&gt;
-&lt;h2&gt;Step 8 - Build a Refinery&lt;/h2&gt;
+&lt;h3&gt;Build a Refinery&lt;/h3&gt;
 &lt;p&gt;We Require More Vespene Gas&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;vespene&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Resource_Vespene_Geyser&amp;#39;&lt;/span&gt;
 
@@ -478,7 +478,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 9 - Gas harvesting&lt;/h2&gt;
+&lt;h3&gt;Gas harvesting&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;building_refinery&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;\
      &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;refinery&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;

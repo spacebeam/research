@@ -285,15 +285,14 @@ if all went well, the workers should now start gathering the mineral patches clo
 
 ```
 :::python
-
 gather = tcc.command2order[tcc.unitcommandtypes.Gather] 
 build = tcc.command2order[tcc.unitcommandtypes.Build]
-rc = tcc.command2order[tcc.unitcommandtypes.Right_Click_Position]
+right_click_position = tcc.command2order[tcc.unitcommandtypes.Right_Click_Position]
 
 for order in unit.orders:
     if order.type not in gather\
      and order.type not in build\\
-     and order.type not in rc\ 
+     and order.type not in right_click_position\ 
      and not building_refinery:
         target = get_closest(unit.x, unit.y, neutral)
         if target is not None:
@@ -348,7 +347,8 @@ if building_refinery and gas_harvesting[0] != unit.id\
             refinery
         ])
 elif refinery and gas_harvesting[0] != unit.id\
-     and gas_harvesting[1] != unit.id and len(gas_harvesting) == 2:
+     and gas_harvesting[1] != unit.id\
+     and len(gas_harvesting) == 2:
         gas_harvesting.append(unit.id)
         actions.append([
             tcc.command_unit_protected,

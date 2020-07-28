@@ -240,6 +240,7 @@ The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact 
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
+{%img [class name(s)] /images/6.png %}
 ### Run `gathering.py` example
 
 ```
@@ -360,4 +361,5 @@ elif refinery and gas_harvesting[0] != unit.id\
 
 ## Further Reading
 
+Here is a link to the complete [gathering.py](https://github.com/spacebeam/starcraft-sif/blob/master/examples/gathering.py) script if you are just curious,
 Next we will [train different units](https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/) to improve our Terran skills!

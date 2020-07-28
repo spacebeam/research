@@ -222,5 +222,5 @@ CTRL-C to stop
 
 ```
 
-You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and [gather resources](https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/) growing a Terran economy. 
+You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and [gather resources](https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/) growing a Terran economy. 
 

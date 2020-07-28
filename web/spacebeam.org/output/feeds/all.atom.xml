@@ -397,6 +397,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;p&gt;The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.&lt;/p&gt;
 &lt;h2&gt;Step 3 - Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img class="[class name(s)]" src="/images/6.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Run &lt;code&gt;gathering.py&lt;/code&gt; example&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/gathering.py
 &lt;/pre&gt;&lt;/div&gt;
@@ -502,7 +503,8 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;h2&gt;Further Reading&lt;/h2&gt;
-&lt;p&gt;Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Here is a link to the complete &lt;a href="https://github.com/spacebeam/starcraft-sif/blob/master/examples/gathering.py"&gt;gathering.py&lt;/a&gt; script if you are just curious,
+Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</id><summary type="html">&lt;p&gt;&lt;img class="[class name(s)]" src="/images/python.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
 &lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
@@ -692,10 +694,10 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and &lt;a href="https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/"&gt;gather resources&lt;/a&gt; growing a Terran economy. &lt;/p&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
+&lt;p&gt;You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and &lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;gather resources&lt;/a&gt; growing a Terran economy. &lt;/p&gt;</content></entry><entry><title>Python TorchCraft Tutorial</title><link href="/2020/07/09/python-torchcraft-tutorial/" rel="alternate"></link><published>2020-07-09T00:00:00+02:00</published><updated>2020-07-09T00:00:00+02:00</updated><author><name>Spacebeam Community</name></author><id>tag:None,2020-07-09:/2020/07/09/python-torchcraft-tutorial/</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;Train your units&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/13/build-a-wall-lings-will-fall/"&gt;Build your buildings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/15/one-in-a-million-repeats-very-often/"&gt;Scout the enemy(s)&lt;/a&gt;&lt;/li&gt;
@@ -707,7 +709,7 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;li&gt;Test …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;Train your units&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/13/build-a-wall-lings-will-fall/"&gt;Build your buildings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/15/one-in-a-million-repeats-very-often/"&gt;Scout the enemy(s)&lt;/a&gt;&lt;/li&gt;

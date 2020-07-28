@@ -13,7 +13,7 @@ we are …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/eleme
 &lt;p&gt;Logged into your system as root, first update and upgrade …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Spacebeam Community</dc:creator><pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2020-07-09:/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</guid></item><item><title>Python TorchCraft Tutorial</title><link>/2020/07/09/python-torchcraft-tutorial/</link><description>&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gathering-minerals-to-someday-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;Train your units&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/13/build-a-wall-lings-will-fall/"&gt;Build your buildings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/15/one-in-a-million-repeats-very-often/"&gt;Scout the enemy(s)&lt;/a&gt;&lt;/li&gt;

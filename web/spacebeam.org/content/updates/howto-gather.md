@@ -232,11 +232,14 @@ while not state.game_ended:
     client.send(actions)
 client.close()
 ```
-## Step 5 - Minerals and Vespene Gas
+
+The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with C++ or Java bots.
+
+## Minerals and Vespene Gas
 
 Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require `Vespene Gas`. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (`Extractor` for `Zerg`, `Refinery` for `Terran` and `Assimilator` for `Protoss`).
 
-## Step 6 -  Gathering Minerals
+## Step 5 -  Gathering Minerals
 
 ```
 TBD
@@ -250,7 +253,7 @@ TBD
 
 Don't expect an optimal spread of workers, but that is left as an exercise.
 
-## Step 7 - Build a Refinery
+## Step 6 - Build a Refinery
 
 We Require More Vespene Gas
 
@@ -258,7 +261,7 @@ We Require More Vespene Gas
 TBD
 ```
 
-## Step 8 - Gas harvesting 
+## Step 7 - Gas harvesting 
 ```
 TBD
 ```

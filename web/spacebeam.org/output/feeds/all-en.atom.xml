@@ -394,9 +394,10 @@ wine Chaoslauncher/Chaoslauncher.exe
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 5 - Minerals and Vespene Gas&lt;/h2&gt;
+&lt;p&gt;The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with C++ or Java bots.&lt;/p&gt;
+&lt;h2&gt;Minerals and Vespene Gas&lt;/h2&gt;
 &lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
-&lt;h2&gt;Step 6 -  Gathering Minerals&lt;/h2&gt;
+&lt;h2&gt;Step 5 -  Gathering Minerals&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -407,13 +408,13 @@ wine Chaoslauncher/Chaoslauncher.exe
 
 
 &lt;p&gt;Don't expect an optimal spread of workers, but that is left as an exercise.&lt;/p&gt;
-&lt;h2&gt;Step 7 - Build a Refinery&lt;/h2&gt;
+&lt;h2&gt;Step 6 - Build a Refinery&lt;/h2&gt;
 &lt;p&gt;We Require More Vespene Gas&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Step 8 - Gas harvesting&lt;/h2&gt;
+&lt;h2&gt;Step 7 - Gas harvesting&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TBD
 &lt;/pre&gt;&lt;/div&gt;
 

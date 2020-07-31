@@ -8,9 +8,7 @@ Spacebeam is a distributed open-source research & development community that con
 
 **Our Goal**: a distributed workspace environment for machines of all ages.
 
-**Our Problem**:
-
-## StarCraft: Brood War
+**Our Problem**: StarCraft: Brood War
 
 The game represent a well defined environment with a number of interesting challenges on:
 

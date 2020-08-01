@@ -3,11 +3,9 @@ Date: 2019-07-12 16:20
 Category: Technology 
 Spacebeam present a custom Debian (x86_64) distribution for simple computational clusters, grid endpoints and visualization on tiled-displays; installation and support is also available from community members.
 
-A distributed system that run hosted as an user-space application on any existing Linux distribution and it's also available pre-installed on top of a custom [Debian](https://debian.org) image, made for professionals and hobbyists.
+Each node presents an identical environment to your working space, our focus it allow you to spawn clean computational grids across multiple clusters of processes.
 
-Each node presents an identical environment to your working space, irrespective of the underlying host our focus it allow you to spawn clean computational grids across multiple clusters of peers.
-
-A communications protocol called [ZMTP](http://zmtp.org) version 3.1 is applied uniformly to access both local and remote resources with official support for independent processes in [Erlang](http://www.erlang.org/), [Python](https://www.python.org/), [Lua](https://lua.org), and community support available as well for other languages via standard ZeroMQ libraries.
+A communications protocol called [ZMTP](http://zmtp.org) version 3.1 is applied uniformly to access both local and remote resources with official support for [Erlang](http://www.erlang.org/), [Python](https://www.python.org/), [Lua](https://lua.org), and community support available as well for other languages via standard ZeroMQ libraries.
 
 ## Our work process
 We use the ZeroMQ C4 process working on Spacebeam, which means that every proposed change is tracked as an issue.

@@ -10,7 +10,7 @@ On the surface, this shift from positive statements to qualified less precise on
 
 Actually, it amounts to an enormous step forward. Faith in the existence of a final and ultimate answer has been replaced by a more mature and sophisticate understanding of the factors involved in organizations.
 
-## Goal function
+### Goal function
 
 Determine the relative success or failure of the organization.
 
@@ -18,13 +18,13 @@ If [it](https://github.com/spacebeam/ophelia) wins at StarCraft: Brood War, with
 
 Goals function as starting point analysis leading to a hierarchy of objectives and to a definition of nodes and units.
 
-## System approach
+### System approach
 
 This approach does not give prime attention to organizational objectives but to those attributes relevant to any goal.
 
 The systems model consider the organization as receiving inputs from the environmet and delivering outputs to it.
 
-### Undecidable decisions
+## Undecidable decisions
 
 Information models are used in two ways; one are schemes with central focus goals, deterministic objectives.
 

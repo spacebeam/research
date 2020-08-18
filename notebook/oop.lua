@@ -1,5 +1,5 @@
 -- First we create a table to represent the class and contain its methods.
---
+
 local MyClass = {}
 MyClass.__index = MyClass
 
@@ -28,13 +28,8 @@ print(i:get_value())
 i:set_value(6)
 print(i:get_value())
 
-
 -- In the methods, we use a "self" parameter to get the instance to operate on.
 -- This is so common that Lua offers the : syntax sugar that calls a function entry from a table and inserts the table itself before the first arg.
-
--- Cuz I'm a man who is sic but I got class, so you only get respect when you are kicking ass. xD
-
-
 
 local MyClass = {}
 MyClass.__index = MyClass
@@ -218,3 +213,18 @@ print(i.foo())
 i.bar()
 print(i.foo())
 
+-- Table vs Closure-based classes
+
+-- Advantages of table-based:
+
+-- Creating instances of table-based classes is faster.
+-- Table-based instances use less memory, since the methods are not duplicated for each instance.
+-- It's possible to get a method directly from the class (for example MyClass.method(instance, args)).
+-- Many Lua and C++ developers might find : for method calls more consistent with the vast majority of object-oriented Lua code.
+
+-- Advantages of closure-based:
+
+-- Closure-based instances can have truly private fields, so that the users of your class cannot accidentally or intentionally get to them.
+-- Access to private fields is faster with closure-based classes, since they're upvalues, not table lookups.
+-- Method calls are faster, since they don't have to go through an __index metamethod.
+-- Many developers from other languages may find the . method call syntax more familiar.

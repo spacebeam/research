@@ -39,6 +39,9 @@ function love.load()
     world:add(player, player.x, player.y, player.w, player.h)
     -- Remove unneeded object layer
     map:removeLayer("entities")
+    -- replace gfx with a better cursor!
+    cursor = love.graphics.newImage("asset/gfx/hand.png")
+    love.mouse.setVisible(false)
 end
 
 function gamekeypressed(key)
@@ -83,4 +86,6 @@ function love.draw()
     -- Draw world
     map:draw(-dx, -dy, scale, scale)
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
+    -- Draw mouse cursor
+    love.graphics.draw(cursor, love.mouse.getX() - cursor:getWidth() / 2, love.mouse.getY() - cursor:getHeight() / 2)
 end

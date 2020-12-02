@@ -5,19 +5,19 @@ local bump = require("./lib/bump/bump")
 local scale = 2
 
 local player = {
-    x = 50,
-    y = 50,
-    lastY = 50,
-    w = 8,
-    h = 8,
-    speed = 80
+    x = 0,
+    y = 0,
+    lastY = 0,
+    w = 7.9,
+    h = 7.9,
+    speed = 90
 }
 
 local world = bump.newWorld(128)
 
 function love.load()
     -- Load tiled map file
-    map = sti("maps/Overwatch.lua", {'bump'})
+    map = sti("maps/WindSpirit.lua", {'bump'})
     map:bump_init(world)
 
     -- Create new dynamic data layer called "Sprites" as the 3th layer

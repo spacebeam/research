@@ -6,23 +6,20 @@ local scale = 2
 
 local player = {
     x = 50,
-    lastY = 50,
     y = 50,
+    lastY = 50,
     w = 8,
     h = 8,
-    speed = 0.85,
-    yAcc = 0,
-    xAcc = 0,
-    vel = 4,
+    speed = 80,
     dx = 0,
     dy = 0
 }
 
-local world = bump.newWorld(8)
+local world = bump.newWorld(128)
 
 function love.load()
     -- Load tiled map file
-    map = sti("maps/WindSpirit.lua", {'bump'})
+    map = sti("maps/Overwatch.lua", {'bump'})
     map:bump_init(world)
 
     -- Create new dynamic data layer called "Sprites" as the 3th layer
@@ -36,40 +33,15 @@ function love.load()
         end
     end
     -- Create player object
-    local sprite = love.graphics.newImage("asset/gfx/portrait.png")
-
     layer.player = {
-        sprite = sprite,
         x      = spawn.x,
-        y      = spawn.y,
-        ox     = sprite:getWidth() / 2,
-        oy     = sprite:getHeight() / 1.35
+        y      = spawn.y
     }
 
     player["x"] = layer.player.x
     player["y"] = layer.player.y
-    player["ox"] = layer.player.ox
-    player["oy"] = layer.player.oy
 
     world:add(player, player.x, player.y, player.w, player.h)
-
-    -- Draw player
-    layer.draw = function(self)
-        love.graphics.draw(
-            self.player.sprite,
-            math.floor(self.player.x),
-            math.floor(self.player.y),
-            0,
-            1,
-            1,
-            self.player.ox,
-            self.player.oy
-        )
-        -- Temporarily draw a point at our location so we know
-        -- that our sprite is offset properly
-        love.graphics.setPointSize(5)
-        love.graphics.points(math.floor(self.player.x), math.floor(self.player.y))
-    end
 
     -- Remove unneeded object layer
     map:removeLayer("Object Layer 1")
@@ -89,45 +61,52 @@ function love.update(dt)
     -- Update world
     map:update(dt)
 
+
+    local speed = player.speed
+
     player.lastY = player.y
-    player.yAcc = 1
-    player.dx = 0
+
+    local dx, dy = 0, 0
 
     -- Move player up
     if love.keyboard.isDown("w", "up") then
-        player.yAcc = -player.speed
+        dy = -speed * dt
     end
 
     -- Move player down
     if love.keyboard.isDown("s", "down") then
-        player.yAcc = player.speed
+        dy = speed * dt
     end
 
     -- Move player left
     if love.keyboard.isDown("a", "left") then
-        player.xAcc = -player.speed
+        dx = -speed * dt
     end
 
     -- Move player right
     if love.keyboard.isDown("d", "right") then
-        player.xAcc = player.speed
+        dx = speed * dt
     end
 
-    player.dx = player.xAcc * player.vel
 
-    player.dy = player.yAcc * player.vel
+    -- get the collisions
+    local tx, ty, cols, len = world:check(player, dx, dy)
 
-    player.x, player.y, cols, len = world:move(player, player.x + player.dx, player.y + player.dy)
+    -- If there where no collisions, we can move the player safely
+    if len == 0 then
+        player.x, player.y = dx, dy
+        world:move(player, player.x, player.y)
+    else
 
-    player.xAcc, player.yAcc = 0, player.yAcc * 0.45
+        print('tomela ' .. #cols)
+
+    end
 end
 
 function love.draw()
     local screen_width  = love.graphics.getWidth()  / scale
     local screen_height = love.graphics.getHeight() / scale
 
-    -- Translate world so that player is always centred
-    --local player = map.layers["Sprites"].player
 
     local dx = math.floor(player.x - screen_width  / 2)
     local dy = math.floor(player.y - screen_height / 2)
@@ -136,4 +115,6 @@ function love.draw()
     map:draw(-dx, -dy, scale, scale)
 
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
+
+    map:bump_draw(world, -dx, -dy, scale, scale)
 end

@@ -5,15 +5,15 @@ local bump = require("./lib/bump/bump")
 local scale = 2
 
 local player = {
-    x = 0,
-    y = 0,
-    lastY = 0,
-    w = 7.9,
-    h = 7.9,
+    x = 50,
+    y = 50,
+    lastY = 50,
+    w = 8,
+    h = 8,
     speed = 90
 }
 
-local world = bump.newWorld(128)
+local world = bump.newWorld(32)
 
 function love.load()
     -- Load tiled map file
@@ -42,7 +42,7 @@ function love.load()
     world:add(player, player.x, player.y, player.w, player.h)
 
     -- Remove unneeded object layer
-    map:removeLayer("Object Layer 1")
+    -- map:removeLayer("entities")
 end
 
 function gamekeypressed(key)
@@ -92,15 +92,16 @@ function love.draw()
     local screen_width  = love.graphics.getWidth()  / scale
     local screen_height = love.graphics.getHeight() / scale
 
-
     local dx = math.floor(player.x - screen_width  / 2)
     local dy = math.floor(player.y - screen_height / 2)
+
+    love.graphics.scale(scale)
+    love.graphics.translate(-dx, -dy)
 
     -- Draw world
     map:draw(-dx, -dy, scale, scale)
 
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
     
-
     --map:bump_draw(world, -dx, -dy, scale, scale)
 end

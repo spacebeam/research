@@ -8,8 +8,8 @@ local player = {
     x = 50,
     y = 50,
     lastY = 50,
-    w = 8,
-    h = 8,
+    w = 6.5,
+    h = 6.5,
     speed = 90
 }
 

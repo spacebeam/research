@@ -10,9 +10,7 @@ local player = {
     lastY = 50,
     w = 8,
     h = 8,
-    speed = 80,
-    dx = 0,
-    dy = 0
+    speed = 80
 }
 
 local world = bump.newWorld(128)
@@ -61,46 +59,33 @@ function love.update(dt)
     -- Update world
     map:update(dt)
 
-
-    local speed = player.speed
-
     player.lastY = player.y
 
-    local dx, dy = 0, 0
+    -- update the player.x and player.y when arrow keys are pressed
 
     -- Move player up
     if love.keyboard.isDown("w", "up") then
-        dy = -speed * dt
+        player.y = player.y - player.speed * dt
     end
 
     -- Move player down
     if love.keyboard.isDown("s", "down") then
-        dy = speed * dt
+        player.y = player.y + player.speed * dt
     end
 
     -- Move player left
     if love.keyboard.isDown("a", "left") then
-        dx = -speed * dt
+        player.x = player.x - player.speed * dt
     end
 
     -- Move player right
     if love.keyboard.isDown("d", "right") then
-        dx = speed * dt
+        player.x = player.x + player.speed * dt
     end
 
-
-    -- get the collisions
-    local tx, ty, cols, len = world:check(player, dx, dy)
-
-    -- If there where no collisions, we can move the player safely
-    if len == 0 then
-        player.x, player.y = dx, dy
-        world:move(player, player.x, player.y)
-    else
-
-        print('tomela ' .. #cols)
-
-    end
+    -- update the player associated bounding box in the world
+	local newX, newY, cols, len = world:move(player, player.x, player.y)
+	player.x, player.y = newX, newY
 end
 
 function love.draw()
@@ -115,6 +100,7 @@ function love.draw()
     map:draw(-dx, -dy, scale, scale)
 
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
+    
 
-    map:bump_draw(world, -dx, -dy, scale, scale)
+    --map:bump_draw(world, -dx, -dy, scale, scale)
 end

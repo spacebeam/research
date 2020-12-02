@@ -2,7 +2,7 @@ local sti = require("./lib/sti/sti")
 local bump = require("./lib/bump/bump")
 
 -- Scale world
-local scale = 2
+local scale = 2.5
 
 local player = {
     x = 50,
@@ -17,7 +17,7 @@ local world = bump.newWorld(32)
 
 function love.load()
     -- Load tiled map file
-    map = sti("maps/WindSpirit.lua", {'bump'})
+    map = sti("maps/FightingSpirit.lua", {'bump'})
     map:bump_init(world)
 
     -- Create new dynamic data layer called "Sprites" as the 3th layer
@@ -42,7 +42,7 @@ function love.load()
     world:add(player, player.x, player.y, player.w, player.h)
 
     -- Remove unneeded object layer
-    -- map:removeLayer("entities")
+    map:removeLayer("entities")
 end
 
 function gamekeypressed(key)
@@ -59,9 +59,9 @@ function love.update(dt)
     -- Update world
     map:update(dt)
 
-    player.lastY = player.y
+    local cols, len = 0, 0
 
-    -- update the player.x and player.y when arrow keys are pressed
+    player.lastY = player.y
 
     -- Move player up
     if love.keyboard.isDown("w", "up") then
@@ -84,8 +84,7 @@ function love.update(dt)
     end
 
     -- update the player associated bounding box in the world
-	local newX, newY, cols, len = world:move(player, player.x, player.y)
-	player.x, player.y = newX, newY
+	player.x, player.y, cols, len = world:move(player, player.x, player.y)
 end
 
 function love.draw()
@@ -102,6 +101,4 @@ function love.draw()
     map:draw(-dx, -dy, scale, scale)
 
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
-    
-    --map:bump_draw(world, -dx, -dy, scale, scale)
 end

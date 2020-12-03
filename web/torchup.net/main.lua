@@ -27,7 +27,7 @@ love.graphics.setDefaultFilter("nearest", "nearest")
 love.mouse.setVisible(false)
 
 -- replace gfx with a better cursor!
-cursor = love.graphics.newImage("asset/gfx/hand.png")
+local cursor = love.graphics.newImage("asset/gfx/hand.png")
 
 function menu:draw()
     love.graphics.print("Press Enter to continue", 10, 10)
@@ -40,10 +40,9 @@ function menu:keyreleased(key, code)
 end
 
 function game:enter()
-
-    --Entities.clear()
     -- setup luerl entities here
 
+    --Entities.clear()
     world = bump.newWorld(32)
 
     -- Load tiled map file
@@ -107,7 +106,6 @@ function game:draw()
     -- Draw mouse cursor
     love.graphics.draw(cursor, love.mouse.getX() - cursor:getWidth() / 2, love.mouse.getY() - cursor:getHeight() / 2)
 end
-
 
 function love.load()
     gamestate.registerEvents()

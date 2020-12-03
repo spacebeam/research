@@ -1,8 +1,16 @@
 local sti = require("./lib/sti/sti")
 local bump = require("./lib/bump/bump")
 
+local gamestate = require("./lib/hump/gamestate")
+
+local menu = {}
+
+local game = {}
+
 -- Scale world
 local scale = 2.5
+
+local world = {}
 
 local player = {
     x = 50,
@@ -13,9 +21,31 @@ local player = {
     speed = 90
 }
 
-local world = bump.newWorld(32)
+-- set rescaling filter
+love.graphics.setDefaultFilter("nearest", "nearest")
 
-function love.load()
+love.mouse.setVisible(false)
+
+-- replace gfx with a better cursor!
+cursor = love.graphics.newImage("asset/gfx/hand.png")
+
+function menu:draw()
+    love.graphics.print("Press Enter to continue", 10, 10)
+end
+
+function menu:keyreleased(key, code)
+    if key == 'return' then
+        gamestate.switch(game)
+    end
+end
+
+function game:enter()
+
+    --Entities.clear()
+    -- setup luerl entities here
+
+    world = bump.newWorld(32)
+
     -- Load tiled map file
     map = sti("maps/FightingSpirit.lua", {'bump'})
     map:bump_init(world)
@@ -39,22 +69,10 @@ function love.load()
     world:add(player, player.x, player.y, player.w, player.h)
     -- Remove unneeded object layer
     map:removeLayer("entities")
-    -- replace gfx with a better cursor!
-    cursor = love.graphics.newImage("asset/gfx/hand.png")
-    love.mouse.setVisible(false)
 end
 
-function gamekeypressed(key)
-    if key == "escape" then 
-        love.event.quit()
-    end
-end
-
-function love.keypressed(key)
-    gamekeypressed(key)
-end
-
-function love.update(dt)
+function game:update(dt)
+    --Entities.update(dt)
     -- Update world
     map:update(dt)
     local cols, len = 0, 0
@@ -76,7 +94,7 @@ function love.update(dt)
     player.x, player.y, cols, len = world:move(player, player.x, player.y)
 end
 
-function love.draw()
+function game:draw()
     local screen_width  = love.graphics.getWidth()  / scale
     local screen_height = love.graphics.getHeight() / scale
     local dx = math.floor(player.x - screen_width  / 2)
@@ -88,4 +106,20 @@ function love.draw()
     love.graphics.rectangle('fill', player.x, player.y, player.w, player.h)
     -- Draw mouse cursor
     love.graphics.draw(cursor, love.mouse.getX() - cursor:getWidth() / 2, love.mouse.getY() - cursor:getHeight() / 2)
+end
+
+
+function love.load()
+    gamestate.registerEvents()
+    gamestate.switch(menu)
+end
+
+function gamekeypressed(key)
+    if key == "escape" then 
+        love.event.quit()
+    end
+end
+
+function love.keypressed(key)
+    gamekeypressed(key)
 end

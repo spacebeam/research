@@ -3,6 +3,9 @@ local bump = require("./lib/bump/bump")
 
 local gamestate = require("./lib/hump/gamestate")
 
+-- init tests with loveframes!
+local loveframes = require("loveframes")
+
 local menu = {}
 
 local game = {}
@@ -120,4 +123,25 @@ end
 
 function love.keypressed(key)
     gamekeypressed(key)
+    loveframes.keypressed(key, unicode)
+end
+
+function love.update(dt)
+    loveframes.update(dt)
+end
+                 
+function love.draw()
+    loveframes.draw()
+end
+
+function love.keyreleased(key)
+    loveframes.keyreleased(key)
+end
+
+function love.mousepressed(x, y, button)
+    loveframes.mousepressed(x, y, button)
+end
+
+function love.mousereleased(x, y, button)
+    loveframes.mousereleased(x, y, button)
 end

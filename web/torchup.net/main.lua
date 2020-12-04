@@ -3,7 +3,6 @@ local bump = require("./lib/bump/bump")
 
 local gamestate = require("./lib/hump/gamestate")
 
--- init tests with loveframes!
 local loveframes = require("loveframes")
 
 local menu = {}
@@ -33,6 +32,7 @@ love.mouse.setVisible(false)
 local cursor = love.graphics.newImage("asset/gfx/hand.png")
 
 function menu:draw()
+    love.graphics.draw(cursor, love.mouse.getX() - cursor:getWidth() / 2, love.mouse.getY() - cursor:getHeight() / 2)
     local frame = loveframes.Create("frame")
     frame:SetName("Frame")
     frame:CenterWithinArea(0, 0, love.graphics.getDimensions())

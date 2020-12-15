@@ -3,7 +3,7 @@ Spacebeam follows its interpretation of the [UNIX](http://www.catb.org/esr/writi
 
 Feel free to explore the organization, [click here](https://github.com/spacebeam/guide/raw/master/guide.pdf) to download the guide on PDF or select the [Wiki](https://github.com/spacebeam/research/wiki) to continue.
 
-For more about how to get help or get involved check our Brood War AI [competition](https://torchup.org), explore the [guide](https://github.com/spacebeam/guide/wiki) and [community](https://spacebeam.org).
+For more about how to get involved check our StarCraft: Brood War AI [competition](https://torchup.org), explore the [guide](https://github.com/spacebeam/guide/wiki) and [community](https://spacebeam.org).
 
 ## Community
 Spacebeam is a multidisciplinary open-source research & development community that conducts work on distributed systems, artificial intelligence and high-performance computing.
@@ -12,4 +12,4 @@ Spacebeam is a multidisciplinary open-source research & development community th
 
 ## Contributing
 
-See  [Contributing](CONTRIBUTING.md).
+See [Contributing](CONTRIBUTING.md).

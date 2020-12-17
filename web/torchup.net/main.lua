@@ -1,6 +1,8 @@
 local sti = require("./lib/sti/sti")
 local bump = require("./lib/bump/bump")
 
+local fun = require("./lib/lume/lume")
+
 local gamestate = require("./lib/hump/gamestate")
 
 local loveframes = require("loveframes")
@@ -33,36 +35,39 @@ local cursor = love.graphics.newImage("asset/gfx/hand.png")
 
 function menu:draw()
     love.graphics.draw(cursor, love.mouse.getX() - cursor:getWidth() / 2, love.mouse.getY() - cursor:getHeight() / 2)
-    local frame = loveframes.Create("frame")
-    frame:SetName("Frame")
-    frame:CenterWithinArea(0, 0, love.graphics.getDimensions())
-    frame:SetDockable(true)
+    
+    
+    --local frame = loveframes.Create("frame")
+    --frame:SetName("Frame")
+    --frame:CenterWithinArea(0, 0, love.graphics.getDimensions())
+    --frame:SetDockable(true)
 
-    local text = loveframes.Create("text", frame)
-    text:SetText("This is an example frame.")
-    text.Update = function(object, dt)
-        object:CenterX()
-        object:SetY(40)
-    end
+    --local text = loveframes.Create("text", frame)
+    --text:SetText("This is an example frame.")
+    --text.Update = function(object, dt)
+    --    object:CenterX()
+    --    object:SetY(40)
+    --end
 
-    local button = loveframes.Create("button", frame)
-    button:SetText("Modal")
-    button:SetWidth(100)
-    button:Center()
-    button.Update = function(object, dt)
-        local modal = object:GetParent():GetModal()
-        if modal then
-            object:SetText("Remove Modal")
-            object.OnClick = function()
-                object:GetParent():SetModal(false)
-            end
-        else
-            object:SetText("Set Modal")
-            object.OnClick = function()
-                object:GetParent():SetModal(true)
-            end
-        end
-    end
+    --local button = loveframes.Create("button", frame)
+    --button:SetText("Modal")
+    --button:SetWidth(100)
+    --button:Center()
+    --button.Update = function(object, dt)
+    --    local modal = object:GetParent():GetModal()
+    --    if modal then
+    --        object:SetText("Remove Modal")
+    --        object.OnClick = function()
+    --            object:GetParent():SetModal(false)
+    --        end
+    --    else
+    --        object:SetText("Set Modal")
+    --        object.OnClick = function()
+    --            object:GetParent():SetModal(true)
+    --        end
+    --    end
+    --end
+    
     love.graphics.print("Press Enter to continue", 10, 10)
 end
 
@@ -153,25 +158,25 @@ end
 
 function love.keypressed(key)
     gamekeypressed(key)
-    loveframes.keypressed(key, unicode)
+    --loveframes.keypressed(key, unicode)
 end
 
 function love.update(dt)
-    loveframes.update(dt)
+    --loveframes.update(dt)
 end
                  
 function love.draw()
-    loveframes.draw()
+    --loveframes.draw()
 end
 
 function love.keyreleased(key)
-    loveframes.keyreleased(key)
+    --loveframes.keyreleased(key)
 end
 
 function love.mousepressed(x, y, button)
-    loveframes.mousepressed(x, y, button)
+    --loveframes.mousepressed(x, y, button)
 end
 
 function love.mousereleased(x, y, button)
-    loveframes.mousereleased(x, y, button)
+    --loveframes.mousereleased(x, y, button)
 end

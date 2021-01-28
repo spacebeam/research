@@ -1,14 +1,9 @@
 local sti = require("./lib/sti/sti")
 local bump = require("./lib/bump/bump")
-local lume = require "lib.lume.lume"
-
-local fun = require("./lib/lume/lume")
 
 local gamestate = require("./lib/hump/gamestate")
 
 local loveframes = require("loveframes")
-
-print(lume.count(nil))
 
 local menu = {}
 

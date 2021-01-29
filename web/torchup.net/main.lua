@@ -1,9 +1,20 @@
+local loveframes = require("loveframes")
+
 local sti = require("./lib/sti/sti")
 local bump = require("./lib/bump/bump")
 
 local gamestate = require("./lib/hump/gamestate")
 
-local loveframes = require("loveframes")
+
+local Intro
+local Game = 
+
+local beholder
+
+
+local paused = false
+local pauseNextFrame = false
+local pauseCanvas = nil
 
 local menu = {}
 

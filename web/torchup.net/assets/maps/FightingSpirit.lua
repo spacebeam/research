@@ -15,13 +15,13 @@ return {
     {
       name = "galletcity_tiles",
       firstgid = 1,
-      filename = "../asset/gfx/galletcity_tiles.tsx",
+      filename = "../gfx/galletcity_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/galletcity_tiles.png",
+      image = "../gfx/galletcity_tiles.png",
       imagewidth = 64,
       imageheight = 168,
       tileoffset = {
@@ -114,13 +114,13 @@ return {
     {
       name = "cavesofgallet_tiles",
       firstgid = 169,
-      filename = "../asset/gfx/cavesofgallet_tiles.tsx",
+      filename = "../gfx/cavesofgallet_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/cavesofgallet_tiles.png",
+      image = "../gfx/cavesofgallet_tiles.png",
       imagewidth = 64,
       imageheight = 96,
       tileoffset = {

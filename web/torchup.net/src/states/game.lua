@@ -27,7 +27,7 @@ function game:enter()
     world = bump.newWorld(32)
 
     -- Load tiled map file
-    map = sti("/assets/maps/FightingSpirit.lua", {'bump'})
+    map = sti("/assets/maps/Overwatch.lua", {'bump'})
     map:bump_init(world)
     -- Create new dynamic data layer called "Sprites" as the 3th layer
     local layer = map:addCustomLayer("Sprites", 3)

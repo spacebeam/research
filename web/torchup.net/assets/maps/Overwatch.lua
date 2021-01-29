@@ -15,13 +15,13 @@ return {
     {
       name = "galletcity_tiles",
       firstgid = 1,
-      filename = "../asset/gfx/galletcity_tiles.tsx",
+      filename = "../gfx/galletcity_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/galletcity_tiles.png",
+      image = "../gfx/galletcity_tiles.png",
       imagewidth = 64,
       imageheight = 168,
       tileoffset = {
@@ -114,13 +114,13 @@ return {
     {
       name = "cavesofgallet_tiles",
       firstgid = 169,
-      filename = "../asset/gfx/cavesofgallet_tiles.tsx",
+      filename = "../gfx/cavesofgallet_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/cavesofgallet_tiles.png",
+      image = "../gfx/cavesofgallet_tiles.png",
       imagewidth = 64,
       imageheight = 96,
       tileoffset = {
@@ -140,13 +140,13 @@ return {
     {
       name = "bw_tiles",
       firstgid = 265,
-      filename = "../asset/gfx/bw_tiles.tsx",
+      filename = "../gfx/bw_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/bw_tiles.png",
+      image = "../gfx/bw_tiles.png",
       imagewidth = 64,
       imageheight = 64,
       tileoffset = {
@@ -166,13 +166,13 @@ return {
     {
       name = "metroid",
       firstgid = 329,
-      filename = "../asset/gfx/metroid.tsx",
+      filename = "../gfx/metroid.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 20,
-      image = "../asset/gfx/abandonauts_tiles.png",
+      image = "../gfx/abandonauts_tiles.png",
       imagewidth = 160,
       imageheight = 160,
       tileoffset = {
@@ -339,7 +339,7 @@ return {
     {
       type = "objectgroup",
       id = 2,
-      name = "Object Layer 1",
+      name = "entities",
       visible = true,
       opacity = 1,
       offsetx = 0,

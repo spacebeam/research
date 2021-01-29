@@ -15,13 +15,13 @@ return {
     {
       name = "galletcity_tiles",
       firstgid = 1,
-      filename = "../asset/gfx/galletcity_tiles.tsx",
+      filename = "../gfx/galletcity_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/galletcity_tiles.png",
+      image = "../gfx/galletcity_tiles.png",
       imagewidth = 64,
       imageheight = 168,
       tileoffset = {
@@ -114,13 +114,13 @@ return {
     {
       name = "cavesofgallet_tiles",
       firstgid = 169,
-      filename = "../asset/gfx/cavesofgallet_tiles.tsx",
+      filename = "../gfx/cavesofgallet_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/cavesofgallet_tiles.png",
+      image = "../gfx/cavesofgallet_tiles.png",
       imagewidth = 64,
       imageheight = 96,
       tileoffset = {
@@ -140,13 +140,13 @@ return {
     {
       name = "azul_tiles",
       firstgid = 265,
-      filename = "../asset/gfx/azul_tiles.tsx",
+      filename = "../gfx/azul_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/azul_tiles.png",
+      image = "../gfx/azul_tiles.png",
       imagewidth = 64,
       imageheight = 88,
       tileoffset = {
@@ -166,13 +166,13 @@ return {
     {
       name = "bw_tiles",
       firstgid = 353,
-      filename = "../asset/gfx/bw_tiles.tsx",
+      filename = "../gfx/bw_tiles.tsx",
       tilewidth = 8,
       tileheight = 8,
       spacing = 0,
       margin = 0,
       columns = 8,
-      image = "../asset/gfx/bw_tiles.png",
+      image = "../gfx/bw_tiles.png",
       imagewidth = 64,
       imageheight = 64,
       tileoffset = {
@@ -339,7 +339,7 @@ return {
     {
       type = "objectgroup",
       id = 6,
-      name = "Object Layer 1",
+      name = "entities",
       visible = true,
       opacity = 1,
       offsetx = 0,

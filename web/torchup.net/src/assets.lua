@@ -5,26 +5,14 @@ local assets = {}
 love.graphics.setDefaultFilter("nearest", "nearest")
 
 
-assets.img_cat = love.graphics.newImage("assets/cat.png")
-assets.img_catandcannon = love.graphics.newImage("assets/catandcannon.png")
-assets.img_gun = love.graphics.newImage("assets/gun.png")
-assets.img_bullet = love.graphics.newImage("assets/bullet.png")
-assets.img_explosion = love.graphics.newImage("assets/explosion.png")
-assets.img_pig = love.graphics.newImage("assets/pig.png")
-assets.img_spawner = love.graphics.newImage("assets/spawner.png")
+assets.img_cat = love.graphics.newImage("assets/gfx/cat.png")
 
-assets.snd_catjump = multisource.new(love.audio.newSource("assets/catjump.wav", "static"))
-assets.snd_cannon = multisource.new(love.audio.newSource("assets/cannon.wav", "static"))
-assets.snd_thud = multisource.new(love.audio.newSource("assets/thud.wav", "static"))
-assets.snd_meow = multisource.new(love.audio.newSource("assets/meow.ogg", "static"))
-assets.snd_oink = multisource.new(love.audio.newSource("assets/oink.ogg", "static"))
-assets.snd_yay = multisource.new(love.audio.newSource("assets/yay.wav", "static"))
+assets.snd_meow = love.audio.newSource("assets/sfx/meow.ogg")
+assets.snd_music = love.audio.newSource("assets/sfx/music.ogg", "stream")
 
-assets.snd_music = love.audio.newSource("assets/music.ogg", "stream")
-
-assets.fnt_hud = love.graphics.newFont("assets/font.ttf", 48)
-assets.fnt_smallhud = love.graphics.newFont("assets/font.ttf", 32)
-assets.fnt_reallysmallhud = love.graphics.newFont("assets/font.ttf", 24)
+assets.fnt_hud = love.graphics.newFont("assets/fonts/DiaryOfAn8BitMage.ttf", 48)
+assets.fnt_smallhud = love.graphics.newFont("assets/fonts/ps2px.ttf", 32)
+assets.fnt_reallysmallhud = love.graphics.newFont("assets/fonts/ThinPixel7.ttf", 24)
 
 
 return assets

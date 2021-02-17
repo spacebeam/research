@@ -3,10 +3,8 @@ local bump = require("./lib/bump/bump")
 
 local gamestate = require("./lib/hump/gamestate")
 
-
 local loveframes = require("loveframes")
 
-local menu = require("./src/states/menu")
 local intro = require("./src/states/intro")
 local game = require("./src/states/game")
 
@@ -39,7 +37,7 @@ love.mouse.setVisible(false)
 
 function love.load()
     gamestate.registerEvents()
-	gamestate.switch(menu)
+	gamestate.switch(intro)
 end
 
 function gamekeypressed(key)

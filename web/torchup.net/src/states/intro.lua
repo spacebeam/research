@@ -1,6 +1,29 @@
+local class = require("./lib/middleclass/middleclass")
+
 local gamestate = require("./lib/hump/gamestate")
 
 local game = require("./src/states/game")
+
+local TimerEvent = require("./src/entities/TimerEvent")
+
+local ScreenSplash = require("./src/entities/ScreenSplash")
+
+local TransitionScreen = require("./src/entities/TransitionScreen")
+
+local assets = require("./src/assets")
+
+local sti = require("./lib/sti/sti")
+
+local camera = require("./lib/hump/camera")
+
+local ControlText = [[
+Controls:
+Move - WASD
+Toggle Fullscreen - \
+Toggle Music - M
+Pause - P
+Escape - Quit
+]] 
 
 local intro = {}
 

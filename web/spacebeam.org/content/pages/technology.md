@@ -1,9 +1,8 @@
 Title: Technology 
-Date: 2020-08-01 16:20
+Date: 2021-04-14 16:20
 Category: Technology 
-Spacebeam present a custom Debian (x86_64) distribution for simple computational clusters, grid endpoints and visualization on tiled-displays; installation and support is also available from community members.
 
-Each node presents an identical environment to your working space, a communications protocol called [ZMTP](http://zmtp.org) version 3.1 is applied uniformly to access both local and remote resources with official support for [Erlang](http://www.erlang.org/), [Python](https://www.python.org/), [Lua](https://lua.org), and community support available as well for other languages via standard ZeroMQ libraries.
+Spacebeam is a distributed open-source research & development community that conducts multidisciplinary work on distributed systems, artificial intelligence and high-performance computing.
 
 ## Our work process
 We use the ZeroMQ C4 process working on Spacebeam, which means that every proposed change is tracked as an issue.
@@ -17,7 +16,7 @@ An ideal description for an issue goes:
 
 Please do not create issues for ideas or feature requests.
 
-Come with clear problems and pausible solutions.
+Come with clear problems and possible solutions.
 
 ## Code and documentation
 

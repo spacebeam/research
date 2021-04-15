@@ -8,14 +8,13 @@ This was just one of a few very big mistakes, I now think that is better to run 
 
 Originally I had this crazy idea of a future where bots could play the old proleague format including 2v2 games, all wishful thinking, since after some real world experience as 2v2 player and a lite dive into bwheadless.exe or C++ for that matter I learned the hard way how crazy my intention was.
 
-I'm not going to continue with the Python tutorial and no matter that I can code some lite examples with TorchCraft's Python API the idea to build also a Terran bot, a race that I don't have any real experience with for a future 2v2 combo with my Zerg bot its completely out of my capacity, I wanted to get the attention of existing Python devs that could  want to build a bot using Python, I hope that someone write a great bw bot with Python eventually I bet a scary bot could be made just with Python alone, but I'm not going to try to be that champion, I have my plate full with Luerl and I'm making a really bad job about it, I'm going to return to write about the Python side of things, for anything PyTorch running on another process talking TCP with the rest of the bot system as it should instead of using Python to write the bot it self.
+I'm not going to continue with the Python tutorial and no matter that I can code some lite examples with TorchCraft's Python API the idea to build also a Terran bot, a race that I don't have any real experience with for a future 2v2 combo with my Zerg bot its completely out of my capacity, I wanted to get the attention of existing Python devs that could  want to build a bot using Python, I hope that someone write a great bw bot with Python eventually I bet a scary bot could be made just with Python alone, but I'm not going to try to be that champion, I have my plate full with Luerl and I'm making a really bad job about it, I'm going to return to write about the Python side of things, for anything PyTorch running on another process talking TCP with the rest of the bot system as it should instead of using Python to write a second bot, Blueberry is dead long live Ophelia.
 
 Python is slow, people say that to keep the meme alive, the reality is that is fast enough, the speed of Python have never been an issue for writing a StarCraft bot, deer reader take a look at the StarCraft 2 AI scene for examples.
 
 Q. Is torch-up vaporware? is it ever going to happen? 
 
 A. I guess is vaporware until is not?
-
 
 Q. What is my problem? ^^
 

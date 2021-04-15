@@ -7,6 +7,6 @@ For more about how to get involved: join the [conversation](https://discord.com/
 
 [Explore](https://spacebeam.org) and remember; as the system grow in number, you must spawn more nodes to control it.
 
-## Contributing
+### Contributing
 
 See [Contributing](CONTRIBUTING.md).

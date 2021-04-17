@@ -5,15 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Full Atom Feed" />
+        <link href="/feeds/updates.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Categories Atom Feed" />
         <!-- twitter card metadata -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/logo.png">
 <meta name="twitter:site" content="@SpacebeamOrg">
-<meta name="twitter:title" content="About">
+<meta name="twitter:title" content="Programming StarCraft:Brood War bots on Linux">
 <meta name="twitter:description" content="">
         <!-- OG Tags -->
-<meta property="og:url" content="/pages/about/"/>
-<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence | About" />
+<meta property="og:url" content="/2021/04/15/programming-starcraftbrood-war-bots-on-linux/"/>
+<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence | Programming StarCraft:Brood War bots on Linux" />
 <meta property="og:description" content="" />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/images/logo.png">
@@ -55,10 +56,10 @@
             <a href="#menu" id="menu-link">more stuff</a>
             <nav id="menu">
                 <ul>
-                        <li class="active"><a href="/pages/about/">about</a></li>
+                        <li><a href="/pages/about/">about</a></li>
                         <li><a href="/pages/research/">research</a></li>
                         <li><a href="/pages/technology/">technology</a></li>
-                            <li><a href="/category/updates">updates</a></li>
+                            <li class="active"><a href="/category/updates">updates</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,40 +70,89 @@
         <footer>
             <a name="top"></a>
             <p>
-              <time datetime=" 2020-07-31 16:20:00+02:00">
-                <script>document.write(moment('2020-07-31 16:20:00+02:00').format('LL'));</script>
+              <time datetime=" 2021-04-15 00:00:00+02:00">
+                <script>document.write(moment('2021-04-15 00:00:00+02:00').format('LL'));</script>
               </time>
             </p>
         </footer>
         <header>
           <h2>
-            About
+            Programming StarCraft:Brood War bots on Linux
           </h2>
         </header>
       <div class="content">
-         <p>Spacebeam is a distributed open-source research &amp; development community that conducts multidisciplinary work on distributed systems, artificial intelligence and high-performance computing.</p>
-<p><strong>Our Mission</strong>: provide open-source tools for play, work and science!</p>
-<p><strong>Our Goal</strong>: a distributed workspace environment for machines of all ages.</p>
-<p><strong>Our Problem</strong>: StarCraft: Brood War</p>
-<p>The game represent a well defined environment with a number of interesting challenges on:</p>
+         <p>StarCRaft</p>
 <ul>
-<li>Information gathering</li>
-<li>Machine reasoning </li>
-<li>Dealing with uncertainty</li>
-<li>Domain knowledge exploitation</li>
+<li>Blizzard 1998</li>
+<li>Best RTS of all time</li>
+<li>Millions of players worldwide</li>
+<li>Professionally played</li>
+<li>Brood War C++ API (BWAPI) Read SC Memory, Issue Commands (Tasks?) to Game</li>
 </ul>
-<h2>Simplicity and principles</h2>
-<p>Simplicity means that the basic principles of your system, the underlying basic principles on which everything is built should be very simple.</p>
+<p>Real-Time Strategy</p>
 <ul>
-<li>Let it crash.</li>
-<li>Functions are a form of objects.</li>
-<li>Message passing and function calling are analogous.</li>
-<li>Asynchronous message passing is necessary for non-blocking.</li>
-<li>Selective receive allow to ignore messages uninteresting now.</li>
+<li>War-like simulation</li>
+<li>Gather resources</li>
+<li>Build Town / Army</li>
+<li>Combat With Enemies</li>
+<li>Different levels of terrain</li>
 </ul>
-<h2>Community</h2>
-<p>Team up with scientists, artists and hackers that spawn network resources where you'll find new tools and information models.</p>
-<p>To achieve our goal we focus on general-purpose strategies that networks learn from experience on different challenges and environments.</p>
+<p>Strategy</p>
+<ul>
+<li>Attacking</li>
+<li>Defending</li>
+<li>Expanding</li>
+</ul>
+<p>Yo why are u copypasta crazy shit don't waste time on this measure how much time was expend by them and compare</p>
+<p>different stages of a game.</p>
+<p>different games inside a game.</p>
+<p>Early game, mid game, late game.</p>
+<p>Zerg:</p>
+<p>Uncivilized alien race, make too many units.</p>
+<p>Units regenerate HP, morph / eggs.</p>
+<p>A SINGULARITY CONTAINER IS AN EGG.</p>
+<p>What is a Build-order?</p>
+<ul>
+<li>Sequence of economic actions</li>
+<li>List of buildings / units to build in order</li>
+</ul>
+<p>Adapted on the fly to what they see in the game</p>
+<p>Use the Zerg as your battle horse analogy for your organization scheme and the use of Erlang and the actor model, here you can draw similarities bound to the physics of things, physical modeling, quoting Carl Hewitt.</p>
+<p>Build-Order Problems:</p>
+<ul>
+<li>What army to construct?</li>
+<li>How predict enemy army based on current observation?</li>
+<li>Where to place buildings?</li>
+</ul>
+<p>Examples: use human knowledge or machine learning to predict enemy composition.</p>
+<p>Scouting is all u need</p>
+<p>BWAPI</p>
+<p>StarCraft Tech Tree</p>
+<ul>
+<li>Each building and unit in the game has a set of things required to build first.</li>
+</ul>
+<p>StarCRaft Maps</p>
+<p>Good maps for bw are balanced or not</p>
+<p>There is a Fog of War</p>
+<p>Imperfect information</p>
+<p>StarCRaft Grid System</p>
+<p>how can i use setFrameSkip with torchcraft? does it make sense?</p>
+<p>standard BWAPI events are:</p>
+<p>MatchStart, MatchFrame(!), MatchEnd, UnitShow, UnitHide, UnitCreate, UnitMorph, UnitDestroy, UnitRenegate, UnitComplete, SendText.</p>
+<p>tools: DrawUnitHealhBar ?</p>
+<p>Setup Instructions</p>
+<p>Get started with StarCraft: Brood War AI Development as fast as possible.</p>
+<p>Linux / Bot Development using TorchCraft</p>
+<p>TorchCraft comes with a example bot written in Lua or Python using BWAPI 4.2.0.</p>
+<p>This repo comes with BWAPI, and uses bwheadless.exe and ChaosLauncher to launch StarCraft with BWAPI.</p>
+<ol>
+<li>CLone this repo to your computer</li>
+<li>Unxip Starcraft Broodwar 1.16.1 to the included windows/starcraft folder</li>
+<li>RUn windows/RunCBotAndStarCraft.sh which will launch the bot executable and Starcraft/BWAPI</li>
+<li>Open windows/c--/visual/StarCraft.sln in Visual Studio 2019 to modify / recompile the code.</li>
+</ol>
+<p>can i use onSendText on torchcraft?</p>
+<p>can i learn to store scores on sqlite3 really quick?</p>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>

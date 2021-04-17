@@ -20,6 +20,7 @@ The game represent a well defined environment with a number of interesting chall
 ## Simplicity and principles
 Simplicity means that the basic principles of your system, the underlying basic principles on which everything is built should be very simple.
 
+- Let it crash.
 - Functions are a form of objects.
 - Message passing and function calling are analogous.
 - Asynchronous message passing is necessary for non-blocking.

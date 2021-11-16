@@ -3,7 +3,6 @@ date: 2021-11-10
 description: Here are the maps updated with some interesting surprises.
 
 ## Maps
-[click here](https://torchup.org/files/maps.zip), to download them on zip file.
 
 | (4) Polypoid 1.65 | &nbsp; | (3) Neo Sylphid 2.0 | &nbsp; | (2) Eclipse BW 1.16.1 | 
 |:---:|:---:|:---:|:---:|:---:|
@@ -13,3 +12,4 @@ description: Here are the maps updated with some interesting surprises.
 |:---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Largo.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/FightingSpirit.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/IronCurtain.jpg 200 %} |
 
+[click here](https://torchup.org/files/maps.zip), to download them on zip file.

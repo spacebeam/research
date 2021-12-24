@@ -8,8 +8,4 @@ description: Here are the maps updated with some interesting surprises.
 |:---:|:---:|:---:|:---:|:---:|
 | {% img [class name(s)] /images/maps/Polypoid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/NeoSylphid.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/Eclipse.jpg 200 %} |
 
-| (4) Largo 1.5 | &nbsp; | (4) Fighting Spirit 1.3 | &nbsp; | (4) Iron Curtain 1.1 | 
-|:---:|:---:|:---:|:---:|:---:|
-| {% img [class name(s)] /images/maps/Largo.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/FightingSpirit.jpg 200 %} | &nbsp; | {% img [class name(s)] /images/maps/IronCurtain.jpg 200 %} |
-
 [click here](https://torchup.org/files/maps.zip), to download them on zip file.

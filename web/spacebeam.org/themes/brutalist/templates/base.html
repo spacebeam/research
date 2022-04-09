@@ -81,7 +81,7 @@
             {% else %}
             <h1><a href="/">{{ FIRST_NAME }}'s Blog</a></h1>
             {% endif %}
-            <a href="#menu" id="menu-link">more stuff</a>
+            <a href="#menu" id="menu-link">more</a>
             <nav id="menu">
                 <ul>
                     {% if DISPLAY_PAGES_ON_MENU %}
@@ -99,6 +99,16 @@
                             {% endif %}
                         {% endfor %}
                     {% endif %}
+                    {% for tag in tag_cloud %}
+                        <li class="tag-{{ tag.1 }}">
+                        <a href="{{ SITEURL }}/{{ tag.0.url }}">
+                        {{ tag.0 }}
+                            {% if TAG_CLOUD_BADGE %}
+                                <span class="badge">{{ tag.2 }}</span>
+                            {% endif %}
+                        </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </nav>
         </header>

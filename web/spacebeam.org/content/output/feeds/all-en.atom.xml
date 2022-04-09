@@ -1,5 +1,1381 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2019-11-30T00:00:00+00:00</updated><entry><title>November Overdrive</title><link href="/november-overdrive.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-11-30:/november-overdrive.html</id><summary type="html">&lt;p&gt;O=&lt;/p&gt;</summary><content type="html">&lt;p&gt;O=&lt;/p&gt;</content></entry><entry><title>The education of the architect</title><link href="/the-education-of-the-architect.html" rel="alternate"></link><published>2019-10-23T00:00:00+00:00</published><updated>2019-10-23T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-10-23:/the-education-of-the-architect.html</id><summary type="html">&lt;p&gt;Knowledge is the child of practice and theory. Practice is the continuous and regular exercise of employment where manual work is done with any necessary material according to the design of a drawing. Theory, on the other hand, is the ability to demonstrate and explain the productions of dexterity on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Knowledge is the child of practice and theory. Practice is the continuous and regular exercise of employment where manual work is done with any necessary material according to the design of a drawing. Theory, on the other hand, is the ability to demonstrate and explain the productions of dexterity on the principles of proportion.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2021-12-10T00:00:00+00:00</updated><entry><title>How to Cut and Trim Video</title><link href="/how-to-cut-and-trim-video.html" rel="alternate"></link><published>2021-12-10T00:00:00+00:00</published><updated>2021-12-10T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2021-12-10:/how-to-cut-and-trim-video.html</id><summary type="html">&lt;p&gt;The following command is used to trim video in FFmpeg. The stream copy enables to trim video without re-encoding and meanwhile keeps original quality for the output video.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ffmpeg -i input.mp4 -ss &lt;span class="m"&gt;00&lt;/span&gt;:01:23 -to &lt;span class="m"&gt;00&lt;/span&gt;:04:20 -c copy output.mp4 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;-c copy trim via stream copy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The following command is used to trim video in FFmpeg. The stream copy enables to trim video without re-encoding and meanwhile keeps original quality for the output video.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ffmpeg -i input.mp4 -ss &lt;span class="m"&gt;00&lt;/span&gt;:01:23 -to &lt;span class="m"&gt;00&lt;/span&gt;:04:20 -c copy output.mp4 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;-c copy trim via stream copy, which is fast and will not re-encode video.&lt;/p&gt;</content><category term="video"></category><category term="tutorial"></category></entry><entry><title>One in a million, repeats very often</title><link href="/one-in-a-million-repeats-very-often.html" rel="alternate"></link><published>2021-04-09T00:00:00+00:00</published><updated>2021-04-09T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2021-04-09:/one-in-a-million-repeats-very-often.html</id><summary type="html">&lt;p&gt;I made lots of mistakes and in hindsight, put and tried to play an humongous amount of games following my own tournament format that bite me to this day.&lt;/p&gt;
+&lt;p&gt;This was just one of a few very big mistakes, I now think that is better to run a small number …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I made lots of mistakes and in hindsight, put and tried to play an humongous amount of games following my own tournament format that bite me to this day.&lt;/p&gt;
+&lt;p&gt;This was just one of a few very big mistakes, I now think that is better to run a small number of games and found my self on the other extreme... growing the bot to play bo3 focus only on one (2), (3) and (4) player maps. I'm in between a code refactor moving bot to a entity-component-system architecture that play nice with a simulator that I have running Luerl (Lua on the Erlang VM) this is one of my main project goals and objectives this integration of different versions and implementations of the Lua language in tandem so instead of fixing the container tournament manager that explode on my face as reported before or finishing the actual tournament as planned, is not that I abandoned torch-up, if anything I want to approach things differently, I still plan to run games with the registered by now old bots following the previous stated rules, a first round and announce results I believe that as my goal with torch-up, that in order to move on to future things without old mistakes hunting me.. I'm a sloth on hell already, I don't have anything new to report around tournament results, other than something completely different, and probably not what you are wondering, like: &lt;/p&gt;
+&lt;p&gt;Originally I had this crazy idea of a future where bots could play the old proleague format including 2v2 games, all wishful thinking, since after some real world experience as 2v2 player and a lite dive into bwheadless.exe or C++ for that matter I learned the hard way how crazy my intention was.&lt;/p&gt;
+&lt;p&gt;I'm not going to continue with the Python tutorial and no matter that I can code some lite examples with TorchCraft's Python API the idea to build also a Terran bot, a race that I don't have any real experience with for a future 2v2 combo with my Zerg bot its completely out of my capacity, I wanted to get the attention of existing Python devs that could  want to build a bot using Python, I hope that someone write a great bw bot with Python eventually I bet a scary bot could be made just with Python alone, but I'm not going to try to be that champion, I have my plate full with Luerl and I'm making a really bad job about it, I'm going to return to write about the Python side of things, for anything PyTorch running on another process talking TCP with the rest of the bot system as it should instead of using Python to write a second bot, Blueberry is dead long live Ophelia.&lt;/p&gt;
+&lt;p&gt;Python is slow, people say that to keep the meme alive, the reality is that is fast enough, the speed of Python have never been an issue for writing a StarCraft bot, deer reader take a look at the StarCraft 2 AI scene for examples.&lt;/p&gt;
+&lt;p&gt;Q. Is torch-up vaporware? is it ever going to happen? &lt;/p&gt;
+&lt;p&gt;A. I guess is vaporware until is not?&lt;/p&gt;
+&lt;p&gt;Q. What is my problem? ^^&lt;/p&gt;
+&lt;p&gt;A. StarCraft: Brood War.&lt;/p&gt;
+&lt;p&gt;Q.What happened? is there any update on this?&lt;/p&gt;
+&lt;p&gt;A. My goal still is built, compete and write about my bot and the system of systems core of the fixing of the StarCraft: Brood War problem instead of a main focus as tournament organizer, but I also want to compete in a world where you are not forced to use Windows because the game release originally for the 1998 version of that OS. So the idea of become an event organizer, sadly apparently the worst at tournament organizing is really not that bad, mistakes where made, my apologies to all involved that want to see this finally out of the deeps of hell or all of you competitive beautiful people that wanna a piece of my bot, until then, this will hunt me until I hunt it.&lt;/p&gt;</content></entry><entry><title>Setup Dev Workflow</title><link href="/setup-dev-workflow.html" rel="alternate"></link><published>2020-09-13T00:00:00+00:00</published><updated>2020-09-13T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-09-13:/setup-dev-workflow.html</id><summary type="html">&lt;p&gt;Hi, in this video I'm going to go through my customized dev environment and linux workflow (?),&lt;/p&gt;
+&lt;p&gt;this is mostly for starcraft brood war ofc born of necessity. &lt;/p&gt;
+&lt;p&gt;I use vim but I expect autocomplete and go to definitions and a tool that let me move throuth my projet easy and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi, in this video I'm going to go through my customized dev environment and linux workflow (?),&lt;/p&gt;
+&lt;p&gt;this is mostly for starcraft brood war ofc born of necessity. &lt;/p&gt;
+&lt;p&gt;I use vim but I expect autocomplete and go to definitions and a tool that let me move throuth my projet easy and quick&lt;/p&gt;
+&lt;p&gt;is a great text editor available everywhere that let me customize it to my own needs&lt;/p&gt;
+&lt;p&gt;I'm by no means a vim expert, this is more like my notes in the continuous process of learning and making my own customized experience.&lt;/p&gt;
+&lt;p&gt;vim window movements suck by default, I need good movements (explain what does this means).&lt;/p&gt;
+&lt;p&gt;my goals are built-in language support for Python, Lua, Erlang and C &lt;/p&gt;
+&lt;p&gt;avoid the requirement of tools outside those supported languages,&lt;/p&gt;
+&lt;p&gt;avoid rust or go utilities if possible,&lt;/p&gt;
+&lt;p&gt;avoid c++ if possible,&lt;/p&gt;
+&lt;p&gt;introduce debian linux&lt;/p&gt;
+&lt;p&gt;introduce the starcraft and vim comparation..&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vim plugging manager&lt;/li&gt;
+&lt;li&gt;my list of pluggins&lt;/li&gt;
+&lt;li&gt;autocompletion&lt;/li&gt;
+&lt;li&gt;unit tests&lt;/li&gt;
+&lt;li&gt;git integration&lt;/li&gt;
+&lt;li&gt;startify menu (?)&lt;/li&gt;
+&lt;li&gt;go to definition&lt;/li&gt;
+&lt;li&gt;linting (?)&lt;/li&gt;
+&lt;li&gt;denite (more than just a fuzzy finder!)&lt;/li&gt;
+&lt;li&gt;undotree F5&lt;/li&gt;
+&lt;li&gt;dirvish (file finder)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hotkeys&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mksh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;kitty&lt;/li&gt;
+&lt;li&gt;bspwm&lt;/li&gt;
+&lt;li&gt;tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;direction is more important than speed&lt;/p&gt;
+&lt;h3&gt;plug&lt;/h3&gt;
+&lt;p&gt;plug vim pluging manager&lt;/p&gt;
+&lt;h3&gt;my list of pluggins&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-sensible&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-eunuch&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-fugitive&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-unimpaired&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-repeat&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-dispatch&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-startify&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-polyglot&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-maximizer&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-lastplace&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-sandwich&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-highlightedyank&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;goyo&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;denite&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-dirvish&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-dirvish-git&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-love-docs&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-pandoc&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-pandoc-syntax&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-sxhkdrc&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-slime&lt;/td&gt;
+&lt;td&gt;blablabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jupytext.vim&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-tmux-navigator&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-table-mode&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;auto-pairs&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;undotree&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onehalf&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rainbow&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VimCompletesMe&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deoplete&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;neoinclude&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deoplete-clangx&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nvim-yarp&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-hug-neovim-rpc&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deoplete-vim-lsp&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-cmake&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-gutentags&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;async.vim&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-lsp&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ale&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;neoformat&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-devicons&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lightline.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-cursorworld&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lightline-bufferline&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vimwiki&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calendar-vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pomodoro.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Colorizer&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indentLine&lt;/td&gt;
+&lt;td&gt;blabla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-test&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-isort&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-minimap&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim-lsp-settings&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;custom preferences&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;plugin&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ale.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calendar.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;denite.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deoplete.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;dirvish.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;goyo.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gutentags.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hotkets.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indentLine.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jupytext.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ligthline.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lsp.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;neoformat.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pandoc.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;startify.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;test.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tmux.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vimwiki.vim&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;autocompletion&lt;/h3&gt;
+&lt;p&gt;blabla bla&lt;/p&gt;
+&lt;h3&gt;linting&lt;/h3&gt;
+&lt;p&gt;ale.vim&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python support flake8 and pylint&lt;/li&gt;
+&lt;li&gt;lua support luacheck&lt;/li&gt;
+&lt;li&gt;c support by clang&lt;/li&gt;
+&lt;li&gt;erlang support with syntaxerl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;hotkeys&lt;/h3&gt;
+&lt;p&gt;hotkeys.vim&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;hotkey&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;leader n&lt;/td&gt;
+&lt;td&gt;ale next wrap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader p&lt;/td&gt;
+&lt;td&gt;ale previous wrap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader -&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader \&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader t&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader gj&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader jq&lt;/td&gt;
+&lt;td&gt;bla&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader tc&lt;/td&gt;
+&lt;td&gt;color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader s&lt;/td&gt;
+&lt;td&gt;update&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader S&lt;/td&gt;
+&lt;td&gt;spelling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader e&lt;/td&gt;
+&lt;td&gt;exit qa!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader f&lt;/td&gt;
+&lt;td&gt;Denite buffer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader w&lt;/td&gt;
+&lt;td&gt;DeniteCursorWord grep:.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader x&lt;/td&gt;
+&lt;td&gt;DeniteProjectDir -start-filter grep:::!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;leader r&lt;/td&gt;
+&lt;td&gt;Denite -resume -cursor-pos=+1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gy&lt;/td&gt;
+&lt;td&gt;Goyo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;leader R, replace&lt;/p&gt;
+&lt;p&gt;leader gg, bla
+leader gj, bla
+leader gf, bla
+leader ga, git fetch
+leader gl, git pull
+leader gc, git commit
+leader gp, git push&lt;/p&gt;
+&lt;p&gt;leader cg, CMakeGenerate
+leader cb, CMakeBuild&lt;/p&gt;
+&lt;p&gt;leader ct, CMakeBuild test&lt;/p&gt;
+&lt;p&gt;leader tn, TestNearest&lt;/p&gt;
+&lt;p&gt;leader tf, TestFile&lt;/p&gt;
+&lt;p&gt;leader ts, TestSuite -strategy=vimterminal&lt;/p&gt;
+&lt;p&gt;leader tl, TestLast&lt;/p&gt;
+&lt;p&gt;I'm also have qe, j, k, qw, qq maped for quickfix stuff (?)&lt;/p&gt;
+&lt;p&gt;leader qe,&lt;/p&gt;
+&lt;p&gt;leader j,&lt;/p&gt;
+&lt;p&gt;leader k,&lt;/p&gt;
+&lt;p&gt;leader qw,&lt;/p&gt;
+&lt;p&gt;leader qq&lt;/p&gt;
+&lt;p&gt;now the F keys&lt;/p&gt;
+&lt;p&gt;f1, help
+f2, maximizer
+f3, dirvish
+f4, denite
+f5, undotree
+f5, date on insert mode
+f7, calendar.vim
+f8, pomodoro.vim&lt;/p&gt;</content></entry><entry><title>Gather Minerals Train a Worker Build a Refinery and Extract Vespene Gas</title><link href="/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas.html" rel="alternate"></link><published>2020-07-28T00:00:00+00:00</published><updated>2020-07-28T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-28:/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through start the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
+we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/TorchCraft/TorchCraft/"&gt;TorchCraft&lt;/a&gt; is a &lt;a href="https://bwapi.github.io/"&gt;BWAPI&lt;/a&gt; module that sends StarCraft: Brood War data out over a &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; connection.
+This lets you parse game data and interact with the Brood War API from anywhere.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through start the game for the first time after &lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;installing the environment&lt;/a&gt;,
+we are going to dive into TorchCraft's Python API and its provided &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt;, learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!&lt;/p&gt;
+&lt;p&gt;Let's start the game and learn a bit more about TorchCraft a general overview can be found in:&lt;/p&gt;
+&lt;p&gt;Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
+Richoux, F. and Usunier, N., 2016. &lt;em&gt;TorchCraft: a Library for Machine Learning Research
+on Real-Time Strategy Games&lt;/em&gt; - &lt;a href="https://arxiv.org/abs/1611.00625"&gt;arXiv:1611.00625&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Step 0 - Build a &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /opt/StarCraft
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
+ -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
+ --name Blueberry --game Blueberry --race T\
+ --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;amp;\
+wine Chaoslauncher/Chaoslauncher.exe
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That is what we are actually executing, let's build a &lt;code&gt;launcher.py&lt;/code&gt; script.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Run bwheadless.exe and Chaoslauncher.exe from here!&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argparse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentParser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host a game with bwheadless&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-p&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/opt/StarCraft/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;StarCraft path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--bot&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Blueberry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--race&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Terran&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-m&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--map&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\(4\)FightingSpirit1.3.scx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse_args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;wine bwheadless.exe -e {0}StarCraft.exe&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; -l {0}bwapi-data/BWAPI.dll --host&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; --name {1} --game {1} --race {2}&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt; --map maps/TorchUp/{3}&amp;amp;&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s1"&gt;wine Chaoslauncher/Chaoslauncher.exe&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;race&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Start the original example again and run &lt;code&gt;launcher.py&lt;/code&gt; to see what gives?&lt;/p&gt;
+&lt;h3&gt;Run the original &lt;code&gt;example.py&lt;/code&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/TorchCraft/examples/py/example.py -t &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Run the &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If everything works as expected, you will see &lt;code&gt;Chaoslauncher&lt;/code&gt;, the first time it will ask for the location of &lt;code&gt;StarCraft.exe&lt;/code&gt;, you will find it on &lt;code&gt;/opt/StarCraft/&lt;/code&gt; confirm and it will ask probably to restart &lt;code&gt;Chaoslauncher.exe&lt;/code&gt;, kill the current session with &lt;code&gt;Control-C&lt;/code&gt; in the terminal where you start &lt;code&gt;launcher.py&lt;/code&gt; and run it again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;{% img [class name(s)] /images/1.png %}&lt;/p&gt;
+&lt;p&gt;Now with Chaoslauncher ready, enable the &lt;code&gt;BWAPI 4.2.0 [RELEASE]&lt;/code&gt; and and &lt;code&gt;W-MODE&lt;/code&gt; plugins and click on &lt;code&gt;Start&lt;/code&gt; hopefully that will launch the game on your new environment, check &lt;code&gt;Multiplayer -&amp;gt; Local PC&lt;/code&gt; and confirm that you see &lt;code&gt;Blueberry&lt;/code&gt; waiting in the lobby.&lt;/p&gt;
+&lt;p&gt;{%img [class name(s)] /images/2.png %}&lt;/p&gt;
+&lt;p&gt;{%img [class name(s)] /images/3.png %}&lt;/p&gt;
+&lt;h2&gt;Step 1 - What is TorchCraft again?&lt;/h2&gt;
+&lt;p&gt;{%img [class name(s)] /images/4.png %}&lt;/p&gt;
+&lt;p&gt;TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here &lt;a href="https://pytorch.org"&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.&lt;/p&gt;
+&lt;p&gt;StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.&lt;/p&gt;
+&lt;h3&gt;BWAPI&lt;/h3&gt;
+&lt;p&gt;BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Perform unit actions, i.e: &lt;code&gt;Attack&lt;/code&gt;, &lt;code&gt;Move&lt;/code&gt;, &lt;code&gt;Build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Obtain current data about any visible unit, such as: &lt;code&gt;Position&lt;/code&gt;, &lt;code&gt;HP&lt;/code&gt;, &lt;code&gt;Energy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Obtain offline data about any unit type, such as: &lt;code&gt;MaxSpeed&lt;/code&gt;, &lt;code&gt;Damage&lt;/code&gt;, &lt;code&gt;MaxHP&lt;/code&gt;, &lt;code&gt;Size&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Programs written with BWAPI alone are usually compiled into a Windows dynamically linked library (DLL) which is injected into the game. BWAPI allows the user to perform any of the aboce functionality while the game is running, after each logic frame update within the game's software.&lt;/p&gt;
+&lt;p&gt;After each logic frame, BWAPI interrupts the StarCraft process and allows the user to read game data and issue commands, which are stored in a queue to be executed during the game's next logic frame.&lt;/p&gt;
+&lt;h3&gt;TorchCraft Design&lt;/h3&gt;
+&lt;p&gt;TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.&lt;/p&gt;
+&lt;p&gt;The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).&lt;/p&gt;
+&lt;p&gt;The server starts at the beginning of the match and stops when that ends.&lt;/p&gt;
+&lt;p&gt;TorchCraft is seen by the AI programmer as a library that provides: &lt;code&gt;connect()&lt;/code&gt;, &lt;code&gt;receive()&lt;/code&gt; to get the state, &lt;code&gt;send(commands)&lt;/code&gt;, and some helper functions about specifics of StarCraft's rules and state representation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- main game engine loop:&lt;/span&gt;
+&lt;span class="c1"&gt;-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`&lt;/span&gt;
+&lt;span class="kr"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="kr"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;receive_player_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compute_dynamics&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c1"&gt;-- our injected code:&lt;/span&gt;
+    &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send_state&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;torchcraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;receive_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`&lt;/span&gt;
+&lt;span class="c1"&gt;-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions&lt;/span&gt;
+&lt;span class="n"&gt;tc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;torchcraft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;featurize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt; &lt;span class="kr"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;featurize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;actions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;tocommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.&lt;/p&gt;
+&lt;p&gt;TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.&lt;/p&gt;
+&lt;h2&gt;Step 2 - Analyzing TorchCraft &lt;code&gt;example.py&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;What is TorchCraft's &lt;a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py"&gt;example.py&lt;/a&gt; actually doing?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tc&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torchcraft.Constants&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tcc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Get closest function, very self explanatory!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_closest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;inf&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;
+            &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;TorchCraft Python API client initial setup&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Client&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Initial setup&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_speed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_gui&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_cmd_optim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Plays simple micro battles with an attack closest heuristic&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{%img [class name(s)] /images/5.png %}&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;loop&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;actions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;game_ended&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;enemy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_closest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;enemy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Attack_Unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Sending actions: {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.&lt;/p&gt;
+&lt;h2&gt;Step 3 - Minerals and Vespene Gas&lt;/h2&gt;
+&lt;p&gt;Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require &lt;code&gt;Vespene Gas&lt;/code&gt;. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (&lt;code&gt;Extractor&lt;/code&gt; for &lt;code&gt;Zerg&lt;/code&gt;, &lt;code&gt;Refinery&lt;/code&gt; for &lt;code&gt;Terran&lt;/code&gt; and &lt;code&gt;Assimilator&lt;/code&gt; for &lt;code&gt;Protoss&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;{%img [class name(s)] /images/6.png %}&lt;/p&gt;
+&lt;h3&gt;Run &lt;code&gt;gathering.py&lt;/code&gt; example&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/gathering.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Run &lt;code&gt;launcher.py&lt;/code&gt; script&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 /usr/src/starcraft-sif/examples/launcher.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Train a SCV&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isbuilding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Constants&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unittypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;\
+     &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Terran_Command_Center&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;producing&lt;/span&gt;\
+         &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ore&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;\
+         &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;used_psi&lt;/span&gt;\
+         &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;total_psi&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# Target, x, y are all 0&lt;/span&gt;
+            &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+                &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;tc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Constants&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unittypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Terran_SCV&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="c1"&gt;# to train a unit you MUST input into &amp;quot;extra&amp;quot; field&lt;/span&gt;
+            &lt;span class="n"&gt;producing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Gathering Minerals&lt;/h3&gt;
+&lt;p&gt;if all went well, the workers should now start gathering the mineral patches closest to them!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gather&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command2order&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Gather&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
+&lt;span class="n"&gt;build&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command2order&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Build&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;right_click_position&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command2order&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Right_Click_Position&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;order&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;orders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;order&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;gather&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;order&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;\\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;order&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;right_click_position&lt;/span&gt;\ 
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;building_refinery&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_closest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;neutral&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+                &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Right_Click_Unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Don't expect an optimal spread of workers, but that is left as an exercise.&lt;/p&gt;
+&lt;h3&gt;Build a Refinery&lt;/h3&gt;
+&lt;p&gt;We Require More Vespene Gas&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;vespene&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Resource_Vespene_Geyser&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isworker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;workers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;bot&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ore&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;building_refinery&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;nu&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;neutral&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unittypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;nu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;vespene&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Build&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;nu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;nu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unittypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Terran_Refinery&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;])&lt;/span&gt;
+                &lt;span class="n"&gt;building_refinery&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Gas harvesting&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;building_refinery&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;refinery&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+            &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Right_Click_Unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;refinery&lt;/span&gt;
+        &lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;refinery&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;\
+     &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;gas_harvesting&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+            &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;command_unit_protected&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;unit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;tcc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unitcommandtypes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Right_Click_Unit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;refinery&lt;/span&gt;
+        &lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;Here is a link to the complete &lt;a href="https://github.com/spacebeam/starcraft-sif/blob/master/examples/gathering.py"&gt;gathering.py&lt;/a&gt; script if you are just curious,
+Next we will &lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;train different units&lt;/a&gt; to improve our Terran skills!&lt;/p&gt;</content><category term="bwapi"></category><category term="tutorial"></category></entry><entry><title>BUILD A WALL &amp; LINGS WILL FALL</title><link href="/build-a-wall-lings-will-fall.html" rel="alternate"></link><published>2020-07-13T00:00:00+00:00</published><updated>2020-07-13T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-13:/build-a-wall-lings-will-fall.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
+(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
+&lt;p&gt;Buldings and research define technology …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Workers are often weak in fights compared to other units.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Players gather resources to build units and defeat their opponents. To that end, they often have worker units
+(and extraction structures) that can gather resources needed to build workers, buildings, other units and research upgrades.&lt;/p&gt;
+&lt;p&gt;Buldings and research define technology trees (directed acyclic graphs) and each state of a tech tree allow for the production of different unit types 
+and the training of new unit abilities.&lt;/p&gt;
+&lt;p&gt;An opening denotes the same thing as in Chess: an early game plan for which the player has to make choices.&lt;/p&gt;
+&lt;p&gt;That is the case in Chess because one can move only one piece at a time (each turn), and in StarCraft because,
+during the early game phase, one is economically limited and has to choose which tech paths to pursue.&lt;/p&gt;
+&lt;p&gt;Available resources constrain the technology advancement and the number of units one can produce. As producing buildings
+and units also take time, the arbitrage between investing in the economy, in technological advancements, and in units production
+is the crux of the strategy during the whole game.&lt;/p&gt;
+&lt;h2&gt;opening&lt;/h2&gt;
+&lt;p&gt;In StarCraft an opening refer to the initial moves of a game. The term can refer to the initial moves by either side, but an opening by Zerg may also be known as &lt;em&gt;defense&lt;/em&gt;. 
+There are dozens of different openings, and hundreds of variants. These vary widely in character from quiet positional play to wild tactical play.&lt;/p&gt;
+&lt;p&gt;In addition to referring to specific move sequences, the opening is the first phase of a game, the other phases being the middlegame and the endgame.&lt;/p&gt;
+&lt;p&gt;Opening moves that are considered standard are referred to as "book moves". Reference works often present move sequnces in simple algebraic notation, opening trees or theory tables. When a game begins to deviate deom known, opening theory, the players are said to be "out of the book".&lt;/p&gt;
+&lt;p&gt;Professional players spend yers studying openings, and continue doing so throughout their careers, as opening theory continues to evolve.&lt;/p&gt;
+&lt;p&gt;The study of openings can become unbalanced if it is to the exclusion of tactical training and middlegame and endgame strategy.&lt;/p&gt;
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;</content><category term="starcraft"></category></entry><entry><title>8 Supply, 11 Gas, 12 Rax, 14 Scout</title><link href="/8-supply-11-gas-12-rax-14-scout.html" rel="alternate"></link><published>2020-07-11T00:00:00+00:00</published><updated>2020-07-11T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-11:/8-supply-11-gas-12-rax-14-scout.html</id><summary type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going …&lt;/p&gt;</summary><content type="html">&lt;p&gt;That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into &lt;a href="https://en.wikipedia.org/wiki/Coroutine"&gt;Coroutines&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with &lt;a href="https://zeromq.org"&gt;ZMQ&lt;/a&gt; and multiple languages, splitting the game into separate components and developing separate systems to solve each task.&lt;/p&gt;
+&lt;p&gt;This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?&lt;/p&gt;
+&lt;h2&gt;Coroutines&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.&lt;/p&gt;
+&lt;p&gt;Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.&lt;/p&gt;
+&lt;p&gt;A sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.&lt;/p&gt;
+&lt;p&gt;Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.&lt;/p&gt;
+&lt;p&gt;In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.&lt;/p&gt;
+&lt;h3&gt;Difference with processes&lt;/h3&gt;
+&lt;p&gt;Processes are idependent units of execution, a subroutine lives inside a process.&lt;/p&gt;
+&lt;h3&gt;Cooperative multitasking&lt;/h3&gt;
+&lt;p&gt;Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.&lt;/p&gt;
+&lt;p&gt;Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.&lt;/p&gt;
+&lt;h2&gt;Python 3 &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.&lt;/p&gt;
+&lt;p&gt;Asynchronous operations generally return placeholder objects (&lt;a href="https://docs.python.org/3.7/library/concurrent.futures.html"&gt;Futures&lt;/a&gt;).
+&lt;code&gt;Futures&lt;/code&gt; are usually transformed into their result with the &lt;code&gt;await&lt;/code&gt; and &lt;code&gt;yield&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Examples&lt;/h3&gt;
+&lt;p&gt;Here is a sample synchronous function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;synchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And here the same rewritten asynchronously as a native coroutine:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;asynchronous_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;http_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Anything you can do with coroutines you can also do by passing callback around, but coroutines
+provide an important simplification by letting you organize your code in the same way you would if it
+were synchronous, important for error handling since &lt;code&gt;try/expect&lt;/code&gt; work as you would expect.&lt;/p&gt;
+&lt;h2&gt;Why ZeroMQ helps?&lt;/h2&gt;
+&lt;p&gt;ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.&lt;/p&gt;
+&lt;p&gt;You can use this feature to queue, route, and filter messages according to various &lt;code&gt;patterns&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Multilingual Distributed Messaging thanks to the ZeroMQ Community.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Carries messages across inproc, IPC, TCP, multicast.&lt;/li&gt;
+&lt;li&gt;Smart patterns like pub-sub, push-pull, request-reply.&lt;/li&gt;
+&lt;li&gt;Backed by a large and active open-source community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. &lt;a href="http://zguide.zeromq.org/"&gt;Read the guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Coroutines again&lt;/h2&gt;
+&lt;p&gt;Coroutines are the recommended way to write asynchronous code.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Coroutines&lt;/em&gt; use the Python 3 &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.&lt;/p&gt;
+&lt;p&gt;Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.&lt;/p&gt;
+&lt;h3&gt;How to call a coroutine&lt;/h3&gt;
+&lt;p&gt;Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
+This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bad_call&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c1"&gt;# This should raise ZeroDivisionError, but it won&amp;#39;t&lt;/span&gt;
+    &lt;span class="c1"&gt;# because the coroutine is called incorrectly!&lt;/span&gt;
+    &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
+and use the &lt;code&gt;await&lt;/code&gt; or &lt;code&gt;yield&lt;/code&gt; keyword in the call.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;good_call&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c1"&gt;# await will unwrap the object returned by divide()&lt;/span&gt;
+    &lt;span class="c1"&gt;# and raise the expection.&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Fire and forget&lt;/h4&gt;
+&lt;p&gt;Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use &lt;code&gt;IOLoop.spawn_callback&lt;/code&gt;, which makes the &lt;code&gt;IOLoop&lt;/code&gt; responsible for the call.
+If it fails, the &lt;code&gt;IOLoop&lt;/code&gt; will log a stack trace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# The IOLoop will catch the expection and print a stack trace&lt;/span&gt;
+&lt;span class="c1"&gt;# in the logs. Note that this doesn&amp;#39;t look like a normal call,&lt;/span&gt;
+&lt;span class="c1"&gt;# since we pass the function object to be called by the IOLoop.&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Coroutine patterns&lt;/h2&gt;
+&lt;h3&gt;Calling blocking functions&lt;/h3&gt;
+&lt;p&gt;The simplest way to call a blocking function from a coroutine is to use &lt;code&gt;IOLoop.run_in_executor&lt;/code&gt;, which returns &lt;code&gt;Futures&lt;/code&gt; that are compatible:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;call_blocking&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_in_executor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blocking_func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Parallelism&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;multi&lt;/code&gt; function accepts lists and dicts whose values are &lt;code&gt;Futures&lt;/code&gt; and waits for all of those &lt;code&gt;Futures&lt;/code&gt; in parallel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                                &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_many&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="c1"&gt;# res is a list of HTTPResponses in the same order&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                      &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="c1"&gt;# res is a dict {url: HTTPResponse}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In decorated coroutines, it is possible to &lt;code&gt;yield&lt;/code&gt; the list or dict directly:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parallel_fetch_decorated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resp2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                          &lt;span class="n"&gt;http_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Interleaving&lt;/h3&gt;
+&lt;p&gt;Sometimes it is useful to save a &lt;code&gt;Future&lt;/code&gt; instead of yielding it immediately, so you can start another operation before waiting.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.gen&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# convert_yielded() starts the native coroutine in the background.&lt;/span&gt;
+    &lt;span class="c1"&gt;# This is equivalent to asyncio.ensure_future() (both work)&lt;/span&gt;
+    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;convert_yielded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a little easier to do with decorated coroutines, because they start immediately when called:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@gen.coroutine&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fetch_future&lt;/span&gt;
+        &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;fetch_future&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_next_chunk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Looping&lt;/h3&gt;
+&lt;p&gt;In native coroutines, &lt;code&gt;async for&lt;/code&gt; can be used.&lt;/p&gt;
+&lt;h3&gt;Running in the background&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;PeriodicCallback&lt;/code&gt; is not normally used with coroutines. Instead, a coroutine can contain a &lt;code&gt;while True:&lt;/code&gt; loop and use &lt;code&gt;tornado.gen.sleep&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Coroutines that loop forever are generally started with&lt;/span&gt;
+&lt;span class="c1"&gt;# spawn_callback().&lt;/span&gt;
+&lt;span class="n"&gt;IOLoop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minute_loop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sometimes a more complicated loop may be desirable. For example, the previous loop runs every &lt;code&gt;60+N&lt;/code&gt; seconds,
+where &lt;code&gt;N&lt;/code&gt; is the running time of &lt;code&gt;do_something()&lt;/code&gt;. To run exactly every 60 seconds, use the interleaving pattern from above:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minute_loop2&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;nxt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Start the clock.&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# Run while the clock is ticking.&lt;/span&gt;
+        &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;nxt&lt;/span&gt;            &lt;span class="c1"&gt;# Wait fot he timer to run out.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;</content></entry><entry><title>How To Install TorchCraft and Set Up a Programming Environment on Linux</title><link href="/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux.html" rel="alternate"></link><published>2020-07-09T00:00:00+00:00</published><updated>2020-07-09T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-09:/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux.html</id><summary type="html">&lt;p&gt;{% img [class name(s)] /images/python.jpg %}&lt;/p&gt;
+&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
+&lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
+&lt;p&gt;Logged into your …&lt;/p&gt;</summary><content type="html">&lt;p&gt;{% img [class name(s)] /images/python.jpg %}&lt;/p&gt;
+&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.&lt;/p&gt;
+&lt;p&gt;This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.&lt;/p&gt;
+&lt;h2&gt;Step 0 - Update and Upgrade&lt;/h2&gt;
+&lt;p&gt;Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt update
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Confirm upgrade when prompted to do so.&lt;/p&gt;
+&lt;h2&gt;Step 1 - Check Version of Python&lt;/h2&gt;
+&lt;p&gt;Check your version of Python 3 installed by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python3 --version
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You'll receive output similar to the following.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 3.7.3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 2 - Install pip&lt;/h2&gt;
+&lt;p&gt;To manage software packages for Python, install &lt;code&gt;pip&lt;/code&gt;, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt install -y python3-pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Python packages can be installed by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install schematics 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here, &lt;code&gt;schematics&lt;/code&gt; can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. &lt;/p&gt;
+&lt;h2&gt;Step 3 - Install Additional Tools&lt;/h2&gt;
+&lt;p&gt;There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends vim git apt-transport-https\
+ gnupg2 wget software-properties-common curl build-essential\
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dpkg --add-architecture i386
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-add-repository contrib 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
+ libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
+ libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
+ libgl1-mesa-dri:i386 libsdl2-2.0-0 libstb0 libstb0:i386 mesa-vulkan-drivers
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 4 - Add the WineHQ Debian repository&lt;/h2&gt;
+&lt;p&gt;Get and install the repository key.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;amp;&amp;amp; apt-key add winehq.key
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-add-repository &amp;#39;deb https://dl.winehq.org/wine-builds/debian/ buster main&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt update &amp;amp;&amp;amp; rm winehq.key
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 5 - Install libfaudio0 and Wine&lt;/h2&gt;
+&lt;p&gt;Starting on Wine &amp;gt;= 4.5, libfaudio0 is required by the staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This explains how to obtain libfaudio0 for Debian 10.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_20.01-0~buster_amd64.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/i386/libfaudio0_20.01-0~buster_i386.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dpkg -i libfaudio0_20.01-0~buster_amd64.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dpkg -i libfaudio0_20.01-0~buster_i386.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt -y install --install-recommends winehq-staging winetricks
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 6 - Configuring WINE&lt;/h2&gt;
+&lt;p&gt;Many programs work under WINE with absolutely no configuration.. unfortunately, this isn't always the case.&lt;/p&gt;
+&lt;h3&gt;(default) using your own &lt;code&gt;non-root&lt;/code&gt; user&lt;/h3&gt;
+&lt;p&gt;The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can &lt;em&gt;REMOVE&lt;/em&gt; it and start clean with &lt;code&gt;rm -rf ~/.wine/&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;WINEARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;win32&lt;span class="p"&gt;;&lt;/span&gt; wineboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2012
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2013
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ winetricks -q vcrun2015
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;(optional) using a separate &lt;code&gt;wine&lt;/code&gt; user&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;adduser --disabled-login --gecos &amp;quot;&amp;quot; --shell /forbid/login wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;usermod --append --groups audio wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chown wine:wine -R /home/wine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 7 - StarCraft: Brood War 1.16.1&lt;/h2&gt;
+&lt;p&gt;At the moment StarCraft: Remastered is &lt;em&gt;NOT&lt;/em&gt; yet supported, the only working version is 1.16.1.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In this tutorial we have StarCraft installed in &lt;code&gt;/opt/StarCraft/&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat /usr/src/starcraft-sif/include/core/core* &amp;gt; /opt/StarCraft.tar.gz
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Installing the provided Python examples&lt;/h3&gt;
+&lt;p&gt;This will install Tornado, PyTorch, PyZMQ, NumPy and SciPy!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Installing TorchCraft&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/TorchCraft/TorchCraft.git /usr/src/TorchCraft --recursive
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install /usr/src/TorchCraft
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Step 8 - Coding &amp;amp; Building&lt;/h2&gt;
+&lt;p&gt;Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. check that everything is installed correctly and that we can run the original examples.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;if you follow the steps your output read hopefully:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CTRL-C to stop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and &lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;gather resources&lt;/a&gt; growing a Terran economy. &lt;/p&gt;</content><category term="tutorial"></category><category term="starcraft"></category><category term="linux"></category></entry><entry><title>Python TorchCraft Tutorial</title><link href="/python-torchcraft-tutorial.html" rel="alternate"></link><published>2020-07-09T00:00:00+00:00</published><updated>2020-07-09T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-09:/python-torchcraft-tutorial.html</id><summary type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;Train your units&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/13/build-a-wall-lings-will-fall/"&gt;Build your buildings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/15/one-in-a-million-repeats-very-often/"&gt;Scout the enemy(s)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Expand on the map&lt;/li&gt;
+&lt;li&gt;Attack and defend&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally we can test and deploy by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Test …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Welcome to our tutorial for StarCraft: Brood War bots using Linux and the TorchCraft Python API; we will learn to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/"&gt;Setup the environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/"&gt;Gather resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/"&gt;Train your units&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/13/build-a-wall-lings-will-fall/"&gt;Build your buildings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spacebeam.org/2020/07/15/one-in-a-million-repeats-very-often/"&gt;Scout the enemy(s)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Expand on the map&lt;/li&gt;
+&lt;li&gt;Attack and defend&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally we can test and deploy by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Test your bot using bw&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://torchup.org/pages/compete/"&gt;Join the Torch Up tournament&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>Stage 2 Supervision</title><link href="/stage-2-supervision.html" rel="alternate"></link><published>2020-07-06T00:00:00+00:00</published><updated>2020-07-06T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-07-06:/stage-2-supervision.html</id><summary type="html">&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
+&lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That one is the core design principle of UNIX: one service -&amp;gt; one daemon.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Daemons can die at all times. Maybe …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;At its core, &lt;a href="http://smarden.org/runit/"&gt;runit&lt;/a&gt; is a process supervision suite.&lt;/p&gt;
+&lt;p&gt;The concept of process supervision comes from several observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That one is the core design principle of UNIX: one service -&amp;gt; one daemon.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Daemons can die at all times. Maybe they are missing a vital resource and cannot handle certain failure;&lt;/li&gt;
+&lt;li&gt;Automatically restarting daemons when they die is generally a good thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A process supervision system organizes the process hierarchy in a radical different way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A process supervision system starts independent hierarchy of processes at boot time, called a supervision tree.&lt;/li&gt;
+&lt;li&gt;Your daemon is identified by the specific directory which contains all the information about it; then you send a message to the supervision tree. The supervision tree start the daemon as a leaf.&lt;/li&gt;
+&lt;li&gt;The parent of your daemon is a supervisor. Since your daemon is its direct child, the supervisor always knows the correct PID of your daemon.&lt;/li&gt;
+&lt;li&gt;To send signals to your daemons, you send a message to its supervisor, which will then send the signal to the daemon in your behalf.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The design of &lt;code&gt;runit&lt;/code&gt; takes a very familiar approach by breaking down functionality into several small utilities responsible for a single task.&lt;/p&gt;
+&lt;p&gt;This approach allows the simple components to be composed in various ways to suit our needs. &lt;/p&gt;
+&lt;p&gt;The core runit utilities are &lt;code&gt;runsvdir&lt;/code&gt;, &lt;code&gt;runsv&lt;/code&gt;, &lt;code&gt;chpst&lt;/code&gt;, &lt;code&gt;svlogd&lt;/code&gt;, and &lt;code&gt;sv&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Service supervision&lt;/h2&gt;
+&lt;p&gt;Each service is associated with a service directory, and each service daemon runs as a child process of a supervising &lt;code&gt;runsv&lt;/code&gt; process runing in this directory.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;runsv&lt;/code&gt; program provides a reliable interface for signalling the service daemon and controlling the service and supervisor.&lt;/p&gt;
+&lt;p&gt;Normally the &lt;code&gt;sv&lt;/code&gt; program is used to send commands throught this interface, and to query status information about the service.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;runsv&lt;/code&gt; program supervises the corresponding service daemon. By default a service is defined to be up, that means, if the service daemon dies, will be restarted. Of course you can tell it otherwise.&lt;/p&gt;
+&lt;p&gt;The promise is that this reliable interface to control daemons and supervisors obsolete pid-guessing programs, such as pidoff, killall, start-stop-daemon, which, due to guessing are prone to failures by design.&lt;/p&gt;
+&lt;p&gt;It also obsoletes so called pid-files, no need for each and every service daemon to include code to daemonize, to write the new process id into a file, and to take care that file is removed properly on shutdown, which might be very difficult in case of a crash!&lt;/p&gt;
+&lt;h2&gt;Clean process state&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;runit&lt;/code&gt; guarantees each service a clean process state, no matter if the service is activated for the first time or automatically at boot time, reactivated, or simply restarted. This means that the service always is started with the same environment, resource limits, open file descriptors, and controlling terminals.&lt;/p&gt;
+&lt;h2&gt;Reliable logging facility&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;runsv&lt;/code&gt; program provides a reliable logging facility for the service daemon. If configured, &lt;code&gt;runsv&lt;/code&gt; creates a pipe, starts and supervises an additional log service, redirects the log daemon's standard input to read from the pipe, and redirects the service daemon's standard output to write to the pipe.&lt;/p&gt;
+&lt;p&gt;Restarting the service does not require restarting the log service, and vice versa.&lt;/p&gt;
+&lt;p&gt;A good choice for log daemon is runit's service logging daemon &lt;code&gt;svlogd&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The service daemon and log daemon run with different process states and can run under different user id's.&lt;/p&gt;
+&lt;h2&gt;Stage 2&lt;/h2&gt;
+&lt;p&gt;Stage 2 handles the systems's uptime tasks (via the &lt;code&gt;runsvdir&lt;/code&gt; program) and is running the whole system's uptime life spawn.&lt;/p&gt;
+&lt;p&gt;Stage 2 is portable across UNIX systems. &lt;code&gt;runit&lt;/code&gt; is well suited for &lt;a href="https://old.reddit.com/r/teslamotors/comments/arfwvm/some_sw_internals_of_tesla_autopilot_node_hw2/"&gt;autopilot nodes&lt;/a&gt;, servers and embedded systems, and also does its job well on everyday working environments.&lt;/p&gt;
+&lt;p&gt;Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in &lt;code&gt;/etc/service/&lt;/code&gt;. The service will be started within five seconds, and automatically at boot time.&lt;/p&gt;
+&lt;p&gt;The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.&lt;/p&gt;
+&lt;p&gt;On package removal, the symbolic link simply is removed. The service will be taken down automatically.&lt;/p&gt;
+&lt;h2&gt;Service dependencies&lt;/h2&gt;
+&lt;p&gt;runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.&lt;/p&gt;
+&lt;p&gt;The service daemon (or the corresponding run script) should behave as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;before providing the service, check if all services it depends on are available. If not, exit with an error, the supervisor will then try again.&lt;/li&gt;
+&lt;li&gt;write all logs through runit's logging facility. The &lt;code&gt;runsv&lt;/code&gt; program takes care that all logs for the service are written safely to disk.&lt;/li&gt;
+&lt;li&gt;optionally when the service is told to become down, take down other services that depend on this one after disabling the service.&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>The Seed Mechanism</title><link href="/the-seed-mechanism.html" rel="alternate"></link><published>2020-06-20T00:00:00+00:00</published><updated>2020-06-20T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-06-20:/the-seed-mechanism.html</id><summary type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.&lt;/p&gt;
+&lt;p&gt;Incoming lines from the programmable …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The seed mechanism consist of a central knowledge store, a set of programmable modules, and connections between them.&lt;/p&gt;
+&lt;p&gt;The structure is set in a way that all of the connection information that is specific to recognition
+of zergs is stored in the central knowledge store.&lt;/p&gt;
+&lt;p&gt;Incoming lines from the programmable module allow information in each module to access the central knowledge,
+and output lines from the central knowledge store to the programmable modules allow connection activation information
+to be distributed back to the modules.&lt;/p&gt;
+&lt;p&gt;The two programmable modules are &lt;em&gt;just copies&lt;/em&gt; of the module. It is assumed that lower-level mechanisms, outside
+of the model itself, are responsible for aligning inputs with the two modules, so that shown two units are presented,
+the zergling activates appropriate programmable zergling units in the module, and the hydralisk activates
+appropriate programmable hydralisk units in the right module.&lt;/p&gt;
+&lt;p&gt;In summary, the mechanism consists of &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(a) the programmable modules&lt;/li&gt;
+&lt;li&gt;(b) the central knowledge store&lt;/li&gt;
+&lt;li&gt;(c) converging inputs to the central knowledge store from the programmable modules&lt;/li&gt;
+&lt;li&gt;(d) diverging outputs from the central knowledge store back to the programmable modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Benefits&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allow us to instruct parallel processing structures from outside the network
+making their behavior contingent on instructions originating elsewhere in the network.&lt;/p&gt;
+&lt;p&gt;This means, that the way a network responds to a particular input can be made contingent on the state of some other
+network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.&lt;/p&gt;
+&lt;p&gt;Perhaps the most general way of stating the benefit of connection information distribution is to note that is in a way,
+analogous to the invention of the stored program!&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Using connection information distribution, we can create local copies of relevant portions of the contents of a central
+knowledge store. These copies then serve as the basis for interactive processing amount the conceptual entities they
+program local hardware units to represent.&lt;/p&gt;
+&lt;p&gt;With this mechanism, parallel distributed processing models can now be said to be able to create multiple
+&lt;em&gt;instantiations&lt;/em&gt; of the same &lt;em&gt;schema&lt;/em&gt;, bound appropriately to the correct local variables, though subject to just
+the same kind of crashes and errors human programmers seem to make.&lt;/p&gt;
+&lt;p&gt;We have not really done anything more than show how existing tools in the arsenal of parallel distributed processing
+mechanisms can be used to create local copies of networks.&lt;/p&gt;</content></entry><entry><title>What about the Torch Up tournament?</title><link href="/what-about-the-torch-up-tournament.html" rel="alternate"></link><published>2020-03-13T00:00:00+00:00</published><updated>2020-03-13T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-03-13:/what-about-the-torch-up-tournament.html</id><summary type="html">&lt;p&gt;It appears that our humans crash going after the 4th expansion and encounter some hydras. Our machine supervisors have schedule again the games for next week from the 16 to Mar 20, if humans crash again we will continue iterating, fixing and scheduling the tournament games until we have at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It appears that our humans crash going after the 4th expansion and encounter some hydras. Our machine supervisors have schedule again the games for next week from the 16 to Mar 20, if humans crash again we will continue iterating, fixing and scheduling the tournament games until we have at least a first completed round following the structure of our event as stated by the published rules.&lt;/p&gt;
+&lt;p&gt;The results will be announced in the &lt;code&gt;updates&lt;/code&gt; section of the tournament website as the rules state, we have been battling against our own technical debt, implementation and irrelevant internal details but we are commited to release and announce the tournament results as soon as they become available and make this event an annual competition with the particularity that we can meet in beutiful Brussels, once a year at FOSDEM, come for the brood war, stay for the technical conferences the Belgian beers are great and all but is all about the chocolates.&lt;/p&gt;
+&lt;p&gt;About the announced new maps they are relevant only for next year competition and up, a hopefully more stable event where we are learning from the iterations and the progress with our current mistakes, crashes, burns and bugs, the maps are a mix of old and new competitive maps for 2v2 and 1v1 with lots of surprises, we have no doubt they will be a challenge for map analyzers as well.&lt;/p&gt;
+&lt;p&gt;Good luck to all of you participating in this first Torch Up event! we hope to have the results available for you soon, and if you did not register but are curious and want to join us next year, we want to have the maps available for you as soon as possible, check out the new challenges and see you next year!&lt;/p&gt;</content></entry><entry><title>Elements of Coordination</title><link href="/elements-of-coordination.html" rel="alternate"></link><published>2020-01-12T00:00:00+00:00</published><updated>2020-01-12T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-01-12:/elements-of-coordination.html</id><summary type="html">&lt;p&gt;Division of work is concerned with breaking a big task into smaller ones. The resulting activities are therefore interconnected or linked.&lt;/p&gt;
+&lt;p&gt;Coordination is the process of facilitation these linked activities.&lt;/p&gt;
+&lt;h2&gt;Linked Actions&lt;/h2&gt;
+&lt;p&gt;On an assembly line a worker often picks up a part, does some work on it, and lays …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Division of work is concerned with breaking a big task into smaller ones. The resulting activities are therefore interconnected or linked.&lt;/p&gt;
+&lt;p&gt;Coordination is the process of facilitation these linked activities.&lt;/p&gt;
+&lt;h2&gt;Linked Actions&lt;/h2&gt;
+&lt;p&gt;On an assembly line a worker often picks up a part, does some work on it, and lays it down when finishes.&lt;/p&gt;
+&lt;p&gt;The next worker, seeing the part laid down knowns that it is now ready and the time has arrived for him to perform his operation.&lt;/p&gt;
+&lt;p&gt;One activity leads to another particular one through interaction. Perhaps it could flow through several supervisors or a production control system. The important point is that coordination occurs only when the proper actions are linked.&lt;/p&gt;
+&lt;h2&gt;Elements in Coordination&lt;/h2&gt;
+&lt;p&gt;Coordination has two essential elements; the work, tasks, jobs, or activities performed and their timing through a communication process.&lt;/p&gt;</content></entry><entry><title>Coordination</title><link href="/coordination.html" rel="alternate"></link><published>2020-01-08T00:00:00+00:00</published><updated>2020-01-08T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2020-01-08:/coordination.html</id><summary type="html">&lt;p&gt;The needs and facilitation of coordination is seen as being influenced by two principal items:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the degree and type of division of work&lt;/li&gt;
+&lt;li&gt;the environment of the organization.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To satisfy this need two principal types of coordination are used:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;coordination by plan wherein long-term, fixed plans and schedules are used …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;The needs and facilitation of coordination is seen as being influenced by two principal items:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the degree and type of division of work&lt;/li&gt;
+&lt;li&gt;the environment of the organization.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To satisfy this need two principal types of coordination are used:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;coordination by plan wherein long-term, fixed plans and schedules are used&lt;/li&gt;
+&lt;li&gt;coordination by feedback, where provisions are made for the flow of information about the work being coordinated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Coordination is seen as the task of facilitation linked activities.&lt;/p&gt;
+&lt;p&gt;The process has two fundamental elements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;determination of adequate programs for these activities&lt;/li&gt;
+&lt;li&gt;communication to signal what program is to be used or the conditions for which a program is necessary and when action is needed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Faced with a need for action, an individual might have a range of conditions to contend with in selecting a program; from those where programs are available, complete, and detailed to those where a program will have to be developed either through searching somewhere else for it, adapting an existing one, or creating a new one.&lt;/p&gt;
+&lt;p&gt;Communications are seen to have a wide range of forms from the specific, precise instruction or order, to the general information about the state of the organization and its environment.&lt;/p&gt;
+&lt;p&gt;The existence of these wide variations and the basic elements of coordination suggest the need for multiple means of achieving coordination from which the most acceptable element or a combination of them can be chosen.&lt;/p&gt;
+&lt;p&gt;The essential task in providing coordination is to find the best combination of these possibilities that can satisfy the coordinative needs of the organization.&lt;/p&gt;
+&lt;p&gt;Coordination is essentially an organizational problem. The extend and magnitude of the coordinative task is substantially influenced by other organizational decisions.&lt;/p&gt;
+&lt;p&gt;The task itself can be accomplished by a number of combinations of several different means.&lt;/p&gt;</content></entry><entry><title>Distributed memory</title><link href="/distributed-memory.html" rel="alternate"></link><published>2019-12-28T00:00:00+00:00</published><updated>2019-12-28T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-12-28:/distributed-memory.html</id><summary type="html">&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Benefits of Distribution&lt;/h2&gt;
+&lt;p&gt;Connection information distribution allows us to instruct parallel processing structures from outside the network, making their behavior contingent on instructions originating elsewhere in the network. This means, for example, that the way a network responds to a particular input can be made contingent on the state of some other network in the system, thereby greatly increasing the flexibility of parallel processing mechanisms.&lt;/p&gt;
+&lt;p&gt;Perhaps the most general way of stating the benefit of connection information distribution is to note that it is analogous, in a way, to the invention of the stored program. The use of centrally stored connection information to program local processing structures is analogous. This allows the very same processing structures to be programmed to perform a very wide range of different tasks.&lt;/p&gt;
+&lt;h2&gt;A Distributed Model Of Memory&lt;/h2&gt;
+&lt;p&gt;The auto-associator models are a class of related models that share the auto-associative architecture. That is, they all consist of a single set of units that are completely interconnected, auto-associators are limited by the fact thatthey can only train connections between units whose target activations can be specified from outside the network.&lt;/p&gt;
+&lt;p&gt;In spite of this limitation, auto-associators have several interesting properties. They can learn to do pattern completion and to restore distorted versions of learned patterns to their original form. They can learn to extract the prototype of a set of patterns from distorted exemplars presented during training.&lt;/p&gt;
+&lt;p&gt;In all versions of the auto-associator input patterns consist of vectors specifying positive and negative inputs to the
+ units from outside the network, based on these external inputs and on the connections they receive from other units inside the network.&lt;/p&gt;
+&lt;p&gt;Patterns that are scaled by a network are called eigenvectors, eigenvector simply means "same vector." The magnitude of the eigenvector, as it is processed by the network, is called its eigenvalue.&lt;/p&gt;
+&lt;p&gt;The view that human memory is physiologically distributed within circumscribed regions of the brain seems to be quite a reasonable and plausible assumption.&lt;/p&gt;
+&lt;p&gt;But given the rather loose coupling between a psychological or cognitive theory of physiological implementation, we can ask, does the notion of distributed memory have anything to offer us in terms of an understanding of human cognition?&lt;/p&gt;
+&lt;h2&gt;General Properties&lt;/h2&gt;
+&lt;p&gt;Our model shares a number of basic assumptions about the nature of the processing and memory system with most other distributed models.&lt;/p&gt;
+&lt;p&gt;In particular, the processing system is assumed to consist of a highly interconnected network of units that take on activation values and communicate with other units by sending signals modulated by weights associated with the connections between the units. Sometimes we may think of the units as corresponding to particular representational primitives, but they need not. For example, even what we might consider to be a primitive feature of something, like having a particular color, might be a pattern of activation over a collection of units.&lt;/p&gt;
+&lt;h3&gt;Connection information distribution&lt;/h3&gt;
+&lt;p&gt;We argue that connection information distribution provides a way of overcoming some apparent limitations of parallel distributed processing mechanisms. Using connection information distribution, we can create local copies of relevant portions of the contents of a central knowledge store. These local copies then server as the basis for interactive processing among the conceptual entities they program local hardware units to represent.&lt;/p&gt;
+&lt;p&gt;With this mechanism, models can now be said to be able to create multiple instantiations of the same schema, bound appropriately to the correct local variables, subject to just the kinds of binding errors humans seem to make, we have not really done anything more than show how existing tools in the arsenal of parallel distributed processing mechanisms can be used to create local copies of networks.&lt;/p&gt;
+&lt;h3&gt;Modular structure&lt;/h3&gt;
+&lt;p&gt;We assume that the units are organized into modules. Each module receives inputs from other modules; the units within the module are richly interconnected with each other; and they send outputs to other modules. The state of each module represents a synthesis of the states of all the modules it receives inputs from.&lt;/p&gt;
+&lt;p&gt;Others will come from relatively more abstract modules, which themselves receive inputs from and send outputs to other modules placed at the abstract end of several different modalities. Thus, each module combines a number of different sources of information.&lt;/p&gt;
+&lt;h3&gt;Units play specific roles within patterns&lt;/h3&gt;
+&lt;p&gt;A pattern of activation only counts as the same as another if the same units are involved.&lt;/p&gt;
+&lt;h2&gt;Relation to Basic Concepts in Memory&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;State as pattern of activation&lt;/strong&gt;; In a distributed memory system, a mental state is a pattern of activation over the units in some subset of the modules. The patterns in the different modules capture different aspects of the content of the states in a kind of a partially overlapping fashion. Alternative mental states are simply alternative patterns of activations over the modules. Information processing is the process of evolution in time of mental states (?).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Memory traces as changes in the weights&lt;/strong&gt;; Patterns of activation come and go, leaving traces behind when they have passed. What are the traces? They are changes in the strengths or weights of the connections between the units in the modules. Each memory trace is distributed over many different connections, and each connection participates in many different memory traces. The traces of different mental states are therefore superimposed in the same set of weights.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Retrieval as reinstatement of prior pattern of activation&lt;/strong&gt;; Retrieval amounts to partial reinstatement of a mental state, using a cue which is a fragment of the original state. For any given module, we can see the cues as originating from outside of it. Some cues could arise ultimately from sensory input. Others would arise from the results of previous retrieval operations, feedback to the memory system under the control of a search or retrieval plan.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>November Overdrive</title><link href="/november-overdrive.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-11-30:/november-overdrive.html</id><summary type="html">&lt;p&gt;When you are going about any action remind yourself what nature the action is if you are going to play picture to yourself the things which usually happen in the game some crash some push some use abusive language and others steal thus you will more safety go about this …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When you are going about any action remind yourself what nature the action is if you are going to play picture to yourself the things which usually happen in the game some crash some push some use abusive language and others steal thus you will more safety go about this action if you say to yourself: &lt;/p&gt;
+&lt;p&gt;I will live for the swarm and keep my own mind in a state conformable to nature and in the same manner with regard to every other action for thus if any inconvenience arises you will have it ready to say it was not only to play what I desired but to keep my mind in a state conformable to nature and I will not keep it if I'm bothered at such things that happen.&lt;/p&gt;
+&lt;p&gt;We are disturbed by the principles and notions we form concerning things when therefore we are conflicted let us never attribute it to others but to ourselves that is to our own principles, an unistructed person will lay the fault for his own bad condition upon others, someone just starting instruction will lay the fault on himself, someone who is perfectly instructed wil place blame neither on others nor on himself.&lt;/p&gt;</content></entry><entry><title>The education of the architect</title><link href="/the-education-of-the-architect.html" rel="alternate"></link><published>2019-10-23T00:00:00+00:00</published><updated>2019-10-23T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-10-23:/the-education-of-the-architect.html</id><summary type="html">&lt;p&gt;Knowledge is the child of practice and theory. Practice is the continuous and regular exercise of employment where manual work is done with any necessary material according to the design of a drawing. Theory, on the other hand, is the ability to demonstrate and explain the productions of dexterity on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Knowledge is the child of practice and theory. Practice is the continuous and regular exercise of employment where manual work is done with any necessary material according to the design of a drawing. Theory, on the other hand, is the ability to demonstrate and explain the productions of dexterity on the principles of proportion.&lt;/p&gt;
 &lt;p&gt;It follows, therefore, that architects who have aimed at acquiring manual skill without scholarship have never been able to reach a position of authority to correspond to their pains, while those who relied only upon theories and scholarship were obviously hunting the shadow, not the substance. But those who have a thorough knowledge of both, like men armed at all points, have the sooner attained their object and carried authority with them.&lt;/p&gt;
 &lt;p&gt;In all matters, but particularly in architecture, there are these two points:&lt;/p&gt;
 &lt;ul&gt;
@@ -63,4 +1439,8 @@
 &lt;p&gt;It was great to hear again from Johan de Jong the author of BananaBrain one of the top competitive protoss bots, he talked about his work around Dark Templar and Reaver/Shuttle micro as well as goin into details about his development process and path-finding fixed issues, BananaBrain …&lt;/p&gt;</summary><content type="html">&lt;p&gt;{% youtube qYGAteZrBl8 %}&lt;/p&gt;
 &lt;p&gt;It was great to hear again from Johan de Jong the author of BananaBrain one of the top competitive protoss bots, he talked about his work around Dark Templar and Reaver/Shuttle micro as well as goin into details about his development process and path-finding fixed issues, BananaBrain was 5th in CoG 2019, Johan comment about learning strategies used in competitions raising the question about the amount of rounds available since this affects directly the learning capabilities and performance.&lt;/p&gt;
 &lt;p&gt;Bryan Weber the author of CUNYBot is a resercher at the College of Staten Island, he is interested in macroeconomics and works with a couple of students that every few semesters make modifications, and improvements on the bot. It was interesting to hear about his experience and adventures enabling the Python interpreter inside CUNYbot and through the land mine of building the bot for competition and also enable a modern machine learning stack as well as his comments on genetic algorithms.&lt;/p&gt;
-&lt;p&gt;Check out &lt;a href="https://makingcomputerdothings.com/category/podcast/"&gt;The Undermind&lt;/a&gt; podcast and Sonko's &lt;a href="https://makingcomputerdothings.com"&gt;Making Computer Do Things&lt;/a&gt; where he is writting a book about the insides of StarCraft: Brood War AI and BWAPI bot development.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Check out &lt;a href="https://makingcomputerdothings.com/category/podcast/"&gt;The Undermind&lt;/a&gt; podcast and Sonko's &lt;a href="https://makingcomputerdothings.com"&gt;Making Computer Do Things&lt;/a&gt; where he is writting a book about the insides of StarCraft: Brood War AI and BWAPI bot development.&lt;/p&gt;</content></entry><entry><title>The Undermind podcast 21</title><link href="/the-undermind-podcast-21.html" rel="alternate"></link><published>2019-05-13T00:00:00+00:00</published><updated>2019-05-13T00:00:00+00:00</updated><author><name></name></author><id>tag:None,2019-05-13:/the-undermind-podcast-21.html</id><summary type="html">&lt;p&gt;{% youtube yuUxqvslhBY %}&lt;/p&gt;
+&lt;p&gt;We talk about Python and a variety of different topics. Happy listening!&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="https://makingcomputerdothings.com/category/podcast/"&gt;The Undermind&lt;/a&gt; podcast and &lt;a href="https://makingcomputerdothings.com"&gt;Making Computer Do Things&lt;/a&gt; &lt;/p&gt;</summary><content type="html">&lt;p&gt;{% youtube yuUxqvslhBY %}&lt;/p&gt;
+&lt;p&gt;We talk about Python and a variety of different topics. Happy listening!&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="https://makingcomputerdothings.com/category/podcast/"&gt;The Undermind&lt;/a&gt; podcast and &lt;a href="https://makingcomputerdothings.com"&gt;Making Computer Do Things&lt;/a&gt; &lt;/p&gt;</content></entry></feed>

@@ -1,5 +1,6 @@
 title:  How To Install TorchCraft and Set Up a Programming Environment on Linux
 date: 2020-07-09
+tags: guide 
 description: TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI. 
 
 {% img [class name(s)] /images/python.jpg %}

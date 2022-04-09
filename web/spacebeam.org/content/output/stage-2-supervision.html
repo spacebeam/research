@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Stage 2 Supervision</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/pages/research.html">Research</a></li>
+                    <li><a href="/pages/technology.html">Technology</a></li>
+                    <li class="active"><a href="/category/updates.html">updates</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/stage-2-supervision.html" rel="bookmark"
+           title="Permalink to Stage 2 Supervision">Stage 2 Supervision</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2020-07-06T00:00:00+00:00">
+                Published: Mon 06 July 2020
+        </abbr>
+
+<p>In <a href="/category/updates.html">updates</a>.</p>
+
+</footer><!-- /.post-info -->      <p>At its core, <a href="http://smarden.org/runit/">runit</a> is a process supervision suite.</p>
+<p>The concept of process supervision comes from several observations:</p>
+<ul>
+<li>UNIX systems, even minimalistic ones, need to run long-lived processes, aka daemons.</li>
+</ul>
+<p>That one is the core design principle of UNIX: one service -&gt; one daemon.</p>
+<ul>
+<li>Daemons can die at all times. Maybe they are missing a vital resource and cannot handle certain failure;</li>
+<li>Automatically restarting daemons when they die is generally a good thing.</li>
+</ul>
+<p>A process supervision system organizes the process hierarchy in a radical different way.</p>
+<ul>
+<li>A process supervision system starts independent hierarchy of processes at boot time, called a supervision tree.</li>
+<li>Your daemon is identified by the specific directory which contains all the information about it; then you send a message to the supervision tree. The supervision tree start the daemon as a leaf.</li>
+<li>The parent of your daemon is a supervisor. Since your daemon is its direct child, the supervisor always knows the correct PID of your daemon.</li>
+<li>To send signals to your daemons, you send a message to its supervisor, which will then send the signal to the daemon in your behalf.</li>
+</ul>
+<p>The design of <code>runit</code> takes a very familiar approach by breaking down functionality into several small utilities responsible for a single task.</p>
+<p>This approach allows the simple components to be composed in various ways to suit our needs. </p>
+<p>The core runit utilities are <code>runsvdir</code>, <code>runsv</code>, <code>chpst</code>, <code>svlogd</code>, and <code>sv</code>.</p>
+<h2>Service supervision</h2>
+<p>Each service is associated with a service directory, and each service daemon runs as a child process of a supervising <code>runsv</code> process runing in this directory.</p>
+<p>The <code>runsv</code> program provides a reliable interface for signalling the service daemon and controlling the service and supervisor.</p>
+<p>Normally the <code>sv</code> program is used to send commands throught this interface, and to query status information about the service.</p>
+<p>The <code>runsv</code> program supervises the corresponding service daemon. By default a service is defined to be up, that means, if the service daemon dies, will be restarted. Of course you can tell it otherwise.</p>
+<p>The promise is that this reliable interface to control daemons and supervisors obsolete pid-guessing programs, such as pidoff, killall, start-stop-daemon, which, due to guessing are prone to failures by design.</p>
+<p>It also obsoletes so called pid-files, no need for each and every service daemon to include code to daemonize, to write the new process id into a file, and to take care that file is removed properly on shutdown, which might be very difficult in case of a crash!</p>
+<h2>Clean process state</h2>
+<p><code>runit</code> guarantees each service a clean process state, no matter if the service is activated for the first time or automatically at boot time, reactivated, or simply restarted. This means that the service always is started with the same environment, resource limits, open file descriptors, and controlling terminals.</p>
+<h2>Reliable logging facility</h2>
+<p>The <code>runsv</code> program provides a reliable logging facility for the service daemon. If configured, <code>runsv</code> creates a pipe, starts and supervises an additional log service, redirects the log daemon's standard input to read from the pipe, and redirects the service daemon's standard output to write to the pipe.</p>
+<p>Restarting the service does not require restarting the log service, and vice versa.</p>
+<p>A good choice for log daemon is runit's service logging daemon <code>svlogd</code>.</p>
+<p>The service daemon and log daemon run with different process states and can run under different user id's.</p>
+<h2>Stage 2</h2>
+<p>Stage 2 handles the systems's uptime tasks (via the <code>runsvdir</code> program) and is running the whole system's uptime life spawn.</p>
+<p>Stage 2 is portable across UNIX systems. <code>runit</code> is well suited for <a href="https://old.reddit.com/r/teslamotors/comments/arfwvm/some_sw_internals_of_tesla_autopilot_node_hw2/">autopilot nodes</a>, servers and embedded systems, and also does its job well on everyday working environments.</p>
+<p>Stage 2 is packaging friendly: all software package that provides a service needs to do is to include a service directory in the package, we provide a symbolic link mechanism to this directory in <code>/etc/service/</code>. The service will be started within five seconds, and automatically at boot time.</p>
+<p>The package's install and update scripts can use the reliable control interface to stop, start, restart or send signal to the service.</p>
+<p>On package removal, the symbolic link simply is removed. The service will be taken down automatically.</p>
+<h2>Service dependencies</h2>
+<p>runit's service supervision resolves dependencies for service daemons designed to be run by a supervisor process automatically.</p>
+<p>The service daemon (or the corresponding run script) should behave as follows:</p>
+<ul>
+<li>before providing the service, check if all services it depends on are available. If not, exit with an error, the supervisor will then try again.</li>
+<li>write all logs through runit's logging facility. The <code>runsv</code> program takes care that all logs for the service are written safely to disk.</li>
+<li>optionally when the service is told to become down, take down other services that depend on this one after disabling the service.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

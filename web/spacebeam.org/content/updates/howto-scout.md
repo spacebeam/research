@@ -1,5 +1,6 @@
 title: One in a million, repeats very often
 date: 2021-04-09
+tags: guide 
 description: Hey, things are still on development hell, its a really slow cook.
 
 I made lots of mistakes and in hindsight, put and tried to play an humongous amount of games following my own tournament format that bite me to this day.

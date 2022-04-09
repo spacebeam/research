@@ -1,4 +1,9 @@
 
+.icon-discord{
+	background-image: url('png/discord.png');
+	background-repeat: no-repeat;
+}
+
 .icon-strava {
 	background-image: url('png/strava.png');
 	background-repeat: no-repeat;

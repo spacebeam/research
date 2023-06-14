@@ -1,0 +1,11 @@
+---
+category: ''
+date: 2022-08-23 16:11:37 UTC-06:00
+description: ''
+link: ''
+slug: libuv
+tags: ''
+title: libuv
+type: text
+---
+libuv is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it’s also used by Luvit, Julia, uvloop, and others.

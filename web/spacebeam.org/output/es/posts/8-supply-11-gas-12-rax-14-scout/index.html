@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 Supply, 11 Gas, 12 Rax, 14 Scout | Spacebeam</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (ko)" hreflang="ko" href="../../../ko/rss.xml">
+<link rel="canonical" href="https://spacebeam.org/es/posts/8-supply-11-gas-12-rax-14-scout/">
+<link rel="icon" href="../../../images/logo.png" sizes="128x128">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="The Spacebeam authors">
+<link rel="prev" href="../how-to-divide-drones/" title="How to divide drones for mining minerals" type="text/html">
+<link rel="next" href="../how-to-cut-and-trim-video/" title="How To Cut and Trim Video" type="text/html">
+<meta property="og:site_name" content="Spacebeam">
+<meta property="og:title" content="8 Supply, 11 Gas, 12 Rax, 14 Scout">
+<meta property="og:url" content="https://spacebeam.org/es/posts/8-supply-11-gas-12-rax-14-scout/">
+<meta property="og:description" content="Let's train some workers when we have the minerals for them!
+That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tan">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-08-11T19:56:29-06:00">
+<link rel="alternate" hreflang="en" href="../../../posts/8-supply-11-gas-12-rax-14-scout/">
+<link rel="alternate" hreflang="ko" href="../../../ko/posts/8-supply-11-gas-12-rax-14-scout/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../../">
+
+            <span id="blog-title">Spacebeam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../../consultancy/#work" class="nav-link">Consultancy</a>
+                </li>
+<li class="nav-item">
+<a href="../../../technology/" class="nav-link">Technology</a>
+                </li>
+<li class="nav-item">
+<a href="../../../community/" class="nav-link">Community</a>
+                </li>
+<li class="nav-item">
+<a href="../../../contact/#us" class="nav-link">Contact Us</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../../../posts/" class="nav-link">Blog</a>
+
+                
+                    </li>
+<li>
+            </li>
+<li class="nav-item"><a href="../../../" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+            <li class="nav-item"><a href="../../../ko/" rel="alternate" hreflang="ko" class="nav-link">한국어</a></li>
+
+                
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">8 Supply, 11 Gas, 12 Rax, 14 Scout</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    The Spacebeam authors
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-11T19:56:29-06:00" itemprop="datePublished" title="2020-08-11 19:56">2020-08-11 19:56</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>Let's train some workers when we have the minerals for them!</p>
+<p>That's the basics you go out, 16 supply, 16 factory, train 2 marines and put them with 1 scv at front on the ramp, 22 cc, 24 supply, 25 tank, 26 ebay.</p>
+<p>This tutorial will walk you through StarCraft: Brood War bot development with Python, but first we are going to dive deep into <a href="https://en.wikipedia.org/wiki/Coroutine">Coroutines</a>!</p>
+<p>Real-time strategy (RTS) games are known to be one of the most complex game genres for humans and machines to play. To tackle the task we focus on a message-passing divide-and-conquer approach with <a href="https://zeromq.org">ZMQ</a> and multiple languages, splitting the game into separate components and developing separate systems to solve each task.</p>
+<p>This trend gives rise to a new problem: how to tie these systems together into a functional StarCraft: Brood War playing bot?</p>
+<h3>Coroutines</h3>
+<p><em>Coroutines</em> are computer-program components that generalize subroutines for non-preemptive multitasking by allowing multiple entry points for suspending and resuming execution at certain locations.</p>
+<p>Subroutines are short programs that perform functions of a general nature that can occuir in varios types of computation.</p>
+<p>A sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.</p>
+<p>Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs.</p>
+<p>In different programming languages, a subroutine may be called a procedure, a function a routine, a method, a subprogram.</p>
+<h4>Difference with processes</h4>
+<p>Processes are idependent units of execution, a subroutine lives inside a process.</p>
+<h4>Cooperative multitasking</h4>
+<p>Also known as non-preemptive multitasking, is a style of computer multitasking in which the operating system never initiates a context switch from a running process to another process.</p>
+<p>Instead, processes voluntary yield control periodically or when idle in order to enable multiple applications to be run concurrently.</p>
+<h3>Python 3 <code>await</code> and <code>yield</code>
+</h3>
+<p>Python uses a single-threaded event loop to enable concurrent actions. This means that all real-time aplication code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
+<p>Asynchronous operations generally return placeholder objects (<a href="https://docs.python.org/3.7/library/concurrent.futures.html">Futures</a>).
+<code>Futures</code> are usually transformed into their result with the <code>await</code> and <code>yield</code>.</p>
+<h4>Examples</h4>
+<p>Here is a sample synchronous function:</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="kn">from</span> <span class="nn">tornado.httpclient</span> <span class="kn">import</span> <span class="n">HTTPClient</span>
+
+<span class="k">def</span> <span class="nf">synchronous_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">http_client</span> <span class="o">=</span> <span class="n">HTTPClient</span><span class="p">()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span>
+</pre></div>
+
+<p>And here the same rewritten asynchronously as a native coroutine:</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="kn">from</span> <span class="nn">tornado.httpclient</span> <span class="kn">import</span> <span class="n">AsyncHTTPClient</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">asynchronous_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">http_client</span> <span class="o">=</span> <span class="n">AsyncHTTPClient</span><span class="p">()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span>
+</pre></div>
+
+<p>Anything you can do with coroutines you can also do by passing callback around, but coroutines
+provide an important simplification by letting you organize your code in the same way you would if it
+were synchronous, important for error handling since <code>try/expect</code> work as you would expect.</p>
+<h3>Why ZeroMQ helps?</h3>
+<p>ZeroMQ is a community of projects focused on decentralized message passing. They agree on protocols (RFCs) for connecting to each other and exchanging messages. Messages are blobs of useful data of any reasonable size.</p>
+<p>You can use this feature to queue, route, and filter messages according to various <code>patterns</code>.</p>
+<p>Multilingual Distributed Messaging thanks to the ZeroMQ Community.</p>
+<ul>
+<li>Carries messages across inproc, IPC, TCP, multicast.</li>
+<li>Smart patterns like pub-sub, push-pull, request-reply.</li>
+<li>Backed by a large and active open-source community.</li>
+</ul>
+<p>It's asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing subroutines. <a href="http://zguide.zeromq.org/">Read the guide</a>.</p>
+<h3>Coroutines again</h3>
+<p>Coroutines are the recommended way to write asynchronous code.</p>
+<p><em>Coroutines</em> use the Python 3 <code>await</code> or <code>yield</code> keyword to suspend and resume execution instead of a chain of callbacks, all coroutines use explicit context switches and are called as asynchronous functions.</p>
+<p>Coroutines are almost as simple as synchronous code, but without the expense of a thread. They make concurrency easier to reason about by reducing the number of places where a context switch can happen.</p>
+<h4>How to call a coroutine</h4>
+<p>Coroutines do not raise exceptions in the normal way: any exception they raise will be trapped in the awaitable object until it is yielded.
+This means it is important to call coroutines in the right way, or you may have errors that do unnoticed:</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">async</span><span class="w"> </span><span class="nv">def</span><span class="w"> </span><span class="nv">divide</span><span class="ss">(</span><span class="nv">x</span>,<span class="w"> </span><span class="nv">y</span><span class="ss">)</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">y</span><span class="w"></span>
+
+<span class="nv">def</span><span class="w"> </span><span class="nv">bad_call</span><span class="ss">()</span><span class="w"></span>
+<span class="w">    </span>#<span class="w"> </span><span class="nv">This</span><span class="w"> </span><span class="nv">should</span><span class="w"> </span><span class="nv">raise</span><span class="w"> </span><span class="nv">ZeroDivisionError</span>,<span class="w"> </span><span class="nv">but</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="nv">won</span><span class="err">'t</span>
+<span class="err">    # because the coroutine is called incorrectly!</span>
+<span class="err">    divide(1, 0)</span><span class="w"></span>
+</pre></div>
+
+<p>In nearly all cases, any function that calls a coroutine must be a coroutine itself, 
+and use the <code>await</code> or <code>yield</code> keyword in the call.</p>
+<div class="code"><pre class="code literal-block">:::python
+async def good_call():
+    # await will unwrap the object returned by divide()
+    # and raise the expection.
+    await divide(1, 0)
+</pre></div>
+
+<h5>Fire and forget</h5>
+<p>Sometimes you may want to "fire and forget" a coroutine without waiting for its result. In this case it is recommended to use <code>IOLoop.spawn_callback</code>, which makes the <code>IOLoop</code> responsible for the call.
+If it fails, the <code>IOLoop</code> will log a stack trace:</p>
+<div class="code"><pre class="code literal-block">:::python
+# The IOLoop will catch the expection and print a stack trace
+# in the logs. Note that this doesn't look like a normal call,
+# since we pass the function object to be called by the IOLoop.
+IOLoop.current().spawn_callback(divide, 1, 0)
+</pre></div>
+
+<h3>Coroutine patterns</h3>
+<h4>Calling blocking functions</h4>
+<p>The simplest way to call a blocking function from a coroutine is to use <code>IOLoop.run_in_executor</code>, which returns <code>Futures</code> that are compatible:</p>
+<div class="code"><pre class="code literal-block">:::python
+async def call_blocking():
+    await IOLoop.current().run_in_executor(None, blocking_func, args)
+</pre></div>
+
+<h4>Parallelism</h4>
+<p>The <code>multi</code> function accepts lists and dicts whose values are <code>Futures</code> and waits for all of those <code>Futures</code> in parallel:</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="kn">from</span> <span class="nn">tornado.gen</span> <span class="kn">import</span> <span class="n">multi</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">parallel_fetch</span><span class="p">(</span><span class="n">url1</span><span class="p">,</span> <span class="n">url2</span><span class="p">):</span>
+    <span class="n">resp1</span><span class="p">,</span> <span class="n">resp2</span> <span class="o">=</span> <span class="k">await</span> <span class="n">multi</span><span class="p">([</span><span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url1</span><span class="p">),</span>
+                                <span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url2</span><span class="p">)]</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_many</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">multi</span><span class="p">([</span><span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">])</span>
+    <span class="c1"># res is a list of HTTPResponses in the same order</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">parallel_fetch_dict</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">multi</span><span class="p">({</span><span class="n">url</span><span class="p">:</span> <span class="n">http_client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                      <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">})</span>
+    <span class="c1"># res is a dict {url: HTTPResponse}</span>
+</pre></div>
+
+<p>In decorated coroutines, it is possible to <code>yield</code> the list or dict directly:</p>
+<div class="code"><pre class="code literal-block"><span class="o">::</span><span class="err">:</span><span class="n">python</span><span class="w"></span>
+<span class="nv">@gen</span><span class="p">.</span><span class="n">coroutine</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">parallel_fetch_decorated</span><span class="p">(</span><span class="n">url1</span><span class="p">,</span><span class="w"> </span><span class="n">url2</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">resp1</span><span class="p">,</span><span class="w"> </span><span class="n">resp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yield</span><span class="w"> </span><span class="o">[</span><span class="n">http_client.fetch(url1),</span>
+<span class="n">                          http_client.fetch(url2)</span><span class="o">]</span><span class="w"></span>
+</pre></div>
+
+<h4>Interleaving</h4>
+<p>Sometimes it is useful to save a <code>Future</code> instead of yielding it immediately, so you can start another operation before waiting.</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="kn">from</span> <span class="nn">tornado.gen</span> <span class="kn">import</span> <span class="n">convert_yielded</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># convert_yielded() starts the native coroutine in the background.</span>
+    <span class="c1"># This is equivalent to asyncio.ensure_future() (both work)</span>
+    <span class="n">fetch_future</span> <span class="o">=</span> <span class="n">convert_yielded</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fetch_next_chunk</span><span class="p">())</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">fetch_future</span>
+        <span class="k">if</span> <span class="n">chunk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">break</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="n">fetch_future</span> <span class="o">=</span> <span class="n">convert_yielded</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fetch_next_chunk</span><span class="p">())</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</pre></div>
+
+<p>This is a little easier to do with decorated coroutines, because they start immediately when called:</p>
+<div class="code"><pre class="code literal-block"><span class="o">::</span><span class="err">:</span><span class="n">python</span><span class="w"></span>
+<span class="nv">@gen</span><span class="p">.</span><span class="n">coroutine</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">gen</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">fetch_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">fetch_next_chunk</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="k">True</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">chunk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yield</span><span class="w"> </span><span class="n">fetch_future</span><span class="w"></span>
+<span class="w">        </span><span class="k">is</span><span class="w"> </span><span class="n">chunk</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"> </span><span class="k">break</span><span class="w"></span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">fetch_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">fetch_next_chunk</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="n">yield</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+
+<h4>Looping</h4>
+<p>In native coroutines, <code>async for</code> can be used.</p>
+<h4>Running in the background</h4>
+<p><code>PeriodicCallback</code> is not normally used with coroutines. Instead, a coroutine can contain a <code>while True:</code> loop and use <code>tornado.gen.sleep</code>:</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">async</span><span class="w"> </span><span class="nv">def</span><span class="w"> </span><span class="nv">minute_loop</span><span class="ss">()</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="nv">True</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">await</span><span class="w"> </span><span class="nv">do_something</span><span class="ss">()</span><span class="w"></span>
+<span class="w">        </span><span class="nv">await</span><span class="w"> </span><span class="nv">gen</span>.<span class="nv">sleep</span><span class="ss">(</span><span class="mi">60</span><span class="ss">)</span><span class="w"></span>
+
+#<span class="w"> </span><span class="nv">Coroutines</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="k">loop</span><span class="w"> </span><span class="nv">forever</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">generally</span><span class="w"> </span><span class="nv">started</span><span class="w"> </span><span class="nv">with</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">spawn_callback</span><span class="ss">()</span>.<span class="w"></span>
+<span class="nv">IOLoop</span>.<span class="nv">current</span><span class="ss">()</span>.<span class="nv">spawn_callback</span><span class="ss">(</span><span class="nv">minute_loop</span><span class="ss">)</span><span class="w"></span>
+</pre></div>
+
+<p>Sometimes a more complicated loop may be desirable. For example, the previous loop runs every <code>60+N</code> seconds,
+where <code>N</code> is the running time of <code>do_something()</code>. To run exactly every 60 seconds, use the interleaving pattern from above:</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">async</span><span class="w"> </span><span class="nv">def</span><span class="w"> </span><span class="nv">minute_loop2</span><span class="ss">()</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="nv">True</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">nxt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">gen</span>.<span class="nv">sleep</span><span class="ss">(</span><span class="mi">60</span><span class="ss">)</span><span class="w">  </span>#<span class="w"> </span><span class="nv">Start</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">clock</span>.<span class="w"></span>
+<span class="w">        </span><span class="nv">await</span><span class="w"> </span><span class="nv">do_something</span><span class="ss">()</span><span class="w"> </span>#<span class="w"> </span><span class="nv">Run</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">clock</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">ticking</span>.<span class="w"></span>
+<span class="w">        </span><span class="nv">await</span><span class="w"> </span><span class="nv">nxt</span><span class="w">            </span>#<span class="w"> </span><span class="k">Wait</span><span class="w"> </span><span class="nv">fot</span><span class="w"> </span><span class="nv">he</span><span class="w"> </span><span class="nv">timer</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="nv">out</span>.<span class="w"></span>
+</pre></div>
+
+<h3>Further Reading</h3>
+<p>TBD</p>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../how-to-divide-drones/" rel="prev" title="How to divide drones for mining minerals">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="../how-to-cut-and-trim-video/" rel="next" title="How To Cut and Trim Video">Siguiente publicación</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Ready for your next project?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            <div class="ml-auto">
+              <a href="../../../contact/#us" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+            </div>
+          </div>
+            
+          <!--
+          <div class="row">
+
+            <div class="col-md-6">HQ</div>
+
+            <div class="col-md-6">Southeast Asia Headquarter</div>
+          </div>
+          -->
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="../../../#zerg" class="footer-logo">Spacebeam</a></h5>
+              <p class="copyright">
+                <small>© 2023</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">Consulting</a></li>
+                <li><a href="../../../technology/">Training</a></li>
+                <li><a href="../../../community/">Support</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Company</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">About us</a></li>
+                <li><a href="../../../contact/#us">Contact us</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled social">
+<li><a href="#"><span class="fa-stack fa-x2"><i class="fa fa-circle fa-stack-x1"></i><i class="fab fa-linkedin fa-stack-lg fa-inverse"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-medium"></span></a></li>
+                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><script src="../../../bs-jsonform.js"></script><script src="../../../underscore-min.js"></script><script src="../../../backbone-min.js"></script><!-- Relax, and have some fun --><script src="../../../seed/fun.utils.js"></script><script src="../../../seed/fun.configuration.js"></script><script src="../../../seed/fun.strings.js"></script><script src="../../../seed/fun.models.js"></script><!-- Project views --><script src="../../../views/landing.js"></script><script src="../../../views/contact.js"></script><script src="../../../views/consultancy.js"></script><!-- fun router --><script src="../../../seed/fun.router.js"></script>
+</body>
+</html>

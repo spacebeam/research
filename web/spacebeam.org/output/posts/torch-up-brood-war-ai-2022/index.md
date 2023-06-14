@@ -1,0 +1,11 @@
+---
+category: ''
+date: 2022-08-22 10:54:44 UTC-06:00
+description: ''
+link: ''
+slug: torch-up-brood-war-ai-2022
+tags: ''
+title: 'Torch Up: Brood War AI 2022'
+type: text
+---
+New Season 2022 map pool and details.

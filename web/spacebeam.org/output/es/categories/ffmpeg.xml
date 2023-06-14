@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spacebeam (Publicaciones sobre ffmpeg)</title><link>https://spacebeam.org/</link><description></description><atom:link href="https://spacebeam.org/es/categories/ffmpeg.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2022 &lt;a href="mailto:info@spacebeam.org"&gt;The Spacebeam Authors&lt;/a&gt; </copyright><lastBuildDate>Sat, 24 Dec 2022 19:05:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How To Cut and Trim Video</title><link>https://spacebeam.org/es/posts/how-to-cut-and-trim-video/</link><dc:creator>The Spacebeam Authors</dc:creator><description>&lt;p&gt;The following command is used to trim video in FFmpeg. The stream copy enables to trim video without re-encoding and meanwhile keeps original quality for the output video.&lt;/p&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;`
+.. code:: bash
+ffmpeg &lt;span class="pre"&gt;-i&lt;/span&gt; input.mp4 &lt;span class="pre"&gt;-ss&lt;/span&gt; 00:01:23 &lt;span class="pre"&gt;-to&lt;/span&gt; 00:04:20 &lt;span class="pre"&gt;-c&lt;/span&gt; copy output.mp4
+`&lt;/code&gt;&lt;/p&gt;
+&lt;aside class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 8)&lt;/p&gt;
+&lt;p&gt;Content block expected for the "code" directive; none found.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;.. code:: bash&lt;/pre&gt;
+&lt;/aside&gt;
+&lt;aside class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 9)&lt;/p&gt;
+&lt;p&gt;Explicit markup ends without a blank line; unexpected unindent.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;p&gt;ffmpeg -i input.mp4 -ss 00:01:23 -to 00:04:20 -c copy output.mp4&lt;/p&gt;
+&lt;p&gt;-c copy trim via stream copy, which is fast and will not re-encode video.&lt;/p&gt;</description><guid>https://spacebeam.org/es/posts/how-to-cut-and-trim-video/</guid><pubDate>Thu, 04 Mar 2021 01:02:09 GMT</pubDate></item></channel></rss>

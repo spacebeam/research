@@ -1,279 +1,816 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>/</loc>
-<lastmod>2022-04-09T11:21:19-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/archives.html</loc>
-<lastmod>2022-04-09T11:21:19-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tags.html</loc>
-<lastmod>2022-04-09T11:21:19-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/categories.html</loc>
-<lastmod>2022-04-09T11:21:19-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/pages/about/</loc>
-<lastmod>2020-07-31T16:20:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.75</priority>
-</url>
-
-<url>
-<loc>/pages/research/</loc>
-<lastmod>2019-04-11T14:20:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.75</priority>
-</url>
-
-<url>
-<loc>/pages/technology/</loc>
-<lastmod>2021-04-14T16:20:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.75</priority>
-</url>
-
-<url>
-<loc>/2022/04/08/chrysalis-anti-spam-discord-bot/</loc>
-<lastmod>2022-04-08T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/04/08/zerg-3d-models/</loc>
-<lastmod>2022-04-08T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/04/04/torch-up-brood-war-ai-2022/</loc>
-<lastmod>2022-04-04T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/04/03/the-computer-nonsense-guide/</loc>
-<lastmod>2022-04-03T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/03/08/the-fall-of-aiur/</loc>
-<lastmod>2022-03-08T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/03/06/how-to-practice-basic-skills/</loc>
-<lastmod>2022-03-06T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2022/03/04/school-for-zergs/</loc>
-<lastmod>2022-03-04T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2021/12/10/how-to-cut-and-trim-video/</loc>
-<lastmod>2021-12-10T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2021/04/09/one-in-a-million-repeats-very-often/</loc>
-<lastmod>2021-04-09T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/09/13/its-a-unix-system/</loc>
-<lastmod>2020-09-13T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/28/how-to-divide-drones-for-mining-minerals/</loc>
-<lastmod>2020-07-28T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/13/build-a-wall-lings-will-fall/</loc>
-<lastmod>2020-07-13T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/11/8-supply-11-gas-12-rax-14-scout/</loc>
-<lastmod>2020-07-11T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/</loc>
-<lastmod>2020-07-09T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/09/python-torchcraft-tutorial/</loc>
-<lastmod>2020-07-09T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/07/06/stage-2-supervision/</loc>
-<lastmod>2020-07-06T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/06/20/the-seed-mechanism/</loc>
-<lastmod>2020-06-20T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/06/18/what-about-torch-up-again/</loc>
-<lastmod>2020-06-18T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/03/13/what-about-the-torch-up-tournament/</loc>
-<lastmod>2020-03-13T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/01/12/elements-of-coordination/</loc>
-<lastmod>2020-01-12T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2020/01/08/coordination/</loc>
-<lastmod>2020-01-08T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/12/28/distributed-memory/</loc>
-<lastmod>2019-12-28T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/11/30/november-overdrive/</loc>
-<lastmod>2019-11-30T00:00:00+01:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/10/23/the-education-of-the-architect/</loc>
-<lastmod>2019-10-23T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/10/19/organizational-behavior/</loc>
-<lastmod>2019-10-19T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/10/19/process-of-abstraction/</loc>
-<lastmod>2019-10-19T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/10/13/cognitive-framework/</loc>
-<lastmod>2019-10-13T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/10/06/the-undermind-podcast-33/</loc>
-<lastmod>2019-10-06T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/2019/05/13/the-undermind-podcast-21/</loc>
-<lastmod>2019-05-13T00:00:00+02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.99</priority>
-</url>
-
-<url>
-<loc>/category/updates</loc>
-<lastmod>2022-04-08T00:00:00+00:18</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/guide/</loc>
-<lastmod>2022-04-08T00:00:00+00:18</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/zergs/</loc>
-<lastmod>2022-04-08T00:00:00+00:18</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>https://spacebeam.org/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/2019/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/2020/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/2021/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/404.html</loc>
+  <lastmod>2023-05-30T16:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/about/</loc>
+  <lastmod>2022-12-24T14:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/archive.html</loc>
+  <lastmod>2023-05-30T16:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/careers/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/cat_computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/cat_zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/ffmpeg/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/hypermodernism/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/nonsense/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/community/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/company/</loc>
+  <lastmod>2023-03-04T14:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/consultancy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/contact/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/dashboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/2019/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/2020/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/2021/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/404.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/about/</loc>
+  <lastmod>2022-12-24T14:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/archive.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/careers/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/cat_computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/cat_zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/ffmpeg/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/hypermodernism/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/nonsense/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/categories/zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/community/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/company/</loc>
+  <lastmod>2023-03-04T14:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/consultancy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/contact/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/dashboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/galleries/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/8-supply-11-gas-12-rax-14-scout/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/architect/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/behavior/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/blackboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/caesars-overdrive/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/chrysalis-anti-spam-discord-bot/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/cognitive-framework/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/distributed-memory/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/elements-of-coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/how-to-cut-and-trim-video/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/how-to-divide-drones/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/how-to-install-torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/how-to-practice-basic-skills/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/howto-build/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/index-1.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/index-2.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/index-3.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/its-a-unix-system/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/libuv/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/love2d/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/luaunit/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/luvit-discordia/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/mapreduce/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/one-in-a-million-repeats-very-often/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/opennings/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/process-of-abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/school-for-zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/stage-2-supervision/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/terran-academy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/the-rise-of-aiur/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/the-undermind-podcast-21/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/the-undermind-podcast-33/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/torch-up-brood-war-ai-2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/what-about-the-torch-up-tournament/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/posts/zerg-3d-models/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/research/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/technology/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/es/the-computer-nonsense-guide/</loc>
+  <lastmod>2022-12-22T14:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/galleries/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/2019/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/2020/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/2021/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/404.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/about/</loc>
+  <lastmod>2022-12-24T14:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/archive.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/careers/</loc>
+  <lastmod>2023-05-18T20:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/cat_computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/cat_zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/computer/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/ffmpeg/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/hypermodernism/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/nonsense/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/categories/zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/community/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/company/</loc>
+  <lastmod>2023-03-04T14:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/consultancy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/contact/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/dashboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/galleries/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/guide/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/8-supply-11-gas-12-rax-14-scout/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/architect/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/behavior/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/blackboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/caesars-overdrive/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/chrysalis-anti-spam-discord-bot/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/cognitive-framework/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/distributed-memory/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/elements-of-coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/how-to-cut-and-trim-video/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/how-to-divide-drones/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/how-to-install-torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/how-to-practice-basic-skills/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/howto-build/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/index-1.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/index-2.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/index-3.html</loc>
+  <lastmod>2023-05-30T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/its-a-unix-system/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/libuv/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/love2d/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/luaunit/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/luvit-discordia/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/mapreduce/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/one-in-a-million-repeats-very-often/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/opennings/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/process-of-abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/school-for-zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/stage-2-supervision/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/terran-academy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/the-rise-of-aiur/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/the-undermind-podcast-21/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/the-undermind-podcast-33/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/torch-up-brood-war-ai-2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/what-about-the-torch-up-tournament/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/posts/zerg-3d-models/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/research/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/technology/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/ko/the-computer-nonsense-guide/</loc>
+  <lastmod>2022-12-22T14:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/listings/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/8-supply-11-gas-12-rax-14-scout/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/architect/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/behavior/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/blackboard/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/caesars-overdrive/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/chrysalis-anti-spam-discord-bot/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/cognitive-framework/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/distributed-memory/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/elements-of-coordination/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/how-to-cut-and-trim-video/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/how-to-divide-drones/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/how-to-install-torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/how-to-practice-basic-skills/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/howto-build/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/index-1.html</loc>
+  <lastmod>2023-05-30T16:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/index-2.html</loc>
+  <lastmod>2023-05-30T16:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/index-3.html</loc>
+  <lastmod>2023-05-30T16:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/its-a-unix-system/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/libuv/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/love2d/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/luaunit/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/luvit-discordia/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/mapreduce/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/one-in-a-million-repeats-very-often/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/opennings/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/process-of-abstraction/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/school-for-zergs/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/stage-2-supervision/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/terran-academy/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/the-rise-of-aiur/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/the-undermind-podcast-21/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/the-undermind-podcast-33/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/torch-up-brood-war-ai-2022/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/torchcraft/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/what-about-the-torch-up-tournament/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/zerg-3d-models/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/research/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/technology/</loc>
+  <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/the-computer-nonsense-guide/</loc>
+  <lastmod>2022-12-22T14:15:00Z</lastmod>
+ </url>
 </urlset>

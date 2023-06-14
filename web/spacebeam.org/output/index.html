@@ -1,171 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
-        <title>Spacebeam: Distributed Artificial Intelligence</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Full Atom Feed" />
-        <!-- twitter card metadata -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/logo.png">
-<meta name="twitter:creator" content="@SpacebeamOrg">
-<meta name="twitter:site" content="@SpacebeamOrg">
-<meta name="twitter:title" content="Spacebeam: Distributed Artificial Intelligence">
-<meta name="twitter:description" content="StarCraft AI, Distributed systems, HPC.">
-        <!-- OG Tags -->
-<meta property="og:url" content=""/>
-<meta property="og:title" content="Spacebeam: Distributed Artificial Intelligence" />
-<meta property="og:description" content="StarCraft AI, Distributed systems, HPC." />
-<meta property="og:image" content="/images/logo.png" />
-        <!-- favicon -->
-        <link rel="icon" type="image/png" href="/images/logo.png">
-        <!-- moment.js for date formatting -->
-        <script src="/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-		<script>
-
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-
-                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');
-                    });
-            };
-        </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distributed AI | Spacebeam</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://spacebeam.org/">
+<link rel="icon" href="images/logo.png" sizes="128x128">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="The Spacebeam authors">
+<meta property="og:site_name" content="Spacebeam">
+<meta property="og:title" content="Distributed AI">
+<meta property="og:url" content="https://spacebeam.org/">
+<meta property="og:description" content="We build Distributed Artificial Intelligence
+            
+            We build hybrid solutions for the world's most creative zerg companies. By providing user-focused consultancy, high capabilities a">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-12-12T13:48:18-06:00">
 </head>
 <body>
-    <div role="banner" id="masthead">
-        <header>
-            <a href="/"><img src="/images/logo.png" alt="McManus Logo"></a>
-            <a href="#menu" id="menu-link">more</a>
-            <nav id="menu">
-                <ul>
-                        <li><a href="/pages/about/">about</a></li>
-                        <li><a href="/pages/research/">research</a></li>
-                        <li><a href="/pages/technology/">technology</a></li>
-                            <li><a href="/category/updates">updates</a></li>
-                        <li class="tag-1">
-                        <a href="/tag/guide/">
-                        guide
-                        </a>
-                        </li>
-                        <li class="tag-4">
-                        <a href="/tag/zergs/">
-                        zergs
-                        </a>
-                        </li>
-                </ul>
-            </nav>
-        </header>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href=".">
+
+            <span id="blog-title">Spacebeam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="consultancy/#work" class="nav-link">Consultancy</a>
+                </li>
+<li class="nav-item">
+<a href="technology/" class="nav-link">Technology</a>
+                </li>
+<li class="nav-item">
+<a href="community/" class="nav-link">Community</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="posts/" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="contact/#us" class="nav-link">Contact Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
     </div>
-        <div class="page" role="main">
-<div class="articles">
-    <ol>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2022-04-08 00:00:00+02:00">
-                            <script>document.write(moment('2022-04-08 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2022/04/08/chrysalis-anti-spam-discord-bot/">
-                        <h2>Chrysalis anti-spam discord bot</h2>
-                    </a>
-                </header>
-                <div class="summary">Now that we are training our workers, eventually we'll be running out of supply. </div>
-                <div class="tags">
-                    <ul class="tags">
-                        <li><a href="/tag/guide/" class="tag">guide</a></li>
-                    </ul>
-                </div>
-                <a href="/2022/04/08/chrysalis-anti-spam-discord-bot/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2022-04-08 00:00:00+02:00">
-                            <script>document.write(moment('2022-04-08 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2022/04/08/zerg-3d-models/">
-                        <h2>Zerg 3d models</h2>
-                    </a>
-                </header>
-                <div class="summary">Now that we are training our workers, eventually we'll be running out of supply. </div>
-                <div class="tags">
-                    <ul class="tags">
-                        <li><a href="/tag/zergs/" class="tag">zergs</a></li>
-                    </ul>
-                </div>
-                <a href="/2022/04/08/zerg-3d-models/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2022-04-04 00:00:00+02:00">
-                            <script>document.write(moment('2022-04-04 00:00:00+02:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2022/04/04/torch-up-brood-war-ai-2022/">
-                        <h2>Torch Up: Brood War AI 2022</h2>
-                    </a>
-                </header>
-                <div class="summary">New Season 2022 maps and details. </div>
-                <div class="tags">
-                    <ul class="tags">
-                    </ul>
-                </div>
-                <a href="/2022/04/04/torch-up-brood-war-ai-2022/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-    </ol>
-<p class="paginator">
-    <span>1 / 10</span>
-        <a href="/2/" class="next">&raquo;</a>
-</p>
-    
-</div>                <footer>
-                    <div class="icons">
-                        <a href="https://github.com/spacebeam" target="_blank"><div class="icon-github icon"></div></a>
-                        <a href="https://twitter.com/SpacebeamOrg" target="_blank"><div class="icon-twitter icon"></div></a>
-                        <a href="https://discord.com/invite/SFpVE5Z" target="_blank"><div class="icon-discord icon"></div></a>
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> The Spacebeam authors</p>
-                </footer>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="display-4">We build Distributed Artificial Intelligence</h1>
+            <br><p class="lead">We build hybrid solutions for the world's most creative zerg companies. By providing user-focused consultancy, high capabilities and connection to specialized communities.</p>
+            <p class="lead">Explore any of the topics below!</p>
         </div>
+        <div class="col-md-4">
+            <center>
+            <a href="consultancy/#work">
+            <img src="images/drone.png" alt="With the Zerg Swarm" style="width:300px"></a>
+            </center>    
+        </div>
+    </div>
+</div>
+
+
+<!-- ICON ROWS  -->  
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm">
+      <center>
+      <a href="categories/computer/">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-robot fa-stack-1x fa-inverse"></i></span>
+        </div> 
+          <br><h3 class="index-feature">Machine Learning</h3>
+      </a>
+      <p><b><i>"Rise of the robots"</i></b></p>
+      </center>
+    </div>  
+
+    <div class="col-sm">
+      <center>
+      <a href=".">     
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-database fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <br><h3 class="index-feature">Apache CouchDB</h3>
+      </a>
+      <p><b><i>"Built for hybrid infrastructures"</i></b></p>
+      </center>
+    </div>
+    
+    <div class="col-sm">
+      <center>
+      <a href="categories/zergs/">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-cube fa-stack-1x fa-inverse">
+                </i>
+            </span>
+        </div>    
+        <br><h3 class="index-feature">Apptainer/Singularity</h3>
+          </a>
+      <p><b><i>"The most widely used container system for HPC"</i></b></p>
+    </center>
+    </div>  
+  </div>  
+  
+   <div class="row">
+
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-satellite-dish fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+          <br><h3 class="index-feature">Voice &amp; Communications</h3>
+          </a>
+      <p><b><i>"Offline Speech Recognition, Speech to Text"</i></b></p>
+</center>
+    </div>
+
+    <div class="col-sm">
+      <center>
+      <a href="categories/nonsense/">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-cog fa-stack-1x fa-inverse"></i>
+            </span>
+        </div> 
+          <br><h3 class="index-feature">Intelligent event-driven automation</h3>
+        </a>
+      <p><b><i>"ITOps, DevOps, NetOps &amp; SecOps"</i></b></p>
+        </center>
+    </div>  
+
+    <div class="col-sm">
+      <center>
+      <a href="categories/guide/">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-python fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>    
+          <br><h3 class="index-feature">Python, Lua, Erlang</h3>
+          </a>  
+      <p><b><i>"A powerful specialized, multidisciplinary team"</i></b></p>
+</center>
+    </div>
+  </div>  
+  
+</div>
+    </div>
+    
+
+</article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Ready for your next project?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            <div class="ml-auto">
+              <a href="contact/#us" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+            </div>
+          </div>
+            
+          <!--
+          <div class="row">
+
+            <div class="col-md-6">HQ</div>
+
+            <div class="col-md-6">Southeast Asia Headquarter</div>
+          </div>
+          -->
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="#zerg" class="footer-logo">Spacebeam</a></h5>
+              <p class="copyright">
+                <small>© 2023</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="consultancy/#work">Consulting</a></li>
+                <li><a href="technology/">Training</a></li>
+                <li><a href="community/">Support</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Company</h5>
+              <ul class="list-unstyled links">
+<li><a href="consultancy/#work">About us</a></li>
+                <li><a href="contact/#us">Contact us</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled social">
+<li><a href="#"><span class="fa-stack fa-x2"><i class="fa fa-circle fa-stack-x1"></i><i class="fab fa-linkedin fa-stack-lg fa-inverse"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-medium"></span></a></li>
+                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><script src="bs-jsonform.js"></script><script src="underscore-min.js"></script><script src="backbone-min.js"></script><!-- Relax, and have some fun --><script src="seed/fun.utils.js"></script><script src="seed/fun.configuration.js"></script><script src="seed/fun.strings.js"></script><script src="seed/fun.models.js"></script><!-- Project views --><script src="views/landing.js"></script><script src="views/contact.js"></script><script src="views/consultancy.js"></script><!-- fun router --><script src="seed/fun.router.js"></script>
 </body>
 </html>

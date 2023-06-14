@@ -1,84 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
-        <title>Spacebeam: Distributed Artificial Intelligence - 2021 archives</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Spacebeam: Distributed Artificial Intelligence Full Atom Feed" />
-        <!-- twitter card metadata -->
-        <!-- OG Tags -->
-        <!-- favicon -->
-        <link rel="icon" type="image/png" href="/images/logo.png">
-        <!-- moment.js for date formatting -->
-        <script src="/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-		<script>
-
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-
-                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');
-                    });
-            };
-        </script>
+<meta charset="utf-8">
+<meta name="description" content="Distributed Artificial Intelligence">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Posts for year 2021 | Spacebeam</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://spacebeam.org/2021/">
+<link rel="icon" href="../images/logo.png" sizes="128x128">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
-    <div role="banner" id="masthead">
-        <header>
-            <a href="/"><img src="/images/logo.png" alt="McManus Logo"></a>
-            <a href="#menu" id="menu-link">more</a>
-            <nav id="menu">
-                <ul>
-                        <li><a href="/pages/about/">about</a></li>
-                        <li><a href="/pages/research/">research</a></li>
-                        <li><a href="/pages/technology/">technology</a></li>
-                            <li><a href="/category/updates">updates</a></li>
-                        <li class="tag-1">
-                        <a href="/tag/guide/">
-                        guide
-                        </a>
-                        </li>
-                        <li class="tag-4">
-                        <a href="/tag/zergs/">
-                        zergs
-                        </a>
-                        </li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-        <div class="page" role="main">
-<h1>Archives for 2021</h1>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<dl>
-    <dt>Fri 10 December 2021</dt>
-    <dd><a href="/2021/12/10/how-to-cut-and-trim-video/">How to Cut and Trim Video</a></dd>
-    <dt>Fri 09 April 2021</dt>
-    <dd><a href="/2021/04/09/one-in-a-million-repeats-very-often/">One in a million, repeats very often</a></dd>
-</dl>
-                <footer>
-                    <div class="icons">
-                        <a href="https://github.com/spacebeam" target="_blank"><div class="icon-github icon"></div></a>
-                        <a href="https://twitter.com/SpacebeamOrg" target="_blank"><div class="icon-twitter icon"></div></a>
-                        <a href="https://discord.com/invite/SFpVE5Z" target="_blank"><div class="icon-discord icon"></div></a>
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> The Spacebeam authors</p>
-                </footer>
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+
+            <span id="blog-title">Spacebeam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../consultancy/#work" class="nav-link">Consultancy</a>
+                </li>
+<li class="nav-item">
+<a href="../technology/" class="nav-link">Technology</a>
+                </li>
+<li class="nav-item">
+<a href="../community/" class="nav-link">Community</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../posts/" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="../contact/#us" class="nav-link">Contact Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="listpage"><header><h1>Posts for year 2021</h1>
+    </header><ul class="postlist">
+<li>
+<time class="listdate" datetime="2021-08-23T16:02:59-06:00" title="2021-08-23 16:02">2021-08-23 16:02</time><a href="../posts/love2d/" class="listtitle">Love2d</a>
+</li>
+        <li>
+<time class="listdate" datetime="2021-03-03T19:02:09-06:00" title="2021-03-03 19:02">2021-03-03 19:02</time><a href="../posts/how-to-cut-and-trim-video/" class="listtitle">How To Cut and Trim Video</a>
+</li>
+    </ul></article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Ready for your next project?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            <div class="ml-auto">
+              <a href="../contact/#us" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+            </div>
+          </div>
+            
+          <!--
+          <div class="row">
+
+            <div class="col-md-6">HQ</div>
+
+            <div class="col-md-6">Southeast Asia Headquarter</div>
+          </div>
+          -->
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="../#zerg" class="footer-logo">Spacebeam</a></h5>
+              <p class="copyright">
+                <small>© 2023</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="../consultancy/#work">Consulting</a></li>
+                <li><a href="../technology/">Training</a></li>
+                <li><a href="../community/">Support</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Company</h5>
+              <ul class="list-unstyled links">
+<li><a href="../consultancy/#work">About us</a></li>
+                <li><a href="../contact/#us">Contact us</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled social">
+<li><a href="#"><span class="fa-stack fa-x2"><i class="fa fa-circle fa-stack-x1"></i><i class="fab fa-linkedin fa-stack-lg fa-inverse"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-medium"></span></a></li>
+                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+              </ul>
+</div>
+            
+          </div>
         </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><script src="../bs-jsonform.js"></script><script src="../underscore-min.js"></script><script src="../backbone-min.js"></script><!-- Relax, and have some fun --><script src="../seed/fun.utils.js"></script><script src="../seed/fun.configuration.js"></script><script src="../seed/fun.strings.js"></script><script src="../seed/fun.models.js"></script><!-- Project views --><script src="../views/landing.js"></script><script src="../views/contact.js"></script><script src="../views/consultancy.js"></script><!-- fun router --><script src="../seed/fun.router.js"></script>
 </body>
 </html>

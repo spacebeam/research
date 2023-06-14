@@ -1,0 +1,295 @@
+<p>Let's learn to order our workers to gather some resources closest to them!</p>
+<p><a href="https://github.com/TorchCraft/TorchCraft/">TorchCraft</a> is a <a href="https://bwapi.github.io/">BWAPI</a> module that sends StarCraft: Brood War data out over a <a href="https://zeromq.org">ZMQ</a> connection.
+This lets you parse game data and interact with the Brood War API from anywhere.</p>
+<p>This tutorial will walk you through start the game for the first time after <a href="https://spacebeam.org/2020/07/09/how-to-install-torchcraft-and-set-up-a-programming-environment-on-linux/">installing the environment</a>,
+we are going to dive into TorchCraft's Python API and its provided <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a>, learn to train a SCV, gather minerals, build a refinery and start harvesting-gas!</p>
+<p>Let's start the game and learn a bit more about TorchCraft a general overview can be found in:</p>
+<p>Synnaeve, G., Nardelli, N., Auvolat, A., Chintala, S., Lacroix, T., Lin, Z.,
+Richoux, F. and Usunier, N., 2016. <em>TorchCraft: a Library for Machine Learning Research
+on Real-Time Strategy Games</em> - <a href="https://arxiv.org/abs/1611.00625">arXiv:1611.00625</a>.</p>
+<h2>Step 0 - Build a <code>launcher.py</code> script</h2>
+<div class="code"><pre class="code literal-block">cd /opt/StarCraft
+</pre></div>
+
+<div class="code"><pre class="code literal-block">wine bwheadless.exe -e /opt/StarCraft/StarCraft.exe\
+ -l /opt/StarCraft/bwapi-data/BWAPI.dll --host\
+ --name Blueberry --game Blueberry --race T\
+ --map maps/TorchUp/\(4\)FightingSpirit1.3.scx&amp;\
+wine Chaoslauncher/Chaoslauncher.exe
+</pre></div>
+
+<p>That is what we are actually executing, let's build a <code>launcher.py</code> script.</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="c1">#!/usr/bin/env python3</span>
+
+<span class="c1"># Run bwheadless.exe and Chaoslauncher.exe from here!</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;host a game with bwheadless&#39;</span><span class="p">)</span>
+
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-p&#39;</span><span class="p">,</span> <span class="s1">&#39;--path&#39;</span><span class="p">,</span>
+                    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;/opt/StarCraft/&#39;</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;StarCraft path&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span> <span class="s1">&#39;--bot&#39;</span><span class="p">,</span>
+                    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Blueberry&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;--race&#39;</span><span class="p">,</span>
+                    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Terran&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;--map&#39;</span><span class="p">,</span>
+                    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;\(4\)FightingSpirit1.3.scx&#39;</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="n">execute</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">wine bwheadless.exe -e </span><span class="si">{0}</span><span class="s1">StarCraft.exe</span><span class="se">\</span>
+<span class="s1"> -l </span><span class="si">{0}</span><span class="s1">bwapi-data/BWAPI.dll --host</span><span class="se">\</span>
+<span class="s1"> --name </span><span class="si">{1}</span><span class="s1"> --game </span><span class="si">{1}</span><span class="s1"> --race </span><span class="si">{2}</span><span class="se">\</span>
+<span class="s1"> --map maps/TorchUp/</span><span class="si">{3}</span><span class="s1">&amp;</span><span class="se">\</span>
+<span class="s1">wine Chaoslauncher/Chaoslauncher.exe</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">bot</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">race</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="o">.</span><span class="n">map</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="n">execute</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+<p>Start the original example again and run <code>launcher.py</code> to see what gives?</p>
+<h3>Run the original <code>example.py</code></h3>
+<div class="code"><pre class="code literal-block">$ python3 /usr/src/TorchCraft/examples/py/example.py -t <span class="m">127</span>.0.0.1
+</pre></div>
+
+<h3>Run the <code>launcher.py</code> script</h3>
+<div class="code"><pre class="code literal-block">$ python3 /usr/src/starcraft-sif/examples/launcher.py
+</pre></div>
+
+<p>If everything works as expected, you will see <code>Chaoslauncher</code>, the first time it will ask for the location of <code>StarCraft.exe</code>, you will find it on <code>/opt/StarCraft/</code> confirm and it will ask probably to restart <code>Chaoslauncher.exe</code>, kill the current session with <code>Control-C</code> in the terminal where you start <code>launcher.py</code> and run it again.</p>
+<div class="code"><pre class="code literal-block">$ python3 /usr/src/starcraft-sif/examples/launcher.py
+</pre></div>
+
+<p>{% img [class name(s)] /images/1.png %}</p>
+<p>Now with Chaoslauncher ready, enable the <code>BWAPI 4.2.0 [RELEASE]</code> and and <code>W-MODE</code> plugins and click on <code>Start</code> hopefully that will launch the game on your new environment, check <code>Multiplayer -&gt; Local PC</code> and confirm that you see <code>Blueberry</code> waiting in the lobby.</p>
+<p>{%img [class name(s)] /images/2.png %}</p>
+<p>{%img [class name(s)] /images/3.png %}</p>
+<h2>Step 1 - What is TorchCraft again?</h2>
+<p>{%img [class name(s)] /images/4.png %}</p>
+<p>TorchCraft is a library that enables machine learning research in the real-time strategy game of StarCraft: Brood War, by making easier to control the game from a machine learning framework, here <a href="https://pytorch.org">PyTorch</a>.</p>
+<p>TorchCraft advocate to have not only the pixels as input and keyboard/mouse for commands, but also a structured representation of the game state. This makes it easier to try a broad variety of models.</p>
+<p>StarCraft: Brood War is a highly competitive game with professional players, which provides interesting datasets, human feedback, and a good benchmark of what is possible to achieve within the game.</p>
+<h3>BWAPI</h3>
+<p>BWAPI is a programming interface written in C++ which allows users to read data and send game commands to a StarCraft: Brood War game client. BWAPI contains all functionality necessary for the creation of a competitive bot. Examples of BWAPI functionality are:</p>
+<ul>
+<li>Perform unit actions, i.e: <code>Attack</code>, <code>Move</code>, <code>Build</code></li>
+<li>Obtain current data about any visible unit, such as: <code>Position</code>, <code>HP</code>, <code>Energy</code></li>
+<li>Obtain offline data about any unit type, such as: <code>MaxSpeed</code>, <code>Damage</code>, <code>MaxHP</code>, <code>Size</code></li>
+</ul>
+<p>Programs written with BWAPI alone are usually compiled into a Windows dynamically linked library (DLL) which is injected into the game. BWAPI allows the user to perform any of the aboce functionality while the game is running, after each logic frame update within the game's software.</p>
+<p>After each logic frame, BWAPI interrupts the StarCraft process and allows the user to read game data and issue commands, which are stored in a queue to be executed during the game's next logic frame.</p>
+<h3>TorchCraft Design</h3>
+<p>TorchCraft connects Torch to BWAPI low level interface to StarCraft: Brood War. TorchCraft's approach is to dynamically inject a piece of code in the game engine that will be a server. This server sends the state of the game to a client, and receives commands to send to the game.</p>
+<p>The two modules are entirely asynchronous. TorchCraft execution model inject a DLL that provides the game interface to the bots, and one that includes all the instructions to communicate with the external client, interpreted by the game as player (or bot AI).</p>
+<p>The server starts at the beginning of the match and stops when that ends.</p>
+<p>TorchCraft is seen by the AI programmer as a library that provides: <code>connect()</code>, <code>receive()</code> to get the state, <code>send(commands)</code>, and some helper functions about specifics of StarCraft's rules and state representation.</p>
+<div class="code"><pre class="code literal-block"><span class="o">:::</span><span class="n">lua</span><span class="w"></span>
+<span class="c1">-- main game engine loop:</span><span class="w"></span>
+<span class="c1">-- it acts as the server for our TorchCraft bot client to `connect`, `receive` and `send(commands)`</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="no">true</span><span class="w"> </span><span class="k">do</span><span class="w"></span>
+<span class="w">    </span><span class="n">game</span><span class="p">.</span><span class="n">receive_player_actions</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="n">game</span><span class="p">.</span><span class="n">compute_dynamics</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="c1">-- our injected code:</span><span class="w"></span>
+<span class="w">    </span><span class="n">torchcraft</span><span class="p">.</span><span class="n">send_state</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="n">torchcraft</span><span class="p">.</span><span class="n">receive_actions</span><span class="p">()</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+
+<p>A simplified client/server model that runs in the game engine (server, on top) and the machine learning framework (client, on the bottom).</p>
+<div class="code"><pre class="code literal-block"><span class="o">:::</span><span class="n">lua</span><span class="w"></span>
+<span class="c1">-- ilustrates a TorchCraft bot using the Lua client to `connect`, `receive` and `send(commands)`</span><span class="w"></span>
+<span class="c1">-- it acts as the machine learning client where we can integrate Torch7 to return in-game actions</span><span class="w"></span>
+<span class="n">tc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">require</span><span class="p">(</span><span class="s1">&#39;torchcraft&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">featurize</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">init</span><span class="p">()</span><span class="w"></span>
+<span class="n">tc</span><span class="o">:</span><span class="n">connect</span><span class="p">(</span><span class="k">port</span><span class="p">)</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">tc</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">game_ended</span><span class="w"> </span><span class="k">do</span><span class="w"></span>
+<span class="w">    </span><span class="n">tc</span><span class="o">:</span><span class="n">receive</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">featurize</span><span class="p">(</span><span class="n">tc</span><span class="p">.</span><span class="n">state</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="o">:</span><span class="n">forward</span><span class="p">(</span><span class="n">features</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">tc</span><span class="o">:</span><span class="n">send</span><span class="p">(</span><span class="n">tc</span><span class="o">:</span><span class="n">tocommand</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+
+<p>TorchCraft also provides an efficient way to store game frames data from past games so that existing replays can be re-examined.</p>
+<p>TorchCraft is a library that enables machine learning reserch on real game data by interfacing PyTorch with StarCraft: Brood War.</p>
+<h2>Step 2 - Analyzing TorchCraft <code>example.py</code></h2>
+<p>What is TorchCraft's <a href="https://github.com/TorchCraft/TorchCraft/blob/master/examples/py/example.py">example.py</a> actually doing?</p>
+<div class="code"><pre class="code literal-block"><span class="p">:::</span><span class="n">python</span>
+<span class="kn">import</span> <span class="nn">torchcraft</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">torchcraft.Constants</span> <span class="k">as</span> <span class="nn">tcc</span>
+</pre></div>
+
+<p>Get closest function, very self explanatory!</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">def</span><span class="w"> </span><span class="nv">get_closest</span><span class="ss">(</span><span class="nv">x</span>,<span class="w"> </span><span class="nv">y</span>,<span class="w"> </span><span class="nv">units</span><span class="ss">)</span><span class="w"></span>
+<span class="w">    </span><span class="nv">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">float</span><span class="ss">(</span><span class="s1">&#39;inf&#39;</span><span class="ss">)</span><span class="w"></span>
+<span class="w">    </span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">None</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nv">unit</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">units</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">x</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">y</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">dist</span>:<span class="w"></span>
+<span class="w">            </span><span class="nv">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">d</span><span class="w"></span>
+<span class="w">            </span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">unit</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">u</span><span class="w"></span>
+</pre></div>
+
+<p>TorchCraft Python API client initial setup</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">tc</span>.<span class="nv">Client</span><span class="ss">()</span><span class="w"></span>
+<span class="nv">client</span>.<span class="k">connect</span><span class="ss">(</span><span class="nv">hostname</span>,<span class="w"> </span><span class="nv">port</span><span class="ss">)</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Initial</span><span class="w"> </span><span class="nv">setup</span><span class="w"></span>
+<span class="nv">client</span>.<span class="k">send</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">    </span>[<span class="nv">tcc</span>.<span class="nv">set_speed</span>,<span class="w"> </span><span class="mi">0</span>],<span class="w"></span>
+<span class="w">    </span>[<span class="nv">tcc</span>.<span class="nv">set_gui</span>,<span class="w"> </span><span class="mi">1</span>],<span class="w"></span>
+<span class="w">    </span>[<span class="nv">tcc</span>.<span class="nv">set_cmd_optim</span>,<span class="w"> </span><span class="mi">1</span>],<span class="w"></span>
+]<span class="ss">)</span><span class="w"></span>
+</pre></div>
+
+<blockquote>
+<p>Plays simple micro battles with an attack closest heuristic</p>
+</blockquote>
+<p>{%img [class name(s)] /images/5.png %}</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">game_ended</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">loop</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="nv">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">client</span>.<span class="nv">recv</span><span class="ss">()</span><span class="w"></span>
+<span class="w">    </span><span class="nv">actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[]<span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">game_ended</span>:<span class="w"></span>
+<span class="w">        </span><span class="k">break</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">units</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">units</span>[<span class="mi">0</span>]<span class="w"></span>
+<span class="w">        </span><span class="nv">enemy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">units</span>[<span class="mi">1</span>]<span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nv">unit</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">units</span>:<span class="w"></span>
+<span class="w">            </span><span class="nv">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">get_closest</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">x</span>,<span class="w"> </span><span class="nv">unit</span>.<span class="nv">y</span>,<span class="w"> </span><span class="nv">enemy</span><span class="ss">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">None</span>:<span class="w"></span>
+<span class="w">                </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">                    </span><span class="nv">tcc</span>.<span class="nv">command_unit_protected</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Attack_Unit</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">target</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">                </span>]<span class="ss">)</span><span class="w"></span>
+<span class="w">    </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;Sending actions: {}&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">str</span><span class="ss">(</span><span class="nv">actions</span><span class="ss">)))</span><span class="w"></span>
+<span class="w">    </span><span class="nv">client</span>.<span class="k">send</span><span class="ss">(</span><span class="nv">actions</span><span class="ss">)</span><span class="w"></span>
+<span class="nv">client</span>.<span class="nv">close</span><span class="ss">()</span><span class="w"></span>
+</pre></div>
+
+<p>The TorchCraft API is a layer of abstraction on top of BWAPI, we don't interact with BWAPI directly, this is the biggest difference if compared with common C++ or Java bots.</p>
+<h2>Step 3 - Minerals and Vespene Gas</h2>
+<p>Workers mine 8 minerals per trip. Minerals are the more important of the two physical resources, for all units produces from buildings or larvae require at least some minerals to be produced, while more basic units and structures do not require <code>Vespene Gas</code>. In addition, gas harvesting is possible only by building a gas-extracting structure on a geyser (<code>Extractor</code> for <code>Zerg</code>, <code>Refinery</code> for <code>Terran</code> and <code>Assimilator</code> for <code>Protoss</code>).</p>
+<p>{%img [class name(s)] /images/6.png %}</p>
+<h3>Run <code>gathering.py</code> example</h3>
+<div class="code"><pre class="code literal-block">$ python3 /usr/src/starcraft-sif/examples/gathering.py
+</pre></div>
+
+<h3>Run <code>launcher.py</code> script</h3>
+<div class="code"><pre class="code literal-block">$ python3 /usr/src/starcraft-sif/examples/launcher.py
+</pre></div>
+
+<h3>Train a SCV</h3>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nv">unit</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">units</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">isbuilding</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">type</span><span class="ss">)</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">tc</span>.<span class="nv">Constants</span>.<span class="nv">unittypes</span>.<span class="nv">_dict</span>[<span class="nv">unit</span>.<span class="nv">type</span>]\<span class="w"></span>
+<span class="w">     </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Terran_Command_Center&#39;</span>:<span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">producing</span>\<span class="w"></span>
+<span class="w">         </span><span class="nv">and</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">frame</span>.<span class="nv">resources</span>[<span class="nv">bot</span>[<span class="s1">&#39;id&#39;</span>]].<span class="nv">ore</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">50</span>\<span class="w"></span>
+<span class="w">         </span><span class="nv">and</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">frame</span>.<span class="nv">resources</span>[<span class="nv">bot</span>[<span class="s1">&#39;id&#39;</span>]].<span class="nv">used_psi</span>\<span class="w"></span>
+<span class="w">         </span><span class="o">!=</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">frame</span>.<span class="nv">resources</span>[<span class="nv">bot</span>[<span class="s1">&#39;id&#39;</span>]].<span class="nv">total_psi</span>:<span class="w"></span>
+<span class="w">            </span>#<span class="w"> </span><span class="nv">Target</span>,<span class="w"> </span><span class="nv">x</span>,<span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">            </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">                </span><span class="nv">tcc</span>.<span class="nv">command_unit_protected</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Train</span>,<span class="w"></span>
+<span class="w">                </span><span class="mi">0</span>,<span class="w"></span>
+<span class="w">                </span><span class="mi">0</span>,<span class="w"></span>
+<span class="w">                </span><span class="mi">0</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">tc</span>.<span class="nv">Constants</span>.<span class="nv">unittypes</span>.<span class="nv">Terran_SCV</span>,<span class="w"></span>
+<span class="w">            </span>]<span class="ss">)</span><span class="w"></span>
+<span class="w">            </span>#<span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">train</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">unit</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">input</span><span class="w"> </span><span class="nv">into</span><span class="w"> </span><span class="s2">&quot;extra&quot;</span><span class="w"> </span><span class="nv">field</span><span class="w"></span>
+<span class="w">            </span><span class="nv">producing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span><span class="w"></span>
+</pre></div>
+
+<h3>Gathering Minerals</h3>
+<p>if all went well, the workers should now start gathering the mineral patches closest to them!</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="nv">gather</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">command2order</span>[<span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Gather</span>]<span class="w"> </span>
+<span class="nv">build</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">command2order</span>[<span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Build</span>]<span class="w"></span>
+<span class="nv">right_click_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">command2order</span>[<span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Right_Click_Position</span>]<span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="nv">order</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">unit</span>.<span class="nv">orders</span>:<span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">order</span>.<span class="nv">type</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">gather</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">order</span>.<span class="nv">type</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">build</span>\\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">order</span>.<span class="nv">type</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">right_click_position</span>\<span class="w"> </span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">building_refinery</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">get_closest</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">x</span>,<span class="w"> </span><span class="nv">unit</span>.<span class="nv">y</span>,<span class="w"> </span><span class="nv">neutral</span><span class="ss">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">None</span>:<span class="w"></span>
+<span class="w">            </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">                </span><span class="nv">tcc</span>.<span class="nv">command_unit_protected</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Right_Click_Unit</span>,<span class="w"></span>
+<span class="w">                </span><span class="nv">target</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">            </span>]<span class="ss">)</span><span class="w"></span>
+</pre></div>
+
+<p>Don't expect an optimal spread of workers, but that is left as an exercise.</p>
+<h3>Build a Refinery</h3>
+<p>We Require More Vespene Gas</p>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+
+<span class="nv">vespene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Resource_Vespene_Geyser&#39;</span><span class="w"></span>
+
+<span class="k">if</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">isworker</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">type</span><span class="ss">)</span>:<span class="w"></span>
+<span class="w">    </span><span class="nv">workers</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">id</span><span class="ss">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">state</span>.<span class="nv">frame</span>.<span class="nv">resources</span>[<span class="nv">bot</span>[<span class="s1">&#39;id&#39;</span>]].<span class="nv">ore</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">100</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">building_refinery</span>:<span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nv">nu</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">neutral</span>:<span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nv">tcc</span>.<span class="nv">unittypes</span>.<span class="nv">_dict</span>[<span class="nv">nu</span>.<span class="nv">type</span>]<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">vespene</span>:<span class="w"></span>
+<span class="w">                </span><span class="nv">gas_harvesting</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">id</span><span class="ss">)</span><span class="w"></span>
+<span class="w">                </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">                    </span><span class="nv">tcc</span>.<span class="nv">command_unit</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Build</span>,<span class="w"></span>
+<span class="w">                    </span><span class="o">-</span><span class="mi">1</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">nu</span>.<span class="nv">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">nu</span>.<span class="nv">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span>,<span class="w"></span>
+<span class="w">                    </span><span class="nv">tcc</span>.<span class="nv">unittypes</span>.<span class="nv">Terran_Refinery</span>,<span class="w"></span>
+<span class="w">                </span>]<span class="ss">)</span><span class="w"></span>
+<span class="w">                </span><span class="nv">building_refinery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span><span class="w"></span>
+</pre></div>
+
+<h3>Gas harvesting</h3>
+<div class="code"><pre class="code literal-block">:::<span class="nv">python</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="nv">building_refinery</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">gas_harvesting</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">unit</span>.<span class="nv">id</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">len</span><span class="ss">(</span><span class="nv">gas_harvesting</span><span class="ss">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">refinery</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">gas_harvesting</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">id</span><span class="ss">)</span><span class="w"></span>
+<span class="w">        </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">            </span><span class="nv">tcc</span>.<span class="nv">command_unit_protected</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Right_Click_Unit</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">refinery</span><span class="w"></span>
+<span class="w">        </span>]<span class="ss">)</span><span class="w"></span>
+<span class="nv">elif</span><span class="w"> </span><span class="nv">refinery</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">gas_harvesting</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">unit</span>.<span class="nv">id</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">gas_harvesting</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">unit</span>.<span class="nv">id</span>\<span class="w"></span>
+<span class="w">     </span><span class="nv">and</span><span class="w"> </span><span class="nv">len</span><span class="ss">(</span><span class="nv">gas_harvesting</span><span class="ss">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span>:<span class="w"></span>
+<span class="w">        </span><span class="nv">gas_harvesting</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">unit</span>.<span class="nv">id</span><span class="ss">)</span><span class="w"></span>
+<span class="w">        </span><span class="nv">actions</span>.<span class="nv">append</span><span class="ss">(</span>[<span class="w"></span>
+<span class="w">            </span><span class="nv">tcc</span>.<span class="nv">command_unit_protected</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">unit</span>.<span class="nv">id</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">tcc</span>.<span class="nv">unitcommandtypes</span>.<span class="nv">Right_Click_Unit</span>,<span class="w"></span>
+<span class="w">            </span><span class="nv">refinery</span><span class="w"></span>
+<span class="w">        </span>]<span class="ss">)</span><span class="w"></span>
+</pre></div>
+
+<h2>Further Reading</h2>
+<p>Here is a link to the complete <a href="https://github.com/spacebeam/starcraft-sif/blob/master/examples/gathering.py">gathering.py</a> script if you are just curious,
+Next we will <a href="https://spacebeam.org/2020/07/11/8-supply-11-gas-12-rax-14-scout/">train different units</a> to improve our Terran skills!</p>

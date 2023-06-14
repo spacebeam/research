@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How To Install TorchCraft and Setup a Programming Environment on Linux | Spacebeam</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (ko)" hreflang="ko" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../../es/rss.xml">
+<link rel="canonical" href="https://spacebeam.org/ko/posts/how-to-install-torchcraft/">
+<link rel="icon" href="../../../images/logo.png" sizes="128x128">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="The Spacebeam authors">
+<link rel="prev" href="../stage-2-supervision/" title="Stage 2 Supervision" type="text/html">
+<link rel="next" href="../howto-build/" title="Build a Wall &amp; Lings Will Fall" type="text/html">
+<meta property="og:site_name" content="Spacebeam">
+<meta property="og:title" content="How To Install TorchCraft and Setup a Programming Environment on Linux">
+<meta property="og:url" content="https://spacebeam.org/ko/posts/how-to-install-torchcraft/">
+<meta property="og:description" content="TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI.
+{% img [class name(s)] /images/python.jpg %}
+Python is an inter">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-07-09T19:50:52-06:00">
+<link rel="alternate" hreflang="en" href="../../../posts/how-to-install-torchcraft/">
+<link rel="alternate" hreflang="es" href="../../../es/posts/how-to-install-torchcraft/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">주 콘텐츠로 바로가기</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../../">
+
+            <span id="blog-title">Spacebeam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../../consultancy/#work" class="nav-link">Consultancy</a>
+                </li>
+<li class="nav-item">
+<a href="../../../technology/" class="nav-link">Technology</a>
+                </li>
+<li class="nav-item">
+<a href="../../../community/" class="nav-link">Community</a>
+                </li>
+<li class="nav-item">
+<a href="../../../contact/#us" class="nav-link">Contact Us</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../../../posts/" class="nav-link">Blog</a>
+
+                
+                    </li>
+<li>
+            </li>
+<li class="nav-item"><a href="../../../" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+            <li class="nav-item"><a href="../../../es/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+
+                
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">How To Install TorchCraft and Setup a Programming Environment on Linux</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    The Spacebeam authors
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-09T19:50:52-06:00" itemprop="datePublished" title="2020-07-09 19:50">2020-07-09 19:50</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI.</p>
+<p>{% img [class name(s)] /images/python.jpg %}</p>
+<p>Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.</p>
+<p>This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.</p>
+<h3>Step 0 - Update and Upgrade</h3>
+<p>Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.</p>
+<div class="code"><pre class="code literal-block">apt update
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt upgrade
+</pre></div>
+
+<p>Confirm upgrade when prompted to do so.</p>
+<h3>Step 1 - Check Version of Python</h3>
+<p>Check your version of Python 3 installed by typing:</p>
+<div class="code"><pre class="code literal-block">python3 --version
+</pre></div>
+
+<p>You'll receive output similar to the following.</p>
+<div class="code"><pre class="code literal-block">Python 3.7.3
+</pre></div>
+
+<h3>Step 2 - Install pip</h3>
+<p>To manage software packages for Python, install <code>pip</code>, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. </p>
+<div class="code"><pre class="code literal-block">apt install -y python3-pip
+</pre></div>
+
+<p>Python packages can be installed by typing:</p>
+<div class="code"><pre class="code literal-block">pip3 install schematics 
+</pre></div>
+
+<p>Here, <code>schematics</code> can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. </p>
+<h3>Step 3 - Install Additional Tools</h3>
+<p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:</p>
+<div class="code"><pre class="code literal-block">apt -y install --install-recommends vim git apt-transport-https\
+ gnupg2 wget software-properties-common curl build-essential\
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg --add-architecture i386
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt-add-repository contrib 
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
+ libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386\
+ libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 libgl1-mesa-glx:i386\
+ libgl1-mesa-dri:i386 libsdl2-2.0-0 libstb0 libstb0:i386 mesa-vulkan-drivers
+</pre></div>
+
+<h3>Step 4 - Add the WineHQ Debian repository</h3>
+<p>Get and install the repository key.</p>
+<div class="code"><pre class="code literal-block">wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;&amp; apt-key add winehq.key
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt update &amp;&amp; rm winehq.key
+</pre></div>
+
+<h3>Step 5 - Install libfaudio0 and Wine</h3>
+<p>Starting on Wine &gt;= 4.5, libfaudio0 is required by the staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This explains how to obtain libfaudio0 for Debian 10.</p>
+<div class="code"><pre class="code literal-block"><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">nc</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Emulators</span><span class="p">:</span><span class="o">/</span><span class="n">Wine</span><span class="p">:</span><span class="o">/</span><span class="n">Debian</span><span class="o">/</span><span class="n">Debian_10</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">libfaudio0_20</span><span class="o">.</span><span class="mi">01</span><span class="o">-</span><span class="mi">0</span><span class="o">~</span><span class="n">buster_amd64</span><span class="o">.</span><span class="n">deb</span><span class="w"></span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block"><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">nc</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Emulators</span><span class="p">:</span><span class="o">/</span><span class="n">Wine</span><span class="p">:</span><span class="o">/</span><span class="n">Debian</span><span class="o">/</span><span class="n">Debian_10</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span><span class="n">libfaudio0_20</span><span class="o">.</span><span class="mi">01</span><span class="o">-</span><span class="mi">0</span><span class="o">~</span><span class="n">buster_i386</span><span class="o">.</span><span class="n">deb</span><span class="w"></span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg -i libfaudio0_20.01-0~buster_amd64.deb
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg -i libfaudio0_20.01-0~buster_i386.deb
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt -y install --install-recommends winehq-staging winetricks
+</pre></div>
+
+<h3>Step 6 - Configuring WINE</h3>
+<p>Many programs work under WINE with absolutely no configuration.. unfortunately, this isn't always the case.</p>
+<h4>(default) using your own <code>non-root</code> user</h4>
+<p>The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can <em>REMOVE</em> it and start clean with <code>rm -rf ~/.wine/</code></p>
+<div class="code"><pre class="code literal-block">$ <span class="nv">WINEARCH</span><span class="o">=</span>win32<span class="p">;</span> wineboot
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$ winetricks -q vcrun2012
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$ winetricks -q vcrun2013
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$ winetricks -q vcrun2015
+</pre></div>
+
+<h4>(optional) using a separate <code>wine</code> user</h4>
+<div class="code"><pre class="code literal-block">adduser --disabled-login --gecos "" --shell /forbid/login wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">usermod --append --groups audio wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">chown wine:wine -R /home/wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
+</pre></div>
+
+<h3>Step 7 - StarCraft: Brood War 1.16.1</h3>
+<p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
+<div class="code"><pre class="code literal-block">git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
+</pre></div>
+
+<p>In this tutorial we have StarCraft installed in <code>/opt/StarCraft/</code></p>
+<div class="code"><pre class="code literal-block"><span class="nv">cat</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">starcraft</span><span class="o">-</span><span class="nv">sif</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nv">core</span><span class="o">/</span><span class="nv">core</span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">StarCraft</span>.<span class="nv">tar</span>.<span class="nv">gz</span><span class="w"></span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block">tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+</pre></div>
+
+<h4>Installing the provided Python examples</h4>
+<p>This will install Tornado, PyTorch, PyZMQ, NumPy and SciPy!</p>
+<div class="code"><pre class="code literal-block">pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
+</pre></div>
+
+<h4>Installing TorchCraft</h4>
+<div class="code"><pre class="code literal-block">git clone https://github.com/TorchCraft/TorchCraft.git /usr/src/TorchCraft --recursive
+</pre></div>
+
+<div class="code"><pre class="code literal-block">pip3 install /usr/src/TorchCraft
+</pre></div>
+
+<h3>Step 8 - Coding &amp; Building</h3>
+<p>Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. check that everything is installed correctly and that we can run the original examples.</p>
+<div class="code"><pre class="code literal-block">python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
+</pre></div>
+
+<p>if you follow the steps your output read hopefully:</p>
+<div class="code"><pre class="code literal-block">CTRL-C to stop
+</pre></div>
+
+<p>You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and <a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/">gather resources</a> growing a Terran economy. </p>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../stage-2-supervision/" rel="prev" title="Stage 2 Supervision">이전 포스트</a>
+            </li>
+            <li class="next">
+                <a href="../howto-build/" rel="next" title="Build a Wall &amp; Lings Will Fall">다음 포스트</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Ready for your next project?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            <div class="ml-auto">
+              <a href="../../../contact/#us" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+            </div>
+          </div>
+            
+          <!--
+          <div class="row">
+
+            <div class="col-md-6">HQ</div>
+
+            <div class="col-md-6">Southeast Asia Headquarter</div>
+          </div>
+          -->
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="../../../#zerg" class="footer-logo">Spacebeam</a></h5>
+              <p class="copyright">
+                <small>© 2023</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">Consulting</a></li>
+                <li><a href="../../../technology/">Training</a></li>
+                <li><a href="../../../community/">Support</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Company</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">About us</a></li>
+                <li><a href="../../../contact/#us">Contact us</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled social">
+<li><a href="#"><span class="fa-stack fa-x2"><i class="fa fa-circle fa-stack-x1"></i><i class="fab fa-linkedin fa-stack-lg fa-inverse"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-medium"></span></a></li>
+                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><script src="../../../bs-jsonform.js"></script><script src="../../../underscore-min.js"></script><script src="../../../backbone-min.js"></script><!-- Relax, and have some fun --><script src="../../../seed/fun.utils.js"></script><script src="../../../seed/fun.configuration.js"></script><script src="../../../seed/fun.strings.js"></script><script src="../../../seed/fun.models.js"></script><!-- Project views --><script src="../../../views/landing.js"></script><script src="../../../views/contact.js"></script><script src="../../../views/consultancy.js"></script><!-- fun router --><script src="../../../seed/fun.router.js"></script>
+</body>
+</html>

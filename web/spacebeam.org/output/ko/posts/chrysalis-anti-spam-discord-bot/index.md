@@ -1,0 +1,10 @@
+.. title: Chrysalis anti-spam discord bot
+.. slug: chrysalis-anti-spam-discord-bot
+.. date: 2022-08-03 08:04:36 UTC-06:00
+.. tags: guide
+.. category: zergs
+.. link:
+.. description: Now that we taining our drones, eventually we'll burn
+.. type: text
+
+Write your post here.

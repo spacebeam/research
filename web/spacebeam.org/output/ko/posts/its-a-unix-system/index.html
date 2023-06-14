@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It's a UNIX system! | Spacebeam</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (ko)" hreflang="ko" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../../es/rss.xml">
+<link rel="canonical" href="https://spacebeam.org/ko/posts/its-a-unix-system/">
+<link rel="icon" href="../../../images/logo.png" sizes="128x128">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="The Spacebeam authors">
+<link rel="prev" href="../torchcraft/" title="TorchCraft" type="text/html">
+<link rel="next" href="../opennings/" title="Opennings" type="text/html">
+<meta property="og:site_name" content="Spacebeam">
+<meta property="og:title" content="It's a UNIX system!">
+<meta property="og:url" content="https://spacebeam.org/ko/posts/its-a-unix-system/">
+<meta property="og:description" content="my system
+I'm going to go through my customized dev environment and linux workflow (?),
+this is mostly for starcraft brood war ofc born of necessity. 
+I use vim but I expect autocomplete and go to def">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-08-30T11:34:34-06:00">
+<meta property="article:tag" content="computer">
+<meta property="article:tag" content="guide">
+<meta property="article:tag" content="hypermodernism">
+<meta property="article:tag" content="nonsense">
+<link rel="alternate" hreflang="en" href="../../../posts/its-a-unix-system/">
+<link rel="alternate" hreflang="es" href="../../../es/posts/its-a-unix-system/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">주 콘텐츠로 바로가기</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../../">
+
+            <span id="blog-title">Spacebeam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../../consultancy/#work" class="nav-link">Consultancy</a>
+                </li>
+<li class="nav-item">
+<a href="../../../technology/" class="nav-link">Technology</a>
+                </li>
+<li class="nav-item">
+<a href="../../../community/" class="nav-link">Community</a>
+                </li>
+<li class="nav-item">
+<a href="../../../contact/#us" class="nav-link">Contact Us</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../../../posts/" class="nav-link">Blog</a>
+
+                
+                    </li>
+<li>
+            </li>
+<li class="nav-item"><a href="../../../" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+            <li class="nav-item"><a href="../../../es/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+
+                
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">It's a UNIX system!</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    The Spacebeam authors
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2022-08-30T11:34:34-06:00" itemprop="datePublished" title="2022-08-30 11:34">2022-08-30 11:34</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <h2>my system</h2>
+<p>I'm going to go through my customized dev environment and linux workflow (?),</p>
+<p>this is mostly for starcraft brood war ofc born of necessity. </p>
+<p>I use vim but I expect autocomplete and go to definitions and a tool that let me move throuth my projet easy and quick</p>
+<p>is a great text editor available everywhere that let me customize it to my own needs</p>
+<p>I'm by no means a vim expert, this is more like my notes in the continuous process of learning and making my own customized experience.</p>
+<p>vim window movements suck by default, I need good movements (explain what does this means).</p>
+<p>my goals are built-in language support for Python, Lua, Erlang and C </p>
+<p>avoid the requirement of tools outside those supported languages,</p>
+<p>avoid rust or go utilities if possible,</p>
+<p>avoid c++ if possible,</p>
+<p>introduce debian linux</p>
+<p>kek</p>
+<p>introduce the starcraft and vim comparation..</p>
+<ul>
+<li>vim plugging manager</li>
+<li>my list of pluggins</li>
+<li>autocompletion</li>
+<li>unit tests</li>
+<li>git integration</li>
+<li>startify menu (?)</li>
+<li>go to definition</li>
+<li>linting (?)</li>
+<li>denite (more than just a fuzzy finder!)</li>
+<li>undotree F5</li>
+<li>dirvish (file finder)</li>
+<li>
+<p>hotkeys</p>
+</li>
+<li>
+<p>mksh</p>
+</li>
+<li>kitty</li>
+<li>bspwm</li>
+<li>tmux</li>
+</ul>
+<p>direction is more important than speed</p>
+<h2>plug</h2>
+<p>plug vim pluging manager</p>
+<h3>my list of pluggins</h3>
+<table>
+<thead><tr>
+<th>pluggin</th>
+<th>description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>vim-sensible</td>
+<td>a universal set of defaults that everyone can agree on.</td>
+</tr>
+<tr>
+<td>vim-eunuch</td>
+<td>Vim sugar for the UNIX shell commands that need it the most.</td>
+</tr>
+<tr>
+<td>vim-fugitive</td>
+<td>It's so awesome, it should be illegal.</td>
+</tr>
+<tr>
+<td>vim-unimpaired</td>
+<td>Complementary pairs of mappings.</td>
+</tr>
+<tr>
+<td>vim-repeat</td>
+<td>Repeat.vim remaps . in a way that plugins can tap into it.</td>
+</tr>
+<tr>
+<td>vim-dispatch</td>
+<td>Kick off builds and test suites using one of several asynchronous adapters.</td>
+</tr>
+<tr>
+<td>vim-startify</td>
+<td>A fancy start screen for Vim</td>
+</tr>
+<tr>
+<td>vim-signify</td>
+<td>Show differences with style</td>
+</tr>
+<tr>
+<td>vim-polyglot</td>
+<td>A solid language pack for Vim.</td>
+</tr>
+<tr>
+<td>vim-maximizer</td>
+<td>Maximizes and restores the current window in Vim.</td>
+</tr>
+<tr>
+<td>vim-bbye</td>
+<td>Close and remove the buffer.</td>
+</tr>
+<tr>
+<td>vim-lastplace</td>
+<td>Intelligently reopen files at your last edit position.</td>
+</tr>
+<tr>
+<td>vim-sandwich</td>
+<td>add/delete/replace surroundings of a sandwiched textobject</td>
+</tr>
+<tr>
+<td>vim-highlightedyank</td>
+<td>Make the yanked region apparent!</td>
+</tr>
+<tr>
+<td>goyo</td>
+<td>Distraction-free writing in Vim.</td>
+</tr>
+<tr>
+<td>limelight</td>
+<td>Hyperfocus-writing in Vim.</td>
+</tr>
+<tr>
+<td>vim-peekaboo</td>
+<td>see the contents of the registers.</td>
+</tr>
+<tr>
+<td>vim-easy-align</td>
+<td>A simple, easy-to-use Vim alignment plugin.</td>
+</tr>
+<tr>
+<td>gv.vim</td>
+<td>A git commit browser in Vim</td>
+</tr>
+<tr>
+<td>vim-slash</td>
+<td>Enhancing in-buffer search experience</td>
+</tr>
+<tr>
+<td>Vim-Jinja2-Syntax</td>
+<td>An up-to-date jinja2 syntax file.</td>
+</tr>
+<tr>
+<td>denite</td>
+<td>Denite is a dark powered plugin to unite all interfaces.</td>
+</tr>
+<tr>
+<td>vim-dirvish</td>
+<td>Directory viewer for Vim</td>
+</tr>
+<tr>
+<td>vim-dirvish-git</td>
+<td>Plugin for dirvish.vim that shows git status flags</td>
+</tr>
+<tr>
+<td>vim-gtfo</td>
+<td>Go to Terminal or File manager</td>
+</tr>
+<tr>
+<td>vim-love-docs</td>
+<td>Vim plugin for LÖVE syntax highlighting and help file</td>
+</tr>
+<tr>
+<td>vim-pandoc</td>
+<td>pandoc integration and utilities for vim</td>
+</tr>
+<tr>
+<td>vim-pandoc-syntax</td>
+<td>pandoc markdown syntax</td>
+</tr>
+<tr>
+<td>graphviz.vim</td>
+<td>graphviz .dot to .png flow chart image</td>
+</tr>
+<tr>
+<td>vim-sxhkdrc</td>
+<td>Vim syntax for sxhkd's configuration files</td>
+</tr>
+<tr>
+<td>jupytext.vim</td>
+<td>editing Jupyter ipynb files via jupytext</td>
+</tr>
+<tr>
+<td>tmux-complete.vim</td>
+<td>insert mode completion of words in adjacent tmux panes</td>
+</tr>
+<tr>
+<td>vim-tmux-navigator</td>
+<td>Seamless navigation between tmux panes and vim splits</td>
+</tr>
+<tr>
+<td>vim-table-mode</td>
+<td>VIM Table Mode for instant table creation.</td>
+</tr>
+<tr>
+<td>auto-pairs</td>
+<td>Vim plugin, insert or delete brackets, parens, quotes in pair</td>
+</tr>
+<tr>
+<td>undotree</td>
+<td>The undo history visualizer for VIM</td>
+</tr>
+<tr>
+<td>onehalf</td>
+<td>one half dark</td>
+</tr>
+<tr>
+<td>rainbow</td>
+<td>Rainbow Parentheses Improved</td>
+</tr>
+<tr>
+<td>VimCompletesMe</td>
+<td>You don't Complete Me; Vim Completes Me!</td>
+</tr>
+<tr>
+<td>deoplete</td>
+<td>Dark powered asynchronous completion framework for Vim</td>
+</tr>
+<tr>
+<td>neoinclude</td>
+<td>Include completion framework for deoplete</td>
+</tr>
+<tr>
+<td>deoplete-clangx</td>
+<td>C/C++ Completion for deoplete using clang</td>
+</tr>
+<tr>
+<td>nvim-yarp</td>
+<td>Yet Another Remote Plugin Framework</td>
+</tr>
+<tr>
+<td>vim-hug-neovim-rpc</td>
+<td>Compatibility layer for neovim rpc client working on vim8</td>
+</tr>
+<tr>
+<td>deoplete-vim-lsp</td>
+<td>deoplete source for vim-lsp</td>
+</tr>
+<tr>
+<td>vim-cmake</td>
+<td>plugin for working with CMake projects</td>
+</tr>
+<tr>
+<td>vim-gutentags</td>
+<td>A Vim plugin that manages your tag files</td>
+</tr>
+<tr>
+<td>tagbar</td>
+<td>displays tags in a window, ordered by scope</td>
+</tr>
+<tr>
+<td>async.vim</td>
+<td>normalize async job control api for vim</td>
+</tr>
+<tr>
+<td>vim-lsp</td>
+<td>async language server protocol plugin for vim</td>
+</tr>
+<tr>
+<td>ale</td>
+<td>Check syntax in Vim asynchronously and fix files</td>
+</tr>
+<tr>
+<td>vim-lsp-ale</td>
+<td>Bridge between vim-lsp and ALE</td>
+</tr>
+<tr>
+<td>neoformat</td>
+<td>A vim plugin for formatting code.</td>
+</tr>
+<tr>
+<td>vim-devicons</td>
+<td>Adds file type icons to Vim plugins</td>
+</tr>
+<tr>
+<td>lightline.vim</td>
+<td>A light and configurable statusline/tabline plugin for Vim</td>
+</tr>
+<tr>
+<td>vim-cursorworld</td>
+<td>Underlines the word under the cursor</td>
+</tr>
+<tr>
+<td>lightline-bufferline</td>
+<td>bufferline functionality for the lightline vim plugin.</td>
+</tr>
+<tr>
+<td>lightline-ale</td>
+<td>ALE indicator for the lightline vim plugin</td>
+</tr>
+<tr>
+<td>vimwiki</td>
+<td>Personal Wiki for Vim</td>
+</tr>
+<tr>
+<td>calendar-vim</td>
+<td>Creates a calendar you can use within vim</td>
+</tr>
+<tr>
+<td>pomodoro.vim</td>
+<td>Bring the beauty of the Pomodoro technique to Vim</td>
+</tr>
+<tr>
+<td>Colorizer</td>
+<td>Color hex codes and color names</td>
+</tr>
+<tr>
+<td>indentLine</td>
+<td>display the indention levels with thin vertical lines</td>
+</tr>
+<tr>
+<td>vim-test</td>
+<td>Run your tests at the speed of thought</td>
+</tr>
+<tr>
+<td>vim-isort</td>
+<td>sort python imports using isort</td>
+</tr>
+<tr>
+<td>vim-minimap</td>
+<td>A minimap for vim</td>
+</tr>
+<tr>
+<td>vim-lsp-settings</td>
+<td>Auto configurations for Language Server for vim-lsp</td>
+</tr>
+</tbody>
+</table>
+<h2>custom preferences</h2>
+<table>
+<thead><tr>
+<th>plugin</th>
+<th>description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ale.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>calendar.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>denite.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>deoplete.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>dirvish.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>goyo.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>gutentags.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>hotkets.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>indentLine.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>jupytext.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>ligthline.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>lsp.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>neoformat.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>pandoc.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>startify.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>test.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>tmux.vim</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>vimwiki.vim</td>
+<td>bla</td>
+</tr>
+</tbody>
+</table>
+<h2>autocompletion</h2>
+<p>blabla bla</p>
+<h2>linting</h2>
+<p>ale.vim</p>
+<ul>
+<li>python support flake8 and pylint</li>
+<li>lua support luacheck</li>
+<li>c support by clang</li>
+<li>erlang support with syntaxerl</li>
+</ul>
+<h2>hotkeys</h2>
+<p>hotkeys.vim</p>
+<table>
+<thead><tr>
+<th>hotkey</th>
+<th>description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>leader ]</td>
+<td>ale next wrap</td>
+</tr>
+<tr>
+<td>leader [</td>
+<td>ale previous wrap</td>
+</tr>
+<tr>
+<td>leader -</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>leader \</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>leader t</td>
+<td>bla</td>
+</tr>
+<tr>
+<td>leader tc</td>
+<td>color</td>
+</tr>
+<tr>
+<td>leader s</td>
+<td>update</td>
+</tr>
+<tr>
+<td>leader z</td>
+<td>spelling</td>
+</tr>
+<tr>
+<td>leader x</td>
+<td>buffer delete Bdelete</td>
+</tr>
+<tr>
+<td>leader e</td>
+<td>exit qa!</td>
+</tr>
+<tr>
+<td>leader d</td>
+<td>Denite buffer</td>
+</tr>
+<tr>
+<td>leader f</td>
+<td>DeniteProjectDir -start-filter grep:::!</td>
+</tr>
+<tr>
+<td>leader Backspace</td>
+<td>Denite -resume -cursor-pos=+1</td>
+</tr>
+<tr>
+<td>leader gy</td>
+<td>Goyo</td>
+</tr>
+</tbody>
+</table>
+<p>leader R, replace</p>
+<p>leader gg, bla
+leader gj, bla
+leader gf, bla
+leader ga, git fetch
+leader gl, git pull
+leader gc, git commit
+leader gp, git push</p>
+<p>leader cg, CMakeGenerate
+leader cb, CMakeBuild</p>
+<p>leader ct, CMakeBuild test</p>
+<p>leader tn, TestNearest</p>
+<p>leader tf, TestFile</p>
+<p>leader ts, TestSuite -strategy=vimterminal</p>
+<p>leader tl, TestLast</p>
+<p>I'm also have qe, j, k, qw, qq maped for quickfix stuff (?)</p>
+<p>leader qe,</p>
+<p>leader j,</p>
+<p>leader k,</p>
+<p>leader qw,</p>
+<p>leader qq</p>
+<p>now the F keys</p>
+<p>f1, help
+f2, maximizer
+f3, dirvish
+f4, denite
+f5, undotree
+f5, date on insert mode
+f7, calendar.vim
+f8, pomodoro.vim</p>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/computer/" rel="tag">computer</a></li>
+            <li><a class="tag p-category" href="../../categories/guide/" rel="tag">guide</a></li>
+            <li><a class="tag p-category" href="../../categories/hypermodernism/" rel="tag">hypermodernism</a></li>
+            <li><a class="tag p-category" href="../../categories/nonsense/" rel="tag">nonsense</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../torchcraft/" rel="prev" title="TorchCraft">이전 포스트</a>
+            </li>
+            <li class="next">
+                <a href="../opennings/" rel="next" title="Opennings">다음 포스트</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Ready for your next project?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            <div class="ml-auto">
+              <a href="../../../contact/#us" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+            </div>
+          </div>
+            
+          <!--
+          <div class="row">
+
+            <div class="col-md-6">HQ</div>
+
+            <div class="col-md-6">Southeast Asia Headquarter</div>
+          </div>
+          -->
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="../../../#zerg" class="footer-logo">Spacebeam</a></h5>
+              <p class="copyright">
+                <small>© 2023</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">Consulting</a></li>
+                <li><a href="../../../technology/">Training</a></li>
+                <li><a href="../../../community/">Support</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Company</h5>
+              <ul class="list-unstyled links">
+<li><a href="../../../consultancy/#work">About us</a></li>
+                <li><a href="../../../contact/#us">Contact us</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled social">
+<li><a href="#"><span class="fa-stack fa-x2"><i class="fa fa-circle fa-stack-x1"></i><i class="fab fa-linkedin fa-stack-lg fa-inverse"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-medium"></span></a></li>
+                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><script src="../../../bs-jsonform.js"></script><script src="../../../underscore-min.js"></script><script src="../../../backbone-min.js"></script><!-- Relax, and have some fun --><script src="../../../seed/fun.utils.js"></script><script src="../../../seed/fun.configuration.js"></script><script src="../../../seed/fun.strings.js"></script><script src="../../../seed/fun.models.js"></script><!-- Project views --><script src="../../../views/landing.js"></script><script src="../../../views/contact.js"></script><script src="../../../views/consultancy.js"></script><!-- fun router --><script src="../../../seed/fun.router.js"></script>
+</body>
+</html>

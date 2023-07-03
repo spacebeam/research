@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://spacebeam.org/</loc>
-  <lastmod>2023-06-16T21:48:00Z</lastmod>
+  <lastmod>2023-07-03T16:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/2019/</loc>
@@ -26,6 +26,10 @@
   <lastmod>2022-12-24T19:05:00Z</lastmod>
  </url>
  <url>
+  <loc>https://spacebeam.org/2023/</loc>
+  <lastmod>2023-07-03T16:14:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://spacebeam.org/404.html</loc>
   <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
@@ -35,7 +39,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/archive.html</loc>
-  <lastmod>2023-06-16T21:52:00Z</lastmod>
+  <lastmod>2023-07-03T16:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/careers/</loc>
@@ -647,7 +651,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/posts/</loc>
-  <lastmod>2022-12-24T19:05:00Z</lastmod>
+  <lastmod>2023-07-03T16:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/8-supply-11-gas-12-rax-14-scout/</loc>
@@ -684,6 +688,10 @@
  <url>
   <loc>https://spacebeam.org/posts/coordination/</loc>
   <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/couchdb-python-views/</loc>
+  <lastmod>2023-07-03T16:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/distributed-memory/</loc>
@@ -723,7 +731,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/posts/index-3.html</loc>
-  <lastmod>2023-06-16T21:52:00Z</lastmod>
+  <lastmod>2023-07-03T16:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/its-a-unix-system/</loc>

@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://spacebeam.org/</loc>
-  <lastmod>2023-05-18T20:07:00Z</lastmod>
+  <lastmod>2023-06-16T21:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/2019/</loc>
@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/404.html</loc>
-  <lastmod>2023-05-30T16:36:00Z</lastmod>
+  <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/about/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/archive.html</loc>
-  <lastmod>2023-05-30T16:36:00Z</lastmod>
+  <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/careers/</loc>
@@ -715,15 +715,15 @@
  </url>
  <url>
   <loc>https://spacebeam.org/posts/index-1.html</loc>
-  <lastmod>2023-05-30T16:37:00Z</lastmod>
+  <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/index-2.html</loc>
-  <lastmod>2023-05-30T16:37:00Z</lastmod>
+  <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/index-3.html</loc>
-  <lastmod>2023-05-30T16:37:00Z</lastmod>
+  <lastmod>2023-06-16T21:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/its-a-unix-system/</loc>

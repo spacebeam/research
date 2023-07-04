@@ -1336,6 +1336,9 @@ EXTRA_HEAD_DATA = """
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<!-- Style CSS -->
+<!-- link rel="stylesheet" href="/css/style.css">
 """
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
@@ -1359,6 +1362,8 @@ BODY_END = '''
 
 <!-- fun router -->
 <script src="/seed/fun.router.js"></script>
+
+
 '''
 # The possibility to extract metadata from the filename by using a
 # regular expression.

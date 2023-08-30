@@ -39,7 +39,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/archive.html</loc>
-  <lastmod>2023-07-04T14:38:00Z</lastmod>
+  <lastmod>2023-08-30T20:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/careers/</loc>
@@ -47,11 +47,15 @@
  </url>
  <url>
   <loc>https://spacebeam.org/categories/</loc>
-  <lastmod>2022-12-24T19:05:00Z</lastmod>
+  <lastmod>2023-08-30T20:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/categories/cat_computer/</loc>
   <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/categories/cat_zerg/</loc>
+  <lastmod>2023-08-30T20:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/categories/cat_zergs/</loc>
@@ -651,7 +655,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/posts/</loc>
-  <lastmod>2023-07-03T16:09:00Z</lastmod>
+  <lastmod>2023-08-30T20:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/8-supply-11-gas-12-rax-14-scout/</loc>
@@ -731,7 +735,7 @@
  </url>
  <url>
   <loc>https://spacebeam.org/posts/index-3.html</loc>
-  <lastmod>2023-07-04T14:38:00Z</lastmod>
+  <lastmod>2023-08-30T20:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/its-a-unix-system/</loc>
@@ -804,6 +808,10 @@
  <url>
   <loc>https://spacebeam.org/posts/what-about-the-torch-up-tournament/</loc>
   <lastmod>2022-12-24T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://spacebeam.org/posts/whisper/</loc>
+  <lastmod>2023-08-30T20:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://spacebeam.org/posts/zerg-3d-models/</loc>

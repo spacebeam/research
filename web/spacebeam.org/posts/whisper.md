@@ -1,6 +1,6 @@
 ---
 category: ''
-date: 2023-9-30 12:13:05 UTC-06:00
+date: 2023-9-24 12:13:05 UTC-06:00
 description: ''
 link: ''
 slug: whisper

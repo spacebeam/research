@@ -1,0 +1,43 @@
+<!-- WIKIDOC PDFONLY
+<h1>Hello Luerl</h1>
+WIKIDOC PDFONLY -->
+
+<p>Luerl works as a library embedded in a host simple called the embedding program. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang functions by Lua code.</p>
+<p>Through the use of Erlang, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.</p>
+<h2>Installing Luerl</h2>
+<p><a href="https://luerl.org">Luerl</a> implement standard <a href="https://lua.org">Lua</a> 5.3 in pure Erlang to start using the project you need to include the luerl library as new dependency on your OTP application.</p>
+<h3>Rebar</h3>
+<p>With <a href="https://rebar3.org">Rebar 3</a>, you can either install <code>luerl</code> from <a href="https://hex.pm/packages/luerl">hex.pm</a> or from GitHub directly (for more info on Rebar dependencies, see the <a href="https://rebar3.org/docs/configuration/dependencies/">dependency documentation</a>).</p>
+<p>Add <code>luerl</code> as a dependency to your project <code>rebar.config</code> file using one of the two options below.</p>
+<h4>Hex</h4>
+<div class="code"><pre class="code literal-block"><span class="go">{deps, [luerl]}.</span>
+</pre></div>
+
+<h4>GitHub</h4>
+<div class="code"><pre class="code literal-block"><span class="go">{deps, [{luerl, {git, &quot;git://github.com/rvirding/luerl.git&quot;, {branch, &quot;develop&quot;}}}]}.</span>
+</pre></div>
+
+<h3>Erlang.mk</h3>
+<p>Or use <a href="https://erlang.mk">Erlang.mk</a> to setup quickly your environment, build the code and project release.</p>
+<p>Create a Makefile and include luerl to the project dependencies.</p>
+<div class="code"><pre class="code literal-block"><span class="nv">DEPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>luerl
+</pre></div>
+
+<h3>Source code</h3>
+<p><code>$ git clone https://github.com/rvirding/luerl.git</code></p>
+<h2>Getting started</h2>
+<p>For a quick starting tutorial we're going to use <a href="https://erlang.mk">Erlang.mk</a> to setup quickly our environment, build our code and start or stop the project release.</p>
+<p>Erlang.mk is very easy to setup: create a folder, put Erlang.mk in it, and write a Makefile:</p>
+<p><code>include erlang.mk</code></p>
+<p>For a step by step:</p>
+<p><code>$ mkdir luerl_demo</code></p>
+<p><code>$ cd luerl_demo</code></p>
+<p><code>$ curl https://erlang.mk/erlang.mk -o erlang.mk</code></p>
+<p>Create a Makefile and copy the next code snippet, there you can make the correct changes to reflect your project needs.</p>
+<div class="code"><pre class="code literal-block"><span class="nv">PROJECT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ophelia
+<span class="nv">DEPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>luerl
+<span class="cp">include erlang.mk</span>
+</pre></div>
+
+<p><code>$ make</code></p>
+<p>From that point you can create an src/ folder or start using http://erlang.mk/ templates - <a href="http://erlang.mk/guide/">User guide</a>.</p>

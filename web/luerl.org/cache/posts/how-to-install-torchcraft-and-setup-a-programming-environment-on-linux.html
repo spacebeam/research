@@ -1,0 +1,151 @@
+<p>TorchCraft is a BWAPI module that sends StarCraft data out over a ZMQ connection. This lets you parse game data and interact with BWAPI.</p>
+<p>{% img [class name(s)] /images/python.jpg %}</p>
+<p>Python is an interpreted, high-level, general-purpose programming language with strengths in automation, data analysis and machine learning.</p>
+<p>This tutorial will walk you through installing Python 3 and setting up a programming environment on Debian 10.</p>
+<h2>Step 0 - Update and Upgrade</h2>
+<p>Logged into your system as root, first update and upgrade to ensure your shipped version of Python 3 is up-to-date.</p>
+<div class="code"><pre class="code literal-block">apt update
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt upgrade
+</pre></div>
+
+<p>Confirm upgrade when prompted to do so.</p>
+<h2>Step 1 - Check Version of Python</h2>
+<p>Check your version of Python 3 installed by typing:</p>
+<div class="code"><pre class="code literal-block">python3 --version
+</pre></div>
+
+<p>You'll receive output similar to the following.</p>
+<div class="code"><pre class="code literal-block">Python 3.7.3
+</pre></div>
+
+<h2>Step 2 - Install pip</h2>
+<p>To manage software packages for Python, install <code>pip</code>, the standard package installer for Python. You can use pip to install things from the official package index and other indexes. </p>
+<div class="code"><pre class="code literal-block">apt install -y python3-pip
+</pre></div>
+
+<p>Python packages can be installed by typing:</p>
+<div class="code"><pre class="code literal-block">pip3 install schematics 
+</pre></div>
+
+<p>Here, <code>schematics</code> can refer to any Python package, such as tornado for backend development or NumPy for scientific computing. </p>
+<h2>Step 3 - Install Additional Tools</h2>
+<p>There are a few more packages and development tools to install to ensure that we have a robust set-up for our StarCraft: Brood War Python TorchCraft bots programming environment:</p>
+<div class="code"><pre class="code literal-block">apt -y install --install-recommends vim git apt-transport-https\
+ gnupg2 wget software-properties-common curl build-essential\
+ gfortran sudo pkg-config make cmake libyaml-0-2 libyaml-dev
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg --add-architecture i386
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt-add-repository contrib 
+</pre></div>
+
+<div class="code"><pre class="code literal-block"><span class="nx">apt</span><span class="w"> </span><span class="o">-</span><span class="nx">y</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">--</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span><span class="w"> </span><span class="nx">libgnutls30</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libldap</span><span class="o">-</span><span class="m m-Double">2.4</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="nx">i386</span>\
+<span class="w"> </span><span class="nx">libgpg</span><span class="o">-</span><span class="nx">error0</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libxml2</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libasound2</span><span class="o">-</span><span class="nx">plugins</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libsdl2</span><span class="o">-</span><span class="m m-Double">2.0</span><span class="o">-</span><span class="mi">0</span><span class="p">:</span><span class="nx">i386</span>\
+<span class="w"> </span><span class="nx">libfreetype6</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libdbus</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libsqlite3</span><span class="o">-</span><span class="mi">0</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libgl1</span><span class="o">-</span><span class="nx">mesa</span><span class="o">-</span><span class="nx">glx</span><span class="p">:</span><span class="nx">i386</span>\
+<span class="w"> </span><span class="nx">libgl1</span><span class="o">-</span><span class="nx">mesa</span><span class="o">-</span><span class="nx">dri</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">libsdl2</span><span class="o">-</span><span class="m m-Double">2.0</span><span class="o">-</span><span class="mi">0</span><span class="w"> </span><span class="nx">libstb0</span><span class="w"> </span><span class="nx">libstb0</span><span class="p">:</span><span class="nx">i386</span><span class="w"> </span><span class="nx">mesa</span><span class="o">-</span><span class="nx">vulkan</span><span class="o">-</span><span class="nx">drivers</span>
+</pre></div>
+
+<h2>Step 4 - Add the WineHQ Debian repository</h2>
+<p>Get and install the repository key.</p>
+<div class="code"><pre class="code literal-block">wget -nc https://dl.winehq.org/wine-builds/winehq.key &amp;&amp; apt-key add winehq.key
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt-add-repository &#39;deb https://dl.winehq.org/wine-builds/debian/ buster main&#39;
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt update &amp;&amp; rm winehq.key
+</pre></div>
+
+<h2>Step 5 - Install libfaudio0 and Wine</h2>
+<p>Starting on Wine &gt;= 4.5, libfaudio0 is required by the staging packages provided by WineHQ but is not included in the Wine HQ packages, which means you are responsible for making libfaudio0 available prior to installing Wine. This explains how to obtain libfaudio0 for Debian 10.</p>
+<div class="code"><pre class="code literal-block"><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">nc</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Emulators</span><span class="p">:</span><span class="o">/</span><span class="n">Wine</span><span class="p">:</span><span class="o">/</span><span class="n">Debian</span><span class="o">/</span><span class="n">Debian_10</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">libfaudio0_20</span><span class="o">.</span><span class="mi">01</span><span class="o">-</span><span class="mi">0</span><span class="o">~</span><span class="n">buster_amd64</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block"><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">nc</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Emulators</span><span class="p">:</span><span class="o">/</span><span class="n">Wine</span><span class="p">:</span><span class="o">/</span><span class="n">Debian</span><span class="o">/</span><span class="n">Debian_10</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span><span class="n">libfaudio0_20</span><span class="o">.</span><span class="mi">01</span><span class="o">-</span><span class="mi">0</span><span class="o">~</span><span class="n">buster_i386</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg -i libfaudio0_20.01-0~buster_amd64.deb
+</pre></div>
+
+<div class="code"><pre class="code literal-block">dpkg -i libfaudio0_20.01-0~buster_i386.deb
+</pre></div>
+
+<div class="code"><pre class="code literal-block">apt -y install --install-recommends winehq-staging winetricks
+</pre></div>
+
+<h2>Step 6 - Configuring WINE</h2>
+<p>Many programs work under WINE with absolutely no configuration.. unfortunately, this isn't always the case.</p>
+<h3>(default) using your own <code>non-root</code> user</h3>
+<p>The following commands MUST be executed as a normal non-root user, if you already have an existing wine setup, you can <em>REMOVE</em> it and start clean with <code>rm -rf ~/.wine/</code></p>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span><span class="nv">WINEARCH</span><span class="o">=</span>win32<span class="p">;</span><span class="w"> </span>wineboot
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>winetricks<span class="w"> </span>-q<span class="w"> </span>vcrun2012
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>winetricks<span class="w"> </span>-q<span class="w"> </span>vcrun2013
+</pre></div>
+
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>winetricks<span class="w"> </span>-q<span class="w"> </span>vcrun2015
+</pre></div>
+
+<h3>(optional) using a separate <code>wine</code> user</h3>
+<div class="code"><pre class="code literal-block">adduser --disabled-login --gecos &quot;&quot; --shell /forbid/login wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">usermod --append --groups audio wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">chown wine:wine -R /home/wine
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine WINEARCH=win32 wineboot
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2012
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2013
+</pre></div>
+
+<div class="code"><pre class="code literal-block">sudo -u wine env HOME=/home/wine USER=wine USERNAME=wine LOGNAME=wine winetricks -q vcrun2015
+</pre></div>
+
+<h2>Step 7 - StarCraft: Brood War 1.16.1</h2>
+<p>At the moment StarCraft: Remastered is <em>NOT</em> yet supported, the only working version is 1.16.1.</p>
+<div class="code"><pre class="code literal-block">git clone https://github.com/spacebeam/starcraft-sif.git /usr/src/starcraft-sif
+</pre></div>
+
+<p>In this tutorial we have StarCraft installed in <code>/opt/StarCraft/</code></p>
+<div class="code"><pre class="code literal-block">cat /usr/src/starcraft-sif/include/core/core* &gt; /opt/StarCraft.tar.gz
+</pre></div>
+
+<div class="code"><pre class="code literal-block">tar -zxvf /opt/StarCraft.tar.gz -C /opt/
+</pre></div>
+
+<h3>Installing the provided Python examples</h3>
+<p>This will install Tornado, PyTorch, PyZMQ, NumPy and SciPy!</p>
+<div class="code"><pre class="code literal-block">pip3 install -r /usr/src/starcraft-sif/examples/blueberry/requirements.txt
+</pre></div>
+
+<h3>Installing TorchCraft</h3>
+<div class="code"><pre class="code literal-block">git clone https://github.com/TorchCraft/TorchCraft.git /usr/src/TorchCraft --recursive
+</pre></div>
+
+<div class="code"><pre class="code literal-block">pip3 install /usr/src/TorchCraft
+</pre></div>
+
+<h2>Step 8 - Coding &amp; Building</h2>
+<p>Lets continue this tutorial with the ambitious goal of create a small Terran bot with a single timing attack, but first.. check that everything is installed correctly and that we can run the original examples.</p>
+<div class="code"><pre class="code literal-block">python3 /usr/src/TorchCraft/examples/py/example.py -t 127.0.0.1
+</pre></div>
+
+<p>if you follow the steps your output read hopefully:</p>
+<div class="code"><pre class="code literal-block">CTRL-C to stop
+</pre></div>
+
+<p>You are ready to start a new Brood War bot using Python on Linux, we hope this tutorial provide a good start, after this short success.. learn how to run the game and <a href="https://spacebeam.org/2020/07/10/gather-minerals-train-a-worker-build-a-refinery-and-extract-vespene-gas/">gather resources</a> growing a Terran economy. </p>

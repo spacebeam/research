@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install | Luerl</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://luerl.org/install/">
+<link rel="icon" href="../images/luerl.png" sizes="128x128">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<!-- Style CSS --><!-- link rel="stylesheet" href="/css/style.css">
+
+
+
+    
+
+    <meta name="author" content="The BEAM Comunity">
+    
+<meta property="og:site_name" content="Luerl">
+<meta property="og:title" content="Install">
+<meta property="og:url" content="https://luerl.org/install/">
+    <meta property="og:description" content="Luerl works as a library embedded in a host simple called the embedding program. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang">
+<meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-08-03T10:18:00-06:00">
+
+    
+
+    
+
+    
+
+
+
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar --><nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+
+            <span id="blog-title">Luerl</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a href="." class="nav-link">Install <span class="sr-only">(active)</span></a>
+                </li>
+<li class="nav-item">
+<a href="../docs/" class="nav-link">Docs</a>
+                </li>
+<li class="nav-item">
+<a href="../community/" class="nav-link">Community</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../posts/" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://github.com/rvirding/luerl" class="nav-link">Try Luerl</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar -->
+</head>
+<body>
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Install</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <!-- WIKIDOC PDFONLY
+<h1>Hello Luerl</h1>
+WIKIDOC PDFONLY -->
+
+<p>Luerl works as a library embedded in a host simple called the embedding program. The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and call Erlang functions by Lua code.</p>
+<p>Through the use of Erlang, Luerl can be augmented to cope with a wide range of different domains, creating a customized language sharing a syntactical framework.</p>
+<h3>Installing Luerl</h3>
+<p><a href="https://luerl.org">Luerl</a> implement standard <a href="https://lua.org">Lua</a> 5.3 in pure Erlang to start using the project you need to include the luerl library as new dependency on your OTP application.</p>
+<h4>Rebar</h4>
+<p>With <a href="https://rebar3.org">Rebar 3</a>, you can either install <code>luerl</code> from <a href="https://hex.pm/packages/luerl">hex.pm</a> or from GitHub directly (for more info on Rebar dependencies, see the <a href="https://rebar3.org/docs/configuration/dependencies/">dependency documentation</a>).</p>
+<p>Add <code>luerl</code> as a dependency to your project <code>rebar.config</code> file using one of the two options below.</p>
+<h5>Hex</h5>
+<div class="code"><pre class="code literal-block"><span class="go">{deps, [luerl]}.</span>
+</pre></div>
+
+<h5>GitHub</h5>
+<div class="code"><pre class="code literal-block"><span class="go">{deps, [{luerl, {git, "git://github.com/rvirding/luerl.git", {branch, "develop"}}}]}.</span>
+</pre></div>
+
+<h4>Erlang.mk</h4>
+<p>Or use <a href="https://erlang.mk">Erlang.mk</a> to setup quickly your environment, build the code and project release.</p>
+<p>Create a Makefile and include luerl to the project dependencies.</p>
+<div class="code"><pre class="code literal-block"><span class="nv">DEPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>luerl
+</pre></div>
+
+<h4>Source code</h4>
+<p><code>$ git clone https://github.com/rvirding/luerl.git</code></p>
+<h3>Getting started</h3>
+<p>For a quick starting tutorial we're going to use <a href="https://erlang.mk">Erlang.mk</a> to setup quickly our environment, build our code and start or stop the project release.</p>
+<p>Erlang.mk is very easy to setup: create a folder, put Erlang.mk in it, and write a Makefile:</p>
+<p><code>include erlang.mk</code></p>
+<p>For a step by step:</p>
+<p><code>$ mkdir luerl_demo</code></p>
+<p><code>$ cd luerl_demo</code></p>
+<p><code>$ curl https://erlang.mk/erlang.mk -o erlang.mk</code></p>
+<p>Create a Makefile and copy the next code snippet, there you can make the correct changes to reflect your project needs.</p>
+<div class="code"><pre class="code literal-block"><span class="nv">PROJECT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ophelia
+<span class="nv">DEPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>luerl
+<span class="cp">include erlang.mk</span>
+</pre></div>
+
+<p><code>$ make</code></p>
+<p>From that point you can create an src/ folder or start using http://erlang.mk/ templates - <a href="http://erlang.mk/guide/">User guide</a>.</p>
+    </div>
+    
+
+</article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="../#zerg" class="footer-logo">Luerl</a></h5>
+              <p class="copyright">
+                <small>© 2024</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href=".">Install</a></li>
+                <li><a href="../docs/">Documentation</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Cases</h5>
+              <ul class="list-unstyled links">
+<li><a href="../about/">About</a></li>
+                <li><a href="#">Cases</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Wiki</a></li>
+                <li><a href="#">Examples</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+                <h5>Community</h5>
+                <ul class="list-unstyled links">
+<li><a href="#">Slack</a></li>
+                <li><a href="#">Discord</a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

@@ -1,103 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
-        <title>Luerl: Lua in Erlang</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Luerl: Lua in Erlang Full Atom Feed" />
-        <!-- twitter card metadata -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/site-cover.jpg">
-<meta name="twitter:creator" content="@rvirding">
-<meta name="twitter:site" content="@rvirding">
-<meta name="twitter:title" content="Luerl: Lua in Erlang">
-<meta name="twitter:description" content="">
-        <!-- OG Tags -->
-<meta property="og:url" content=""/>
-<meta property="og:title" content="Luerl: Lua in Erlang" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="/images/site-cover.jpg" />
-        <!-- favicon -->
-        <link rel="icon" type="image/png" href="/images/luerl.png">
-        <!-- moment.js for date formatting -->
-        <script src="/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lua in Erlang | Luerl</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://luerl.org/">
+<link rel="icon" href="images/luerl.png" sizes="128x128">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<!-- Style CSS --><!-- link rel="stylesheet" href="/css/style.css">
+
+
+
     
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
+
+    <meta name="author" content="The BEAM Comunity">
+    
+<meta property="og:site_name" content="Luerl">
+<meta property="og:title" content="Lua in Erlang">
+<meta property="og:url" content="https://luerl.org/">
+    <meta property="og:description" content="Lua in Erlang
             
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+            Luerl is an implementation of standard Lua written in Erlang/OTP a powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artifici">
+<meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-12-12T13:48:18-06:00">
+
+    
+
+    
+
+    
+
+
+
 </head>
 <body>
-    <div role="banner" id="masthead">
-        <header>
-            <a href="/"><img src="/images/luerl.png" alt="McManus Logo"></a>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                        <li><a href="/pages/about/">about</a></li>
-                        <li><a href="/pages/community/">community</a></li>
-                            <li><a href="/category/updates">updates</a></li>
-                </ul>
-            </nav>
-        </header>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar --><nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href=".">
+
+            <span id="blog-title">Luerl</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="install/" class="nav-link">Install</a>
+                </li>
+<li class="nav-item">
+<a href="docs/" class="nav-link">Docs</a>
+                </li>
+<li class="nav-item">
+<a href="community/" class="nav-link">Community</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="posts/" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://github.com/rvirding/luerl" class="nav-link">Try Luerl</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
     </div>
-        <div class="page" role="main">
-<div class="articles">
-    <ol>
-        <li>
-            <article>
-                <footer>
-                     <p>
-                        <time datetime="2020-02-20 00:00:00+01:00">
-                            <script>document.write(moment('2020-02-20 00:00:00+01:00').format('LL'));</script>
-                        </time>
-                                in <a href="/category/updates"><span class="category-tag">updates</span></a>
-                    </p>
-                </footer>
-                <header>
-                    <a href="/2020/02/20/lua-in-erlang/">
-                        <h2>Lua in Erlang</h2>
-                    </a>
-                </header>
-                <div class="summary">Luerl is an implementation of standard Lua written in Erlang/OTP a powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artificial intelligence and scientific computing research. </div>
-                <div class="tags">
-                    <ul class="tags">
-                    </ul>
-                </div>
-                <a href="/2020/02/20/lua-in-erlang/">
-                    <p class="readmore">Read more...</p>
-                </a>
-            </article>
-        </li>
-    </ol>
-    
-</div>                <footer>
-                    <div class="icons">
-                        <a href="https://twitter.com/rvirding" target="_blank"><div class="icon-twitter icon"></div></a>
-                        <a href="https://github.com/rvirding/luerl" target="_blank"><div class="icon-github icon"></div></a>
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> BEAM Community</p>
-                </footer>
+<!-- /.container -->
+</nav><!-- End of Menubar -->
+</head>
+<body>
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="jumbotron">
+    <div class="row">
+        
+        <div class="col-md-4">
+            <center>
+            <a href="about/">
+            <img src="images/luerl.png" alt="With the Zerg Swarm" style="width:300px"></a>
+            </center>    
         </div>
+        
+        <div class="col-md-8">
+            <h1 class="display-4">Lua in Erlang</h1>
+            <br><p class="lead">Luerl is an implementation of standard Lua written in Erlang/OTP a powerful, efficient, lightweight, embeddable scripting language common in games, IoT, artificial intelligence and scientific computing research.</p>
+            <p class="lead">Explore any of the topics below!</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- ICON ROWS  -->  
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-microchip fa-stack-1x fa-inverse"></i></span>
+        </div> 
+          <br><h3 class="index-feature">High-Performance Computing</h3>
+      </a>
+      <p><b><i>"Unleash the power of Luerl for demanding workloads"</i></b></p>
+      </center>
+    </div>  
+
+    <div class="col-sm">
+      <center>
+      <a href=".">     
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code-branch fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <br><h3 class="index-feature">Effortless Concurrency</h3>
+      </a>
+      <p><b><i>"Build scalable and responsive applications with lightweight processes"</i></b></p>
+      </center>
+    </div>
+    
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-link fa-stack-1x fa-inverse">
+                </i>
+            </span>
+        </div>    
+        <br><h3 class="index-feature">Seamless C Integration (FFI)</h3>
+          </a>
+      <p><b><i>"Leverage existing C libraries for maximum performance and flexibility"</i></b></p>
+    </center>
+    </div>  
+  </div>  
+  
+   <div class="row">
+
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-puzzle-piece fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+          <br><h3 class="index-feature">Elegant Pattern Matching</h3>
+          </a>
+      <p><b><i>"Write concise and expressive code with powerful pattern matching"</i></b></p>
+</center>
+    </div>
+
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-shield-alt fa-stack-1x fa-inverse"></i>
+            </span>
+        </div> 
+          <br><h3 class="index-feature">Robust Error Handling</h3>
+        </a>
+      <p><b><i>"Prevent runtime crashes with tagged unions and explicit error representation"</i></b></p>
+        </center>
+    </div>  
+
+    <div class="col-sm">
+      <center>
+      <a href=".">
+        <div class="feature-icon feature-icon-components">
+            <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
+            </span>
+        </div> 
+          <br><h3 class="index-feature">Rapid Development</h3>
+          </a>  
+      <p><b><i>"Get started quickly with Luerl's intuitive syntax and powerful tooling"</i></b></p>
+</center>
+    </div>
+  </div>  
+  
+</div>
+    </div>
+    
+
+</article><!--End of body content--><footer id="footer"><footer class="footer-20192"><div class="site-section">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-sm">
+              <h5><a href="#zerg" class="footer-logo">Luerl</a></h5>
+              <p class="copyright">
+                <small>© 2024</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h5>Capabilities</h5>
+              <ul class="list-unstyled links">
+<li><a href="install/">Install</a></li>
+                <li><a href="docs/">Documentation</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Cases</h5>
+              <ul class="list-unstyled links">
+<li><a href="about/">About</a></li>
+                <li><a href="#">Cases</a></li>
+              </ul>
+</div>
+            <div class="col-sm">
+              <h5>Further Information</h5>
+              <ul class="list-unstyled links">
+<li><a href="#">Wiki</a></li>
+                <li><a href="#">Examples</a></li>
+              </ul>
+</div>
+            <div class="col-md-3">
+                <h5>Community</h5>
+                <ul class="list-unstyled links">
+<li><a href="#">Slack</a></li>
+                <li><a href="#">Discord</a></li>
+              </ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </footer></footer>
+</div>
+</div>
+
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
 </body>
 </html>
